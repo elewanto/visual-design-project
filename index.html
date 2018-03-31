@@ -5,15 +5,17 @@
 
     <!-- dependent .css files -->
     <link href="css/bootstrap.min.css" rel="stylesheet"> <!-- bootstrap css file -->      
+    <link href="css/bootstrap-slider.min.css" rel="stylesheet"> <!-- bootstrap slider plugin css file -->          
     <link rel="stylesheet" type="text/css" href="css/index.css">    <!-- homepage css file -->     
 
     <!-- dependent .js files -->
     <!-- .js library packages (may not need all these) -->
     <script type="text/javascript" src="https://d3js.org/d3.v4.min.js"></script>  <!-- D3 library -->
     <script type="text/javascript" src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>      
-    <script type="text/javascript" src="js/libraries/jquery-3.1.1.js"></script> <!-- jquery library -->   
+    <script type="text/javascript" src="js/libraries/jquery-3.3.1.min.js"></script> <!-- jquery library -->   
     <script type="text/javascript" src="js/libraries/tether.min.js"></script> <!-- tether library (dependence of bootstrap) -->          
     <script type="text/javascript" src="js/libraries/bootstrap.min.js"></script> <!-- bootstrap library -->    
+    <script type="text/javascript" src="js/libraries/bootstrap-slider.min.js"></script> <!-- bootstrap slider plugin -->     
 
     <!-- project .js files -->
     <script type="text/javascript" src="js/project.js"></script>    <!-- main project javascript file; contains landingPageStart() function -->
@@ -27,8 +29,15 @@
       <p>Visualization of Columbus Health Trends</p>
     </div>
 
+
     <div id="mapDiv">
     </div>
+
+    <div id="sliderDiv" class="wrapper">
+      <b>1980 </b><input id="mapSlider" type="text" class="span2" value="" data-slider-min="1980" data-slider-max="2010"
+                      data-slider-steps="10" data-slider-value="2000"/> <b>2010</b>
+    </div>
+
 
     <div id="topButtonsDiv" class="wrapper">
       <button id="USMapBut" type="button" class="btn btn-outline-primary btn-lg">United States</button>
@@ -36,9 +45,6 @@
       <button id="FranklinMapBut" type="button" class="btn btn-outline-primary btn-lg">Franklin County</button>      
     </div>
 
-    <div id="sliderDiv" class="wrapper">
-
-    </div>
 
     <div id="botButtonsDiv" class="wrapper">
       <button id="LifeBut" type="button" class="btn btn-outline-success btn-lg">Life Expectancy Data</button>
