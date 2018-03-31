@@ -8,8 +8,8 @@ Team Google Docs [Problem Statement and Layout Ideas](https://docs.google.com/do
 
 ---
 ## Members:  
-Ellie  
 Coleman Anker  
+Ellie Bloch  
 Sangeeta Kumari  
 Eric Lewantowicz  
 Mike Zhang  
