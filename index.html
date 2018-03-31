@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Team 3 Visual Design Project Landing Page</title>
+
+    <!-- dependent .css files -->
+    <link href="css/bootstrap.min.css" rel="stylesheet"> <!-- bootstrap css file -->      
+    <link rel="stylesheet" type="text/css" href="css/index.css">    <!-- homepage css file -->     
+
+    <!-- dependent .js files -->
+    <!-- .js library packages (may not need all these) -->
+    <script type="text/javascript" src="https://d3js.org/d3.v4.min.js"></script>  <!-- D3 library -->
+    <script type="text/javascript" src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>      
+    <script type="text/javascript" src="js/libraries/jquery-3.1.1.js"></script> <!-- jquery library -->   
+    <script type="text/javascript" src="js/libraries/tether.min.js"></script> <!-- tether library (dependence of bootstrap) -->          
+    <script type="text/javascript" src="js/libraries/bootstrap.min.js"></script> <!-- bootstrap library -->    
+
+    <!-- project .js files -->
+    <script type="text/javascript" src="js/project.js"></script>    <!-- main project javascript file; contains landingPageStart() function -->
+
+  </head>
+
+
+  <body onload="landingPageStart();">
+
+    <div id="titleDiv" class="wrapper">
+      <p>Visualization of Columbus Health Trends</p>
+    </div>
+
+    <div id="mapDiv">
+    </div>
+
+    <div id="topButtonsDiv" class="wrapper">
+      <button id="USMapBut" type="button" class="btn btn-outline-primary btn-lg">United States</button>
+      <button id="OhioMapBut" type="button" class="btn btn-outline-primary btn-lg">Ohio Counties</button>
+      <button id="FranklinMapBut" type="button" class="btn btn-outline-primary btn-lg">Franklin County</button>      
+    </div>
+
+    <div id="sliderDiv" class="wrapper">
+
+    </div>
+
+    <div id="botButtonsDiv" class="wrapper">
+      <button id="LifeBut" type="button" class="btn btn-outline-success btn-lg">Life Expectancy Data</button>
+      <button id="OpioidBut" type="button" class="btn btn-outline-success btn-lg">Opioid Use Data</button>
+      <button id="ObesityBut" type="button" class="btn btn-outline-success btn-lg">Obesity Data</button>      
+      <button id="data4But" type="button" class="btn btn-outline-success btn-lg">Data Graphs4</button>
+    </div>    
+
+
+ 
+  </body>
+
+</html>

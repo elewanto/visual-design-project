@@ -1,0 +1,83 @@
+@charset "utf-8";
+
+
+body {
+  background-color: seashell;  
+  font-size: 100%;
+}
+
+html {
+  height: 100%;
+}
+
+div {
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 2px;
+  padding-left: 10px;
+}
+
+.wrapper {
+  text-align: center;
+}
+
+.button {
+  position: absolute;
+  top: 50%;
+}
+
+#titleDiv {
+  font-family: "Arial", Sans-serif;
+  font-size: 3em;
+  font-weight: bold;
+}
+
+
+
+
+
+/* old stuff may not be needed */
+.axis path,
+.axis line {
+  stroke: black;
+  stroke-width: 1;
+  shape-rendering: crispEdges;
+  fill: none;
+}
+
+text {
+  font-size: 12px;
+  font-weight: bold;
+  fill: black;
+  text-anchor: middle;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.titlechart {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.tooltip {
+  position: absolute;
+  width: 160px;
+  height: 20px;
+  pointer-events: none;
+  font-weight: bold;
+  background-color: lightgrey;
+  text-align: center;
+}
+
+.tooltip1 {
+  position: absolute;
+  width: 140px;
+  height: 20px;
+  pointer-events: none;
+  font-weight: bold;
+  background-color: lightgrey;
+  text-align: center;
+}
