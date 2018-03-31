@@ -6,7 +6,7 @@
     <!-- dependent .css files -->
     <link href="css/bootstrap.min.css" rel="stylesheet"> <!-- bootstrap css file -->      
     <link href="css/bootstrap-slider.min.css" rel="stylesheet"> <!-- bootstrap slider plugin css file -->          
-    <link rel="stylesheet" type="text/css" href="css/index.css">    <!-- homepage css file -->     
+    <link rel="stylesheet" type="text/css" href="css/index.css">    <!-- homepage css file -->   
 
     <!-- dependent .js files -->
     <!-- .js library packages (may not need all these) -->
@@ -17,13 +17,21 @@
     <script type="text/javascript" src="js/libraries/bootstrap.min.js"></script> <!-- bootstrap library -->    
     <script type="text/javascript" src="js/libraries/bootstrap-slider.min.js"></script> <!-- bootstrap slider plugin -->     
 
+
     <!-- project .js files -->
     <script type="text/javascript" src="js/project.js"></script>    <!-- main project javascript file; contains landingPageStart() function -->
+
+
 
   </head>
 
 
   <body onload="landingPageStart();">
+
+
+
+
+
 
     <div id="titleDiv" class="wrapper">
       <p>Visualization of Columbus Health Trends</p>
@@ -34,9 +42,13 @@
     </div>
 
     <div id="sliderDiv" class="wrapper">
-      <b>1980 </b><input id="mapSlider" type="text" class="span2" value="" data-slider-min="1980" data-slider-max="2010"
-                      data-slider-steps="10" data-slider-value="2000"/> <b>2010</b>
+      <input id="mapSlider" type="text"
+              data-provide="slider"
+              data-slider-ticks="[1980, 1990, 2000, 2010]"
+              data-slider-ticks-snap-bounds="30"
+              data-slider-ticks-labels='["1980", "1990", "2000", "2010"]'/>
     </div>
+
 
 
     <div id="topButtonsDiv" class="wrapper">
