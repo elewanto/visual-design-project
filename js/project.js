@@ -1,6 +1,8 @@
 
 // global variables
 var drawMaps = true;
+var dataLocation = "ohio";    // "franklin", "ohio", "us"
+var dataType = "life";    // "life", "opioid", "obesity"
 
 // main function called from index.html homepage
 function landingPageStart() {
@@ -13,12 +15,12 @@ function landingPageStart() {
                               .data('slider');
 
   // map to graph toggle button event listener
-  document.getElementById('graphMapButton').addEventListener('click', toggleGraphMap);  
+  document.getElementById('chartMapButton').addEventListener('click', toggleChartMap);  
 
   // map button event listeners
-  document.getElementById('USMapBut').addEventListener('click', USMap);
-  document.getElementById('OhioMapBut').addEventListener('click', OhioMap);
-  document.getElementById('FranklinMapBut').addEventListener('click', FranklinMap);
+  document.getElementById('USBut').addEventListener('click', USData);
+  document.getElementById('OhioBut').addEventListener('click', OhioData);
+  document.getElementById('FranklinBut').addEventListener('click', FranklinData);
 
   // data button event listeners
   document.getElementById('LifeBut').addEventListener('click', LifeExpectData);
@@ -42,18 +44,18 @@ function sliderChange() {
 }  
 
 
-function toggleGraphMap() {
-  console.log('clicked map-graph toggle button');
+function toggleChartMap() {
+  console.log('clicked map-chart toggle button');
 
   if (drawMaps) {    // switch to graphs
-    document.getElementById('graphMapButton').innerHTML = "&nbsp;Maps&nbsp;&nbsp;";
-    document.getElementById('graphMapButton').classList.remove('btn-outline-dark');
-    document.getElementById('graphMapButton').classList.add('btn-outline-primary');        
+    document.getElementById('chartMapButton').innerHTML = "&nbsp;Maps&nbsp;&nbsp;";
+    document.getElementById('chartMapButton').classList.remove('btn-outline-dark');
+    document.getElementById('chartMapButton').classList.add('btn-outline-primary');        
     drawMaps = false;
   } else {
-    document.getElementById('graphMapButton').innerHTML = "Charts";
-    document.getElementById('graphMapButton').classList.remove('btn-outline-primary');
-    document.getElementById('graphMapButton').classList.add('btn-outline-dark');     
+    document.getElementById('chartMapButton').innerHTML = "Charts";
+    document.getElementById('chartMapButton').classList.remove('btn-outline-primary');
+    document.getElementById('chartMapButton').classList.add('btn-outline-dark');     
     drawMaps = true;
   }
 
@@ -62,48 +64,182 @@ function toggleGraphMap() {
 
 
 // United States Map button function
-function USMap() {
-  console.log('clicked United States Map button');
-  updateButtonGroup1('USMapBut'); 
+function USData() {
+  console.log('clicked United States button');
+  dataLocation = 'us';
+  updateButtonGroup1('USBut');
+
+  if (drawMaps) {
+    // draw U.S. maps
+    if (dataType == 'life') {
+    
+    } else if (dataType == 'opioid') {
+
+    } else {  // dataType == 'obesity'
+
+    }
+
+  } else { // draw U.S. charts
+
+    if (dataType == 'life') {
+
+    } else if (dataType == 'opioid') {
+
+    } else {  // dataType == 'obesity'
+
+    }    
+  }   
 
 }
 
 
 // Ohio map button function
-function OhioMap() {
-  console.log('clicked Ohio Map button');
-  updateButtonGroup1('OhioMapBut');
+function OhioData() {
+  console.log('clicked Ohio button');
+  dataLocation = 'ohio';
+  updateButtonGroup1('OhioBut');
 
-  drawOhioMap();
+  if (drawMaps) {
+    // draw Ohio maps
+    if (dataType == 'life') {
+      drawOhioMap();
+    } else if (dataType == 'opioid') {
+
+    } else {  // dataType == 'obesity'
+
+    }
+
+  } else { // draw Ohio charts
+
+    if (dataType == 'life') {
+
+    } else if (dataType == 'opioid') {
+
+    } else {  // dataType == 'obesity'
+
+    }    
+  }  
+
+
 
 }
 
 
 // Franklin County map button function
-function FranklinMap() {
-  console.log('clicked Franklin County Map button');  
-  updateButtonGroup1('FranklinMapBut');     
+function FranklinData() {
+  console.log('clicked Franklin County button');  
+  dataLocation = 'franklin';
+  updateButtonGroup1('FranklinBut');
+
+  if (drawMaps) {
+    // draw Franklin County maps
+    if (dataType == 'life') {
+
+    } else if (dataType == 'opioid') {
+
+    } else {  // dataType == 'obesity'
+
+    }
+
+  } else { // draw Franklin County charts
+
+    if (dataType == 'life') {
+
+    } else if (dataType == 'opioid') {
+
+    } else {  // dataType == 'obesity'
+
+    }    
+  }     
 
 }
 
 
 function LifeExpectData() {
-  console.log('clicked Life Expectancy Data button'); 
-  updateButtonGroup2('LifeBut');     
+  console.log('clicked Life Expectancy Data button');
+  dataType = 'life';
+  updateButtonGroup2('LifeBut');
+
+  if (drawMaps) {
+    // draw life expectancy maps
+    if (dataLocation == 'franklin') {
+
+    } else if (dataLocation == 'ohio') {
+
+    } else {  // dataLocation == 'us'
+
+    }
+
+  } else { // draw life expectancy charts
+
+    if (dataLocation == 'franklin') {
+
+    } else if (dataLocation == 'ohio') {
+
+    } else {  // dataLocation == 'us'
+
+    }    
+  }     
 
 }
 
 
 function OpioidData() {
-  console.log('clicked Opioid Data button');  
+  console.log('clicked Opioid Data button');
+  dataType = 'opioid';
   updateButtonGroup2('OpioidBut'); 
+
+  if (drawMaps) {
+    // draw opioid maps
+    if (dataLocation == 'franklin') {
+
+    } else if (dataLocation == 'ohio') {
+
+    } else {  // dataLocation == 'us'
+
+    }
+
+  } else { // draw opioid charts
+
+    // draw opioid charts
+    if (dataLocation == 'franklin') {
+
+    } else if (dataLocation == 'ohio') {
+
+    } else {  // dataLocation == 'us'
+
+    }    
+  }  
 
 }
 
 
 function ObesityData() {
-  console.log('clicked Obesity Data button');  
-  updateButtonGroup2('ObesityBut'); 
+  console.log('clicked Obesity Data button');
+  dataType = 'obesity';
+  updateButtonGroup2('ObesityBut');
+
+  if (drawMaps) {
+    // draw obesity maps
+    if (dataLocation == 'franklin') {
+
+    } else if (dataLocation == 'ohio') {
+
+    } else {  // dataLocation == 'us'
+
+    }
+
+  } else { // draw obesity charts
+
+    // draw obesity charts
+    if (dataLocation == 'franklin') {
+
+    } else if (dataLocation == 'ohio') {
+
+    } else {  // dataLocation == 'us'
+
+    }    
+  }
 
 }
 
