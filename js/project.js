@@ -1,6 +1,6 @@
 
 // global variables
-var mapToggle = true;
+var drawMaps = true;
 
 // main function called from index.html homepage
 function landingPageStart() {
@@ -45,16 +45,16 @@ function sliderChange() {
 function toggleGraphMap() {
   console.log('clicked map-graph toggle button');
 
-  if (mapToggle) {    // switch to graphs
+  if (drawMaps) {    // switch to graphs
     document.getElementById('graphMapButton').innerHTML = "&nbsp;Maps&nbsp;&nbsp;";
     document.getElementById('graphMapButton').classList.remove('btn-outline-dark');
     document.getElementById('graphMapButton').classList.add('btn-outline-primary');        
-    mapToggle = false;
+    drawMaps = false;
   } else {
-    document.getElementById('graphMapButton').innerHTML = "Graphs";
+    document.getElementById('graphMapButton').innerHTML = "Charts";
     document.getElementById('graphMapButton').classList.remove('btn-outline-primary');
     document.getElementById('graphMapButton').classList.add('btn-outline-dark');     
-    mapToggle = true;
+    drawMaps = true;
   }
 
 
