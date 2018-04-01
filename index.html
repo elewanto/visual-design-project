@@ -8,18 +8,18 @@
     <link href="css/bootstrap-slider.min.css" rel="stylesheet"> <!-- bootstrap slider plugin css file -->          
     <link rel="stylesheet" type="text/css" href="css/index.css">    <!-- homepage css file -->   
 
-    <!-- dependent .js files -->
-    <!-- .js library packages (may not need all these) -->
-    <script type="text/javascript" src="https://d3js.org/d3.v4.min.js"></script>  <!-- D3 library -->
-    <script type="text/javascript" src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>      
-    <script type="text/javascript" src="js/libraries/jquery-3.3.1.min.js"></script> <!-- jquery library -->   
-    <script type="text/javascript" src="js/libraries/tether.min.js"></script> <!-- tether library (dependence of bootstrap) -->          
-    <script type="text/javascript" src="js/libraries/bootstrap.min.js"></script> <!-- bootstrap library -->    
-    <script type="text/javascript" src="js/libraries/bootstrap-slider.min.js"></script> <!-- bootstrap slider plugin -->     
+    <!-- .js library packages -->
+    <script src="https://d3js.org/d3.v4.min.js"></script>  <!-- D3 library -->
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>      
+    <script src="js/libraries/jquery-3.3.1.min.js"></script> <!-- jquery library -->   
+    <script src="js/libraries/tether.min.js"></script> <!-- tether library (dependence of bootstrap) -->          
+    <script src="js/libraries/bootstrap.min.js"></script> <!-- bootstrap library -->    
+    <script src="js/libraries/bootstrap-slider.min.js"></script> <!-- bootstrap slider plugin -->     
 
 
     <!-- project .js files -->
-    <script type="text/javascript" src="js/project.js"></script>    <!-- main project javascript file; contains landingPageStart() function -->
+    <script src="js/project.js"></script>    <!-- main project javascript file; contains landingPageStart() function -->
+    <script src="js/ohio-map.js"></script>  <!-- Mike's Ohio map imported to standalone .js file -->
 
 
 
@@ -28,45 +28,76 @@
 
   <body onload="landingPageStart();">
 
-
-
-
+  <div class="container h-100">
 
 
     <div id="titleDiv" class="wrapper">
       <p>Visualization of Columbus Health Trends</p>
     </div>
 
-
     <div id="mapDiv">
     </div>
 
     <div id="sliderDiv" class="wrapper">
-      <input id="mapSlider" type="text"
-              data-provide="slider"
-              data-slider-ticks="[1980, 1990, 2000, 2010]"
-              data-slider-ticks-snap-bounds="30"
-              data-slider-ticks-labels='["1980", "1990", "2000", "2010"]'/>
+      <b>1980 &nbsp;&nbsp;</b>
+      <input id="mapSlider" data-slider-id='mSlider' type="text"
+              data-provide="slider"             
+              data-slider-min="1980"
+              data-slider-max="2010"
+              data-slider-step="10"
+              data-slider-value="2010"
+              data-slider-tooltip="always"
+      />
+      <b>&nbsp;&nbsp; 2010</b>
+    </div>
+
+
+    <div class="btn-toolbar row h-100 justify-content-center align-items-center" role="toolbar" aria-label="Toolbar with button groups">
+      <div class="btn-group mr-2 row" role="group" aria-label="First group">
+        <button id="USMapBut" type="button" class="btn btn-secondary bg1">United States</button>
+        <button id="OhioMapBut" type="button" class="btn btn-secondary bg1">Ohio Counties</button>
+        <button id="FranklinMapBut" type="button" class="btn btn-secondary bg1">Franklin County</button>
+      </div>
+      <div class="btn-group mr-2" role="group" aria-label="Second group">
+        <button id="LifeBut" type="button" class="btn btn-secondary bg2">Life Expectancy</button>
+        <button id="OpioidBut" type="button" class="btn btn-secondary bg2">Opioid Use</button>
+        <button id="ObesityBut" type="button" class="btn btn-secondary bg2">Obesity</button>       
+      </div>
+    </div>
+
+    <div class="btn-toolbar row h-100 justify-content-center align-items-center" role="toolbar" aria-label="Toolbar with button groups">
+      <div class="btn-group">
+        <button id="graphMapButton" type="button" class="btn btn-outline-dark btn-lg longbutton bg3">Graphs</button>
+      </div>
     </div>
 
 
 
-    <div id="topButtonsDiv" class="wrapper">
-      <button id="USMapBut" type="button" class="btn btn-outline-primary btn-lg">United States</button>
-      <button id="OhioMapBut" type="button" class="btn btn-outline-primary btn-lg">Ohio Counties</button>
-      <button id="FranklinMapBut" type="button" class="btn btn-outline-primary btn-lg">Franklin County</button>      
+
+
+<!--  deprecated buttons
+
+
+    <div  class="wrapper" role="toolbar" aria>
+      <button  type="button" class="btn btn-outline-primary btn-lg">United States</button>
+      <button  type="button" class="btn btn-outline-primary btn-lg">Ohio Counties</button>
+      <button  type="button" class="btn btn-outline-primary btn-lg">Franklin County</button>      
     </div>
 
 
-    <div id="botButtonsDiv" class="wrapper">
-      <button id="LifeBut" type="button" class="btn btn-outline-success btn-lg">Life Expectancy Data</button>
-      <button id="OpioidBut" type="button" class="btn btn-outline-success btn-lg">Opioid Use Data</button>
-      <button id="ObesityBut" type="button" class="btn btn-outline-success btn-lg">Obesity Data</button>      
-      <button id="data4But" type="button" class="btn btn-outline-success btn-lg">Data Graphs4</button>
+    <div  class="wrapper">
+      <button  type="button" class="btn btn-outline-success btn-lg">Life Expectancy Data</button>
+      <button  type="button" class="btn btn-outline-success btn-lg">Opioid Use Data</button>
+      <button  type="button" class="btn btn-outline-success btn-lg">Obesity Data</button>      
+      <button  type="button" class="btn btn-outline-success btn-lg">Data Graphs4</button>
     </div>    
 
+    <div class="wrapper">
+      <button  type="button" class="btn btn-outline-dark btn-lg">Graphs</button>
+    </div>      
+-->
 
- 
+  </div>
   </body>
 
 </html>
