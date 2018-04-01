@@ -2,8 +2,11 @@
 // global variables
 var drawMaps = true;
 var dataLocation = "ohio";    // "franklin", "ohio", "us"
-var dataType = "life";    // "life", "opioid", "obesity"
+var dataType = "life";        // "life", "opioid", "obesity"
+var sliderValue = "2010";     //
 
+
+/************************************************************************************************/
 // main function called from index.html homepage
 function landingPageStart() {
 
@@ -34,13 +37,13 @@ function landingPageStart() {
 
 
 
-
+/************************************************************************************************/
 
 
 // Map Slider function
 function sliderChange() {
   console.log('slider used: ' + slider.getValue());
-
+  sliderValue = slider.getValue();
 }  
 
 
