@@ -1,10 +1,33 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
+
+
+<style>
+
+div.tooltip {	
+    position: absolute;			
+    text-align: center;			
+    width: 100px;					
+    height: 28px;					
+    padding: 0px;				
+    font: 12px sans-serif;		
+    border: 0px;		
+    border-radius: 8px;			
+    pointer-events: none;			
+}
+
+</style>
 <html>
 	<head>
 		<title>D3 - Geo - Ohio</title>
-		<!-- <script type="text/javascript" src="d3/d3.min.js"></script>  -->
+		<!-- Add dependency libraries  -->
+		<link href='https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.5/leaflet.css'
+			   rel='stylesheet' type='text/css'/>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.5/leaflet-src.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.9/d3.min.js"></script>
+
 		<script src="https://d3js.org/d3.v4.min.js"></script>
+		<script src="http://d3js.org/queue.v1.min.js"></script>
 
 		<style>
 			body {
@@ -12,26 +35,27 @@
 			  font-size: 14px;
 			  color: #333;
 			}
-
-			
 		</style>
 	</head>
 
-	<body>
+<body>
 
-		<svg width="1300" height="800" id="svgmap">
-		</svg>
+
+	<svg width="1300" height="1200" id="svgmap">
+	</svg>
 
         <script type="text/javascript">
 
 		// set the color for the graph
 		var color = d3.scaleLinear()
 	            	.domain([0, 35, 100])
-	.range(["#2c7bb6", "#ffff8c", "#d7191c"])
-	            .interpolate(d3.interpolateHcl);
+			.range(["#2c7bb6", "#ffff8c", "#d7191c"])
+	                .interpolate(d3.interpolateHcl);
 
-
-		    //.range(["#2c7bb6", "#00a6ca","#00ccbc","#90eb9d","#ffff8c","#f9d057","#f29e2e","#e76818","#d7191c"]);
+		// declare the properties for the div used for the tooltips
+		var div = d3.select("body").append("div")   
+		    .attr("class", "tooltip")             
+		    .style("opacity", 0); 
 
 
 		// set the size for the bar chart
@@ -44,8 +68,6 @@
 		var linearGradient = defs.append("linearGradient")
 		    .attr("id", "linear-gradient");
 
-
-
 		//Append multiple color stops by using D3's data/enter step
 		linearGradient.selectAll("stop") 
 		    .data( color.range() )                  
@@ -54,6 +76,14 @@
 		    .attr("stop-color", function(d) { return d; });
 
 
+		var g = svg.append('g');
+
+		var effectLayer = g.append('g')
+		  .classed('effect-layer', true);
+		var mapLayer = g.append('g')
+		  .classed('map-layer', true);
+
+		// import the data from json file
         	d3.json("OH_map.json", drawOhio);
 
 		// draw OHIO function
@@ -61,44 +91,71 @@
 
 			console.log(counties);
 	        	var width = 1300;
-        		var height = 1000;
+        		var height = 900;
 
 	        	var projection = d3.geoEquirectangular()
 	        		.fitExtent([[0,0], [width, height]], counties);
 	        	
-				var geoGenerator = d3.geoPath()
-					.projection(projection);
+			var geoGenerator = d3.geoPath()
+				.projection(projection);
 
-				var paths = d3.select('svg')
-					.selectAll('path')
-					.data(counties.features)
-					.enter()
-					.append('path')
-	
-					// fill colors to maps
-				      .attr("fill", function(d, i) {
+			var features = svg.append("g");
+			var paths = mapLayer
+				.selectAll('path')
+				.data(counties.features)
+				.enter()
+				.append('path')
+				.attr('d', geoGenerator)
+				// fill colors to maps
+				.attr("fill", function(d, i) {
 			    			return color(i);
-					})
-					.attr('d', geoGenerator);
+				})
+			      .on('mouseover', mouseover)
+			      .on('mouseout', mouseout);
+				
+			// add text notation to map
+			var texts = mapLayer
+				.selectAll('text')
+				.data(counties.features)
+				.enter()
+				.append('text')
+				.attr('text-anchor', 'middle')					
+				.attr('alignment-baseline', 'middle')
+				.attr('opacity', 0.5)
+				.text(function(d) {
+					return d.properties.NAME;
+				})
+				.attr('transform', function(d) {
+					var center = geoGenerator.centroid(d);
+					return 'translate (' + center + ')';
+				});
+		}
 
-				var texts = d3.select('svg')
-					.selectAll('text')
-					.data(counties.features)
-					.enter()
-					.append('text')
-					.attr('text-anchor', 'middle')
-					.attr('alignment-baseline', 'middle')
-					.attr('opacity', 0.5)
-					.text(function(d) {
-						return d.properties.NAME;
-					})
-					.attr('transform', function(d) {
-						var center = geoGenerator.centroid(d);
-						return 'translate (' + center + ')';
-					});
+		function mouseover(d){
+		  // Highlight hovered province
+		  d3.select(this)
+			 .transition()
+        		 //.duration(200)
+			.attr("opacity", 1)
+			.attr('fill', 'pink');
+
+		}
+
+		function mouseout(d){
+		  // Reset province color
+		  mapLayer.selectAll('path')
+			// fill colors to maps
+			 .transition()
+	        	.duration(200)
+			.attr("opacity", 1)	
+			.attr("fill", function(d, i) {
+				//console.log(color(i));
+	   			return color(i);
+			})
+
 		}
 
         </script>
 
-	</body>
+</body>
 </html>
