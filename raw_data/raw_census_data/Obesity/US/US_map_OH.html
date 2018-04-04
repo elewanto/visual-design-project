@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+
+<style>
+
+div.tooltip {	
+    position: absolute;			
+    text-align: center;			
+    width: 100px;					
+    height: 28px;					
+    padding: 0px;				
+    font: 12px sans-serif;		
+    border: 0px;		
+    border-radius: 8px;			
+    pointer-events: none;			
+}
+
+</style>
+<html>
+	<head>
+		<title>US Obesity</title>
+		<!-- Add scripts from D3  -->
+		<script src="https://d3js.org/d3.v4.min.js"></script>
+		<script src="http://d3js.org/queue.v1.min.js"></script>
+
+		<style>
+			body {
+			  font-family: "Helvetica Neue", Helvetica, sans-serif;
+			  font-size: 14px;
+			  color: #333;
+			}
+		</style>
+	</head>
+
+<body>
+        <script type="text/javascript">
+
+	// call the function
+	US_Obesity();
+
+	function US_Obesity(){
+
+		// remove previous svg elements	
+		d3.selectAll("svg").remove();
+
+		// set up the size for svg
+		var width = 1200;
+		var height = 600;
+
+
+		// scale to US map
+		var projection = d3.geoAlbersUsa()
+			 .translate([width/2, height/2])   
+			 .scale([1000]);          
+		
+
+		// convert GeoJSON to SVG paths
+		var path = d3.geoPath()               
+			.projection(projection);
+
+		// set the color for the degree of obesity
+		var color = d3.scaleLinear()
+			.range(["#77dd77","#fdfd96","#ffb347","#d7191c"]);
+
+
+		// construct SVG element and append map to the SVG
+		var svg = d3.select("body")
+			.append("svg")
+			.attr("width", width)
+			.attr("height", height)
+			//apend the graph title
+			.append("text")
+		      	  .attr("x", 500)
+		      	  .attr("y", 10)
+		          .attr("transform","translate(10,50)")
+		      	  .text("US Percentage of Obesity");
+		
+		// Append Div for tooltip to SVG
+		var div = d3.select("body")
+			.append("div")   
+		    	.attr("class", "tooltip")               
+		    	.style("opacity", 0);
+
+		// import data from the obesity file
+		d3.csv("obesity_rate_us.csv",  function(d, i) {
+				d['obese_degree'] = +d['obese_degree'];
+				return d;
+			},function(data) {
+
+			// set the range of the input data
+			color.domain([0,1,2,3]); 
+
+
+			// import GeoJSON data 
+			d3.json("us-states.json",function(json) {
+
+
+				// iterate each row of data in the csv file
+				for (var i = 0; i < data.length; i++) {
+
+					// extract the state
+					var state = data[i].state;
+
+					// extract the degree of obesity
+					var obese_degree = data[i].obese_degree;
+
+					// Find the corresponding state inside the GeoJSON
+					for (var j = 0; j < json.features.length; j++)  {
+						var jsonState = json.features[j].properties.name;
+
+						if (state == jsonState) {
+							// assign the obese rate to json file
+							json.features[j].properties.value = obese_degree; 
+							break;
+						}
+					}
+				}
+		
+				// assign the color for each state
+				var paths = d3.select('svg')
+					.selectAll("path")
+					.data(json.features)
+					.enter()
+					.append("path")
+					.attr("d", path)
+					.style("stroke", "#000")
+					.style("stroke-width", "1")
+					.style("fill", function(d) {
+
+						// extract the obese rate value
+						var degree = d.properties.value;
+						// assign color based on the severity
+						return color(degree);
+
+					})
+					.on('mouseover',function(d) {  
+						d3.select(this)
+						 .transition()
+			        		 .duration(1)
+			 			.attr("opacity", 0.5);
+					})
+			      		.on('mouseout', function(d, i) {		  
+						d3.select(this)
+						 .transition()
+						.duration(200)
+						.attr("opacity", 1)
+					        .style('fill', color(d.properties.value));
+					});
+
+
+				// add text notation to map
+				var texts = svg.selectAll('text')
+					.data(json.features)
+					.enter()
+					.append('text')
+					.attr('text-anchor', 'middle')
+					.attr('alignment-baseline', 'middle')
+					.attr('opacity', 0.5)
+					.attr('fontSize', '6px')
+					.text(function(d) {
+
+						return d.properties.name;
+					})
+					.attr('transform', function(d) {
+						var center = path.centroid(d);
+						if (d.properties.name != "Puerto Rico"){
+							return 'translate (' + center + ')';
+						}
+					});
+
+
+				var g = svg.append('g');
+		
+				// add legend for the svg
+				var legend = g.append("svg")
+				      	.attr("class", "legend")
+				     	.attr("width", 140)
+				   	.attr("height", 100)
+					// position for the legend position
+		          		//.attr("transform","translate(-1100,-400)")
+				   		.selectAll("g")
+				   		.data(color.domain().slice().reverse())
+				   		.enter()
+				   		.append("g")
+				     		.attr("transform", function(d, i) { return "translate(10," + i * 20 + ")"; });
+
+					// append the rectangle box for legend
+				  	legend.append("rect")
+				   		  .attr("width", 18)
+				   		  .attr("height", 18)
+				   		  .style("fill", color);
+
+					// append the legend text
+				  	legend.append("text")
+				  		 .data(["Obesity: >29%", "Obesity: <=29%", "Obesity: <=26%", "Obesity: <=23%"])
+				      	  .attr("x", 24)
+				      	  .attr("y", 9)
+				      	  .attr("dy", ".35em")
+				      	  .text(function(d) { return d; });
+			});
+
+		});
+	}
+
+	function mouseover(d){
+		  // Highlight hovered province
+		  d3.select(this)
+			 .transition()
+			 .duration(1)
+			 .attr("opacity", 0.5);
+
+	}
+
+	function mouseout(d, i){
+		  // Reset province color
+		  d3.selectAll('path')
+		    .attr("opacity", 1);
+	}
+		
+        </script>
+
+
+	<svg width="1300" height="1200" id="svgmap">
+	</svg>
+
+        <script type="text/javascript">
+
+		// set the color for the degree of obesity
+		var color = d3.scaleLinear()
+			.range(["#77dd77","#fdfd96","#ffb347","#d7191c"]);
+
+		// declare the properties for the div used for the tooltips
+		var div = d3.select("body").append("div")   
+		    .attr("class", "tooltip")             
+		    .style("opacity", 0); 
+
+
+		// set the size for the bar chart
+		var svg2 = d3.select("#svgmap")
+			.attr("transform","translate(0,0)")
+
+
+		var g = svg2.append('g');
+
+		var mapLayer = g.append('g')
+		  .classed('map-layer', true);
+
+		// import data from the obesity file
+		d3.csv("Ohio_Obesity.csv",  function(d, i) {
+				d['obese_degree'] = +d['obese_degree'];
+				return d;
+			},function(data) {
+
+				// set the range of the input data
+				color.domain([0,1,2,3]); 
+
+				d3.json("OH_map.json", function(counties) {
+
+
+					// iterate each row of data in the csv file
+					for (var i = 0; i < data.length; i++) {
+
+						// extract the state
+						var county = data[i].County;
+
+						// extract the degree of obesity
+						var obese_degree = data[i]['2004_degree'];
+
+
+						// Find the corresponding state inside the GeoJSON
+						for (var j = 0; j < counties.features.length; j++)  {
+							var jsonCounty = counties.features[j].properties.NAME;
+							//console.log(jsonState);
+							if (county == jsonCounty) {
+								// assign the obese rate to json file
+								counties.features[j].properties.value = obese_degree; 
+
+								break;
+							}
+						}
+					}
+				// set up size for the OH svg map
+				var width = 1300;
+				var height = 900;
+
+				var projection = d3.geoEquirectangular()
+					.fitExtent([[0,0], [width/1.5, height/1.5]], counties);
+				
+				var geoGenerator = d3.geoPath()
+					.projection(projection);
+
+				var paths = mapLayer
+					.selectAll('path')
+					.data(counties.features)
+					.enter()
+					.append('path')
+	
+
+					// fill colors to maps
+					.attr("fill", function(d, i) {
+
+						// extract the obese rate value
+						var degree = parseInt(d.properties.value);
+
+						// assign color based on the severity
+						return color(parseInt(d.properties.value));
+					})
+					.attr('d', geoGenerator)
+
+				      .on('mouseover', mouseover)
+				      .on('mouseout', mouseout);
+
+				// add text notation to map
+				var texts = mapLayer
+					.selectAll('text')
+					.data(counties.features)
+					.enter()
+					.append('text')
+					.attr('text-anchor', 'middle')
+					.attr('alignment-baseline', 'middle')
+					.attr('opacity', 0.5)
+					.attr('fontSize', '6px')
+					.text(function(d) {
+						return d.properties.NAME;
+					})
+					.attr('transform', function(d) {
+						var center = geoGenerator.centroid(d);
+						return 'translate (' + center + ')';
+					});
+
+				});
+				function mouseover(d){
+				  // Highlight hovered province
+				  d3.select(this)
+					 .transition()
+					 .duration(1)
+					  .attr("opacity", 0.5)
+
+				}
+
+				function mouseout(d, i){
+
+					  // Reset province color
+					  mapLayer.selectAll('path')
+					// fill colors to maps
+					 .transition()
+					.duration(200)
+					.attr("opacity", 1);	
+				}
+
+	});
+
+        </script>
+
+</body>
+</html>
