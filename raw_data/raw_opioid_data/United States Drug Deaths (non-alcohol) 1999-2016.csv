@@ -1,0 +1,980 @@
+Notes,State,State Code,Year,Year Code,MCD - Drug/Alcohol Induced,MCD - Drug/Alcohol Induced Code,Deaths,Population,Crude Rate
+,Alabama,1,1999,1999,Drug-induced causes,D,327,4430141,7.4
+,Alabama,1,2000,2000,Drug-induced causes,D,470,4447100,10.6
+,Alabama,1,2001,2001,Drug-induced causes,D,541,4467634,12.1
+,Alabama,1,2002,2002,Drug-induced causes,D,495,4480089,11
+,Alabama,1,2003,2003,Drug-induced causes,D,512,4503491,11.4
+,Alabama,1,2004,2004,Drug-induced causes,D,644,4530729,14.2
+,Alabama,1,2005,2005,Drug-induced causes,D,677,4569805,14.8
+,Alabama,1,2006,2006,Drug-induced causes,D,834,4628981,18
+,Alabama,1,2007,2007,Drug-induced causes,D,978,4672840,20.9
+,Alabama,1,2008,2008,Drug-induced causes,D,998,4718206,21.2
+,Alabama,1,2009,2009,Drug-induced causes,D,1104,4757938,23.2
+,Alabama,1,2010,2010,Drug-induced causes,D,1012,4779736,21.2
+,Alabama,1,2011,2011,Drug-induced causes,D,1076,4802740,22.4
+,Alabama,1,2012,2012,Drug-induced causes,D,1142,4822023,23.7
+,Alabama,1,2013,2013,Drug-induced causes,D,1167,4833722,24.1
+,Alabama,1,2014,2014,Drug-induced causes,D,1317,4849377,27.2
+,Alabama,1,2015,2015,Drug-induced causes,D,1386,4858979,28.5
+,Alabama,1,2016,2016,Drug-induced causes,D,4689,4863300,96.4
+,Alaska,2,1999,1999,Drug-induced causes,D,115,624779,18.4
+,Alaska,2,2000,2000,Drug-induced causes,D,122,626932,19.5
+,Alaska,2,2001,2001,Drug-induced causes,D,145,633714,22.9
+,Alaska,2,2002,2002,Drug-induced causes,D,142,642337,22.1
+,Alaska,2,2003,2003,Drug-induced causes,D,149,648414,23
+,Alaska,2,2004,2004,Drug-induced causes,D,156,659286,23.7
+,Alaska,2,2005,2005,Drug-induced causes,D,160,666946,24
+,Alaska,2,2006,2006,Drug-induced causes,D,162,675302,24
+,Alaska,2,2007,2007,Drug-induced causes,D,168,680300,24.7
+,Alaska,2,2008,2008,Drug-induced causes,D,248,687455,36.1
+,Alaska,2,2009,2009,Drug-induced causes,D,225,698895,32.2
+,Alaska,2,2010,2010,Drug-induced causes,D,189,710231,26.6
+,Alaska,2,2011,2011,Drug-induced causes,D,216,722718,29.9
+,Alaska,2,2012,2012,Drug-induced causes,D,234,731449,32
+,Alaska,2,2013,2013,Drug-induced causes,D,204,735132,27.8
+,Alaska,2,2014,2014,Drug-induced causes,D,755,736732,102.5
+,Alaska,2,2015,2015,Drug-induced causes,D,886,738432,120
+,Alaska,2,2016,2016,Drug-induced causes,D,966,741894,130.2
+,Arizona,4,1999,1999,Drug-induced causes,D,984,5023823,19.6
+,Arizona,4,2000,2000,Drug-induced causes,D,946,5130632,18.4
+,Arizona,4,2001,2001,Drug-induced causes,D,963,5273477,18.3
+,Arizona,4,2002,2002,Drug-induced causes,D,1049,5396255,19.4
+,Arizona,4,2003,2003,Drug-induced causes,D,1127,5510364,20.5
+,Arizona,4,2004,2004,Drug-induced causes,D,1195,5652404,21.1
+,Arizona,4,2005,2005,Drug-induced causes,D,1349,5839077,23.1
+,Arizona,4,2006,2006,Drug-induced causes,D,1485,6029141,24.6
+,Arizona,4,2007,2007,Drug-induced causes,D,1438,6167681,23.3
+,Arizona,4,2008,2008,Drug-induced causes,D,1324,6280362,21.1
+,Arizona,4,2009,2009,Drug-induced causes,D,1532,6343154,24.2
+,Arizona,4,2010,2010,Drug-induced causes,D,6686,6392017,104.6
+,Arizona,4,2011,2011,Drug-induced causes,D,6970,6482505,107.5
+,Arizona,4,2012,2012,Drug-induced causes,D,7434,6553255,113.4
+,Arizona,4,2013,2013,Drug-induced causes,D,7685,6626624,116
+,Arizona,4,2014,2014,Drug-induced causes,D,7688,6731484,114.2
+,Arizona,4,2015,2015,Drug-induced causes,D,8253,6828065,120.9
+,Arizona,4,2016,2016,Drug-induced causes,D,9013,6931071,130
+,Arkansas,5,1999,1999,Drug-induced causes,D,216,2651860,8.1
+,Arkansas,5,2000,2000,Drug-induced causes,D,296,2673400,11.1
+,Arkansas,5,2001,2001,Drug-induced causes,D,282,2691571,10.5
+,Arkansas,5,2002,2002,Drug-induced causes,D,370,2705927,13.7
+,Arkansas,5,2003,2003,Drug-induced causes,D,494,2724816,18.1
+,Arkansas,5,2004,2004,Drug-induced causes,D,582,2749686,21.2
+,Arkansas,5,2005,2005,Drug-induced causes,D,638,2781097,22.9
+,Arkansas,5,2006,2006,Drug-induced causes,D,725,2821761,25.7
+,Arkansas,5,2007,2007,Drug-induced causes,D,753,2848650,26.4
+,Arkansas,5,2008,2008,Drug-induced causes,D,4099,2874554,142.6
+,Arkansas,5,2009,2009,Drug-induced causes,D,3978,2896843,137.3
+,Arkansas,5,2010,2010,Drug-induced causes,D,3831,2915918,131.4
+,Arkansas,5,2011,2011,Drug-induced causes,D,3938,2937979,134
+,Arkansas,5,2012,2012,Drug-induced causes,D,3901,2949131,132.3
+,Arkansas,5,2013,2013,Drug-induced causes,D,3993,2959373,134.9
+,Arkansas,5,2014,2014,Drug-induced causes,D,3873,2966369,130.6
+,Arkansas,5,2015,2015,Drug-induced causes,D,4265,2978204,143.2
+,Arkansas,5,2016,2016,Drug-induced causes,D,4087,2988248,136.8
+,California,6,1999,1999,Drug-induced causes,D,6287,33499204,18.8
+,California,6,2000,2000,Drug-induced causes,D,5600,33871648,16.5
+,California,6,2001,2001,Drug-induced causes,D,4691,34479458,13.6
+,California,6,2002,2002,Drug-induced causes,D,7004,34871843,20.1
+,California,6,2003,2003,Drug-induced causes,D,7123,35253159,20.2
+,California,6,2004,2004,Drug-induced causes,D,7238,35574576,20.3
+,California,6,2005,2005,Drug-induced causes,D,7443,35827943,20.8
+,California,6,2006,2006,Drug-induced causes,D,7436,36021202,20.6
+,California,6,2007,2007,Drug-induced causes,D,7684,36250311,21.2
+,California,6,2008,2008,Drug-induced causes,D,7567,36604337,20.7
+,California,6,2009,2009,Drug-induced causes,D,7770,36961229,21
+,California,6,2010,2010,Drug-induced causes,D,7577,37253956,20.3
+,California,6,2011,2011,Drug-induced causes,D,7761,37691912,20.6
+,California,6,2012,2012,Drug-induced causes,D,7705,38041430,20.3
+,California,6,2013,2013,Drug-induced causes,D,8265,38332521,21.6
+,California,6,2014,2014,Drug-induced causes,D,8366,38802500,21.6
+,California,6,2015,2015,Drug-induced causes,D,8754,39144818,22.4
+,California,6,2016,2016,Drug-induced causes,D,9099,39250017,23.2
+,Colorado,8,1999,1999,Drug-induced causes,D,1437,4226018,34
+,Colorado,8,2000,2000,Drug-induced causes,D,1439,4301261,33.5
+,Colorado,8,2001,2001,Drug-induced causes,D,1536,4425687,34.7
+,Colorado,8,2002,2002,Drug-induced causes,D,1623,4490406,36.1
+,Colorado,8,2003,2003,Drug-induced causes,D,1690,4528732,37.3
+,Colorado,8,2004,2004,Drug-induced causes,D,1645,4575013,36
+,Colorado,8,2005,2005,Drug-induced causes,D,1842,4631888,39.8
+,Colorado,8,2006,2006,Drug-induced causes,D,1863,4720423,39.5
+,Colorado,8,2007,2007,Drug-induced causes,D,1989,4803868,41.4
+,Colorado,8,2008,2008,Drug-induced causes,D,2104,4889730,43
+,Colorado,8,2009,2009,Drug-induced causes,D,2134,4972195,42.9
+,Colorado,8,2010,2010,Drug-induced causes,D,2020,5029196,40.2
+,Colorado,8,2011,2011,Drug-induced causes,D,2046,5116796,40
+,Colorado,8,2012,2012,Drug-induced causes,D,5150,5187582,99.3
+,Colorado,8,2013,2013,Drug-induced causes,D,5701,5268367,108.2
+,Colorado,8,2014,2014,Drug-induced causes,D,4860,5355866,90.7
+,Colorado,8,2015,2015,Drug-induced causes,D,6307,5456574,115.6
+,Colorado,8,2016,2016,Drug-induced causes,D,6751,5540545,121.8
+,Connecticut,9,1999,1999,Drug-induced causes,D,470,3386401,13.9
+,Connecticut,9,2000,2000,Drug-induced causes,D,538,3405565,15.8
+,Connecticut,9,2001,2001,Drug-induced causes,D,528,3432835,15.4
+,Connecticut,9,2002,2002,Drug-induced causes,D,559,3458749,16.2
+,Connecticut,9,2003,2003,Drug-induced causes,D,517,3484336,14.8
+,Connecticut,9,2004,2004,Drug-induced causes,D,1961,3496094,56.1
+,Connecticut,9,2005,2005,Drug-induced causes,D,3323,3506956,94.8
+,Connecticut,9,2006,2006,Drug-induced causes,D,3711,3517460,105.5
+,Connecticut,9,2007,2007,Drug-induced causes,D,3914,3527270,111
+,Connecticut,9,2008,2008,Drug-induced causes,D,3774,3545579,106.4
+,Connecticut,9,2009,2009,Drug-induced causes,D,3582,3561807,100.6
+,Connecticut,9,2010,2010,Drug-induced causes,D,3456,3574097,96.7
+,Connecticut,9,2011,2011,Drug-induced causes,D,3531,3580709,98.6
+,Connecticut,9,2012,2012,Drug-induced causes,D,3368,3590347,93.8
+,Connecticut,9,2013,2013,Drug-induced causes,D,3672,3596080,102.1
+,Connecticut,9,2014,2014,Drug-induced causes,D,3521,3596677,97.9
+,Connecticut,9,2015,2015,Drug-induced causes,D,3801,3590886,105.9
+,Connecticut,9,2016,2016,Drug-induced causes,D,3965,3576452,110.9
+,Delaware,10,1999,1999,Drug-induced causes,D,101,774990,13
+,Delaware,10,2000,2000,Drug-induced causes,D,115,783600,14.7
+,Delaware,10,2001,2001,Drug-induced causes,D,132,795699,16.6
+,Delaware,10,2002,2002,Drug-induced causes,D,137,806169,17
+,Delaware,10,2003,2003,Drug-induced causes,D,206,818003,25.2
+,Delaware,10,2004,2004,Drug-induced causes,D,195,830803,23.5
+,Delaware,10,2005,2005,Drug-induced causes,D,180,845150,21.3
+,Delaware,10,2006,2006,Drug-induced causes,D,240,859268,27.9
+,Delaware,10,2007,2007,Drug-induced causes,D,1263,871749,144.9
+,Delaware,10,2008,2008,Drug-induced causes,D,1326,883874,150
+,Delaware,10,2009,2009,Drug-induced causes,D,1265,891730,141.9
+,Delaware,10,2010,2010,Drug-induced causes,D,1238,897934,137.9
+,Delaware,10,2011,2011,Drug-induced causes,D,1274,907135,140.4
+,Delaware,10,2012,2012,Drug-induced causes,D,1260,917092,137.4
+,Delaware,10,2013,2013,Drug-induced causes,D,1261,925749,136.2
+,Delaware,10,2014,2014,Drug-induced causes,D,1376,935614,147.1
+,Delaware,10,2015,2015,Drug-induced causes,D,1504,945934,159
+,Delaware,10,2016,2016,Drug-induced causes,D,1699,952065,178.5
+,District of Columbia,11,1999,1999,Drug-induced causes,D,90,570213,15.8
+,District of Columbia,11,2000,2000,Drug-induced causes,D,136,572059,23.8
+,District of Columbia,11,2001,2001,Drug-induced causes,D,168,574504,29.2
+,District of Columbia,11,2002,2002,Drug-induced causes,D,144,573158,25.1
+,District of Columbia,11,2003,2003,Drug-induced causes,D,248,568502,43.6
+,District of Columbia,11,2004,2004,Drug-induced causes,D,230,567754,40.5
+,District of Columbia,11,2005,2005,Drug-induced causes,D,381,567136,67.2
+,District of Columbia,11,2006,2006,Drug-induced causes,D,550,570681,96.4
+,District of Columbia,11,2007,2007,Drug-induced causes,D,454,574404,79
+,District of Columbia,11,2008,2008,Drug-induced causes,D,505,580236,87
+,District of Columbia,11,2009,2009,Drug-induced causes,D,423,592228,71.4
+,District of Columbia,11,2010,2010,Drug-induced causes,D,453,601723,75.3
+,District of Columbia,11,2011,2011,Drug-induced causes,D,474,617996,76.7
+,District of Columbia,11,2012,2012,Drug-induced causes,D,407,632323,64.4
+,District of Columbia,11,2013,2013,Drug-induced causes,D,475,646449,73.5
+,District of Columbia,11,2014,2014,Drug-induced causes,D,439,658893,66.6
+,District of Columbia,11,2015,2015,Drug-induced causes,D,501,672228,74.5
+,District of Columbia,11,2016,2016,Drug-induced causes,D,643,681170,94.4
+,Florida,12,1999,1999,Drug-induced causes,D,1674,15759421,10.6
+,Florida,12,2000,2000,Drug-induced causes,D,2342,15982378,14.7
+,Florida,12,2001,2001,Drug-induced causes,D,3000,16356966,18.3
+,Florida,12,2002,2002,Drug-induced causes,D,3197,16689370,19.2
+,Florida,12,2003,2003,Drug-induced causes,D,3470,17004085,20.4
+,Florida,12,2004,2004,Drug-induced causes,D,3940,17415318,22.6
+,Florida,12,2005,2005,Drug-induced causes,D,20944,17842038,117.4
+,Florida,12,2006,2006,Drug-induced causes,D,21140,18166990,116.4
+,Florida,12,2007,2007,Drug-induced causes,D,21160,18367842,115.2
+,Florida,12,2008,2008,Drug-induced causes,D,21650,18527305,116.9
+,Florida,12,2009,2009,Drug-induced causes,D,21239,18652644,113.9
+,Florida,12,2010,2010,Drug-induced causes,D,20946,18801310,111.4
+,Florida,12,2011,2011,Drug-induced causes,D,20750,19057542,108.9
+,Florida,12,2012,2012,Drug-induced causes,D,21120,19317568,109.3
+,Florida,12,2013,2013,Drug-induced causes,D,22582,19552860,115.5
+,Florida,12,2014,2014,Drug-induced causes,D,22149,19893297,111.3
+,Florida,12,2015,2015,Drug-induced causes,D,22703,20271272,112
+,Florida,12,2016,2016,Drug-induced causes,D,25105,20612439,121.8
+,Georgia,13,1999,1999,Drug-induced causes,D,528,8045965,6.6
+,Georgia,13,2000,2000,Drug-induced causes,D,897,8186453,11
+,Georgia,13,2001,2001,Drug-induced causes,D,1036,8377038,12.4
+,Georgia,13,2002,2002,Drug-induced causes,D,1079,8508256,12.7
+,Georgia,13,2003,2003,Drug-induced causes,D,1148,8622793,13.3
+,Georgia,13,2004,2004,Drug-induced causes,D,1258,8769252,14.3
+,Georgia,13,2005,2005,Drug-induced causes,D,1453,8925922,16.3
+,Georgia,13,2006,2006,Drug-induced causes,D,1537,9155813,16.8
+,Georgia,13,2007,2007,Drug-induced causes,D,1594,9349988,17
+,Georgia,13,2008,2008,Drug-induced causes,D,1663,9504843,17.5
+,Georgia,13,2009,2009,Drug-induced causes,D,1932,9620846,20.1
+,Georgia,13,2010,2010,Drug-induced causes,D,8121,9687653,83.8
+,Georgia,13,2011,2011,Drug-induced causes,D,7855,9815210,80
+,Georgia,13,2012,2012,Drug-induced causes,D,8003,9919945,80.7
+,Georgia,13,2013,2013,Drug-induced causes,D,8446,9992167,84.5
+,Georgia,13,2014,2014,Drug-induced causes,D,8743,10097343,86.6
+,Georgia,13,2015,2015,Drug-induced causes,D,9428,10214860,92.3
+,Georgia,13,2016,2016,Drug-induced causes,D,9529,10310371,92.4
+,Hawaii,15,1999,1999,Drug-induced causes,D,122,1210300,10.1
+,Hawaii,15,2000,2000,Drug-induced causes,D,129,1211537,10.6
+,Hawaii,15,2001,2001,Drug-induced causes,D,165,1225948,13.5
+,Hawaii,15,2002,2002,Drug-induced causes,D,160,1239613,12.9
+,Hawaii,15,2003,2003,Drug-induced causes,D,180,1251154,14.4
+,Hawaii,15,2004,2004,Drug-induced causes,D,210,1273569,16.5
+,Hawaii,15,2005,2005,Drug-induced causes,D,251,1292729,19.4
+,Hawaii,15,2006,2006,Drug-induced causes,D,1097,1309731,83.8
+,Hawaii,15,2007,2007,Drug-induced causes,D,1268,1315675,96.4
+,Hawaii,15,2008,2008,Drug-induced causes,D,1311,1332213,98.4
+,Hawaii,15,2009,2009,Drug-induced causes,D,1279,1346717,95
+,Hawaii,15,2010,2010,Drug-induced causes,D,1342,1360301,98.7
+,Hawaii,15,2011,2011,Drug-induced causes,D,1429,1374810,103.9
+,Hawaii,15,2012,2012,Drug-induced causes,D,1388,1392313,99.7
+,Hawaii,15,2013,2013,Drug-induced causes,D,1380,1404054,98.3
+,Hawaii,15,2014,2014,Drug-induced causes,D,1390,1419561,97.9
+,Hawaii,15,2015,2015,Drug-induced causes,D,1370,1431603,95.7
+,Hawaii,15,2016,2016,Drug-induced causes,D,1516,1428557,106.1
+,Idaho,16,1999,1999,Drug-induced causes,D,112,1275674,8.8
+,Idaho,16,2000,2000,Drug-induced causes,D,213,1293953,16.5
+,Idaho,16,2001,2001,Drug-induced causes,D,220,1319962,16.7
+,Idaho,16,2002,2002,Drug-induced causes,D,272,1340372,20.3
+,Idaho,16,2003,2003,Drug-induced causes,D,1790,1363380,131.3
+,Idaho,16,2004,2004,Drug-induced causes,D,1866,1391802,134.1
+,Idaho,16,2005,2005,Drug-induced causes,D,2129,1428241,149.1
+,Idaho,16,2006,2006,Drug-induced causes,D,2097,1468669,142.8
+,Idaho,16,2007,2007,Drug-induced causes,D,2101,1505105,139.6
+,Idaho,16,2008,2008,Drug-induced causes,D,2177,1534320,141.9
+,Idaho,16,2009,2009,Drug-induced causes,D,2347,1554439,151
+,Idaho,16,2010,2010,Drug-induced causes,D,2376,1567582,151.6
+,Idaho,16,2011,2011,Drug-induced causes,D,2458,1584985,155.1
+,Idaho,16,2012,2012,Drug-induced causes,D,2349,1595728,147.2
+,Idaho,16,2013,2013,Drug-induced causes,D,2538,1612136,157.4
+,Idaho,16,2014,2014,Drug-induced causes,D,2542,1634464,155.5
+,Idaho,16,2015,2015,Drug-induced causes,D,2615,1654930,158
+,Idaho,16,2016,2016,Drug-induced causes,D,2791,1683140,165.8
+,Illinois,17,1999,1999,Drug-induced causes,D,1486,12359020,12
+,Illinois,17,2000,2000,Drug-induced causes,D,1615,12419293,13
+,Illinois,17,2001,2001,Drug-induced causes,D,1598,12488445,12.8
+,Illinois,17,2002,2002,Drug-induced causes,D,1742,12525556,13.9
+,Illinois,17,2003,2003,Drug-induced causes,D,1622,12556006,12.9
+,Illinois,17,2004,2004,Drug-induced causes,D,1887,12589773,15
+,Illinois,17,2005,2005,Drug-induced causes,D,2008,12609903,15.9
+,Illinois,17,2006,2006,Drug-induced causes,D,2268,12643955,17.9
+,Illinois,17,2007,2007,Drug-induced causes,D,2127,12695866,16.8
+,Illinois,17,2008,2008,Drug-induced causes,D,12325,12747038,96.7
+,Illinois,17,2009,2009,Drug-induced causes,D,12038,12796778,94.1
+,Illinois,17,2010,2010,Drug-induced causes,D,11933,12830632,93
+,Illinois,17,2011,2011,Drug-induced causes,D,12174,12869257,94.6
+,Illinois,17,2012,2012,Drug-induced causes,D,12426,12875255,96.5
+,Illinois,17,2013,2013,Drug-induced causes,D,12415,12882135,96.4
+,Illinois,17,2014,2014,Drug-induced causes,D,12689,12880580,98.5
+,Illinois,17,2015,2015,Drug-induced causes,D,12693,12859995,98.7
+,Illinois,17,2016,2016,Drug-induced causes,D,13237,12801539,103.4
+,Indiana,18,1999,1999,Drug-induced causes,D,507,6044969,8.4
+,Indiana,18,2000,2000,Drug-induced causes,D,714,6080485,11.7
+,Indiana,18,2001,2001,Drug-induced causes,D,769,6127760,12.5
+,Indiana,18,2002,2002,Drug-induced causes,D,777,6155967,12.6
+,Indiana,18,2003,2003,Drug-induced causes,D,964,6196638,15.6
+,Indiana,18,2004,2004,Drug-induced causes,D,1129,6233007,18.1
+,Indiana,18,2005,2005,Drug-induced causes,D,1221,6278616,19.4
+,Indiana,18,2006,2006,Drug-induced causes,D,1293,6332669,20.4
+,Indiana,18,2007,2007,Drug-induced causes,D,1388,6379599,21.8
+,Indiana,18,2008,2008,Drug-induced causes,D,7578,6424806,117.9
+,Indiana,18,2009,2009,Drug-induced causes,D,7685,6459325,119
+,Indiana,18,2010,2010,Drug-induced causes,D,8116,6483802,125.2
+,Indiana,18,2011,2011,Drug-induced causes,D,10546,6516922,161.8
+,Indiana,18,2012,2012,Drug-induced causes,D,10837,6537334,165.8
+,Indiana,18,2013,2013,Drug-induced causes,D,11194,6570902,170.4
+,Indiana,18,2014,2014,Drug-induced causes,D,11547,6596855,175
+,Indiana,18,2015,2015,Drug-induced causes,D,11875,6619680,179.4
+,Indiana,18,2016,2016,Drug-induced causes,D,11786,6633053,177.7
+,Iowa,19,1999,1999,Drug-induced causes,D,172,2917634,5.9
+,Iowa,19,2000,2000,Drug-induced causes,D,357,2926324,12.2
+,Iowa,19,2001,2001,Drug-induced causes,D,379,2931997,12.9
+,Iowa,19,2002,2002,Drug-induced causes,D,402,2934234,13.7
+,Iowa,19,2003,2003,Drug-induced causes,D,503,2941999,17.1
+,Iowa,19,2004,2004,Drug-induced causes,D,559,2953635,18.9
+,Iowa,19,2005,2005,Drug-induced causes,D,577,2964454,19.5
+,Iowa,19,2006,2006,Drug-induced causes,D,587,2982644,19.7
+,Iowa,19,2007,2007,Drug-induced causes,D,664,2999212,22.1
+,Iowa,19,2008,2008,Drug-induced causes,D,707,3016734,23.4
+,Iowa,19,2009,2009,Drug-induced causes,D,707,3032870,23.3
+,Iowa,19,2010,2010,Drug-induced causes,D,736,3046355,24.2
+,Iowa,19,2011,2011,Drug-induced causes,D,4636,3062309,151.4
+,Iowa,19,2012,2012,Drug-induced causes,D,4970,3074186,161.7
+,Iowa,19,2013,2013,Drug-induced causes,D,5239,3090416,169.5
+,Iowa,19,2014,2014,Drug-induced causes,D,5137,3107126,165.3
+,Iowa,19,2015,2015,Drug-induced causes,D,5279,3123899,169
+,Iowa,19,2016,2016,Drug-induced causes,D,5384,3134693,171.8
+,Kansas,20,1999,1999,Drug-induced causes,D,219,2678338,8.2
+,Kansas,20,2000,2000,Drug-induced causes,D,323,2688418,12
+,Kansas,20,2001,2001,Drug-induced causes,D,393,2702162,14.5
+,Kansas,20,2002,2002,Drug-induced causes,D,424,2713535,15.6
+,Kansas,20,2003,2003,Drug-induced causes,D,456,2723004,16.7
+,Kansas,20,2004,2004,Drug-induced causes,D,524,2734373,19.2
+,Kansas,20,2005,2005,Drug-induced causes,D,4123,2745299,150.2
+,Kansas,20,2006,2006,Drug-induced causes,D,3820,2762931,138.3
+,Kansas,20,2007,2007,Drug-induced causes,D,3704,2783785,133.1
+,Kansas,20,2008,2008,Drug-induced causes,D,3776,2808076,134.5
+,Kansas,20,2009,2009,Drug-induced causes,D,3703,2832704,130.7
+,Kansas,20,2010,2010,Drug-induced causes,D,3708,2853118,130
+,Kansas,20,2011,2011,Drug-induced causes,D,3679,2871238,128.1
+,Kansas,20,2012,2012,Drug-induced causes,D,3919,2885905,135.8
+,Kansas,20,2013,2013,Drug-induced causes,D,3798,2893957,131.2
+,Kansas,20,2014,2014,Drug-induced causes,D,4057,2904021,139.7
+,Kansas,20,2015,2015,Drug-induced causes,D,4317,2911641,148.3
+,Kansas,20,2016,2016,Drug-induced causes,D,4423,2907289,152.1
+,Kentucky,21,1999,1999,Drug-induced causes,D,445,4018053,11.1
+,Kentucky,21,2000,2000,Drug-induced causes,D,592,4041769,14.6
+,Kentucky,21,2001,2001,Drug-induced causes,D,681,4068132,16.7
+,Kentucky,21,2002,2002,Drug-induced causes,D,804,4089875,19.7
+,Kentucky,21,2003,2003,Drug-induced causes,D,917,4117170,22.3
+,Kentucky,21,2004,2004,Drug-induced causes,D,957,4146101,23.1
+,Kentucky,21,2005,2005,Drug-induced causes,D,1066,4182742,25.5
+,Kentucky,21,2006,2006,Drug-induced causes,D,1114,4219239,26.4
+,Kentucky,21,2007,2007,Drug-induced causes,D,1157,4256672,27.2
+,Kentucky,21,2008,2008,Drug-induced causes,D,1268,4289878,29.6
+,Kentucky,21,2009,2009,Drug-induced causes,D,1287,4317074,29.8
+,Kentucky,21,2010,2010,Drug-induced causes,D,4753,4339367,109.5
+,Kentucky,21,2011,2011,Drug-induced causes,D,8100,4369356,185.4
+,Kentucky,21,2012,2012,Drug-induced causes,D,8463,4380415,193.2
+,Kentucky,21,2013,2013,Drug-induced causes,D,8320,4395295,189.3
+,Kentucky,21,2014,2014,Drug-induced causes,D,8846,4413457,200.4
+,Kentucky,21,2015,2015,Drug-induced causes,D,9787,4425092,221.2
+,Kentucky,21,2016,2016,Drug-induced causes,D,9895,4436974,223
+,Louisiana,22,1999,1999,Drug-induced causes,D,428,4460811,9.6
+,Louisiana,22,2000,2000,Drug-induced causes,D,2940,4468976,65.8
+,Louisiana,22,2001,2001,Drug-induced causes,D,2794,4477875,62.4
+,Louisiana,22,2002,2002,Drug-induced causes,D,2870,4497267,63.8
+,Louisiana,22,2003,2003,Drug-induced causes,D,2890,4521042,63.9
+,Louisiana,22,2004,2004,Drug-induced causes,D,2749,4552238,60.4
+,Louisiana,22,2005,2005,Drug-induced causes,D,3043,4576628,66.5
+,Louisiana,22,2006,2006,Drug-induced causes,D,2669,4302665,62
+,Louisiana,22,2007,2007,Drug-induced causes,D,2646,4375581,60.5
+,Louisiana,22,2008,2008,Drug-induced causes,D,2582,4435586,58.2
+,Louisiana,22,2009,2009,Drug-induced causes,D,2684,4491648,59.8
+,Louisiana,22,2010,2010,Drug-induced causes,D,2577,4533372,56.8
+,Louisiana,22,2011,2011,Drug-induced causes,D,2346,4574836,51.3
+,Louisiana,22,2012,2012,Drug-induced causes,D,3514,4601893,76.4
+,Louisiana,22,2013,2013,Drug-induced causes,D,5715,4625470,123.6
+,Louisiana,22,2014,2014,Drug-induced causes,D,6086,4649676,130.9
+,Louisiana,22,2015,2015,Drug-induced causes,D,6467,4670724,138.5
+,Louisiana,22,2016,2016,Drug-induced causes,D,6619,4681666,141.4
+,Maine,23,1999,1999,Drug-induced causes,D,256,1266808,20.2
+,Maine,23,2000,2000,Drug-induced causes,D,267,1274923,20.9
+,Maine,23,2001,2001,Drug-induced causes,D,283,1285692,22
+,Maine,23,2002,2002,Drug-induced causes,D,324,1295960,25
+,Maine,23,2003,2003,Drug-induced causes,D,312,1306513,23.9
+,Maine,23,2004,2004,Drug-induced causes,D,330,1313688,25.1
+,Maine,23,2005,2005,Drug-induced causes,D,409,1318787,31
+,Maine,23,2006,2006,Drug-induced causes,D,393,1323619,29.7
+,Maine,23,2007,2007,Drug-induced causes,D,370,1327040,27.9
+,Maine,23,2008,2008,Drug-induced causes,D,337,1330509,25.3
+,Maine,23,2009,2009,Drug-induced causes,D,419,1329590,31.5
+,Maine,23,2010,2010,Drug-induced causes,D,329,1328361,24.8
+,Maine,23,2011,2011,Drug-induced causes,D,408,1328188,30.7
+,Maine,23,2012,2012,Drug-induced causes,D,2401,1329192,180.6
+,Maine,23,2013,2013,Drug-induced causes,D,2705,1328302,203.6
+,Maine,23,2014,2014,Drug-induced causes,D,2576,1330089,193.7
+,Maine,23,2015,2015,Drug-induced causes,D,2894,1329328,217.7
+,Maine,23,2016,2016,Drug-induced causes,D,2980,1331479,223.8
+,Maryland,24,1999,1999,Drug-induced causes,D,903,5254509,17.2
+,Maryland,24,2000,2000,Drug-induced causes,D,932,5296486,17.6
+,Maryland,24,2001,2001,Drug-induced causes,D,959,5374691,17.8
+,Maryland,24,2002,2002,Drug-induced causes,D,1027,5440389,18.9
+,Maryland,24,2003,2003,Drug-induced causes,D,6824,5496269,124.2
+,Maryland,24,2004,2004,Drug-induced causes,D,5753,5546935,103.7
+,Maryland,24,2005,2005,Drug-induced causes,D,6593,5592379,117.9
+,Maryland,24,2006,2006,Drug-induced causes,D,6374,5627367,113.3
+,Maryland,24,2007,2007,Drug-induced causes,D,6234,5653408,110.3
+,Maryland,24,2008,2008,Drug-induced causes,D,6120,5684965,107.7
+,Maryland,24,2009,2009,Drug-induced causes,D,6084,5730388,106.2
+,Maryland,24,2010,2010,Drug-induced causes,D,5941,5773552,102.9
+,Maryland,24,2011,2011,Drug-induced causes,D,5724,5828289,98.2
+,Maryland,24,2012,2012,Drug-induced causes,D,5855,5884563,99.5
+,Maryland,24,2013,2013,Drug-induced causes,D,5961,5928814,100.5
+,Maryland,24,2014,2014,Drug-induced causes,D,6077,5976407,101.7
+,Maryland,24,2015,2015,Drug-induced causes,D,6148,6006401,102.4
+,Maryland,24,2016,2016,Drug-induced causes,D,6978,6016447,116
+,Massachusetts,25,1999,1999,Drug-induced causes,D,652,6317345,10.3
+,Massachusetts,25,2000,2000,Drug-induced causes,D,726,6349097,11.4
+,Massachusetts,25,2001,2001,Drug-induced causes,D,967,6397634,15.1
+,Massachusetts,25,2002,2002,Drug-induced causes,D,958,6417206,14.9
+,Massachusetts,25,2003,2003,Drug-induced causes,D,1138,6422565,17.7
+,Massachusetts,25,2004,2004,Drug-induced causes,D,988,6412281,15.4
+,Massachusetts,25,2005,2005,Drug-induced causes,D,1167,6403290,18.2
+,Massachusetts,25,2006,2006,Drug-induced causes,D,1396,6410084,21.8
+,Massachusetts,25,2007,2007,Drug-induced causes,D,1398,6431559,21.7
+,Massachusetts,25,2008,2008,Drug-induced causes,D,1297,6468967,20
+,Massachusetts,25,2009,2009,Drug-induced causes,D,1288,6517613,19.8
+,Massachusetts,25,2010,2010,Drug-induced causes,D,1244,6547629,19
+,Massachusetts,25,2011,2011,Drug-induced causes,D,1509,6587536,22.9
+,Massachusetts,25,2012,2012,Drug-induced causes,D,1441,6646144,21.7
+,Massachusetts,25,2013,2013,Drug-induced causes,D,1711,6692824,25.6
+,Massachusetts,25,2014,2014,Drug-induced causes,D,2744,6745408,40.7
+,Massachusetts,25,2015,2015,Drug-induced causes,D,6967,6794422,102.5
+,Massachusetts,25,2016,2016,Drug-induced causes,D,7904,6811779,116
+,Michigan,26,1999,1999,Drug-induced causes,D,1163,9897116,11.8
+,Michigan,26,2000,2000,Drug-induced causes,D,1516,9938444,15.3
+,Michigan,26,2001,2001,Drug-induced causes,D,1636,9991120,16.4
+,Michigan,26,2002,2002,Drug-induced causes,D,1811,10015710,18.1
+,Michigan,26,2003,2003,Drug-induced causes,D,1844,10041152,18.4
+,Michigan,26,2004,2004,Drug-induced causes,D,12435,10055315,123.7
+,Michigan,26,2005,2005,Drug-induced causes,D,14838,10051137,147.6
+,Michigan,26,2006,2006,Drug-induced causes,D,15234,10036081,151.8
+,Michigan,26,2007,2007,Drug-induced causes,D,15227,10001284,152.3
+,Michigan,26,2008,2008,Drug-induced causes,D,15441,9946889,155.2
+,Michigan,26,2009,2009,Drug-induced causes,D,15512,9901591,156.7
+,Michigan,26,2010,2010,Drug-induced causes,D,15538,9883640,157.2
+,Michigan,26,2011,2011,Drug-induced causes,D,16104,9876187,163.1
+,Michigan,26,2012,2012,Drug-induced causes,D,16054,9883360,162.4
+,Michigan,26,2013,2013,Drug-induced causes,D,16791,9895622,169.7
+,Michigan,26,2014,2014,Drug-induced causes,D,17237,9909877,173.9
+,Michigan,26,2015,2015,Drug-induced causes,D,14586,9922576,147
+,Michigan,26,2016,2016,Drug-induced causes,D,18203,9928300,183.3
+,Minnesota,27,1999,1999,Drug-induced causes,D,662,4873481,13.6
+,Minnesota,27,2000,2000,Drug-induced causes,D,703,4919479,14.3
+,Minnesota,27,2001,2001,Drug-induced causes,D,755,4982796,15.2
+,Minnesota,27,2002,2002,Drug-induced causes,D,799,5018935,15.9
+,Minnesota,27,2003,2003,Drug-induced causes,D,897,5053572,17.7
+,Minnesota,27,2004,2004,Drug-induced causes,D,958,5087713,18.8
+,Minnesota,27,2005,2005,Drug-induced causes,D,1092,5119598,21.3
+,Minnesota,27,2006,2006,Drug-induced causes,D,1117,5163555,21.6
+,Minnesota,27,2007,2007,Drug-induced causes,D,1032,5207203,19.8
+,Minnesota,27,2008,2008,Drug-induced causes,D,1127,5247018,21.5
+,Minnesota,27,2009,2009,Drug-induced causes,D,1181,5281203,22.4
+,Minnesota,27,2010,2010,Drug-induced causes,D,1218,5303925,23
+,Minnesota,27,2011,2011,Drug-induced causes,D,4858,5344861,90.9
+,Minnesota,27,2012,2012,Drug-induced causes,D,5933,5379139,110.3
+,Minnesota,27,2013,2013,Drug-induced causes,D,6656,5420380,122.8
+,Minnesota,27,2014,2014,Drug-induced causes,D,7148,5457173,131
+,Minnesota,27,2015,2015,Drug-induced causes,D,7385,5489594,134.5
+,Minnesota,27,2016,2016,Drug-induced causes,D,7834,5519952,141.9
+,Mississippi,28,1999,1999,Drug-induced causes,D,185,2828408,6.5
+,Mississippi,28,2000,2000,Drug-induced causes,D,230,2844658,8.1
+,Mississippi,28,2001,2001,Drug-induced causes,D,272,2852994,9.5
+,Mississippi,28,2002,2002,Drug-induced causes,D,339,2858681,11.9
+,Mississippi,28,2003,2003,Drug-induced causes,D,348,2868312,12.1
+,Mississippi,28,2004,2004,Drug-induced causes,D,411,2889010,14.2
+,Mississippi,28,2005,2005,Drug-induced causes,D,425,2905943,14.6
+,Mississippi,28,2006,2006,Drug-induced causes,D,552,2904978,19
+,Mississippi,28,2007,2007,Drug-induced causes,D,513,2928350,17.5
+,Mississippi,28,2008,2008,Drug-induced causes,D,500,2947806,17
+,Mississippi,28,2009,2009,Drug-induced causes,D,537,2958774,18.1
+,Mississippi,28,2010,2010,Drug-induced causes,D,551,2967297,18.6
+,Mississippi,28,2011,2011,Drug-induced causes,D,548,2978512,18.4
+,Mississippi,28,2012,2012,Drug-induced causes,D,1660,2984926,55.6
+,Mississippi,28,2013,2013,Drug-induced causes,D,1651,2991207,55.2
+,Mississippi,28,2014,2014,Drug-induced causes,D,1634,2994079,54.6
+,Mississippi,28,2015,2015,Drug-induced causes,D,1661,2992333,55.5
+,Mississippi,28,2016,2016,Drug-induced causes,D,1627,2988726,54.4
+,Missouri,29,1999,1999,Drug-induced causes,D,634,5561948,11.4
+,Missouri,29,2000,2000,Drug-induced causes,D,810,5595211,14.5
+,Missouri,29,2001,2001,Drug-induced causes,D,859,5641142,15.2
+,Missouri,29,2002,2002,Drug-induced causes,D,917,5674825,16.2
+,Missouri,29,2003,2003,Drug-induced causes,D,1048,5709403,18.4
+,Missouri,29,2004,2004,Drug-induced causes,D,1038,5747741,18.1
+,Missouri,29,2005,2005,Drug-induced causes,D,1270,5790300,21.9
+,Missouri,29,2006,2006,Drug-induced causes,D,1345,5842704,23
+,Missouri,29,2007,2007,Drug-induced causes,D,1309,5887612,22.2
+,Missouri,29,2008,2008,Drug-induced causes,D,1421,5923916,24
+,Missouri,29,2009,2009,Drug-induced causes,D,1511,5961088,25.3
+,Missouri,29,2010,2010,Drug-induced causes,D,8714,5988927,145.5
+,Missouri,29,2011,2011,Drug-induced causes,D,9121,6010688,151.7
+,Missouri,29,2012,2012,Drug-induced causes,D,9628,6021988,159.9
+,Missouri,29,2013,2013,Drug-induced causes,D,10164,6044171,168.2
+,Missouri,29,2014,2014,Drug-induced causes,D,10309,6063589,170
+,Missouri,29,2015,2015,Drug-induced causes,D,10548,6083672,173.4
+,Missouri,29,2016,2016,Drug-induced causes,D,11214,6093000,184
+,Montana,30,1999,1999,Drug-induced causes,D,119,897507,13.3
+,Montana,30,2000,2000,Drug-induced causes,D,184,902195,20.4
+,Montana,30,2001,2001,Drug-induced causes,D,215,906961,23.7
+,Montana,30,2002,2002,Drug-induced causes,D,237,911667,26
+,Montana,30,2003,2003,Drug-induced causes,D,1717,919630,186.7
+,Montana,30,2004,2004,Drug-induced causes,D,1779,930009,191.3
+,Montana,30,2005,2005,Drug-induced causes,D,1886,940102,200.6
+,Montana,30,2006,2006,Drug-induced causes,D,1817,952692,190.7
+,Montana,30,2007,2007,Drug-induced causes,D,1877,964706,194.6
+,Montana,30,2008,2008,Drug-induced causes,D,1985,976415,203.3
+,Montana,30,2009,2009,Drug-induced causes,D,1839,983982,186.9
+,Montana,30,2010,2010,Drug-induced causes,D,1858,989415,187.8
+,Montana,30,2011,2011,Drug-induced causes,D,2008,998199,201.2
+,Montana,30,2012,2012,Drug-induced causes,D,1827,1005141,181.8
+,Montana,30,2013,2013,Drug-induced causes,D,1942,1015165,191.3
+,Montana,30,2014,2014,Drug-induced causes,D,1969,1023579,192.4
+,Montana,30,2015,2015,Drug-induced causes,D,2104,1032949,203.7
+,Montana,30,2016,2016,Drug-induced causes,D,2129,1042520,204.2
+,Nebraska,31,1999,1999,Drug-induced causes,D,72,1704764,4.2
+,Nebraska,31,2000,2000,Drug-induced causes,D,132,1711263,7.7
+,Nebraska,31,2001,2001,Drug-induced causes,D,157,1719836,9.1
+,Nebraska,31,2002,2002,Drug-induced causes,D,173,1728292,10
+,Nebraska,31,2003,2003,Drug-induced causes,D,2208,1738643,127
+,Nebraska,31,2004,2004,Drug-induced causes,D,2083,1749370,119.1
+,Nebraska,31,2005,2005,Drug-induced causes,D,2537,1761497,144
+,Nebraska,31,2006,2006,Drug-induced causes,D,2516,1772693,141.9
+,Nebraska,31,2007,2007,Drug-induced causes,D,2626,1783440,147.2
+,Nebraska,31,2008,2008,Drug-induced causes,D,2682,1796378,149.3
+,Nebraska,31,2009,2009,Drug-induced causes,D,2668,1812683,147.2
+,Nebraska,31,2010,2010,Drug-induced causes,D,2712,1826341,148.5
+,Nebraska,31,2011,2011,Drug-induced causes,D,2780,1842641,150.9
+,Nebraska,31,2012,2012,Drug-induced causes,D,2777,1855525,149.7
+,Nebraska,31,2013,2013,Drug-induced causes,D,2764,1868516,147.9
+,Nebraska,31,2014,2014,Drug-induced causes,D,2822,1881503,150
+,Nebraska,31,2015,2015,Drug-induced causes,D,2859,1896190,150.8
+,Nebraska,31,2016,2016,Drug-induced causes,D,2814,1907116,147.6
+,Nevada,32,1999,1999,Drug-induced causes,D,330,1934718,17.1
+,Nevada,32,2000,2000,Drug-induced causes,D,411,1998257,20.6
+,Nevada,32,2001,2001,Drug-induced causes,D,401,2098399,19.1
+,Nevada,32,2002,2002,Drug-induced causes,D,517,2173791,23.8
+,Nevada,32,2003,2003,Drug-induced causes,D,566,2248850,25.2
+,Nevada,32,2004,2004,Drug-induced causes,D,634,2346222,27
+,Nevada,32,2005,2005,Drug-induced causes,D,693,2432143,28.5
+,Nevada,32,2006,2006,Drug-induced causes,D,679,2522658,26.9
+,Nevada,32,2007,2007,Drug-induced causes,D,746,2601072,28.7
+,Nevada,32,2008,2008,Drug-induced causes,D,2134,2653630,80.4
+,Nevada,32,2009,2009,Drug-induced causes,D,2399,2684665,89.4
+,Nevada,32,2010,2010,Drug-induced causes,D,2449,2700551,90.7
+,Nevada,32,2011,2011,Drug-induced causes,D,2521,2723322,92.6
+,Nevada,32,2012,2012,Drug-induced causes,D,2490,2758931,90.3
+,Nevada,32,2013,2013,Drug-induced causes,D,2528,2790136,90.6
+,Nevada,32,2014,2014,Drug-induced causes,D,2765,2839099,97.4
+,Nevada,32,2015,2015,Drug-induced causes,D,3281,2890845,113.5
+,Nevada,32,2016,2016,Drug-induced causes,D,4179,2940058,142.1
+,New Hampshire,33,1999,1999,Drug-induced causes,D,195,1222014,16
+,New Hampshire,33,2000,2000,Drug-induced causes,D,188,1235786,15.2
+,New Hampshire,33,2001,2001,Drug-induced causes,D,228,1255517,18.2
+,New Hampshire,33,2002,2002,Drug-induced causes,D,281,1269089,22.1
+,New Hampshire,33,2003,2003,Drug-induced causes,D,295,1279840,23
+,New Hampshire,33,2004,2004,Drug-induced causes,D,1453,1290121,112.6
+,New Hampshire,33,2005,2005,Drug-induced causes,D,2035,1298492,156.7
+,New Hampshire,33,2006,2006,Drug-induced causes,D,1963,1308389,150
+,New Hampshire,33,2007,2007,Drug-induced causes,D,2070,1312540,157.7
+,New Hampshire,33,2008,2008,Drug-induced causes,D,1963,1315906,149.2
+,New Hampshire,33,2009,2009,Drug-induced causes,D,2049,1316102,155.7
+,New Hampshire,33,2010,2010,Drug-induced causes,D,1882,1316470,143
+,New Hampshire,33,2011,2011,Drug-induced causes,D,2099,1318194,159.2
+,New Hampshire,33,2012,2012,Drug-induced causes,D,2075,1320718,157.1
+,New Hampshire,33,2013,2013,Drug-induced causes,D,2246,1323459,169.7
+,New Hampshire,33,2014,2014,Drug-induced causes,D,2380,1326813,179.4
+,New Hampshire,33,2015,2015,Drug-induced causes,D,2499,1330608,187.8
+,New Hampshire,33,2016,2016,Drug-induced causes,D,2556,1334795,191.5
+,New Jersey,34,1999,1999,Drug-induced causes,D,1078,8359592,12.9
+,New Jersey,34,2000,2000,Drug-induced causes,D,1192,8414350,14.2
+,New Jersey,34,2001,2001,Drug-induced causes,D,1158,8492671,13.6
+,New Jersey,34,2002,2002,Drug-induced causes,D,1258,8552643,14.7
+,New Jersey,34,2003,2003,Drug-induced causes,D,1219,8601402,14.2
+,New Jersey,34,2004,2004,Drug-induced causes,D,8756,8634561,101.4
+,New Jersey,34,2005,2005,Drug-induced causes,D,10651,8651974,123.1
+,New Jersey,34,2006,2006,Drug-induced causes,D,10597,8661679,122.3
+,New Jersey,34,2007,2007,Drug-induced causes,D,10357,8677885,119.3
+,New Jersey,34,2008,2008,Drug-induced causes,D,10689,8711090,122.7
+,New Jersey,34,2009,2009,Drug-induced causes,D,9862,8755602,112.6
+,New Jersey,34,2010,2010,Drug-induced causes,D,10378,8791894,118
+,New Jersey,34,2011,2011,Drug-induced causes,D,10403,8821155,117.9
+,New Jersey,34,2012,2012,Drug-induced causes,D,10403,8864590,117.4
+,New Jersey,34,2013,2013,Drug-induced causes,D,10674,8899339,119.9
+,New Jersey,34,2014,2014,Drug-induced causes,D,10224,8938175,114.4
+,New Jersey,34,2015,2015,Drug-induced causes,D,10207,8958013,113.9
+,New Jersey,34,2016,2016,Drug-induced causes,D,10725,8944469,119.9
+,New Mexico,35,1999,1999,Drug-induced causes,D,382,1808082,21.1
+,New Mexico,35,2000,2000,Drug-induced causes,D,459,1819046,25.2
+,New Mexico,35,2001,2001,Drug-induced causes,D,438,1831690,23.9
+,New Mexico,35,2002,2002,Drug-induced causes,D,479,1855309,25.8
+,New Mexico,35,2003,2003,Drug-induced causes,D,647,1877574,34.5
+,New Mexico,35,2004,2004,Drug-induced causes,D,565,1903808,29.7
+,New Mexico,35,2005,2005,Drug-induced causes,D,664,1932274,34.4
+,New Mexico,35,2006,2006,Drug-induced causes,D,2507,1962137,127.8
+,New Mexico,35,2007,2007,Drug-induced causes,D,2638,1990070,132.6
+,New Mexico,35,2008,2008,Drug-induced causes,D,2787,2010662,138.6
+,New Mexico,35,2009,2009,Drug-induced causes,D,2550,2036802,125.2
+,New Mexico,35,2010,2010,Drug-induced causes,D,2839,2059179,137.9
+,New Mexico,35,2011,2011,Drug-induced causes,D,2814,2082224,135.1
+,New Mexico,35,2012,2012,Drug-induced causes,D,2721,2085538,130.5
+,New Mexico,35,2013,2013,Drug-induced causes,D,2728,2085287,130.8
+,New Mexico,35,2014,2014,Drug-induced causes,D,2842,2085572,136.3
+,New Mexico,35,2015,2015,Drug-induced causes,D,2838,2085109,136.1
+,New Mexico,35,2016,2016,Drug-induced causes,D,2817,2081015,135.4
+,New York,36,1999,1999,Drug-induced causes,D,2047,18882725,10.8
+,New York,36,2000,2000,Drug-induced causes,D,2278,18976457,12
+,New York,36,2001,2001,Drug-induced causes,D,2832,19082838,14.8
+,New York,36,2002,2002,Drug-induced causes,D,2699,19137800,14.1
+,New York,36,2003,2003,Drug-induced causes,D,14525,19175939,75.7
+,New York,36,2004,2004,Drug-induced causes,D,15831,19171567,82.6
+,New York,36,2005,2005,Drug-induced causes,D,16397,19132610,85.7
+,New York,36,2006,2006,Drug-induced causes,D,16961,19104631,88.8
+,New York,36,2007,2007,Drug-induced causes,D,17402,19132335,91
+,New York,36,2008,2008,Drug-induced causes,D,17669,19212436,92
+,New York,36,2009,2009,Drug-induced causes,D,17501,19307066,90.6
+,New York,36,2010,2010,Drug-induced causes,D,17678,19378102,91.2
+,New York,36,2011,2011,Drug-induced causes,D,18339,19465197,94.2
+,New York,36,2012,2012,Drug-induced causes,D,18598,19570261,95
+,New York,36,2013,2013,Drug-induced causes,D,18991,19651127,96.6
+,New York,36,2014,2014,Drug-induced causes,D,19071,19746227,96.6
+,New York,36,2015,2015,Drug-induced causes,D,19868,19795791,100.4
+,New York,36,2016,2016,Drug-induced causes,D,20651,19745289,104.6
+,North Carolina,37,1999,1999,Drug-induced causes,D,1349,7949361,17
+,North Carolina,37,2000,2000,Drug-induced causes,D,2168,8049313,26.9
+,North Carolina,37,2001,2001,Drug-induced causes,D,2141,8210122,26.1
+,North Carolina,37,2002,2002,Drug-induced causes,D,2360,8326201,28.3
+,North Carolina,37,2003,2003,Drug-induced causes,D,2700,8422501,32.1
+,North Carolina,37,2004,2004,Drug-induced causes,D,2823,8553152,33
+,North Carolina,37,2005,2005,Drug-induced causes,D,3115,8705407,35.8
+,North Carolina,37,2006,2006,Drug-induced causes,D,3201,8917270,35.9
+,North Carolina,37,2007,2007,Drug-induced causes,D,3334,9118037,36.6
+,North Carolina,37,2008,2008,Drug-induced causes,D,3456,9309449,37.1
+,North Carolina,37,2009,2009,Drug-induced causes,D,3443,9449566,36.4
+,North Carolina,37,2010,2010,Drug-induced causes,D,3371,9535483,35.4
+,North Carolina,37,2011,2011,Drug-induced causes,D,3429,9656401,35.5
+,North Carolina,37,2012,2012,Drug-induced causes,D,3637,9752073,37.3
+,North Carolina,37,2013,2013,Drug-induced causes,D,3753,9848060,38.1
+,North Carolina,37,2014,2014,Drug-induced causes,D,12981,9943964,130.5
+,North Carolina,37,2015,2015,Drug-induced causes,D,13343,10042802,132.9
+,North Carolina,37,2016,2016,Drug-induced causes,D,14167,10146788,139.6
+,North Dakota,38,1999,1999,Drug-induced causes,D,650,644259,100.9
+,North Dakota,38,2000,2000,Drug-induced causes,D,793,642200,123.5
+,North Dakota,38,2001,2001,Drug-induced causes,D,823,639062,128.8
+,North Dakota,38,2002,2002,Drug-induced causes,D,903,638168,141.5
+,North Dakota,38,2003,2003,Drug-induced causes,D,1014,638817,158.7
+,North Dakota,38,2004,2004,Drug-induced causes,D,958,644705,148.6
+,North Dakota,38,2005,2005,Drug-induced causes,D,951,646089,147.2
+,North Dakota,38,2006,2006,Drug-induced causes,D,1001,649422,154.1
+,North Dakota,38,2007,2007,Drug-induced causes,D,886,652822,135.7
+,North Dakota,38,2008,2008,Drug-induced causes,D,1200,657569,182.5
+,North Dakota,38,2009,2009,Drug-induced causes,D,1174,664968,176.5
+,North Dakota,38,2010,2010,Drug-induced causes,D,1103,672591,164
+,North Dakota,38,2011,2011,Drug-induced causes,D,1132,683932,165.5
+,North Dakota,38,2012,2012,Drug-induced causes,D,1118,699628,159.8
+,North Dakota,38,2013,2013,Drug-induced causes,D,1190,723393,164.5
+,North Dakota,38,2014,2014,Drug-induced causes,D,1150,739482,155.5
+,North Dakota,38,2015,2015,Drug-induced causes,D,1228,756927,162.2
+,North Dakota,38,2016,2016,Drug-induced causes,D,1240,757952,163.6
+,Ohio,39,1999,1999,Drug-induced causes,D,1396,11335454,12.3
+,Ohio,39,2000,2000,Drug-induced causes,D,1739,11353140,15.3
+,Ohio,39,2001,2001,Drug-induced causes,D,1915,11387404,16.8
+,Ohio,39,2002,2002,Drug-induced causes,D,2115,11407889,18.5
+,Ohio,39,2003,2003,Drug-induced causes,D,2132,11434788,18.6
+,Ohio,39,2004,2004,Drug-induced causes,D,2764,11452251,24.1
+,Ohio,39,2005,2005,Drug-induced causes,D,3033,11463320,26.5
+,Ohio,39,2006,2006,Drug-induced causes,D,3208,11481213,27.9
+,Ohio,39,2007,2007,Drug-induced causes,D,16901,11500468,147
+,Ohio,39,2008,2008,Drug-induced causes,D,18550,11515391,161.1
+,Ohio,39,2009,2009,Drug-induced causes,D,17296,11528896,150
+,Ohio,39,2010,2010,Drug-induced causes,D,17997,11536504,156
+,Ohio,39,2011,2011,Drug-induced causes,D,18384,11544951,159.2
+,Ohio,39,2012,2012,Drug-induced causes,D,18890,11544225,163.6
+,Ohio,39,2013,2013,Drug-induced causes,D,19215,11570808,166.1
+,Ohio,39,2014,2014,Drug-induced causes,D,19633,11594163,169.3
+,Ohio,39,2015,2015,Drug-induced causes,D,21135,11613423,182
+,Ohio,39,2016,2016,Drug-induced causes,D,21907,11614373,188.6
+,Oklahoma,40,1999,1999,Drug-induced causes,D,325,3437147,9.5
+,Oklahoma,40,2000,2000,Drug-induced causes,D,496,3450654,14.4
+,Oklahoma,40,2001,2001,Drug-induced causes,D,547,3467100,15.8
+,Oklahoma,40,2002,2002,Drug-induced causes,D,532,3489080,15.2
+,Oklahoma,40,2003,2003,Drug-induced causes,D,816,3504892,23.3
+,Oklahoma,40,2004,2004,Drug-induced causes,D,4873,3525233,138.2
+,Oklahoma,40,2005,2005,Drug-induced causes,D,5687,3548597,160.3
+,Oklahoma,40,2006,2006,Drug-induced causes,D,5609,3594090,156.1
+,Oklahoma,40,2007,2007,Drug-induced causes,D,6097,3634349,167.8
+,Oklahoma,40,2008,2008,Drug-induced causes,D,5444,3668976,148.4
+,Oklahoma,40,2009,2009,Drug-induced causes,D,5291,3717572,142.3
+,Oklahoma,40,2010,2010,Drug-induced causes,D,5451,3751351,145.3
+,Oklahoma,40,2011,2011,Drug-induced causes,D,5943,3791508,156.7
+,Oklahoma,40,2012,2012,Drug-induced causes,D,5545,3814820,145.4
+,Oklahoma,40,2013,2013,Drug-induced causes,D,4982,3850568,129.4
+,Oklahoma,40,2014,2014,Drug-induced causes,D,4900,3878051,126.4
+,Oklahoma,40,2015,2015,Drug-induced causes,D,4957,3911338,126.7
+,Oklahoma,40,2016,2016,Drug-induced causes,D,5006,3923561,127.6
+,Oregon,41,1999,1999,Drug-induced causes,D,531,3393941,15.6
+,Oregon,41,2000,2000,Drug-induced causes,D,599,3421399,17.5
+,Oregon,41,2001,2001,Drug-induced causes,D,655,3467937,18.9
+,Oregon,41,2002,2002,Drug-induced causes,D,803,3513424,22.9
+,Oregon,41,2003,2003,Drug-induced causes,D,7138,3547376,201.2
+,Oregon,41,2004,2004,Drug-induced causes,D,6976,3569463,195.4
+,Oregon,41,2005,2005,Drug-induced causes,D,7282,3613202,201.5
+,Oregon,41,2006,2006,Drug-induced causes,D,7323,3670883,199.5
+,Oregon,41,2007,2007,Drug-induced causes,D,7325,3722417,196.8
+,Oregon,41,2008,2008,Drug-induced causes,D,7633,3768748,202.5
+,Oregon,41,2009,2009,Drug-induced causes,D,7429,3808600,195.1
+,Oregon,41,2010,2010,Drug-induced causes,D,7450,3831074,194.5
+,Oregon,41,2011,2011,Drug-induced causes,D,7747,3871859,200.1
+,Oregon,41,2012,2012,Drug-induced causes,D,7530,3899353,193.1
+,Oregon,41,2013,2013,Drug-induced causes,D,7822,3930065,199
+,Oregon,41,2014,2014,Drug-induced causes,D,7684,3970239,193.5
+,Oregon,41,2015,2015,Drug-induced causes,D,8068,4028977,200.2
+,Oregon,41,2016,2016,Drug-induced causes,D,8152,4093465,199.1
+,Pennsylvania,42,1999,1999,Drug-induced causes,D,1650,12263805,13.5
+,Pennsylvania,42,2000,2000,Drug-induced causes,D,1829,12281054,14.9
+,Pennsylvania,42,2001,2001,Drug-induced causes,D,1662,12298970,13.5
+,Pennsylvania,42,2002,2002,Drug-induced causes,D,1875,12331031,15.2
+,Pennsylvania,42,2003,2003,Drug-induced causes,D,2265,12374658,18.3
+,Pennsylvania,42,2004,2004,Drug-induced causes,D,2466,12410722,19.9
+,Pennsylvania,42,2005,2005,Drug-induced causes,D,2631,12449990,21.1
+,Pennsylvania,42,2006,2006,Drug-induced causes,D,13553,12510809,108.3
+,Pennsylvania,42,2007,2007,Drug-induced causes,D,14483,12563937,115.3
+,Pennsylvania,42,2008,2008,Drug-induced causes,D,14867,12612285,117.9
+,Pennsylvania,42,2009,2009,Drug-induced causes,D,14510,12666858,114.6
+,Pennsylvania,42,2010,2010,Drug-induced causes,D,14111,12702379,111.1
+,Pennsylvania,42,2011,2011,Drug-induced causes,D,14490,12742886,113.7
+,Pennsylvania,42,2012,2012,Drug-induced causes,D,16008,12763536,125.4
+,Pennsylvania,42,2013,2013,Drug-induced causes,D,16602,12773801,130
+,Pennsylvania,42,2014,2014,Drug-induced causes,D,16610,12787209,129.9
+,Pennsylvania,42,2015,2015,Drug-induced causes,D,17531,12802503,136.9
+,Pennsylvania,42,2016,2016,Drug-induced causes,D,18749,12784227,146.7
+,Rhode Island,44,1999,1999,Drug-induced causes,D,150,1040402,14.4
+,Rhode Island,44,2000,2000,Drug-induced causes,D,225,1048319,21.5
+,Rhode Island,44,2001,2001,Drug-induced causes,D,251,1057142,23.7
+,Rhode Island,44,2002,2002,Drug-induced causes,D,231,1065995,21.7
+,Rhode Island,44,2003,2003,Drug-induced causes,D,274,1071342,25.6
+,Rhode Island,44,2004,2004,Drug-induced causes,D,226,1074579,21
+,Rhode Island,44,2005,2005,Drug-induced causes,D,305,1067916,28.6
+,Rhode Island,44,2006,2006,Drug-induced causes,D,1564,1063096,147.1
+,Rhode Island,44,2007,2007,Drug-induced causes,D,1505,1057315,142.3
+,Rhode Island,44,2008,2008,Drug-induced causes,D,1522,1055003,144.3
+,Rhode Island,44,2009,2009,Drug-induced causes,D,1509,1053646,143.2
+,Rhode Island,44,2010,2010,Drug-induced causes,D,1592,1052567,151.2
+,Rhode Island,44,2011,2011,Drug-induced causes,D,1662,1051302,158.1
+,Rhode Island,44,2012,2012,Drug-induced causes,D,1719,1050292,163.7
+,Rhode Island,44,2013,2013,Drug-induced causes,D,1770,1051511,168.3
+,Rhode Island,44,2014,2014,Drug-induced causes,D,1735,1055173,164.4
+,Rhode Island,44,2015,2015,Drug-induced causes,D,1821,1056298,172.4
+,Rhode Island,44,2016,2016,Drug-induced causes,D,1673,1056426,158.4
+,South Carolina,45,1999,1999,Drug-induced causes,D,387,3974682,9.7
+,South Carolina,45,2000,2000,Drug-induced causes,D,735,4012012,18.3
+,South Carolina,45,2001,2001,Drug-induced causes,D,665,4064995,16.4
+,South Carolina,45,2002,2002,Drug-induced causes,D,597,4107795,14.5
+,South Carolina,45,2003,2003,Drug-induced causes,D,706,4150297,17
+,South Carolina,45,2004,2004,Drug-induced causes,D,774,4210921,18.4
+,South Carolina,45,2005,2005,Drug-induced causes,D,6160,4270150,144.3
+,South Carolina,45,2006,2006,Drug-induced causes,D,6350,4357847,145.7
+,South Carolina,45,2007,2007,Drug-induced causes,D,6208,4444110,139.7
+,South Carolina,45,2008,2008,Drug-induced causes,D,5955,4528996,131.5
+,South Carolina,45,2009,2009,Drug-induced causes,D,6080,4589872,132.5
+,South Carolina,45,2010,2010,Drug-induced causes,D,6324,4625364,136.7
+,South Carolina,45,2011,2011,Drug-induced causes,D,6045,4679230,129.2
+,South Carolina,45,2012,2012,Drug-induced causes,D,6166,4723723,130.5
+,South Carolina,45,2013,2013,Drug-induced causes,D,6241,4774839,130.7
+,South Carolina,45,2014,2014,Drug-induced causes,D,6478,4832482,134.1
+,South Carolina,45,2015,2015,Drug-induced causes,D,6753,4896146,137.9
+,South Carolina,45,2016,2016,Drug-induced causes,D,6795,4961119,137
+,South Dakota,46,1999,1999,Drug-induced causes,D,55,750412,7.3
+,South Dakota,46,2000,2000,Drug-induced causes,D,105,754844,13.9
+,South Dakota,46,2001,2001,Drug-induced causes,D,92,757972,12.1
+,South Dakota,46,2002,2002,Drug-induced causes,D,91,760020,12
+,South Dakota,46,2003,2003,Drug-induced causes,D,104,763729,13.6
+,South Dakota,46,2004,2004,Drug-induced causes,D,1062,770396,137.9
+,South Dakota,46,2005,2005,Drug-induced causes,D,1314,775493,169.4
+,South Dakota,46,2006,2006,Drug-induced causes,D,1159,783033,148
+,South Dakota,46,2007,2007,Drug-induced causes,D,1214,791623,153.4
+,South Dakota,46,2008,2008,Drug-induced causes,D,1295,799124,162.1
+,South Dakota,46,2009,2009,Drug-induced causes,D,1234,807067,152.9
+,South Dakota,46,2010,2010,Drug-induced causes,D,1215,814180,149.2
+,South Dakota,46,2011,2011,Drug-induced causes,D,1298,824082,157.5
+,South Dakota,46,2012,2012,Drug-induced causes,D,1252,833354,150.2
+,South Dakota,46,2013,2013,Drug-induced causes,D,1268,844877,150.1
+,South Dakota,46,2014,2014,Drug-induced causes,D,1329,853175,155.8
+,South Dakota,46,2015,2015,Drug-induced causes,D,1343,858469,156.4
+,South Dakota,46,2016,2016,Drug-induced causes,D,1361,865454,157.3
+,Tennessee,47,1999,1999,Drug-induced causes,D,619,5638706,11
+,Tennessee,47,2000,2000,Drug-induced causes,D,874,5689283,15.4
+,Tennessee,47,2001,2001,Drug-induced causes,D,981,5750789,17.1
+,Tennessee,47,2002,2002,Drug-induced causes,D,1103,5795918,19
+,Tennessee,47,2003,2003,Drug-induced causes,D,1266,5847812,21.6
+,Tennessee,47,2004,2004,Drug-induced causes,D,1444,5910809,24.4
+,Tennessee,47,2005,2005,Drug-induced causes,D,1657,5991057,27.7
+,Tennessee,47,2006,2006,Drug-induced causes,D,1714,6088766,28.2
+,Tennessee,47,2007,2007,Drug-induced causes,D,1649,6175727,26.7
+,Tennessee,47,2008,2008,Drug-induced causes,D,1616,6247411,25.9
+,Tennessee,47,2009,2009,Drug-induced causes,D,1853,6306019,29.4
+,Tennessee,47,2010,2010,Drug-induced causes,D,2004,6346105,31.6
+,Tennessee,47,2011,2011,Drug-induced causes,D,1967,6403353,30.7
+,Tennessee,47,2012,2012,Drug-induced causes,D,8190,6456243,126.9
+,Tennessee,47,2013,2013,Drug-induced causes,D,8706,6495978,134
+,Tennessee,47,2014,2014,Drug-induced causes,D,6058,6549352,92.5
+,Tennessee,47,2015,2015,Drug-induced causes,D,9655,6600299,146.3
+,Tennessee,47,2016,2016,Drug-induced causes,D,10676,6651194,160.5
+,Texas,48,1999,1999,Drug-induced causes,D,3114,20558220,15.1
+,Texas,48,2000,2000,Drug-induced causes,D,3552,20851820,17
+,Texas,48,2001,2001,Drug-induced causes,D,3850,21319622,18.1
+,Texas,48,2002,2002,Drug-induced causes,D,4075,21690325,18.8
+,Texas,48,2003,2003,Drug-induced causes,D,23509,22030931,106.7
+,Texas,48,2004,2004,Drug-induced causes,D,23053,22394023,102.9
+,Texas,48,2005,2005,Drug-induced causes,D,23358,22778123,102.5
+,Texas,48,2006,2006,Drug-induced causes,D,22317,23359580,95.5
+,Texas,48,2007,2007,Drug-induced causes,D,22409,23831983,94
+,Texas,48,2008,2008,Drug-induced causes,D,22352,24309039,91.9
+,Texas,48,2009,2009,Drug-induced causes,D,22850,24801761,92.1
+,Texas,48,2010,2010,Drug-induced causes,D,23048,25145561,91.7
+,Texas,48,2011,2011,Drug-induced causes,D,23829,25674681,92.8
+,Texas,48,2012,2012,Drug-induced causes,D,24603,26059203,94.4
+,Texas,48,2013,2013,Drug-induced causes,D,24985,26448193,94.5
+,Texas,48,2014,2014,Drug-induced causes,D,25435,26956958,94.4
+,Texas,48,2015,2015,Drug-induced causes,D,26273,27469114,95.6
+,Texas,48,2016,2016,Drug-induced causes,D,26375,27862596,94.7
+,Utah,49,1999,1999,Drug-induced causes,D,259,2203482,11.8
+,Utah,49,2000,2000,Drug-induced causes,D,296,2233169,13.3
+,Utah,49,2001,2001,Drug-induced causes,D,302,2283715,13.2
+,Utah,49,2002,2002,Drug-induced causes,D,374,2324815,16.1
+,Utah,49,2003,2003,Drug-induced causes,D,656,2360137,27.8
+,Utah,49,2004,2004,Drug-induced causes,D,1815,2401580,75.6
+,Utah,49,2005,2005,Drug-induced causes,D,1938,2457719,78.9
+,Utah,49,2006,2006,Drug-induced causes,D,1977,2525507,78.3
+,Utah,49,2007,2007,Drug-induced causes,D,2101,2597746,80.9
+,Utah,49,2008,2008,Drug-induced causes,D,2062,2663029,77.4
+,Utah,49,2009,2009,Drug-induced causes,D,2149,2723421,78.9
+,Utah,49,2010,2010,Drug-induced causes,D,2051,2763885,74.2
+,Utah,49,2011,2011,Drug-induced causes,D,2108,2817222,74.8
+,Utah,49,2012,2012,Drug-induced causes,D,2269,2855287,79.5
+,Utah,49,2013,2013,Drug-induced causes,D,2279,2900872,78.6
+,Utah,49,2014,2014,Drug-induced causes,D,2399,2942902,81.5
+,Utah,49,2015,2015,Drug-induced causes,D,2517,2995919,84
+,Utah,49,2016,2016,Drug-induced causes,D,2600,3051217,85.2
+,Vermont,50,1999,1999,Drug-induced causes,D,102,604683,16.9
+,Vermont,50,2000,2000,Drug-induced causes,D,156,608827,25.6
+,Vermont,50,2001,2001,Drug-induced causes,D,194,612223,31.7
+,Vermont,50,2002,2002,Drug-induced causes,D,184,615442,29.9
+,Vermont,50,2003,2003,Drug-induced causes,D,1001,617858,162
+,Vermont,50,2004,2004,Drug-induced causes,D,1078,619920,173.9
+,Vermont,50,2005,2005,Drug-induced causes,D,1159,621215,186.6
+,Vermont,50,2006,2006,Drug-induced causes,D,1136,622892,182.4
+,Vermont,50,2007,2007,Drug-induced causes,D,1174,623481,188.3
+,Vermont,50,2008,2008,Drug-induced causes,D,1183,624151,189.5
+,Vermont,50,2009,2009,Drug-induced causes,D,1137,624817,182
+,Vermont,50,2010,2010,Drug-induced causes,D,1237,625741,197.7
+,Vermont,50,2011,2011,Drug-induced causes,D,1303,626431,208
+,Vermont,50,2012,2012,Drug-induced causes,D,1309,626011,209.1
+,Vermont,50,2013,2013,Drug-induced causes,D,1270,626630,202.7
+,Vermont,50,2014,2014,Drug-induced causes,D,1340,626562,213.9
+,Vermont,50,2015,2015,Drug-induced causes,D,1419,626042,226.7
+,Vermont,50,2016,2016,Drug-induced causes,D,1369,624594,219.2
+,Virginia,51,1999,1999,Drug-induced causes,D,708,7000174,10.1
+,Virginia,51,2000,2000,Drug-induced causes,D,820,7078515,11.6
+,Virginia,51,2001,2001,Drug-induced causes,D,938,7198362,13
+,Virginia,51,2002,2002,Drug-induced causes,D,973,7286873,13.4
+,Virginia,51,2003,2003,Drug-induced causes,D,1076,7366977,14.6
+,Virginia,51,2004,2004,Drug-induced causes,D,1072,7475575,14.3
+,Virginia,51,2005,2005,Drug-induced causes,D,1116,7577105,14.7
+,Virginia,51,2006,2006,Drug-induced causes,D,1249,7673725,16.3
+,Virginia,51,2007,2007,Drug-induced causes,D,1237,7751000,16
+,Virginia,51,2008,2008,Drug-induced causes,D,1254,7833496,16
+,Virginia,51,2009,2009,Drug-induced causes,D,1257,7925937,15.9
+,Virginia,51,2010,2010,Drug-induced causes,D,1056,8001024,13.2
+,Virginia,51,2011,2011,Drug-induced causes,D,1359,8096604,16.8
+,Virginia,51,2012,2012,Drug-induced causes,D,1341,8185867,16.4
+,Virginia,51,2013,2013,Drug-induced causes,D,1516,8260405,18.4
+,Virginia,51,2014,2014,Drug-induced causes,D,2605,8326289,31.3
+,Virginia,51,2015,2015,Drug-induced causes,D,7310,8382993,87.2
+,Virginia,51,2016,2016,Drug-induced causes,D,7569,8411808,90
+,Washington,53,1999,1999,Drug-induced causes,D,955,5842564,16.3
+,Washington,53,2000,2000,Drug-induced causes,D,1457,5894121,24.7
+,Washington,53,2001,2001,Drug-induced causes,D,1405,5985722,23.5
+,Washington,53,2002,2002,Drug-induced causes,D,1579,6052349,26.1
+,Washington,53,2003,2003,Drug-induced causes,D,1733,6104115,28.4
+,Washington,53,2004,2004,Drug-induced causes,D,8281,6178645,134
+,Washington,53,2005,2005,Drug-induced causes,D,9064,6257305,144.9
+,Washington,53,2006,2006,Drug-induced causes,D,8952,6370753,140.5
+,Washington,53,2007,2007,Drug-induced causes,D,9344,6461587,144.6
+,Washington,53,2008,2008,Drug-induced causes,D,9673,6562231,147.4
+,Washington,53,2009,2009,Drug-induced causes,D,9476,6667426,142.1
+,Washington,53,2010,2010,Drug-induced causes,D,9591,6724540,142.6
+,Washington,53,2011,2011,Drug-induced causes,D,9964,6830038,145.9
+,Washington,53,2012,2012,Drug-induced causes,D,10071,6897012,146
+,Washington,53,2013,2013,Drug-induced causes,D,10470,6971406,150.2
+,Washington,53,2014,2014,Drug-induced causes,D,10656,7061530,150.9
+,Washington,53,2015,2015,Drug-induced causes,D,11566,7170351,161.3
+,Washington,53,2016,2016,Drug-induced causes,D,11006,7288000,151
+,West Virginia,54,1999,1999,Drug-induced causes,D,215,1811799,11.9
+,West Virginia,54,2000,2000,Drug-induced causes,D,360,1808344,19.9
+,West Virginia,54,2001,2001,Drug-induced causes,D,470,1801481,26.1
+,West Virginia,54,2002,2002,Drug-induced causes,D,487,1805414,27
+,West Virginia,54,2003,2003,Drug-induced causes,D,585,1812295,32.3
+,West Virginia,54,2004,2004,Drug-induced causes,D,643,1816438,35.4
+,West Virginia,54,2005,2005,Drug-induced causes,D,520,1820492,28.6
+,West Virginia,54,2006,2006,Drug-induced causes,D,696,1827912,38.1
+,West Virginia,54,2007,2007,Drug-induced causes,D,790,1834052,43.1
+,West Virginia,54,2008,2008,Drug-induced causes,D,851,1840310,46.2
+,West Virginia,54,2009,2009,Drug-induced causes,D,590,1847775,31.9
+,West Virginia,54,2010,2010,Drug-induced causes,D,979,1852994,52.8
+,West Virginia,54,2011,2011,Drug-induced causes,D,1125,1855364,60.6
+,West Virginia,54,2012,2012,Drug-induced causes,D,1073,1855413,57.8
+,West Virginia,54,2013,2013,Drug-induced causes,D,1036,1854304,55.9
+,West Virginia,54,2014,2014,Drug-induced causes,D,1126,1850326,60.9
+,West Virginia,54,2015,2015,Drug-induced causes,D,1307,1844128,70.9
+,West Virginia,54,2016,2016,Drug-induced causes,D,1517,1831102,82.8
+,Wisconsin,55,1999,1999,Drug-induced causes,D,619,5332666,11.6
+,Wisconsin,55,2000,2000,Drug-induced causes,D,755,5363675,14.1
+,Wisconsin,55,2001,2001,Drug-induced causes,D,839,5406835,15.5
+,Wisconsin,55,2002,2002,Drug-induced causes,D,891,5445162,16.4
+,Wisconsin,55,2003,2003,Drug-induced causes,D,7295,5479203,133.1
+,Wisconsin,55,2004,2004,Drug-induced causes,D,7689,5514026,139.4
+,Wisconsin,55,2005,2005,Drug-induced causes,D,8086,5546166,145.8
+,Wisconsin,55,2006,2006,Drug-induced causes,D,8099,5577655,145.2
+,Wisconsin,55,2007,2007,Drug-induced causes,D,8283,5610775,147.6
+,Wisconsin,55,2008,2008,Drug-induced causes,D,8180,5640996,145
+,Wisconsin,55,2009,2009,Drug-induced causes,D,8146,5669264,143.7
+,Wisconsin,55,2010,2010,Drug-induced causes,D,8607,5686986,151.3
+,Wisconsin,55,2011,2011,Drug-induced causes,D,8847,5711767,154.9
+,Wisconsin,55,2012,2012,Drug-induced causes,D,8856,5726398,154.7
+,Wisconsin,55,2013,2013,Drug-induced causes,D,9426,5742713,164.1
+,Wisconsin,55,2014,2014,Drug-induced causes,D,9367,5757564,162.7
+,Wisconsin,55,2015,2015,Drug-induced causes,D,9306,5771337,161.2
+,Wisconsin,55,2016,2016,Drug-induced causes,D,9665,5778708,167.3
+,Wyoming,56,1999,1999,Drug-induced causes,D,71,491780,14.4
+,Wyoming,56,2000,2000,Drug-induced causes,D,123,493782,24.9
+,Wyoming,56,2001,2001,Drug-induced causes,D,106,494657,21.4
+,Wyoming,56,2002,2002,Drug-induced causes,D,111,500017,22.2
+,Wyoming,56,2003,2003,Drug-induced causes,D,162,503453,32.2
+,Wyoming,56,2004,2004,Drug-induced causes,D,813,509106,159.7
+,Wyoming,56,2005,2005,Drug-induced causes,D,826,514157,160.7
+,Wyoming,56,2006,2006,Drug-induced causes,D,879,522667,168.2
+,Wyoming,56,2007,2007,Drug-induced causes,D,884,534876,165.3
+,Wyoming,56,2008,2008,Drug-induced causes,D,888,546043,162.6
+,Wyoming,56,2009,2009,Drug-induced causes,D,901,559851,160.9
+,Wyoming,56,2010,2010,Drug-induced causes,D,994,563626,176.4
+,Wyoming,56,2011,2011,Drug-induced causes,D,934,568158,164.4
+,Wyoming,56,2012,2012,Drug-induced causes,D,994,576412,172.4
+,Wyoming,56,2013,2013,Drug-induced causes,D,957,582658,164.2
+,Wyoming,56,2014,2014,Drug-induced causes,D,1006,584153,172.2
+,Wyoming,56,2015,2015,Drug-induced causes,D,1054,586107,179.8
+,Wyoming,56,2016,2016,Drug-induced causes,D,1045,585501,178.5
+---,,,,,,,,,
+---,,,,,,,,,
+---,,,,,,,,,
+---,,,,,,,,,
+---,,,,,,,,,
+"1 resident population, from the Vintage 2015 postcensal series released by NCHS on June 28, 2016. The population figures for",,,,,,,,,
+"1. As of April 3, 2017, the underlying cause of death has been revised for 125 deaths in 2014. More information:",,,,,,,,,
+"1999-2016 on CDC WONDER Online Database, released December, 2017. Data are from the Multiple Cause of Death Files, 1999-2016, as",,,,,,,,,
+2. Circumstances in Georgia for the years 2008 and 2009 have resulted in unusually high death counts for the ICD-10 cause of,,,,,,,,,
+2013 Urbanization: All,,,,,,,,,
+3. Circumstances in New Jersey for the year 2009 have resulted in unusually high death counts for the ICD-10 cause of death code,,,,,,,,,
+"4. Circumstances in California resulted in unusually high death counts for the ICD-10 cause of death code R99, ""Other",,,,,,,,,
+"5. The population figures for year 2016 are bridged-race estimates of the July 1 resident population, from the Vintage 2016",,,,,,,,,
+6. The population figures used in the calculation of death rates for the age group 'under 1 year' are the estimates of the,,,,,,,,,
+"at http://wonder.cdc.gov/mcd-icd10.html on Apr 2, 2018 10:05:56 PM",,,,,,,,,
+Autopsy: All,,,,,,,,,
+"Calculate Rates Per: 100,000",,,,,,,,,
+Caveats:,,,,,,,,,
+compiled from data provided by the 57 vital statistics jurisdictions through the Vital Statistics Cooperative Program. Accessed,,,,,,,,,
+"county-level 2000 - 2009 series released by NCHS on October 26, 2012. Population figures for 2000 are April 1 Census counts.",,,,,,,,,
+"Dataset: Multiple Cause of Death, 1999-2016",,,,,,,,,
+"death code R99, ""Other ill-defined and unspecified causes of mortality."" Caution should be used in interpreting these data.",,,,,,,,,
+"estimates of the July 1 resident population, from the Vintage 2012 postcensal series released by NCHS on June 13, 2013.",,,,,,,,,
+"figures for years 2001 - 2009, are bridged-race estimates of the July 1 resident population, from the revised intercensal",,,,,,,,,
+Gender: All,,,,,,,,,
+"Group By: State, Year, MCD - Drug/Alcohol Induced",,,,,,,,,
+Groups are the number of live births. <br/><b>Note:</b> Rates and population figures for years 2001 - 2009 differ slightly from,,,,,,,,,
+Help: See http://wonder.cdc.gov/wonder/help/mcd.html for more information.,,,,,,,,,
+Hispanic Origin: All,,,,,,,,,
+http://wonder.cdc.gov/wonder/help/mcd.html#2014-Revision.,,,,,,,,,
+"ill-defined and unspecified causes of mortality"" for deaths occurring in years 2000 and 2001. Caution should be used in",,,,,,,,,
+interpreting these data. More information: http://wonder.cdc.gov/wonder/help/mcd.html#California-Reporting-Anomalies.,,,,,,,,,
+interpreting these data. More information: http://wonder.cdc.gov/wonder/help/mcd.html#New-Jersey-Reporting-Anomalies.,,,,,,,,,
+MCD - Drug/Alcohol Induced Causes: Drug-induced causes,,,,,,,,,
+More information: http://wonder.cdc.gov/wonder/help/mcd.html#Georgia-Reporting-Anomalies.,,,,,,,,,
+"most notably R95, ""Sudden Infant Death Syndrome"" and X40-X49, ""Unintentional poisoning."" Caution should be used in",,,,,,,,,
+"on June 30, 2015. The population figures for year 2013 are bridged-race estimates of the July 1 resident population, from the",,,,,,,,,
+Place of Death: All,,,,,,,,,
+Population figures for 1999 are from the 1990-1999 intercensal series of July 1 estimates. Population figures for Infant Age,,,,,,,,,
+"Population figures for 2011 are bridged-race estimates of the July 1 resident population, from the county-level postcensal",,,,,,,,,
+"postcensal series released by NCHS on June 26, 2017. The population figures for year 2015 are bridged-race estimates of the July",,,,,,,,,
+"previously published reports, due to use of the population estimates which were available at the time of release.",,,,,,,,,
+"Query Date: Apr 2, 2018 10:05:56 PM",,,,,,,,,
+Query Parameters:,,,,,,,,,
+"R99, ""Other ill-defined and unspecified causes of mortality"" and therefore unusually low death counts in other ICD-10 codes,",,,,,,,,,
+Race: All,,,,,,,,,
+Rate Options: Default intercensal populations for years 2001-2009 (except Infant Age Groups),,,,,,,,,
+resident population that is under one year of age. More information: http://wonder.cdc.gov/wonder/help/mcd.html#Age Group.,,,,,,,,,
+Show Suppressed: False,,,,,,,,,
+Show Totals: True,,,,,,,,,
+Show Zero Values: False,,,,,,,,,
+States: All,,,,,,,,,
+"Suggested Citation: Centers for Disease Control and Prevention, National Center for Health Statistics. Multiple Cause of Death",,,,,,,,,
+Ten-Year Age Groups: All,,,,,,,,,
+Title:,,,,,,,,,
+UCD - ICD-10 Codes: All,,,,,,,,,
+"Vintage 2011 series released by NCHS on July 18, 2012. Population figures for 2010 are April 1 Census counts. The population",,,,,,,,,
+"Vintage 2013 postcensal series released by NCHS on June 26, 2014. The population figures for year 2012 are bridged-race",,,,,,,,,
+Weekday: All,,,,,,,,,
+"year 2014 are bridged-race estimates of the July 1 resident population, from the Vintage 2014 postcensal series released by NCHS",,,,,,,,,
+Year/Month: All,,,,,,,,,

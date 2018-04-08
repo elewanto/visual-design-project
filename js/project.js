@@ -1,8 +1,7 @@
 
 // global variables
-var drawMaps = true;
-var dataLocation = "ohio";    // "franklin", "ohio", "us"
-var dataType = "life";        // "life", "opioid", "obesity"
+var dataLocation = "ohio";    // "franklin", "ohio"
+var dataType = "life";        // "life", "heart", "cancer", "opioid", "obesity"
 var sliderValue = "2010";     //
 
 
@@ -17,21 +16,19 @@ function landingPageStart() {
                               .on('slide', sliderChange)
                               .data('slider');
 
-  // map to graph toggle button event listener
-  document.getElementById('chartMapButton').addEventListener('click', toggleChartMap);  
-
   // map button event listeners
-  document.getElementById('USBut').addEventListener('click', USData);
   document.getElementById('OhioBut').addEventListener('click', OhioData);
   document.getElementById('FranklinBut').addEventListener('click', FranklinData);
 
   // data button event listeners
   document.getElementById('LifeBut').addEventListener('click', LifeExpectData);
+  document.getElementById('HeartBut').addEventListener('click', HeartDiseaseData);
+  document.getElementById('CancerBut').addEventListener('click', CancerData);    
   document.getElementById('OpioidBut').addEventListener('click', OpioidData);
   document.getElementById('ObesityBut').addEventListener('click', ObesityData);    
 
-  // automatically draw Ohio county map by default
-  drawOhioMap();
+  // automatically draw side-by-side U.S and Ohio county map by default
+  drawMaps();
 
 }
 
@@ -47,82 +44,24 @@ function sliderChange() {
 }  
 
 
-function toggleChartMap() {
-  console.log('clicked map-chart toggle button');
-
-  if (drawMaps) {    // switch to graphs
-    document.getElementById('chartMapButton').innerHTML = "&nbsp;Maps&nbsp;&nbsp;";
-    document.getElementById('chartMapButton').classList.remove('btn-outline-dark');
-    document.getElementById('chartMapButton').classList.add('btn-outline-primary');        
-    drawMaps = false;
-  } else {
-    document.getElementById('chartMapButton').innerHTML = "Charts";
-    document.getElementById('chartMapButton').classList.remove('btn-outline-primary');
-    document.getElementById('chartMapButton').classList.add('btn-outline-dark');     
-    drawMaps = true;
-  }
-
-
-}
-
-
-// United States Map button function
-function USData() {
-  console.log('clicked United States button');
-  dataLocation = 'us';
-  updateButtonGroup1('USBut');
-
-  if (drawMaps) {
-    // draw U.S. maps
-    if (dataType == 'life') {
-    
-    } else if (dataType == 'opioid') {
-
-    } else {  // dataType == 'obesity'
-
-    }
-
-  } else { // draw U.S. charts
-
-    if (dataType == 'life') {
-
-    } else if (dataType == 'opioid') {
-
-    } else {  // dataType == 'obesity'
-
-    }    
-  }   
-
-}
-
-
 // Ohio map button function
 function OhioData() {
   console.log('clicked Ohio button');
   dataLocation = 'ohio';
   updateButtonGroup1('OhioBut');
 
-  if (drawMaps) {
-    // draw Ohio maps
-    if (dataType == 'life') {
-      drawOhioMap();
-    } else if (dataType == 'opioid') {
 
-    } else {  // dataType == 'obesity'
+  if (dataType == 'life') {
+      drawMaps();
+  } else if (dataType == 'heart') {
 
-    }
+  } else if (dataType == 'cancer') { 
 
-  } else { // draw Ohio charts
+  } else if (dataType == 'opioid') {
 
-    if (dataType == 'life') {
+  } else if (dataType == 'obesity') {
 
-    } else if (dataType == 'opioid') {
-
-    } else {  // dataType == 'obesity'
-
-    }    
   }  
-
 
 
 }
@@ -130,121 +69,142 @@ function OhioData() {
 
 // Franklin County map button function
 function FranklinData() {
+
   console.log('clicked Franklin County button');  
   dataLocation = 'franklin';
   updateButtonGroup1('FranklinBut');
 
-  if (drawMaps) {
-    // draw Franklin County maps
-    if (dataType == 'life') {
+  if (dataType == 'life') {
 
-    } else if (dataType == 'opioid') {
+  } else if (dataType == 'heart') {
 
-    } else {  // dataType == 'obesity'
+  } else if (dataType == 'cancer') { 
 
-    }
+  } else if (dataType == 'opioid') {
 
-  } else { // draw Franklin County charts
+  } else if (dataType == 'obesity') {
 
-    if (dataType == 'life') {
+  }
 
-    } else if (dataType == 'opioid') {
-
-    } else {  // dataType == 'obesity'
-
-    }    
-  }     
-
+  
 }
 
 
 function LifeExpectData() {
+
   console.log('clicked Life Expectancy Data button');
   dataType = 'life';
   updateButtonGroup2('LifeBut');
 
-  if (drawMaps) {
-    // draw life expectancy maps
-    if (dataLocation == 'franklin') {
+  if (dataLocation == 'ohio') {   // draw U.S. / Ohio county data
 
-    } else if (dataLocation == 'ohio') {
+  } else if (dataLocation == 'franklin') { // draw U.S. / Franklin county data
 
-    } else {  // dataLocation == 'us'
-
-    }
-
-  } else { // draw life expectancy charts
-
-    if (dataLocation == 'franklin') {
-
-    } else if (dataLocation == 'ohio') {
-
-    } else {  // dataLocation == 'us'
-
-    }    
-  }     
+  }      
 
 }
 
 
+function HeartDiseaseData() {
+
+  console.log('clicked Heart Disease Data button');
+  dataType = 'heart';
+  updateButtonGroup2('HeartBut');
+
+  if (dataLocation == 'ohio') {   // draw U.S. / Ohio county data
+
+  } else if (dataLocation == 'franklin') { // draw U.S. / Franklin county data
+
+  }      
+
+}
+
+
+function CancerData() {
+
+  console.log('clicked Cancer Data button');
+  dataType = 'cancer';
+  updateButtonGroup2('CancerBut');
+
+  if (dataLocation == 'ohio') {   // draw U.S. / Ohio county data
+
+  } else if (dataLocation == 'franklin') { // draw U.S. / Franklin county data
+
+  }      
+
+}
+
+
+// draw Opioid maps and charts
 function OpioidData() {
+
   console.log('clicked Opioid Data button');
   dataType = 'opioid';
   updateButtonGroup2('OpioidBut'); 
 
-  if (drawMaps) {
-    // draw opioid maps
-    if (dataLocation == 'franklin') {
+  if (dataLocation == 'ohio') {   // draw U.S. / Ohio county data
 
-    } else if (dataLocation == 'ohio') {
+  } else if (dataLocation == 'franklin') { // draw U.S. / Franklin county data
 
-    } else {  // dataLocation == 'us'
-
-    }
-
-  } else { // draw opioid charts
-
-    // draw opioid charts
-    if (dataLocation == 'franklin') {
-
-    } else if (dataLocation == 'ohio') {
-
-    } else {  // dataLocation == 'us'
-
-    }    
   }  
 
 }
 
-
+// draw Obesity maps and charts
 function ObesityData() {
+
   console.log('clicked Obesity Data button');
   dataType = 'obesity';
   updateButtonGroup2('ObesityBut');
 
-  if (drawMaps) {
-    // draw obesity maps
-    if (dataLocation == 'franklin') {
+  if (dataLocation == 'ohio') {   // draw U.S. / Ohio county data
 
-    } else if (dataLocation == 'ohio') {
+  } else if (dataLocation == 'franklin') { // draw U.S. / Franklin county data
 
-    } else {  // dataLocation == 'us'
-
-    }
-
-  } else { // draw obesity charts
-
-    // draw obesity charts
-    if (dataLocation == 'franklin') {
-
-    } else if (dataLocation == 'ohio') {
-
-    } else {  // dataLocation == 'us'
-
-    }    
   }
 
+
 }
+
+
+// create SVG and groups needed to draw two maps side-by-side
+// can add data parameters to pass to function
+function drawMaps() {
+
+  console.log('in drawMaps()');
+  
+  // remove any existing svg so we don't append a second one below
+  oldSvg = document.getElementById('mapDiv');   // get the parent container div for the svg
+  removeChildren(oldSvg);                       // delete previous svg element before drawing new svg
+
+  // create SVG element for two side-by-side maps (maps share the same SVG; we will use transformation to position horizontally)
+  var width = 1500;
+  var height = 800;
+  var mapSvg = d3.select('#mapDiv')
+                .append('svg')
+                .attr('id', 'svgmap')       // svg ID is '#svgmap'
+                .attr('width', width)
+                .attr('height', height);
+
+
+  // create US map group <g>  ID #usmap
+  var usmapg = mapSvg.append('g')
+                    .attr('id', 'usmap')
+                    .attr('transform', 'translate(5, 0)');
+
+  // create Ohio map group <g> ID #ohiomap
+  var ohiomapg = mapSvg.append('g')
+                    .attr('id', 'ohiomap')
+                    .attr('transform', 'translate(800, 0)');
+
+
+  drawOhioMap();
+}
+
+
+
+
+
 
 
 // update button selection attributes
