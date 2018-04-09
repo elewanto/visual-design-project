@@ -1,8 +1,17 @@
 
 // create svg canvas and setup to draw map
-function drawOhioMap() {
+function drawOhioMapv1() {
 
   console.log('in drawOhioMap()');
+
+  // remove any existing svg so we don't append a second one below
+  oldSvg = document.getElementById('mapDiv');   // get the parent container div for the svg
+  removeChildren(oldSvg);                       // delete previous svg element before drawing new svg 
+  
+  var width = 1000;
+  var height = 700;
+  var mapSvg = d3.select('#mapDiv').append('svg').attr('id', 'svgmap');
+  mapSvg.attr('width', width).attr('height', height); 
 
   // set the color for the graph
   var color = d3.scaleLinear()
@@ -12,9 +21,11 @@ function drawOhioMap() {
 
         //.range(["#2c7bb6", "#00a6ca","#00ccbc","#90eb9d","#ffff8c","#f9d057","#f29e2e","#e76818","#d7191c"]);
 
-  var ohioMapG = d3.select('#ohiomap');
+  // set the size for the bar chart
+  var svg = d3.select("#svgmap")
+
   //Append a defs (for definition) element to your SVG
-  var defs = ohioMapG.append("defs");
+  var defs = svg.append("defs");
 
   //Append a linearGradient element to the defs and give it a unique id
   var linearGradient = defs.append("linearGradient")
@@ -27,13 +38,13 @@ function drawOhioMap() {
         .attr("offset", function(d,i) { return i/(color.range().length-1); })
         .attr("stop-color", function(d) { return d; });
 
-  d3.json("data/OH_map.json", drawOhio);
+  d3.json("data/OH_map_v1.json", drawOhiov1);
 }
 
 
 
 // draw OHIO state map with counties
-function drawOhio(error, counties) {
+function drawOhiov1(error, counties) {
 
   console.log(counties);
 
@@ -51,7 +62,7 @@ function drawOhio(error, counties) {
   var geoGenerator = d3.geoPath()
     .projection(projection);
 
-  var paths = d3.select('#ohiomap')
+  var paths = d3.select('#svgmap')
     .selectAll('path')
     .data(counties.features)
     .enter()
@@ -62,7 +73,7 @@ function drawOhio(error, counties) {
     })
     .attr('d', geoGenerator);
 
-  var texts = d3.select('#ohiomap')
+  var texts = d3.select('svg')
     .selectAll('text')
     .data(counties.features)
     .enter()

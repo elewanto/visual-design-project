@@ -8,6 +8,10 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;  
+
+  font-family: "Helvetica Neue", Helvetica, sans-serif; /* Mike map */
+  font-size: 14px;
+  color: #333;
 }
 
 svg {
@@ -40,6 +44,11 @@ div {
 }
 */
 
+.maptitle {
+  font-size: 3em;
+  font-weight: bold;
+}
+
 .wrapper {
   text-align: center;
 }
@@ -54,7 +63,6 @@ div {
 }
 
 
-
 #mSlider .slider-selection{
   background: turquoise;
 }
@@ -63,8 +71,18 @@ div {
   background: darkcyan;
 }
 
-
-
+/* Mike: map formatting */
+div.tooltip { 
+    position: absolute;     
+    text-align: center;     
+    width: 100px;         
+    height: 28px;         
+    padding: 0px;       
+    font: 12px sans-serif;    
+    border: 0px;    
+    border-radius: 8px;     
+    pointer-events: none;     
+}
 
 
 

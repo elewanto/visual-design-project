@@ -29,7 +29,6 @@ function landingPageStart() {
 
   // automatically draw side-by-side U.S and Ohio county map by default
   drawMaps();
-
 }
 
 
@@ -52,15 +51,15 @@ function OhioData() {
 
 
   if (dataType == 'life') {
-      drawMaps();
-  } else if (dataType == 'heart') {
 
+  } else if (dataType == 'heart') {
+    drawOhioMapv1();
   } else if (dataType == 'cancer') { 
 
   } else if (dataType == 'opioid') {
 
   } else if (dataType == 'obesity') {
-
+    drawMaps();
   }  
 
 
@@ -77,11 +76,11 @@ function FranklinData() {
   if (dataType == 'life') {
 
   } else if (dataType == 'heart') {
-
+    drawOhioMapv1();
   } else if (dataType == 'cancer') { 
 
   } else if (dataType == 'opioid') {
-
+    drawMaps();
   } else if (dataType == 'obesity') {
 
   }
@@ -112,9 +111,9 @@ function HeartDiseaseData() {
   updateButtonGroup2('HeartBut');
 
   if (dataLocation == 'ohio') {   // draw U.S. / Ohio county data
-
+    drawOhioMapv1();
   } else if (dataLocation == 'franklin') { // draw U.S. / Franklin county data
-
+    drawOhioMapv1();
   }      
 
 }
@@ -158,9 +157,9 @@ function ObesityData() {
   updateButtonGroup2('ObesityBut');
 
   if (dataLocation == 'ohio') {   // draw U.S. / Ohio county data
-
+    drawMaps();
   } else if (dataLocation == 'franklin') { // draw U.S. / Franklin county data
-
+    drawMaps();
   }
 
 
@@ -172,32 +171,32 @@ function ObesityData() {
 function drawMaps() {
 
   console.log('in drawMaps()');
-  
+
   // remove any existing svg so we don't append a second one below
   oldSvg = document.getElementById('mapDiv');   // get the parent container div for the svg
   removeChildren(oldSvg);                       // delete previous svg element before drawing new svg
 
-  // create SVG element for two side-by-side maps (maps share the same SVG; we will use transformation to position horizontally)
+  // create single SVG element for two side-by-side maps (maps share the same SVG
+  // we will use transformation to position horizontally)
   var width = 1500;
-  var height = 800;
+  var height = 700;
   var mapSvg = d3.select('#mapDiv')
                 .append('svg')
                 .attr('id', 'svgmap')       // svg ID is '#svgmap'
                 .attr('width', width)
                 .attr('height', height);
 
-
   // create US map group <g>  ID #usmap
   var usmapg = mapSvg.append('g')
-                    .attr('id', 'usmap')
-                    .attr('transform', 'translate(5, 0)');
+                .attr('id', 'usmap')
+                .attr('transform', 'translate(5, 0)');
 
   // create Ohio map group <g> ID #ohiomap
   var ohiomapg = mapSvg.append('g')
-                    .attr('id', 'ohiomap')
-                    .attr('transform', 'translate(800, 0)');
+                .attr('id', 'ohiomap')
+                .attr('transform', 'translate(800, 0)');
 
-
+  drawUSMap();
   drawOhioMap();
 }
 
