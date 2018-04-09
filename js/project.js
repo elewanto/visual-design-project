@@ -183,8 +183,11 @@ function drawMaps() {
   var mapSvg = d3.select('#mapDiv')
                 .append('svg')
                 .attr('id', 'svgmap')       // svg ID is '#svgmap'
-                .attr('width', width)
-                .attr('height', height);
+                .attr('preserveAspectRatio', 'xMinYMin meet')
+                .attr('viewBox', '0 0 1500 700')
+                .classed('svg-content', true);
+                //.attr('width', width)
+                //.attr('height', height);
 
   // create US map group <g>  ID #usmap
   var usmapg = mapSvg.append('g')
@@ -199,9 +202,6 @@ function drawMaps() {
   drawUSMap();
   drawOhioMap();
 }
-
-
-
 
 
 
