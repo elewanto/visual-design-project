@@ -204,6 +204,18 @@ function drawMaps() {
 }
 
 
+// draw SVG D3 charts 
+function drawCharts() {
+
+  console.log('in drawCharts()');
+
+  // remove any existing svg so we don't append a second one below
+  oldSvg = document.getElementById('chartDiv');   // get the parent container div for the svg
+  removeChildren(oldSvg);                       // delete previous svg element before drawing new svg
+
+}
+
+
 
 
 // update button selection attributes
@@ -234,7 +246,7 @@ function updateButtonGroup2(butId) {
   document.getElementById(butId).classList.add('btn-primary');  
 }
 
-// remove html children of node parameter
+// remove document html children of node parameter
 function removeChildren(node) {
 
   console.log('in removeChildren()');
