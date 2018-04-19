@@ -39,7 +39,7 @@ var z = d3.scaleOrdinal()
     .range(["#ccebc5", "#a8ddb5", "#7bccc4", "#4eb3d3", "#2b8cbe", "#0868ac", "#084081", "#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
 
 // import the data file
-d3.csv("data/US_obes_2003_2015.csv", function(d, i, columns) {
+d3.csv("data/obesity_data/US_obes_2003_2015.csv", function(d, i, columns) {
 
   // convert all data into the integers
   for (var i = 1, n = columns.length; i < n; ++i) 
