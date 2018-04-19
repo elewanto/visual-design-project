@@ -70,7 +70,7 @@ div.tooltip {
 	    .style("opacity", 0);
 
 	// load the data from the csv file  
-	d3.csv("data/Obesity_data/Oh_2004.csv", function(d) {
+	d3.csv("data/obesity_data/Oh_2004.csv", function(d) {
 		d['2004'] = +d['2004'] / 100;
 
 	        return d;
