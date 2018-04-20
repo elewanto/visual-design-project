@@ -136,7 +136,7 @@ d3.csv("data/obesity_data/US_obes_2003_2015.csv", function(d, i, columns) {
     .selectAll("g")
     .data(keys.slice().reverse())
     .enter().append("g")
-      .attr("transform", function(d, i) { return "translate(40," + i * 20 + ")"; });
+      .attr("transform", function(d, i) { return "translate(45," + i * 20 + ")"; });
 
   // add rectangles for legend
   legend.append("rect")
