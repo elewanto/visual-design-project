@@ -15,7 +15,7 @@
 
 // graph size for SVG
 var svg = d3.select("svg"),
-    margin = {top: 20, right: 20, bottom: 30, left: 40},
+    margin = {top: 20, right: 120, bottom: 30, left: 40},
     width = +svg.attr("width") - margin.left - margin.right,
     height = +svg.attr("height") - margin.top - margin.bottom,
     g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
@@ -98,7 +98,7 @@ d3.csv("data/obesity_data/US_obes_2003_2015.csv", function(d, i, columns) {
     .selectAll("g")
     .data(keys.slice().reverse())
     .enter().append("g")
-      .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
+      .attr("transform", function(d, i) { return "translate(30," + i * 20 + ")"; });
 
   // add rectangles for legend
   legend.append("rect")
