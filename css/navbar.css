@@ -7,6 +7,7 @@
   overflow: hidden;
   background-color: #5a201e;
   font-family: "Europa-Light", sans-serif;  
+
 }
 
 /* links inside navbar */
@@ -23,7 +24,13 @@
 .dropdownm {
   float: left;
   overflow: hidden;
+
 }
+.dropdownm:first-child {
+    margin-left: 140px;
+}
+
+
 
 /* dropdown button */
 .dropdownm .dropbtnm {
