@@ -1,66 +1,64 @@
+
+<!-- about_us.html contains team names and pictures; static image from design team plus top navbar -->
+
 <!doctype html>
-<html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <title>HTML5 / CSS3 Drop-Down Navigation Menu</title>
-      <meta name="description" content="">
-      <link rel="stylesheet" type="text/css" href="css/navbar.css">
-      <!-- IE6-8 support of HTML5 elements --> <!--[if lt IE 9]>
-      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-      <![endif]-->
-      <title>Team 3 Visual Design Project</title>
-      <!-- dependent .css files --> 
-      <link href="css/bootstrap.min.css" rel="stylesheet">
-      <!-- bootstrap css file -->      
-      <link href="css/bootstrap-slider.min.css" rel="stylesheet">
-      <!-- bootstrap slider plugin css file -->
-      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-      <!-- navbar arrow icon -->
-      <!-- .js library packages -->
-      <script src="https://d3js.org/d3.v4.min.js"></script>  <!-- D3 library -->
-      <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>      
-      <script src="js/libraries/jquery-3.3.1.min.js"></script> <!-- jquery library -->   
-      <script src="js/libraries/tether.min.js"></script> <!-- tether library (dependence of bootstrap) -->          
-      <script src="js/libraries/bootstrap.min.js"></script> <!-- bootstrap library -->    
-      <script src="js/libraries/bootstrap-slider.min.js"></script> <!-- bootstrap slider plugin -->     
-      <script src="https://d3js.org/queue.v1.min.js"></script> <!-- Mke map library -->
-      <!-- project .js files -->
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   </head>
-   <body>
-      <div id="wrapper">
-         <nav id="nav">
-            <ul id="navigation">
-               <li>
-                  <a href="#">Services &gt;</a>
-                  <ul>
-                     <li><a href="#">Web Development</a></li>
-                     <li><a href="#">Logo Design</a></li>
-                     <li><a href="#">Wordpress</a></li>
-                  </ul>
-               </li>
-               <li>
-                  <a href="#">Services &gt;</a>
-                  <ul>
-                     <li><a href="#">Web Development</a></li>
-                     <li><a href="#">Logo Design</a></li>
-                     <li><a href="#">Wordpress</a></li>
-                  </ul>
-               </li>
-               <li>
-                  <a href="#">Portfolio &gt;</a>
-                  <ul>
-                     <li><a href="#">Graphic Design</a></li>
-                     <li><a href="#">Photography</a></li>
-                     <li><a href="#">Architecture</a></li>
-                     <li><a href="#">Calligraphy</a></li>
-                     <li><a href="#">Graffity </a></li>
-                  </ul>
-               </li>
-               <li><a href="#">Menu</a></li>
-            </ul>
-         </nav>
+<html>
+  <head>
+    <title>Team 3 Visual Design Project</title>
+
+    <!-- dependent .css files --> 
+    <link href="css/bootstrap.min.css" rel="stylesheet"> <!-- bootstrap css file -->      
+    <link href="css/bootstrap-slider.min.css" rel="stylesheet"> <!-- bootstrap slider plugin css file -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> <!-- navbar arrow icon -->
+
+    <link rel="stylesheet" type="text/css" href="css/index.css">    <!-- background image css file -->       
+    <link rel="stylesheet" type="text/css" href="css/navbar.css">   <!-- navbar css file -->  
+
+
+    <!-- .js library packages -->
+    <script src="https://d3js.org/d3.v4.min.js"></script>  <!-- D3 library -->
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>      
+    <script src="js/libraries/jquery-3.3.1.min.js"></script> <!-- jquery library -->   
+    <script src="js/libraries/tether.min.js"></script> <!-- tether library (dependence of bootstrap) -->          
+    <script src="js/libraries/bootstrap.min.js"></script> <!-- bootstrap library -->    
+    <script src="js/libraries/bootstrap-slider.min.js"></script> <!-- bootstrap slider plugin -->     
+
+    <script src="https://d3js.org/queue.v1.min.js"></script> <!-- Mke map library -->
+
+    <!-- project .js files -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+
+  </head>
+
+
+  <body>
+
+    <div id="container">
+
+      <img src="images/team.png" class="bg"> <!-- background image scales to screen dimensions-->      
+
+      <!-- top navigation bar -->
+      <div class="navbarm">
+        <a href="homepage.html">Home</a>
+        <a href="life_expectancy.html">Life Expectancy</a>
+        <div class="dropdownm">
+          <button class="dropbtnm">Mortality
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdownm-content">
+            <a href="heart_disease.html">Heart Disease</a>
+            <a href="cancer.html">Cancer</a>
+            <a href="suicide.html">Suicide</a>
+            <a href="general_mortality.html">General</a>
+          </div>
+        </div>
+        <a href="opioid.html">Opioid</a>
+        <a href="obesity.html">Obesity</a>
+        <a id="aboutus" href="about_us.html">About Us</a>
       </div>
-      <!--end wrapper-->
-   </body>
+
+    </div>
+  </body>
+
 </html>
