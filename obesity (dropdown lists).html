@@ -14,7 +14,7 @@
 
     <link rel="stylesheet" type="text/css" href="css/homepage.css">    <!-- homepage css file --> 
     <link rel="stylesheet" type="text/css" href="css/navbar.css">   <!-- navbar css file -->
-    <link rel="stylesheet" type="text/css" href="css/data_dropdown.css">   <!-- data dropdown css file -->      
+    <link rel="stylesheet" type="text/css" href="css/data_dropdown_lists.css">   <!-- data dropdown css file -->      
 
 
     <!-- .js library packages -->
@@ -90,32 +90,39 @@
       <div class = "container-fluid">
         <div class = "row" id="dataDiv">
 
-          <div class="col" id="analysisDropdown">
-            <div class="drop-btn-group">
-              <div class="dropdownd">
-                <button class="dropbtnd">drop 1 obesity graphs</button>
-                <div class="dropdownd-content">
-                  <a onclick="drawStart()">drop 1 graph 1 obesity stuff</a>
-                  <a onclick="drawStart()">drop 1 graph 2 obesity stuff</a>
-                </div>
-              </div>
-              <div class="dropdownd">
-                <button class="dropbtnd">drop 2 obesity graphs</button>
-                <div class="dropdownd-content">
-                  <a onclick="drawStart()">drop 2 graph 1 obesity stuff</a>
-                  <a onclick="drawStart()">drop 2 graph 2 obesity stuff</a>
-                </div>              
-              </div>            
-            </div>
+          <div class="col">
+            <nav id="a_drop">
+              <ul>
+                <li>
+                  <a href="">drop1 life expectancy graphs</a>
+                  <ul>
+                    <li><a onclick="drawStart()">drop 1 graph 1 life expetancy stuff</a></li>
+                    <li><a onclick="drawStart()">drop 1 graph 2 life expetancy stuff</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="">drop2 life expectancy graphs</a>
+                  <ul>
+                    <li><a onclick="drawStart()">drop 2 graph 1 life expetancy stuff</a></li>
+                    <li><a onclick="drawStart()">drop 2 graph 2 life expetancy stuff</a></li>
+                  </ul>
+                </li>              
+              </ul>
+            </nav>
           </div>
+
+
+
+
+
 
           <div class="col-8">
             <div id="chartDiv" class="svg-container">
             </div>
           </div>
         
-        </div> 
-      </div> 
+        </div>
+      </div>
       
 
 

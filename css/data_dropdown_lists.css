@@ -1,0 +1,55 @@
+
+
+
+#a_drop {
+  font-size: 20px;
+}
+
+#a_drop ul {
+  background: #999;
+  float: left;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+#a_drop li {
+  float: left;
+  position: relative;
+  width: 200px;
+  list-style: none;
+  -webkit-transition: .5s;
+  transition: .5s;  
+}
+
+#a_drop a {
+  display: block;
+  text-decoration: none;
+  padding: 5px 15px;
+  color: #000;
+}
+
+#a_drop ul ul {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  visibility: hidden;
+  opacity: 0;
+}
+
+#a_drop li:hover, #a_drop li:hover li {
+  background: #ddd;
+  z-index: 2;
+}
+
+#a_drop li li:hover, #a_drop li li:hover li {
+  background: #bbb;
+}
+
+#a_drop li:hover > ul {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+
+
