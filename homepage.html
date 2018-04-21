@@ -1,0 +1,69 @@
+
+<!-- homepage.html is NOT the splash page.  index.html is the splash page and links to homepage.html -->
+<!-- homepage.html contains navbar links and problem statement text -->
+
+<!doctype html>
+<html>
+  <head>
+    <title>Team 3 Visual Design Project Homepage</title>
+
+    <!-- dependent .css files --> 
+    <link href="css/bootstrap.min.css" rel="stylesheet"> <!-- bootstrap css file -->      
+    <link href="css/bootstrap-slider.min.css" rel="stylesheet"> <!-- bootstrap slider plugin css file -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> <!-- navbar arrow icon -->
+
+    <link rel="stylesheet" type="text/css" href="css/homepage.css">    <!-- homepage css file --> 
+    <link rel="stylesheet" type="text/css" href="css/navbar.css">   <!-- navbar css file -->  
+
+
+    <!-- .js library packages -->
+    <script src="https://d3js.org/d3.v4.min.js"></script>  <!-- D3 library -->
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>      
+    <script src="js/libraries/jquery-3.3.1.min.js"></script> <!-- jquery library -->   
+    <script src="js/libraries/tether.min.js"></script> <!-- tether library (dependence of bootstrap) -->          
+    <script src="js/libraries/bootstrap.min.js"></script> <!-- bootstrap library -->    
+    <script src="js/libraries/bootstrap-slider.min.js"></script> <!-- bootstrap slider plugin -->     
+
+    <script src="https://d3js.org/queue.v1.min.js"></script> <!-- Mke map library -->
+
+    <!-- project .js files -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+
+  </head>
+
+
+  <body>
+
+    <div id="container">
+
+      <!-- top navigation bar -->
+      <div class="navbarm">
+        <a href="homepage.html">Home</a>
+        <a href="life_expectancy.html">Life Expectancy</a>
+        <div class="dropdownm">
+          <button class="dropbtnm">Mortality
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdownm-content">
+            <a href="heart_disease.html">Heart Disease</a>
+            <a href="cancer.html">Cancer</a>
+            <a href="suicide.html">Suicide</a>
+            <a href="general_mortality.html">General</a>
+          </div>
+        </div>
+        <a href="opioid.html">Opioid</a>
+        <a href="obesity.html">Obesity</a>
+        <a id="aboutus" href="about_us.html">About Us</a>
+      </div>
+
+      <!-- placeholder title...do whatever here -->
+      <div id="titleDiv" class="wrapper">
+        <p>Visualization of Columbus Health Trends</p>
+      </div>
+
+
+    </div>
+  </body>
+
+</html>
