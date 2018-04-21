@@ -40,6 +40,14 @@ visibility: hidden;
 }
 
 /*-------- Header--------*/
+header {
+background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/columbus.png);
+background-size: cover;
+background-position: center;
+height: 100vh;
+background-attachment: fixed;
+letter-spacing: .5px;
+}
 div.a {
   border: .5px solid white;
   height: 82vh;
