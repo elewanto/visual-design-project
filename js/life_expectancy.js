@@ -17,7 +17,7 @@ function drawStart() {
                               .data('slider');  
 
   // automatically draw side-by-side U.S and Ohio county map by default
-  drawMaps();
+  life1_chart1();
 }
 
 
@@ -44,6 +44,25 @@ function life1_chart1() {
   oldChartSvg = document.getElementById('chartDiv');
   removeChildren(oldChartSvg);
   // draw chart here
+
+  var chartSvg = d3.select('#chartDiv')
+                .append('svg')
+                .attr('id', 'svgchart')       // svg ID is '#svgchart'
+                .attr('preserveAspectRatio', 'xMidYMid meet')
+                .attr('viewBox', '0 0 1200 800')
+                .classed('svg-content', true)
+                .attr('overflow', 'visible');
+                //.attr('width', width)
+                //.attr('height', height);
+
+  // create US map group <g>  ID #usmap
+  var chartGroup = chartSvg.append('g')
+                .attr('id', 'chartG')
+                .attr('transform', 'translate(5, 0)');
+
+  drawBarChart5start();
+
+
 
 }
 
