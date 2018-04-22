@@ -1,0 +1,89 @@
+2013 Urbanization,2013 Urbanization Code,County,County Code,Deaths,Population,Crude Rate,% of Total Deaths
+Large Central Metro,1,"Cuyahoga County, OH",39035,14648,1330612,1100.8,13.40%
+Large Central Metro,1,"Franklin County, OH",39049,8520,1105497,770.7,7.80%
+Large Central Metro,1,"Hamilton County, OH",39061,8034,810352,991.4,7.40%
+Large Fringe Metro,2,"Brown County, OH",39015,458,44161,1037.1,0.40%
+Large Fringe Metro,2,"Butler County, OH",39017,2743,350732,782.1,2.50%
+Large Fringe Metro,2,"Clermont County, OH",39025,1441,189486,760.5,1.30%
+Large Fringe Metro,2,"Delaware County, OH",39041,681,149153,456.6,0.60%
+Large Fringe Metro,2,"Fairfield County, OH",39045,1064,138745,766.9,1.00%
+Large Fringe Metro,2,"Geauga County, OH",39055,699,93614,746.7,0.60%
+Large Fringe Metro,2,"Hocking County, OH",39073,302,29058,1039.3,0.30%
+Large Fringe Metro,2,"Lake County, OH",39085,2215,227647,973,2.00%
+Large Fringe Metro,2,"Licking County, OH",39089,1368,157950,866.1,1.30%
+Large Fringe Metro,2,"Lorain County, OH",39093,2627,294873,890.9,2.40%
+Large Fringe Metro,2,"Madison County, OH",39097,346,41292,837.9,0.30%
+Large Fringe Metro,2,"Medina County, OH",39103,1097,164953,665,1.00%
+Large Fringe Metro,2,"Morrow County, OH",39117,283,34271,825.8,0.30%
+Large Fringe Metro,2,"Perry County, OH",39127,364,35254,1032.5,0.30%
+Large Fringe Metro,2,"Pickaway County, OH",39129,481,52954,908.3,0.40%
+Large Fringe Metro,2,"Union County, OH",39159,322,46952,685.8,0.30%
+Large Fringe Metro,2,"Warren County, OH",39165,1286,195499,657.8,1.20%
+Medium Metro,3,"Carroll County, OH",39019,236,29118,810.5,0.20%
+Medium Metro,3,"Fulton County, OH",39051,336,42897,783.3,0.30%
+Medium Metro,3,"Greene County, OH",39057,1257,156223,804.6,1.20%
+Medium Metro,3,"Lawrence County, OH",39087,719,62476,1150.8,0.70%
+Medium Metro,3,"Lucas County, OH",39095,4384,449224,975.9,4.00%
+Medium Metro,3,"Mahoning County, OH",39099,3040,247702,1227.3,2.80%
+Medium Metro,3,"Miami County, OH",39109,965,101564,950.1,0.90%
+Medium Metro,3,"Montgomery County, OH",39113,5399,546979,987.1,5.00%
+Medium Metro,3,"Portage County, OH",39133,1241,157469,788.1,1.10%
+Medium Metro,3,"Stark County, OH",39151,3890,376050,1034.4,3.60%
+Medium Metro,3,"Summit County, OH",39153,5438,545029,997.7,5.00%
+Medium Metro,3,"Trumbull County, OH",39155,2418,217926,1109.6,2.20%
+Medium Metro,3,"Wood County, OH",39173,902,124698,723.3,0.80%
+Small Metro,4,"Allen County, OH",39003,1004,106861,939.5,0.90%
+Small Metro,4,"Belmont County, OH",39013,903,70203,1286.3,0.80%
+Small Metro,4,"Clark County, OH",39023,1652,141367,1168.6,1.50%
+Small Metro,4,"Jefferson County, OH",39081,1015,71251,1424.5,0.90%
+Small Metro,4,"Richland County, OH",39139,1257,127724,984.2,1.20%
+Micropolitan (non-metro),5,"Ashland County, OH",39005,481,53048,906.7,0.40%
+Micropolitan (non-metro),5,"Ashtabula County, OH",39007,1132,102638,1102.9,1.00%
+Micropolitan (non-metro),5,"Athens County, OH",39009,419,64075,653.9,0.40%
+Micropolitan (non-metro),5,"Auglaize County, OH",39011,449,46166,972.6,0.40%
+Micropolitan (non-metro),5,"Champaign County, OH",39021,386,39592,974.9,0.40%
+Micropolitan (non-metro),5,"Clinton County, OH",39027,376,41775,900.1,0.30%
+Micropolitan (non-metro),5,"Columbiana County, OH",39029,1224,109784,1114.9,1.10%
+Micropolitan (non-metro),5,"Coshocton County, OH",39031,392,37363,1049.2,0.40%
+Micropolitan (non-metro),5,"Crawford County, OH",39033,526,45536,1155.1,0.50%
+Micropolitan (non-metro),5,"Darke County, OH",39037,517,53200,971.8,0.50%
+Micropolitan (non-metro),5,"Defiance County, OH",39039,360,39049,921.9,0.30%
+Micropolitan (non-metro),5,"Erie County, OH",39043,861,78070,1102.9,0.80%
+Micropolitan (non-metro),5,"Fayette County, OH",39047,336,28695,1170.9,0.30%
+Micropolitan (non-metro),5,"Gallia County, OH",39053,343,30993,1106.7,0.30%
+Micropolitan (non-metro),5,"Guernsey County, OH",39059,446,40752,1094.4,0.40%
+Micropolitan (non-metro),5,"Hancock County, OH",39063,628,73585,853.4,0.60%
+Micropolitan (non-metro),5,"Huron County, OH",39077,574,60116,954.8,0.50%
+Micropolitan (non-metro),5,"Jackson County, OH",39079,402,33242,1209.3,0.40%
+Micropolitan (non-metro),5,"Knox County, OH",39083,578,58641,985.7,0.50%
+Micropolitan (non-metro),5,"Logan County, OH",39091,465,46066,1009.4,0.40%
+Micropolitan (non-metro),5,"Marion County, OH",39101,652,66468,980.9,0.60%
+Micropolitan (non-metro),5,"Mercer County, OH",39107,406,40967,991,0.40%
+Micropolitan (non-metro),5,"Muskingum County, OH",39119,885,85696,1032.7,0.80%
+Micropolitan (non-metro),5,"Ottawa County, OH",39123,451,41629,1083.4,0.40%
+Micropolitan (non-metro),5,"Ross County, OH",39141,772,75935,1016.7,0.70%
+Micropolitan (non-metro),5,"Sandusky County, OH",39143,633,61865,1023.2,0.60%
+Micropolitan (non-metro),5,"Scioto County, OH",39145,891,77926,1143.4,0.80%
+Micropolitan (non-metro),5,"Seneca County, OH",39147,579,57664,1004.1,0.50%
+Micropolitan (non-metro),5,"Shelby County, OH",39149,394,49044,803.4,0.40%
+Micropolitan (non-metro),5,"Tuscarawas County, OH",39157,947,92286,1026.2,0.90%
+Micropolitan (non-metro),5,"Van Wert County, OH",39161,321,29264,1096.9,0.30%
+Micropolitan (non-metro),5,"Washington County, OH",39167,689,62547,1101.6,0.60%
+Micropolitan (non-metro),5,"Wayne County, OH",39169,1038,113603,913.7,1.00%
+NonCore (non-metro),6,"Adams County, OH",39001,295,28522,1034.3,0.30%
+NonCore (non-metro),6,"Hardin County, OH",39065,300,31983,938,0.30%
+NonCore (non-metro),6,"Harrison County, OH",39067,192,15907,1207,0.20%
+NonCore (non-metro),6,"Henry County, OH",39069,268,29031,923.2,0.20%
+NonCore (non-metro),6,"Highland County, OH",39071,451,42967,1049.6,0.40%
+NonCore (non-metro),6,"Holmes County, OH",39075,257,41630,617.3,0.20%
+NonCore (non-metro),6,"Meigs County, OH",39105,284,23588,1204,0.30%
+NonCore (non-metro),6,"Monroe County, OH",39111,217,14943,1452.2,0.20%
+NonCore (non-metro),6,"Morgan County, OH",39115,151,15216,992.4,0.10%
+NonCore (non-metro),6,"Noble County, OH",39121,124,14210,872.6,0.10%
+NonCore (non-metro),6,"Paulding County, OH",39125,167,19810,843,0.20%
+NonCore (non-metro),6,"Pike County, OH",39131,321,28299,1134.3,0.30%
+NonCore (non-metro),6,"Preble County, OH",39135,412,42584,967.5,0.40%
+NonCore (non-metro),6,"Putnam County, OH",39137,278,34798,798.9,0.30%
+NonCore (non-metro),6,"Vinton County, OH",39163,125,13370,934.9,0.10%
+NonCore (non-metro),6,"Williams County, OH",39171,371,38546,962.5,0.30%
+NonCore (non-metro),6,"Wyandot County, OH",39175,230,22820,1007.9,0.20%
