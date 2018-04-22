@@ -10,7 +10,7 @@ function drawBarChart5start() {
 
 console.log("in chart");
 // Problem 5
-d3.csv("js/2016ConsumerTopLevelProb5.csv", drawBarCharts5);
+d3.csv("data/test_data/2016ConsumerTopLevelProb5.csv", drawBarCharts5);
 
 }
 

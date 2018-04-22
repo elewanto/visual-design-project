@@ -1,7 +1,5 @@
 
 // global variables
-var dataLocation = "ohio";    // "franklin", "ohio"
-var dataType = "life";        // "life", "heart", "cancer", "opioid", "obesity"
 var sliderValue = "2015";     //
 
 

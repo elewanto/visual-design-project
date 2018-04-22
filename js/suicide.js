@@ -15,7 +15,7 @@ function drawStart() {
                               .data('slider');  
 
   // automatically draw side-by-side U.S and Ohio county map by default
-  obesity1_chart1();
+  suicide1_chart1();
 }
 
 
@@ -34,8 +34,8 @@ function sliderChange() {
 
 
 // draw Obesity maps and charts
-function obesity1_chart1() {
-  console.log('obesity1_chart1()')
+function suicide1_chart1() {
+  console.log('suicide1_chart1()')
 
   drawMaps();
 
