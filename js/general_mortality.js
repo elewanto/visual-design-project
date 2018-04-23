@@ -39,6 +39,11 @@ function mortality1_chart1() {
 
   drawMaps();
 
+  // Added by Sangeeta
+  //Draw the bubble chart
+  drawBubbles("../data/mortality_data/OH_Rural_Counties_Mortality_rate.csv");
+  drawBubbles("../data/mortality_data/OH_Urban_Counties_Mortality_Rate.csv");
+
   oldChartSvg = document.getElementById('chartDiv');
   removeChildren(oldChartSvg);
   // draw chart here
@@ -60,16 +65,82 @@ function mortality1_chart1() {
 
   drawBarChart5start();
 
-
-
 }
 
 
 
+function drawBubbles(file){
+  
+  if(file == "../data/mortality_data/OH_Rural_Counties_Mortality_rate.csv"){
+    xtransform = 5;
+  }else{
+    xtransform = 200;
+  }
+
+  var diameter = 300;
+  var color = d3.scaleOrdinal(d3.schemeCategory20c);
+  var pack = d3.pack()
+                .size([diameter, diameter])
+                .padding(1);
+
+  var bubbles_svg = d3.select('#bubbles-chart')
+            .append('svg')
+            .attr('class', 'bubbles')
+            .attr('id', 'bubble-chart')
+            .attr('width', 500)
+            .attr('height', 300)
+            .attr('transform', 'translate(' +xtransform+ ', 0)');
+
+  d3.csv(file, function(error, data){
+
+      data = data.map(function(d){ d.value = +d["Deaths_2015"]/10; d.Change = +d.Change; return d; });
+
+      var nodes = d3.hierarchy({children: data})
+                    .sum(function(d) { return d.value; })
+                    .sort(function(a, b) { return b.value - a.value; });
+
+      var circle = bubbles_svg.selectAll("circle")
+                      .data(pack(nodes).leaves(), function(d){ return d.Change; });
 
 
+      circle.enter().append("circle")
+          .attr("r", function(d){ return d.r; })
+          .attr("cx", function(d){ return d.x; })
+          .attr("cy", function(d){ return d.y; })
+          .attr("fill", function(d,i){ 
+            if(d.data.Change > 0){
+              return "orange";
+            }else{
+              return "green"; 
+          }})
+          .attr("id", function(d){return d.data.County;})
+          .on("mouseover", function(d) {
+              showPopover.call(this, d);
+          })
+          .on("mouseout", function(d) {
+              removePopovers();
+          })
+  });
+}
 
-
+function removePopovers() {
+  $('.popover').each(function() {
+    $(this).remove();
+  });
+}
+ 
+function showPopover(d) {
+  $(this).popover({
+      placement: 'auto top',
+      container: 'body',
+      trigger: 'manual',
+      html: true,
+      content: function() {
+        return "County: "+ d.data.County + "</br>Deaths in 2005: " + d.data.Deaths_2005 + "</br>Deaths in 2015: " + d.data.Deaths_2015 + "</br>Change: " + d.data.Change ;
+      }
+  });
+  $(this).popover('show');
+}
 
 // create SVG and groups needed to draw two maps side-by-side
 // can add data parameters to pass to function

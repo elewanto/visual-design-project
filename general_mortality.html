@@ -34,7 +34,7 @@
     <script src="js/ohio_map.js"></script>    <!-- Mike's new Ohio heat map tied to data -->
     <script src="js/us_map.js"></script>      <!-- Mike's US heat map tied to data -->
     <script src="js/test_chart.js"></script>
-
+    <script src="//d3js.org/d3.v4.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">   
 
   </head>
@@ -94,6 +94,19 @@
         </div>
       </div>
 
+      <div class="chart county-chart centered col-lg-12">
+        <p class="mapTitle">The rural-urban death rates in Ohio<span class="state area"></span></p>
+
+        <div class="bubbles-wrapper">
+            <div id="bubbles-chart" class="bubbles-inner">               
+            </div>
+            
+            <div id="bubbles-tooltip"></div>
+
+            <span>The size of each circle represents the death rate in that county for year 2015. Death rates for year 2005 is compared with the year 2015. Increase in the death rates are shown in orange and decrease in death rates (desirable) are shown as green.
+            </span>
+        </div>
+      </div>
 
       <!-- SVG for charts is build as child to chartDiv -->
       <div class="container-fluid" id="chart-container">
