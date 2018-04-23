@@ -41,8 +41,8 @@ function mortality1_chart1() {
 
   // Added by Sangeeta
   //Draw the bubble chart
-  drawBubbles("../data/mortality_data/OH_Rural_Counties_Mortality_rate.csv");
-  drawBubbles("../data/mortality_data/OH_Urban_Counties_Mortality_Rate.csv");
+  drawBubbles("/data/mortality_data/OH_Rural_Counties_Mortality_rate.csv");
+  drawBubbles("/data/mortality_data/OH_Urban_Counties_Mortality_Rate.csv");
 
   oldChartSvg = document.getElementById('chartDiv');
   removeChildren(oldChartSvg);
