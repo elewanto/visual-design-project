@@ -146,10 +146,9 @@ function drawHeartDiseaseUSMap(year) {
           .attr('id', function(d, i) {
             return 'statename' + i;
           })
-          .attr('opacity', 0.9)
-          .attr('font-size', 'small')
-          // hide the text
-          .attr('display', 'none')
+          .style('opacity', 0.7)
+          .style('font-size', 8)
+          .attr('display', '')
           .text(function(d) {
             return d.properties.name;
           })
