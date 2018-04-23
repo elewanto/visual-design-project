@@ -109,7 +109,7 @@ function drawHeartDiseaseUSMap(year) {
                     .style('width', function() {
                       var pixwidth = 140;
                       try {
-                        pixwidth = d.properties.name.length * 8 + 50;
+                        pixwidth = d.properties.name.length * 9 + 50;
                       } 
                       catch(e) { }
                       return pixwidth + 'px'; 

@@ -99,7 +99,7 @@ div.tooltip {
 .tooltipAlt {
   position: absolute;
   width: 145px;
-  height: 22px;
+  height: 24px;
   pointer-events: none;
   font-weight: bold;
   border-style: solid;
