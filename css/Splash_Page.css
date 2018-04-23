@@ -42,7 +42,7 @@ visibility: hidden;
 /*-------- Header--------*/
 
 header {
-background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../images/columbus.png);
+background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../images/columbus.PNG);
 background-size: cover;
 background-position: center;
 height: 100vh;
