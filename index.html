@@ -1,6 +1,4 @@
 <!-- index.html is the splash page / landing page.  It contains a button link to homepage.html -->
-
-
 <!-- to run locally: -->
 <!-- python -m SimpleHTTPServer 8888 -->
 <!-- http://localhost:8888 -->
@@ -13,7 +11,8 @@
     <!-- dependent .css files -->
     <link href="css/bootstrap.min.css" rel="stylesheet"> <!-- bootstrap css file -->      
     <link href="css/bootstrap-slider.min.css" rel="stylesheet"> <!-- bootstrap slider plugin css file -->          
-    <link rel="stylesheet" type="text/css" href="css/index.css">    <!-- homepage css file -->   
+    <link rel="stylesheet" type="text/css" href="css/index.css">    <!-- homepage css file -->
+    <link rel="stylesheet" type="text/css" href="css/Splash_Page.css">    
 
     <!-- .js library packages -->
     <script src="https://d3js.org/d3.v4.min.js"></script>  <!-- D3 library -->
@@ -28,18 +27,35 @@
     <!-- project .js files -->
 
     <!-- set viewport for responsive page size scaling -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,300italic' rel='stylesheet' type='text/css'>    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
 
 
   <body>
 
-    <div class="container">
-      <img src="images/splash_page.png" class="bg">
-     <!-- <button class="btn">LEARN MORE</button> -->
-      <a href="homepage.html" class="btn">LEARN MORE</a>
-    </div>
-  <!--</div>-->
-  </body>
+   <body>
+      <header>
+         <div class="hero-text-box">
+            <div class="a">
+               <h1>
+                  Life Expectancy in<br> 
+                  Ohio Counties and the U.S.
+               </h1>
+               <div class="back">
+                  <a href="homepage.html">
+                  <div class="button_base b02_slide_in">
+                     <div>HOMEPAGE</div>
+                     <div></div>
+                     <div>LEARN MORE</div>
+                  </div>
+                 </a>
+                  <a href="about_us.html"><button class="button button1">ABOUT US</button></a>
+               </div>
+            </div>
+         </div>
+      </header>
+      <!--</div>-->
+   </body>
 
 </html>

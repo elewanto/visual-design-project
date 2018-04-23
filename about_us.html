@@ -4,12 +4,18 @@
 <!doctype html>
 <html>
   <head>
-    <title>Team 3 Visual Design Project</title>
+    <meta charset="UTF-8">
+    <title>HTML5 / CSS3 Drop-Down Navigation Menu</title>
+    <meta name="description" content="">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/grid.css">      
 
     <!-- dependent .css files --> 
     <link href="css/bootstrap.min.css" rel="stylesheet"> <!-- bootstrap css file -->      
     <link href="css/bootstrap-slider.min.css" rel="stylesheet"> <!-- bootstrap slider plugin css file -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> <!-- navbar arrow icon -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,300italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/about_us.css">    
 
     <link rel="stylesheet" type="text/css" href="css/index.css">    <!-- background image css file -->       
     <link rel="stylesheet" type="text/css" href="css/navbar.css">   <!-- navbar css file -->  
@@ -22,7 +28,6 @@
     <script src="js/libraries/tether.min.js"></script> <!-- tether library (dependence of bootstrap) -->          
     <script src="js/libraries/bootstrap.min.js"></script> <!-- bootstrap library -->    
     <script src="js/libraries/bootstrap-slider.min.js"></script> <!-- bootstrap slider plugin -->     
-
     <script src="https://d3js.org/queue.v1.min.js"></script> <!-- Mke map library -->
 
     <!-- project .js files -->
@@ -34,31 +39,108 @@
 
   <body>
 
-    <div id="container">
-
-      <img src="images/team.png" class="bg"> <!-- background image scales to screen dimensions-->      
-
-      <!-- top navigation bar -->
-      <div class="navbarm">
-        <a href="homepage.html">Home</a>
-        <a href="life_expectancy.html">Life Expectancy</a>
-        <div class="dropdownm">
-          <button class="dropbtnm">Mortality
-            <i class="fa fa-caret-down"></i>
-          </button>
-          <div class="dropdownm-content">
-            <a href="heart_disease.html">Heart Disease</a>
-            <a href="cancer.html">Cancer</a>
-            <a href="suicide.html">Suicide</a>
-            <a href="general_mortality.html">General</a>
-          </div>
-        </div>
-        <a href="opioid.html">Opioid</a>
-        <a href="obesity.html">Obesity</a>
-        <a id="aboutus" href="about_us.html">About Us</a>
+      <div id="wrapper">
+         <nav id="nav">
+            <ul id="navigation">
+               <li><a href="homepage.html">Home</a></li>
+               <li><a href="life_expectancy.html">Life Expectancy</a></li>
+               <li>
+                  <a href="#">Mortality &or;</a>
+                  <ul>
+                        <li><a href="heart_disease.html">Heart Diseases</a></li>
+                        <li><a href="cancer.html">Cancer</a></li>
+                        <li><a href="suicide.html">Suicide</a></li>
+                        <li><a href="general_mortality.html">General</a></li>
+                  </ul>
+               </li>
+               <li><a href="opioid.html">Opioid</a></li>
+               <li><a href="obesity.html">Obesity</a></li>
+            </ul>
+         </nav>
       </div>
+      <!--end wrapper-->
 
-    </div>
+      <section class="section-steps" id="works">
+                  <div class="row">
+                     <!--Concept Statement-->
+                     <div class="col span-1-of-2">
+                        <h1>Concept Statement</h1>
+                        <p class="long-copy">
+                           Despite high economic status and availability of reliable healthcare services, Columbus residents are lagging behind the United States and other parts of Ohio in life expectancy, obesity rates, and abuse of opioids.  We will identify the trends in opioid abuse and obesity and their possible effects on life expectancy in Columbus Ohio, with focus on Columbus counties (information). Our goal is to show trends in Columbus residents’ life expectancy, opioid use, and obesity relative to the rest of the country over time, possible correlations between them, and to explore other potential influencing factors.
+                        </p>
+                        <a  href="index.html"><button class="button button1">Splash Page</button></a>
+                     </div>
+                     <!--Team Members-->
+                     <div class="col span-1-of-2 steps-box">
+                        <div class="works-step clearfix">
+                           <div style="float:left; padding-bottom:25px; margin-left:30px">
+                              <a href="https://www.linkedin.com/in/coleman-anker-6121b6156/">
+                              <img src="images/Coleman.jpg" style="width:100px;">
+                           </div>
+                           </a>
+                           <div style="float:left; margin-top:20px; margin-left:20px">
+                              <h4>Coleman Anker</h4>
+                              <p>Computer Science Engineering</p>
+                           </div>
+                        </div>
+                        <div class="works-step clearfix">
+                           <div style="float:left; padding-bottom:25px; margin-left:30px">
+                              <a href="https://www.linkedin.com/in/sangeeta1/">
+                              <img src="images/Sangeeta.jpg" style="width:100px">
+                              </a>
+                           </div>
+                           <div style="float:left; margin-top:20px; margin-left:20px">
+                              <h4>Sangeeta Kumari</h4>
+                              <p>Computer Science Engineering</p>
+                           </div>
+                        </div>
+                        <div class="works-step clearfix">
+                           <div style="float:left; padding-bottom:25px; margin-left:30px">
+                              <a href="https://www.linkedin.com/in/eric-lewantowicz-0a904a43/">
+                              <img src="images/Eric.jpg" style="width:100px">
+                              </a>
+                           </div>
+                           <div style="float:left; margin-top:20px; margin-left:20px">
+                              <h4>Eric Lewantowicz</h4>
+                              <p>Computer Science Engineering</p>
+                           </div>
+                        </div>
+                        <div class="works-step clearfix">
+                           <div style="float:left; padding-bottom:25px; margin-left:30px">
+                              <a href="https://www.linkedin.com/in/mike-zhang-491830b9//">
+                              <img src="images/Mike.jpg" style="width:100px">
+                              </a>
+                           </div>
+                           <div style="float:left; margin-top:20px; margin-left:20px">
+                              <h4>Mike Zhang</h4>
+                              <p>Computer Science Engineering</p>
+                           </div>
+                        </div>
+                        <div class="works-step clearfix">
+                           <div style="float:left; padding-bottom:25px; margin-left:30px">
+                              <a href="https://www.linkedin.com/in/ejbloch/">
+                              <img src="images/Ellie.jpg" style="width:100px">
+                              </a>
+                           </div>
+                           <div style="float:left; margin-top:20px; margin-left:20px">
+                              <h4>Ellie Block</h4>
+                              <p>Visual Communication Design</p>
+                           </div>
+                        </div>
+                        <div class="works-step clearfix">
+                           <div style="float:left; padding-bottom:25px; margin-left:30px">
+                              <a href="https://www.linkedin.com/in/yihao-zhang-sam-b60494115">
+                              <img src="images/Yihao.jpg" style="width:100px">
+                              </a>
+                           </div>
+                           <div style="float:left; margin-top:20px; margin-left:20px">
+                              <h4>Yihao Zhang</h4>
+                              <p>Visual Communication Design</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </section>
   </body>
 
 </html>
