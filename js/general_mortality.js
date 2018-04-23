@@ -71,7 +71,7 @@ function mortality1_chart1() {
 
 function drawBubbles(file){
   
-  if(file == "../data/mortality_data/OH_Rural_Counties_Mortality_rate.csv"){
+  if(file == "/data/mortality_data/OH_Rural_Counties_Mortality_rate.csv"){
     xtransform = 5;
   }else{
     xtransform = 200;
