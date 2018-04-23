@@ -53,15 +53,32 @@ function drawHeartDiseaseUSMap(year) {
   var tipg = usmapg.append('g')
       .attr('id', 'tipg')
 
-  // import data from the obesity file
-  d3.csv("data/heart_disease_data/heart_disease_mortality_us_1999_2015.csv",  function(d, i) {
-      return d;
-    },function(data) {
+  // get data from US and Ohio to find global min max rates for color scaling
+  queue().defer(d3.csv, "data/heart_disease_data/heart_disease_mortality_us_1999_2015.csv")
+        .defer(d3.csv, "data/heart_disease_data/heart_disease_mortality_ohio_1999_2015.csv")
+        .await(drawUS);
 
-      minRate = d3.min(data, function(d) {return d.Rate});    // get min, max values from Rate column for color scaling
-      maxRate = d3.max(data, function(d) {return d.Rate});
-      console.log('min rate: ' + minRate);
-      console.log('max rate: ' + maxRate);
+
+  // import data from the obesity file
+  function drawUS(error, data, dataOhio) {
+
+    var minRate = d3.min(data, function(d) {return d.Rate});    // get min, max values from Rate column for color scaling
+    var maxRate = d3.max(data, function(d) {return d.Rate});
+    console.log('U.S. rates: ' + minRate + ' ' + maxRate);
+    // check if Ohio min/max is less/greater and use global
+    var minOhio = -1;
+    var maxOhio = -1;
+    minOhio = d3.min(dataOhio, function(d) {return d.Rate});
+    maxOhio = d3.max(dataOhio, function(d) {return d.Rate});
+    console.log('Ohio rates: ' + minOhio + ' ' + maxOhio);    
+    if (minOhio != -1 && minOhio < minRate) {
+      minRate = minOhio;
+    }
+    if (maxOhio != -1 && maxOhio > maxRate) {
+      maxRate = maxOhio;
+    }
+    console.log('U.S. Map min max rates: ' + minRate + ' ' + maxRate);
+
       var color = d3.scaleSequential(d3.interpolateYlOrBr)    // set color scheme
                     .domain([minRate, maxRate])     
        d3.json("data/us-states.json",function(json) {        // import GeoJSON data 
@@ -194,11 +211,10 @@ function drawHeartDiseaseUSMap(year) {
                   .style('font-size', 16)
                   .text(function(d) { return d; });
       }); // end d3.json data function
-    }); // end function(data)
+    } // end function(data)
 
   return 1;
 } // end drawUSMap ()
-
 
 
 
@@ -231,43 +247,63 @@ function redrawHeartDiseaseUSMap(year, delay) {
             .text(year +"  Heart Disease Mortality Rates per 100,000 Population ")  
             .style('font-size', 22);    
 
-  // import data from the obesity file
-  d3.csv("data/heart_disease_data/heart_disease_mortality_us_1999_2015.csv",  function(d, i) {
-      return d;
-    },function(data) {
 
-      minRate = d3.min(data, function(d) {return d.Rate});    // get min, max values from Rate column for color scaling
-      maxRate = d3.max(data, function(d) {return d.Rate});
-      var color = d3.scaleSequential(d3.interpolateYlOrBr)    // set color scheme
-                    .domain([minRate, maxRate])     
-       d3.json("data/us-states.json",function(json) {        // import GeoJSON data 
-        for (var i = 0; i < data.length; i++) {             // iterate each row of data in the csv file
-          if (data[i].Year == year) {                        // filter only selected year
-            var state = data[i].State;                        // extract the state
-            var rate = data[i].Rate;                   
-            for (var j = 0; j < json.features.length; j++)  {             // Find the corresponding state inside the GeoJSON
-              var jsonState = json.features[j].properties.name;
-              if (state == jsonState) {
-                json.features[j].properties.value = rate;
-                break;
-              }
+  // get data from US and Ohio to find global min max rates for color scaling
+  queue().defer(d3.csv, "data/heart_disease_data/heart_disease_mortality_us_1999_2015.csv")
+        .defer(d3.csv, "data/heart_disease_data/heart_disease_mortality_ohio_1999_2015.csv")
+        .await(redrawUS);
+
+
+
+  function redrawUS(error, data, dataOhio) {
+
+    minRate = d3.min(data, function(d) {return d.Rate});    // get min, max values from Rate column for color scaling
+    maxRate = d3.max(data, function(d) {return d.Rate});
+    var minOhio = -1;
+    var maxOhio = -1;
+    minOhio = d3.min(dataOhio, function(d) {return d.Rate});
+    maxOhio = d3.max(dataOhio, function(d) {return d.Rate});
+    console.log('Ohio rates: ' + minOhio + ' ' + maxOhio);    
+
+    if (minOhio != -1 && minOhio < minRate) {
+      minRate = minOhio;
+    }
+    if (maxOhio != -1 && maxOhio > maxRate) {
+      maxRate = maxOhio;
+    }
+    console.log('U.S. Map min max rates: ' + minRate + ' ' + maxRate);
+
+
+    var color = d3.scaleSequential(d3.interpolateYlOrBr)    // set color scheme
+                  .domain([minRate, maxRate])     
+     d3.json("data/us-states.json",function(json) {        // import GeoJSON data 
+      for (var i = 0; i < data.length; i++) {             // iterate each row of data in the csv file
+        if (data[i].Year == year) {                        // filter only selected year
+          var state = data[i].State;                        // extract the state
+          var rate = data[i].Rate;                   
+          for (var j = 0; j < json.features.length; j++)  {             // Find the corresponding state inside the GeoJSON
+            var jsonState = json.features[j].properties.name;
+            if (state == jsonState) {
+              json.features[j].properties.value = rate;
+              break;
             }
           }
         }
+      }
 
-      var t = d3.transition()
-                .duration(delay)
-                .ease(d3.easeLinear);        
+    var t = d3.transition()
+              .duration(delay)
+              .ease(d3.easeLinear);        
 
-        var paths = d3.select('#usmap')         // assign the color for each state
-          .selectAll("path")
-          .data(json.features)
-          .transition(t)
-          .style("fill", function(d) {
-            return color(d.properties.value);
-          });
-      }); // end d3.json data function
-    }); // end function(data)
+      var paths = d3.select('#usmap')         // assign the color for each state
+        .selectAll("path")
+        .data(json.features)
+        .transition(t)
+        .style("fill", function(d) {
+          return color(d.properties.value);
+        });
+    }); // end d3.json data function
+  } // end function(data)
 
   return 1;
 }
