@@ -150,6 +150,9 @@ function drawHeartDiseaseUSMap(year) {
           .style('font-size', 8)
           .attr('display', '')
           .text(function(d) {
+            if (d.properties.name == 'Puerto Rico') {
+              return '';
+            }
             return d.properties.name;
           })
           .attr('transform', function(d, i) {
