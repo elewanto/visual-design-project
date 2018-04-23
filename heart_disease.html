@@ -19,7 +19,9 @@
     <link rel="stylesheet" type="text/css" href="css/data_dropdown.css">   <!-- data dropdown css file -->      
     <!-- .js library packages -->
     <script src="https://d3js.org/d3.v4.min.js"></script>  <!-- D3 library -->
-    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>      
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+    <script src="https://d3js.org/d3-color.v1.min.js"></script>
+    <script src="https://d3js.org/d3-interpolate.v1.min.js"></script>     
     <script src="js/libraries/jquery-3.3.1.min.js"></script> <!-- jquery library -->   
     <script src="js/libraries/tether.min.js"></script> <!-- tether library (dependence of bootstrap) -->          
  <!--   <script src="js/libraries/bootstrap.min.js"></script> --><!-- bootstrap library -->    
@@ -31,8 +33,8 @@
     <!-- project .js files -->
     <script src="js/heart_disease.js"></script>    
     <script src="js/ohio_map_v1.js"></script>  <!-- Mike's original Ohio map imported to standalone .js file -->
-    <script src="js/ohio_map.js"></script>    <!-- Mike's new Ohio heat map tied to data -->
-    <script src="js/us_map.js"></script>      <!-- Mike's US heat map tied to data -->
+    <script src="js/ohio_map_heart_disease.js"></script>
+    <script src="js/us_map_heart_disease.js"></script>
     <script src="js/test_chart.js"></script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">   
@@ -78,12 +80,12 @@
             </div>
 
             <div id="sliderDiv" class="wrapper">
-              <b>1980 &nbsp;&nbsp;</b>
+              <b>1999 &nbsp;&nbsp;</b>
               <input id="mapSlider" data-slider-id='mSlider' type="text"
                       data-provide="slider"             
-                      data-slider-min="1980"
+                      data-slider-min="1999"
                       data-slider-max="2015"
-                      data-slider-step="5"
+                      data-slider-step="1"
                       data-slider-value="2015"
                       data-slider-tooltip="always"
               />
@@ -103,6 +105,12 @@
             <div class="panel-body">
               <div  id="analysisDropdown">
                 <div class="drop-btn-group">
+                  <div class="dropdownd">
+                    <button class="dropbtnd" onclick="heart_disease_maps_years()">Heart Disease Over The Years</button>
+                  </div>
+                  <div class="dropdownd">
+                    <button class="dropbtnd" onclick="heart_disease_maps_1999_2015()">Heart Disease 1999 vs. 2015</button>
+                  </div>                          
                   <div class="dropdownd">
                     <button class="dropbtnd">drop 1 heart disease graphs</button>
                     <div class="dropdownd-content">
