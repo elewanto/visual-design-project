@@ -57,12 +57,25 @@ function drawHeartDiseaseOhioMap(year) {
         .attr('class', 'tooltipAlt')
         .style('opacity', 0);        
 
+      var columbusCounties = ['Franklin', 'Delaware', 'Pickaway', 'Fairfield'];
+
       var paths = mapLayer
         .selectAll('path')
         .data(counties.features)
         .enter()
         .append('path')
-        .style("stroke", "#606060")
+        .style("stroke", function(d, i) {
+          if (columbusCounties.includes(d.properties.NAME)) {
+            return '#e40005';       // border Columbus counties in red
+          }
+          return "#606060";
+        })
+        .style("stroke-width", function(d, i) {
+          if (columbusCounties.includes(d.properties.NAME)) {
+            return 3;       // border Columbus counties in thicker path line
+          }
+          return 1;
+        })        
         // fill colors to maps
         .attr("fill", function(d, i) {
           // assign color based on the min, max mortality rate
@@ -141,7 +154,7 @@ function drawHeartDiseaseOhioMap(year) {
 
 
 
-function drawHeartDiseaseOhioMapRedraw(year, delay) {
+function redrawHeartDiseaseOhioMap(year, delay) {
 
   // set up size for the OH svg map
   var width = 500;

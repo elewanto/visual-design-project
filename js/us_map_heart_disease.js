@@ -93,8 +93,18 @@ function drawHeartDiseaseUSMap(year) {
           .enter()
           .append("path")
           .attr("d", path)
-          .style("stroke", "#606060")
-          .style("stroke-width", "1")
+          .style("stroke", function(d, i) {
+            if (d.properties.name == 'Ohio') {
+              return '#e40005';       // border Columbus counties in red
+            }
+            return "#606060";
+          })
+          .style("stroke-width", function(d, i) {
+            if (d.properties.name == 'Ohio') {
+              return 3;       // border Columbus counties in thicker path line
+            }
+            return 1;
+          }) 
           .style("fill", function(d) {
             return color(d.properties.value);
           })
@@ -192,7 +202,7 @@ function drawHeartDiseaseUSMap(year) {
 
 
 
-function drawHeartDiseaseUSMapRedraw(year, delay) {
+function redrawHeartDiseaseUSMap(year, delay) {
 
   // set up the size US map within svg (left half of svg area)
   var width = 1000;

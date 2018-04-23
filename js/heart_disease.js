@@ -20,8 +20,8 @@ function drawStart() {
 async function sliderChange() {
   console.log('slider used: ' + slider.getValue());
   sliderValue = await slider.getValue();
-  var ret1 = drawHeartDiseaseUSMapRedraw(sliderValue, 500);
-  var ret2 = drawHeartDiseaseOhioMapRedraw(sliderValue, 500);
+  var ret1 = redrawHeartDiseaseUSMap(sliderValue, 500);
+  var ret2 = redrawHeartDiseaseOhioMap(sliderValue, 500);
   var hold = [await ret1, await ret2]
   return 1;
 }  
@@ -67,8 +67,8 @@ async function heart_disease_maps_years() {
     var usmapg = mapSvg.select('#usmap');
     var ohiomapg = mapSvg.select('#ohiomap');
     delay = 500 // transition milliseconds
-    drawHeartDiseaseUSMapRedraw(year, delay);
-    drawHeartDiseaseOhioMapRedraw(year, delay);
+    redrawHeartDiseaseUSMap(year, delay);
+    redrawHeartDiseaseOhioMap(year, delay);
     await sleep(600);
   }
 
@@ -85,8 +85,8 @@ async function heart_disease_maps_1999_2015() {
   await sleep(1000);
 
   delay = 800 // transition milliseconds
-  drawHeartDiseaseUSMapRedraw(2015, delay);
-  drawHeartDiseaseOhioMapRedraw(2015, delay);
+  redrawHeartDiseaseUSMap(2015, delay);
+  redrawHeartDiseaseOhioMap(2015, delay);
 
   function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
