@@ -65,13 +65,6 @@ html, body {
   min-height: 800px; 
 }
 
-/*
-#mapDiv {
-  height: 60%;
-  width: 90%;
-}
-*/
-
 .maptitle {
   font-size: 3em;
   font-weight: bold;
@@ -103,6 +96,23 @@ div.tooltip {
     pointer-events: none;     
 }
 
+.tooltipAlt {
+  position: absolute;
+  width: 145px;
+  height: 22px;
+  pointer-events: none;
+  font-weight: bold;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+  border-radius: 5px;
+  color: #000;
+  background-color: #ccc;
+  padding: 5px 0;
+  text-align: center;
+  z-index: 1;
+}
+
 
 
 /* old stuff may not be needed */
@@ -130,24 +140,3 @@ text {
   font-size: 18px;
   font-weight: bold;
 }
-
-/*
-.tooltip {
-  position: absolute;
-  width: 160px;
-  height: 20px;
-  pointer-events: none;
-  font-weight: bold;
-  text-align: center;
-}
-
-.tooltip1 {
-  position: absolute;
-  width: 140px;
-  height: 20px;
-  pointer-events: none;
-  font-weight: bold;
-  background-color: lightgrey;
-  text-align: center;
-}
-*/

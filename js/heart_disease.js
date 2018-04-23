@@ -1,6 +1,6 @@
 
 // global variables
-var sliderValue = "2015";     //
+var sliderValue = "2015";
 
 
 /************************************************************************************************/
@@ -8,18 +8,22 @@ var sliderValue = "2015";     //
 function drawStart() {
   // create slider object
   slider = $('#mapSlider').slider()
-                              .on('slide', sliderChange)
+                              .on('slide slideStop', sliderChange)
                               .data('slider');  
-
   // default chart / maps to draw on heart_disease.html page load
   heart_disease1_chart1();
 }
 
+
+
 // Map Slider function
-function sliderChange() {
+async function sliderChange() {
   console.log('slider used: ' + slider.getValue());
-  sliderValue = slider.getValue();
-  drawMaps(sliderValue);
+  sliderValue = await slider.getValue();
+  var ret1 = drawHeartDiseaseUSMapRedraw(sliderValue, 500);
+  var ret2 = drawHeartDiseaseOhioMapRedraw(sliderValue, 500);
+  var hold = [await ret1, await ret2]
+  return 1;
 }  
 
 
@@ -57,21 +61,16 @@ async function heart_disease_maps_years() {
 
   drawMaps(1999);
 
-
   for (var year = 1999; year <= 2015; year++) {
-
     $('#mapSlider').slider('setValue', year);
-
     var mapSvg = d3.select('#svgmap');
     var usmapg = mapSvg.select('#usmap');
     var ohiomapg = mapSvg.select('#ohiomap');
-
-    drawHeartDiseaseUSMapMultiple(year);
-    drawHeartDiseaseOhioMapMultiple(year);
-
+    delay = 500 // transition milliseconds
+    drawHeartDiseaseUSMapRedraw(year, delay);
+    drawHeartDiseaseOhioMapRedraw(year, delay);
     await sleep(600);
   }
-
 
   function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -80,17 +79,14 @@ async function heart_disease_maps_years() {
 }
 
 
-
-
-
 async function heart_disease_maps_1999_2015() {
 
   drawMaps(1999);  
   await sleep(1000);
 
-  drawHeartDiseaseUSMap1999_2015(2015);
-  drawHeartDiseaseOhioMap1999_2015(2015);
-
+  delay = 800 // transition milliseconds
+  drawHeartDiseaseUSMapRedraw(2015, delay);
+  drawHeartDiseaseOhioMapRedraw(2015, delay);
 
   function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -140,20 +136,8 @@ function drawMaps(year) {
 
 
 
-// draw SVG D3 charts 
-function drawCharts() {
-
-  // remove any existing svg so we don't append a second one below
-  oldSvg = document.getElementById('chartDiv');   // get the parent container div for the svg
-  removeChildren(oldSvg);                       // delete previous svg element before drawing new svg
-
-}
-
-
 // remove document html children of node parameter
 function removeChildren(node) {
-
-  console.log('in removeChildren()');
 
   while (node.firstChild) {
     node.removeChild(node.firstChild);

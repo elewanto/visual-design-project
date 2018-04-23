@@ -46,8 +46,12 @@ function drawHeartDiseaseUSMap(year) {
       .classed('map-layer', true);      
 
   var textLayer = usmapg.append('g')
-    .attr('transform','translate (300, 0)')
-    .classed('map-layer', true);
+      .attr('transform','translate (300, 0)')
+      .classed('map-layer', true);
+
+
+  var tipg = usmapg.append('g')
+      .attr('id', 'tipg')
 
   // import data from the obesity file
   d3.csv("data/heart_disease_data/heart_disease_mortality_us_1999_2015.csv",  function(d, i) {
@@ -75,6 +79,13 @@ function drawHeartDiseaseUSMap(year) {
           }
         }
 
+        var tooltip = d3.select('body').append('div')
+          .attr('class', 'tooltipAlt')
+          .style('opacity', 0);
+
+        var t = d3.transition()
+                  .duration(400)
+                  .ease(d3.easeLinear);  
 
         var paths = d3.select('#usmap')         // assign the color for each state
           .selectAll("path")
@@ -88,22 +99,41 @@ function drawHeartDiseaseUSMap(year) {
             return color(d.properties.value);
           })
           .on('mouseover',function(d, i) {            // add mouse over function
-            d3.select(this)
-              .transition()
-              .duration(1)
-              .attr("opacity", 0.5)
+              tooltip.transition()
+                    .duration(200)
+                    .style('opacity', 0.9);
+              tooltip.html(d.properties.value + '&ensp;' + d.properties.name)
+                    .style('left', (d3.event.pageX - 70) + 'px')
+                    .style('top', (d3.event.pageY - 35) + 'px')
+                    .style('background-color', color(parseInt(d.properties.value)))
+                    .style('width', function() {
+                      var pixwidth = 140;
+                      try {
+                        pixwidth = d.properties.name.length * 8 + 50;
+                      } 
+                      catch(e) { }
+                      return pixwidth + 'px'; 
+                    });
 
-              d3.select('#statename' + i)
-                .attr('display', '')
+              d3.select(this)
+                .transition()
+                .duration(1)
+                .attr("opacity", 0.6)
+
+            //  d3.select('#statename' + i)
+            //    .attr('display', '')
           })
-                .on('mouseout', function(d, i) {                // add mouse out function
-            d3.select(this)
-              .transition()
-              .duration(200)
-              .attr("opacity", 1)
-              .style('fill', color(d.properties.value));
-            d3.select('#statename' + i)
-              .attr('display', 'none')
+            .on('mouseout', function(d, i) {                // add mouse out function
+                tooltip.transition()
+                      .duration(400)
+                      .style('opacity', 0);
+                d3.select(this)
+                  .transition()
+                  .duration(200)
+                  .attr("opacity", 1)
+                  .style('fill', color(d.properties.value));
+             //   d3.select('#statename' + i)
+             //     .attr('display', 'none')
           });
         var texts = d3.select('#usmap')         // add text notation to map
           .selectAll('text')
@@ -116,8 +146,8 @@ function drawHeartDiseaseUSMap(year) {
           .attr('id', function(d, i) {
             return 'statename' + i;
           })
-          .attr('opacity', 0.5)
-          .attr('font-size', 'x-small')
+          .attr('opacity', 0.9)
+          .attr('font-size', 'small')
           // hide the text
           .attr('display', 'none')
           .text(function(d) {
@@ -142,7 +172,6 @@ function drawHeartDiseaseUSMap(year) {
                 .attr("width", 24)
                 .attr("height", 24)
                 .style("fill", function(d, i) {
-                  console.log('d: ' + d3.interpolateYlOrBr(d));
                   return(d3.interpolateYlOrBr(d)) });
             legend.append("text")                 // append the legend text
                   .data([Math.round(0.1*maxRate) + ' deaths per 100,000', Math.round(0.4*maxRate) + ' deaths per 100,000',
@@ -155,35 +184,13 @@ function drawHeartDiseaseUSMap(year) {
       }); // end d3.json data function
     }); // end function(data)
 
-  function mouseover(d){
-      // Highlight hovered province
-      d3.select(this)
-       .transition()
-       .duration(1)
-       .attr("opacity", 0.5);
-
-     // display the statename on map
-     d3.select('#statename' + i)
-       .attr('display', '')
-  }
-
-  function mouseout(d, i){
-      // Reset province color
-      d3.selectAll('path')
-        .attr("opacity", 1);
-  }
-
+  return 1;
 } // end drawUSMap ()
 
 
 
 
-
-
-
-
-
-function drawHeartDiseaseUSMapMultiple(year) {
+function drawHeartDiseaseUSMapRedraw(year, delay) {
 
   // set up the size US map within svg (left half of svg area)
   var width = 1000;
@@ -237,7 +244,7 @@ function drawHeartDiseaseUSMapMultiple(year) {
         }
 
       var t = d3.transition()
-                .duration(500)
+                .duration(delay)
                 .ease(d3.easeLinear);        
 
         var paths = d3.select('#usmap')         // assign the color for each state
@@ -250,76 +257,5 @@ function drawHeartDiseaseUSMapMultiple(year) {
       }); // end d3.json data function
     }); // end function(data)
 
-
-}
-
-
-
-function drawHeartDiseaseUSMap1999_2015(year) {
-
-  // set up the size US map within svg (left half of svg area)
-  var width = 1000;
-  var height = 800;
-
-  // scale to US map
-  var projection = d3.geoAlbersUsa()
-      .translate([450, 300])
-      .scale([1100]);
-
-  // convert GeoJSON to SVG paths
-  var path = d3.geoPath()               
-      .projection(projection);
-
-  parent = document.getElementById('svgmap');     // clear old title and rewrite new year
-  child = document.getElementById('mastertitle');
-  parent.removeChild(child);
-
-  // create single title for both maps
-  var mapsvg = d3.select("#svgmap")
-    .attr("class", "maptitle")
-    .append("text")               //apend the graph title                     
-            .attr("x", 800)
-            .attr("y", 40)
-            .attr('id', 'mastertitle')            
-            .text(year +"  Heart Disease Mortality Rates per 100,000 Population ")  
-            .style('font-size', 22);    
-
-  // import data from the obesity file
-  d3.csv("data/heart_disease_data/heart_disease_mortality_us_1999_2015.csv",  function(d, i) {
-      return d;
-    },function(data) {
-
-      minRate = d3.min(data, function(d) {return d.Rate});    // get min, max values from Rate column for color scaling
-      maxRate = d3.max(data, function(d) {return d.Rate});
-      var color = d3.scaleSequential(d3.interpolateYlOrBr)    // set color scheme
-                    .domain([minRate, maxRate])     
-       d3.json("data/us-states.json",function(json) {        // import GeoJSON data 
-        for (var i = 0; i < data.length; i++) {             // iterate each row of data in the csv file
-          if (data[i].Year == year) {                        // filter only selected year
-            var state = data[i].State;                        // extract the state
-            var rate = data[i].Rate;                   
-            for (var j = 0; j < json.features.length; j++)  {             // Find the corresponding state inside the GeoJSON
-              var jsonState = json.features[j].properties.name;
-              if (state == jsonState) {
-                json.features[j].properties.value = rate;
-                break;
-              }
-            }
-          }
-        }
-
-      var t = d3.transition()
-                .duration(2000)
-                .ease(d3.easeLinear);        
-
-        var paths = d3.select('#usmap')         // assign the color for each state
-          .selectAll("path")
-          .data(json.features)
-          .transition(t)
-          .style("fill", function(d) {
-            return color(d.properties.value);
-          });
-      }); // end d3.json data function
-    }); // end function(data)
-
+  return 1;
 }
