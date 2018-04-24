@@ -187,8 +187,10 @@ function drawIncomeCharts(error, data) {
       } else if (i != 0) {
         barHeight += barHeightStep
         return barHeight - vertPad;
+      }else{
+        return barHeight - vertPad;
       }
-      return barHeight;
+
     })
     .style('font-size', 14)
     .style('text-anchor', 'start')
