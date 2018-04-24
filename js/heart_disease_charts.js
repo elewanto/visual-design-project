@@ -87,7 +87,10 @@ function drawLineChart2(error, dataUS, dataOhio) {
                 if (d.key == 'Ohio') {return 'red';}
                 return '#43565a';
               })
-              .attr('stroke-width', 5)
+              .attr('stroke-width', function(d) {
+                if (d.key == 'Ohio') {return 5;}
+                return 3;
+              })
               .attr('z-index', function(d) {
                 if (d.key == 'Ohio') {return 2;}
                 return 1;
@@ -115,13 +118,7 @@ function drawLineChart2(error, dataUS, dataOhio) {
                 if (d.key == 'Ohio') {return 'red';}
                 return '#43565a';
                 });                       
-              });
-
-
-      d3.select('#Ohioline')
-        .attr('fill', 'none')
-        .attr('stroke-width', 8)
-        .attr('stroke', 'red');             
+              });            
 
 }
 

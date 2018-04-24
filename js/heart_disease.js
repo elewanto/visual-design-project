@@ -25,7 +25,55 @@ async function sliderChange() {
   var ret2 = redrawHeartDiseaseOhioMap(sliderValue, 500);
   var hold = [await ret1, await ret2]
   return 1;
-}  
+}
+
+
+function test_image1() {
+  console.log('test_image1()');
+
+  oldChartSvg = document.getElementById('chartDiv');
+  removeChildren(oldChartSvg);
+
+  var img = new Image();
+  var parentDiv = document.getElementById('chartDiv');
+  img.onload = function() {
+    parentDiv.appendChild(img);
+
+    imgNode = parentDiv.childNodes[0];
+    imgNode.setAttribute('id', 'chartImage');
+    imgNode.setAttribute('class', 'center-block');
+    //dynamically set max image width to minimize distortion
+    console.log('image width: ' + img.width);
+    imgNode.setAttribute('width', img.width);  
+  };
+
+  img.src = 'images/LE_US_gender_race.png';
+
+}
+
+
+function test_image2() {
+  console.log('test_image2()');
+
+  oldChartSvg = document.getElementById('chartDiv');
+  removeChildren(oldChartSvg);
+
+  var img = new Image();
+  var parentDiv = document.getElementById('chartDiv');
+  img.onload = function() {
+    parentDiv.appendChild(img);
+
+    imgNode = parentDiv.childNodes[0];
+    imgNode.setAttribute('id', 'chartImage');
+    imgNode.setAttribute('class', 'center-block');
+    //dynamically set max image width to minimize distortion
+    console.log('image width: ' + img.width);
+    imgNode.setAttribute('width', img.width);  
+  };
+
+  img.src = 'images/causeDeathB.png';
+
+}
 
 
 
