@@ -18,8 +18,6 @@ function drawStart() {
   life1_chart1();
 }
 
-
-
 /************************************************************************************************/
 
 
@@ -31,7 +29,8 @@ function sliderChange() {
 }  
 
 
-
+function life2_chart1(){
+}
 
 // draw Obesity maps and charts
 function life1_chart1() {
@@ -58,18 +57,8 @@ function life1_chart1() {
                 .attr('id', 'chartG')
                 .attr('transform', 'translate(5, 0)');
 
-  drawBarChart5start();
-
-
-
+  drawIncomeChartstart();
 }
-
-
-
-
-
-
-
 
 // create SVG and groups needed to draw two maps side-by-side
 // can add data parameters to pass to function
@@ -131,3 +120,5 @@ function removeChildren(node) {
   }
 
 }
+
+
