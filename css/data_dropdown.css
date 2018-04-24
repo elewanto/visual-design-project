@@ -15,8 +15,8 @@
     padding: 2px 16px;
     font-size: 20px;
     cursor: pointer;
-    min-width: 250px;
-    max-width: 500px;
+    min-width: 160px;
+    /*max-width: 500px;*/
 }
 
 .dropdownd {
@@ -28,11 +28,11 @@
   float: left;
   display: none;
   position: absolute;
-  left: 250px;
+  left: 140px;
   top: 0px;
   background-color: #5a201e;
   color: white;  
-  min-width: 300px;
+  /*min-width: 300px;*/
   /*max-width: 500px;*/
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   border-radius: 10px;
@@ -53,12 +53,13 @@
 }
 
 .dropdownd-content a:hover {
-  background-color: #923025
-  position: relative;
+  background-color: #923025;
+
 }
 
 .dropdownd:hover .dropdownd-content {
     display: block;
+
 }
 
 .dropdownd:hover .dropbtnd {
