@@ -112,13 +112,13 @@ function drawHeartDiseaseUSMap(year) {
           .attr("d", path)
           .style("stroke", function(d, i) {
             if (d.properties.name == 'Ohio') {
-              return '#e40005';       // border Columbus counties in red
+              return '#e40005';       // border Ohio in red
             }
             return "#606060";
           })
           .style("stroke-width", function(d, i) {
             if (d.properties.name == 'Ohio') {
-              return 3;       // border Columbus counties in thicker path line
+              return 3;       // border Ohio in thicker path line
             }
             return 1;
           }) 

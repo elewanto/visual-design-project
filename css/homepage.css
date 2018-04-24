@@ -115,14 +115,16 @@ div.tooltip {
 }
 
 
-
-/* old stuff may not be needed */
 .axis path,
 .axis line {
   stroke: black;
   stroke-width: 1;
   shape-rendering: crispEdges;
   fill: none;
+}
+
+.axis text{
+  font-size: 16px;
 }
 
 text {
@@ -133,7 +135,7 @@ text {
 }
 
 .title {
-  font-size: 22px;
+  font-size: 26px;
   font-weight: bold;
 }
 
