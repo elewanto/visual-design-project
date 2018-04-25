@@ -1,11 +1,11 @@
 function drawFIncomeChartstart() {
   console.log("in chart");
-  d3.csv("/data/le_data/LE_F_Cbus_Counties_Income_2015.csv", drawIncomeCharts);
+  d3.csv("data/le_data/LE_F_Cbus_Counties_Income_2015.csv", drawIncomeCharts);
 }
 
 function drawMIncomeChartstart() {
   console.log("in chart");
-  d3.csv("/data/le_data/LE_M_Cbus_Counties_Income_2015.csv", drawIncomeCharts);
+  d3.csv("data/le_data/LE_M_Cbus_Counties_Income_2015.csv", drawIncomeCharts);
 }
 
 function drawIncomeCharts(error, data) {
