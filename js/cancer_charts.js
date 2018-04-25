@@ -10,7 +10,7 @@ function drawLineChartUS(error, dataUS, dataOhio) {
   dataOhio.forEach(function(d) {
     d.Rate = +d.Rate;
     d.Year = +d.Year;
-  });
+  });        
 
   var chartGroup = d3.select('#chartG');
 
@@ -18,14 +18,14 @@ function drawLineChartUS(error, dataUS, dataOhio) {
             .attr('transform', 'translate(650, 50)')
             .attr('id', '#chartTitle')
             .append('text')
-            .text('U.S. Heart Disease Mortality Rates per 100,000 Population (1999 - 2015)')
+            .text('U.S. Cancer Mortality Rates per 100,000 Population (1999 - 2016)')
             .attr('class', 'title');
 
   var canvasWidth = 1200;
   var canvasHeight = 1000;
 
   var marginLeft = 60;
-  var marginRight = 15;
+  var marginRight = 20;
   var marginTop = 20;
   var marginBottom = 20;  
 
@@ -60,8 +60,8 @@ function drawLineChartUS(error, dataUS, dataOhio) {
   console.log('states length: ' + states.length);
 
   // normalize ranges
-  var xScale = d3.scaleLinear().domain([1999, 2015]).range([marginLeft, chartWidth + marginLeft]);
-  var yScale = d3.scaleLinear().domain([50, Math.round(maxRate)+100]).range([chartHeight + marginBottom, marginTop]);
+  var xScale = d3.scaleLinear().domain([1999, 2016]).range([marginLeft, chartWidth + marginLeft]);
+  var yScale = d3.scaleLinear().domain([80, Math.round(maxRate)]).range([chartHeight + marginBottom, marginTop]);
 
   // x-axis
   var xAxis = d3.axisBottom().scale(xScale).tickFormat(d3.format('d'));
@@ -71,7 +71,7 @@ function drawLineChartUS(error, dataUS, dataOhio) {
             .call(xAxis);
 
   chartGroup.append('text')
-            .attr('transform', 'translate(' + ((chartWidth+marginLeft+marginRight+40) / 2) + ',' + (chartHeight+marginTop+marginBottom) + ')')
+            .attr('transform', 'translate(' + ((chartWidth+marginLeft+marginRight+10) / 2) + ',' + (chartHeight+marginTop+marginBottom) + ')')
             .style('text-anchor', 'middle')
             .style('font-size', '20px')
             .text('Year');
@@ -101,7 +101,7 @@ function drawLineChartUS(error, dataUS, dataOhio) {
     .style('opacity', 0);  
 
   var lineGenerator = d3.line()
-            .curve(d3.curveMonotoneX)
+            .curve(d3.curveMonotoneX)  
             .x(function(d) {
               return xScale(d.Year);
             })
@@ -163,9 +163,9 @@ function drawLineChartUS(error, dataUS, dataOhio) {
             .enter()
             .append('text')
             .style('text-anchor', 'end')        
-            .attr('x', chartWidth-50)
+            .attr('x', chartWidth-350)
             .attr('y', function(d, i) {
-              return (chartHeight/2 - 300) + (i+1)*(barHeight + padding);
+              return (chartHeight/2 - 430) + (i+1)*(barHeight + padding);
             })
             .style('font-size', 20)
             .text(function(d) {
@@ -174,9 +174,9 @@ function drawLineChartUS(error, dataUS, dataOhio) {
   legendGroup.selectAll('rect')
     .data(names)
     .enter().append('rect')
-    .attr('x', chartWidth-30)
+    .attr('x', chartWidth-330)
     .attr('y', function(d, i) {
-      return (chartHeight/2 - 310) + (i+1)*(barHeight + padding+2);
+      return (chartHeight/2 - 440) + (i+1)*(barHeight + padding+2);
     })
     .attr('width', function(d, i) {
       return 50;
@@ -185,6 +185,7 @@ function drawLineChartUS(error, dataUS, dataOhio) {
     .style('fill', function(d, i) {
       return colors[i];
     });
+
 
 }
 
@@ -202,7 +203,7 @@ function drawLineChartOhio(error, dataUS, dataOhio) {
   dataOhio.forEach(function(d) {
     d.Rate = +d.Rate;
     d.Year = +d.Year;
-  });
+  });      
 
   var chartGroup = d3.select('#chartG');
 
@@ -210,7 +211,7 @@ function drawLineChartOhio(error, dataUS, dataOhio) {
             .attr('transform', 'translate(650, 50)')
             .attr('id', '#chartTitle')
             .append('text')
-            .text('Ohio Counties Heart Disease Mortality Rates per 100,000 Population (1999 - 2015)')
+            .text('Ohio Counties Cancer Mortality Rates per 100,000 Population (1999 - 2016)')
             .attr('class', 'title');
 
   var canvasWidth = 1200;
@@ -252,8 +253,8 @@ function drawLineChartOhio(error, dataUS, dataOhio) {
   console.log('states length: ' + states.length);
 
   // normalize ranges
-  var xScale = d3.scaleLinear().domain([1999, 2015]).range([marginLeft, chartWidth + marginLeft]);
-  var yScale = d3.scaleLinear().domain([50, Math.round(maxRate)+100]).range([chartHeight + marginBottom, marginTop]);
+  var xScale = d3.scaleLinear().domain([1999, 2016]).range([marginLeft, chartWidth + marginLeft]);
+  var yScale = d3.scaleLinear().domain([80, Math.round(maxRate)]).range([chartHeight + marginBottom, marginTop]);
 
   // x-axis
   var xAxis = d3.axisBottom().scale(xScale).tickFormat(d3.format('d'));
@@ -263,7 +264,7 @@ function drawLineChartOhio(error, dataUS, dataOhio) {
             .call(xAxis);
 
   chartGroup.append('text')
-            .attr('transform', 'translate(' + ((chartWidth+marginLeft+marginRight+40) / 2) + ',' + (chartHeight+marginTop+marginBottom) + ')')
+            .attr('transform', 'translate(' + ((chartWidth+marginLeft+marginRight+10) / 2) + ',' + (chartHeight+marginTop+marginBottom) + ')')
             .style('text-anchor', 'middle')
             .style('font-size', '20px')
             .text('Year');
@@ -357,7 +358,7 @@ function drawLineChartOhio(error, dataUS, dataOhio) {
             .style('text-anchor', 'end')        
             .attr('x', chartWidth-50)
             .attr('y', function(d, i) {
-              return (chartHeight/2 - 400) + (i+1)*(barHeight + padding);
+              return (chartHeight/2 - 430) + (i+1)*(barHeight + padding);
             })
             .style('font-size', 20)
             .text(function(d) {
@@ -368,7 +369,7 @@ function drawLineChartOhio(error, dataUS, dataOhio) {
     .enter().append('rect')
     .attr('x', chartWidth-30)
     .attr('y', function(d, i) {
-      return (chartHeight/2 - 410) + (i+1)*(barHeight + padding+2);
+      return (chartHeight/2 - 440) + (i+1)*(barHeight + padding+2);
     })
     .attr('width', function(d, i) {
       return 50;
@@ -393,7 +394,7 @@ function partialDrawLineChartUS(error, dataUS, dataOhio) {
   dataOhio.forEach(function(d) {
     d.Rate = +d.Rate;
     d.Year = +d.Year;
-  });
+  });      
 
   var chartGroup = d3.select('#chartG');
 
@@ -401,7 +402,7 @@ function partialDrawLineChartUS(error, dataUS, dataOhio) {
             .attr('transform', 'translate(650, 50)')
             .attr('id', '#chartTitle')
             .append('text')
-            .text('U.S. and Ohio Heart Disease Mortality Rates per 100,000 Population (1999 - 2015)')
+            .text('U.S. and Ohio Cancer Mortality Rates per 100,000 Population (1999 - 2016)')
             .attr('class', 'title');
 
   var canvasWidth = 1200;
@@ -443,8 +444,8 @@ function partialDrawLineChartUS(error, dataUS, dataOhio) {
   console.log('states length: ' + states.length);
 
   // normalize ranges
-  var xScale = d3.scaleLinear().domain([1999, 2015]).range([marginLeft, chartWidth + marginLeft]);
-  var yScale = d3.scaleLinear().domain([50, Math.round(maxRate)+100]).range([chartHeight + marginBottom, marginTop]);
+  var xScale = d3.scaleLinear().domain([1999, 2016]).range([marginLeft, chartWidth + marginLeft]);
+  var yScale = d3.scaleLinear().domain([80, Math.round(maxRate)]).range([chartHeight + marginBottom, marginTop]);
 
   // x-axis
   var xAxis = d3.axisBottom().scale(xScale).tickFormat(d3.format('d'));
@@ -546,9 +547,9 @@ function partialDrawLineChartUS(error, dataUS, dataOhio) {
             .enter()
             .append('text')
             .style('text-anchor', 'end')        
-            .attr('x', chartWidth-50)
+            .attr('x', chartWidth-350)
             .attr('y', function(d, i) {
-              return (chartHeight/2 - 300) + (i+1)*(barHeight + padding);
+              return (chartHeight/2 - 430) + (i+1)*(barHeight + padding);
             })
             .style('font-size', 20)
             .text(function(d) {
@@ -557,9 +558,9 @@ function partialDrawLineChartUS(error, dataUS, dataOhio) {
   legendGroup.selectAll('rect')
     .data(names)
     .enter().append('rect')
-    .attr('x', chartWidth-30)
+    .attr('x', chartWidth-330)
     .attr('y', function(d, i) {
-      return (chartHeight/2 - 310) + (i+1)*(barHeight + padding+2);
+      return (chartHeight/2 - 440) + (i+1)*(barHeight + padding+2);
     })
     .attr('width', function(d, i) {
       return 50;
@@ -585,7 +586,7 @@ function partialDrawLineChartOhio(error, dataUS, dataOhio) {
   dataOhio.forEach(function(d) {
     d.Rate = +d.Rate;
     d.Year = +d.Year;
-  });  
+  });      
 
   var chartGroup = d3.select('#chartG');
 
@@ -628,8 +629,8 @@ function partialDrawLineChartOhio(error, dataUS, dataOhio) {
   console.log('states length: ' + states.length);
 
   // normalize ranges
-  var xScale = d3.scaleLinear().domain([1999, 2015]).range([marginLeft, chartWidth + marginLeft]);
-  var yScale = d3.scaleLinear().domain([50, Math.round(maxRate)+100]).range([chartHeight + marginBottom, marginTop]);
+  var xScale = d3.scaleLinear().domain([1999, 2016]).range([marginLeft, chartWidth + marginLeft]);
+  var yScale = d3.scaleLinear().domain([80, Math.round(maxRate)]).range([chartHeight + marginBottom, marginTop]);
         
 
   //var color = d3.scaleOrdinal(d3.schemeCategory10);   // choose color scheme
@@ -705,7 +706,7 @@ function partialDrawLineChartOhio(error, dataUS, dataOhio) {
             .style('text-anchor', 'end')        
             .attr('x', chartWidth-50)
             .attr('y', function(d, i) {
-              return (chartHeight/2 - 400) + (i+1)*(barHeight + padding);
+              return (chartHeight/2 - 430) + (i+1)*(barHeight + padding);
             })
             .style('font-size', 20)
             .text(function(d) {
@@ -716,7 +717,7 @@ function partialDrawLineChartOhio(error, dataUS, dataOhio) {
     .enter().append('rect')
     .attr('x', chartWidth-30)
     .attr('y', function(d, i) {
-      return (chartHeight/2 - 410) + (i+1)*(barHeight + padding+2);
+      return (chartHeight/2 - 440) + (i+1)*(barHeight + padding+2);
     })
     .attr('width', function(d, i) {
       return 50;

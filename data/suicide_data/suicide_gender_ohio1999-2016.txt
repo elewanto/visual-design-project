@@ -1,0 +1,222 @@
+"Notes"	"County"	"County Code"	"Gender"	"Gender Code"	Deaths	Population	Crude Rate
+	"Adams County, OH"	"39001"	"Female"	"F"	20	256977	7.8
+	"Adams County, OH"	"39001"	"Male"	"M"	78	249935	31.2
+	"Allen County, OH"	"39003"	"Female"	"F"	33	954948	3.5
+	"Allen County, OH"	"39003"	"Male"	"M"	163	962658	16.9
+	"Ashland County, OH"	"39005"	"Female"	"F"	16	486744	Unreliable
+	"Ashland County, OH"	"39005"	"Male"	"M"	88	467908	18.8
+	"Ashtabula County, OH"	"39007"	"Female"	"F"	37	919743	4.0
+	"Ashtabula County, OH"	"39007"	"Male"	"M"	243	905747	26.8
+	"Athens County, OH"	"39009"	"Female"	"F"	30	581706	5.2
+	"Athens County, OH"	"39009"	"Male"	"M"	98	572702	17.1
+	"Auglaize County, OH"	"39011"	"Male"	"M"	79	409938	19.3
+	"Belmont County, OH"	"39013"	"Female"	"F"	27	628398	4.3
+	"Belmont County, OH"	"39013"	"Male"	"M"	155	632047	24.5
+	"Brown County, OH"	"39015"	"Female"	"F"	26	399061	6.5
+	"Brown County, OH"	"39015"	"Male"	"M"	104	391049	26.6
+	"Butler County, OH"	"39017"	"Female"	"F"	169	3288692	5.1
+	"Butler County, OH"	"39017"	"Male"	"M"	590	3148201	18.7
+	"Carroll County, OH"	"39019"	"Female"	"F"	13	259771	Unreliable
+	"Carroll County, OH"	"39019"	"Male"	"M"	52	257989	20.2
+	"Champaign County, OH"	"39021"	"Female"	"F"	18	358817	Unreliable
+	"Champaign County, OH"	"39021"	"Male"	"M"	85	352068	24.1
+	"Clark County, OH"	"39023"	"Female"	"F"	63	1300337	4.8
+	"Clark County, OH"	"39023"	"Male"	"M"	275	1216476	22.6
+	"Clermont County, OH"	"39025"	"Female"	"F"	108	1755156	6.2
+	"Clermont County, OH"	"39025"	"Male"	"M"	352	1703729	20.7
+	"Clinton County, OH"	"39027"	"Female"	"F"	10	381393	Unreliable
+	"Clinton County, OH"	"39027"	"Male"	"M"	70	369256	19.0
+	"Columbiana County, OH"	"39029"	"Female"	"F"	54	975801	5.5
+	"Columbiana County, OH"	"39029"	"Male"	"M"	236	979534	24.1
+	"Coshocton County, OH"	"39031"	"Female"	"F"	14	337073	Unreliable
+	"Coshocton County, OH"	"39031"	"Male"	"M"	73	327740	22.3
+	"Crawford County, OH"	"39033"	"Female"	"F"	12	412813	Unreliable
+	"Crawford County, OH"	"39033"	"Male"	"M"	84	388805	21.6
+	"Cuyahoga County, OH"	"39035"	"Female"	"F"	536	12420232	4.3
+	"Cuyahoga County, OH"	"39035"	"Male"	"M"	2033	11199465	18.2
+	"Darke County, OH"	"39037"	"Female"	"F"	26	483684	5.4
+	"Darke County, OH"	"39037"	"Male"	"M"	109	467205	23.3
+	"Defiance County, OH"	"39039"	"Male"	"M"	55	346525	15.9
+	"Delaware County, OH"	"39041"	"Female"	"F"	54	1433668	3.8
+	"Delaware County, OH"	"39041"	"Male"	"M"	185	1403472	13.2
+	"Erie County, OH"	"39043"	"Female"	"F"	26	713110	3.6
+	"Erie County, OH"	"39043"	"Male"	"M"	132	682326	19.3
+	"Fairfield County, OH"	"39045"	"Female"	"F"	31	1270963	2.4
+	"Fairfield County, OH"	"39045"	"Male"	"M"	215	1253760	17.1
+	"Fayette County, OH"	"39047"	"Female"	"F"	10	261868	Unreliable
+	"Fayette County, OH"	"39047"	"Male"	"M"	52	254654	20.4
+	"Franklin County, OH"	"39049"	"Female"	"F"	496	10592280	4.7
+	"Franklin County, OH"	"39049"	"Male"	"M"	1755	10047237	17.5
+	"Fulton County, OH"	"39051"	"Female"	"F"	15	389786	Unreliable
+	"Fulton County, OH"	"39051"	"Male"	"M"	68	375757	18.1
+	"Gallia County, OH"	"39053"	"Male"	"M"	82	272909	30.0
+	"Geauga County, OH"	"39055"	"Female"	"F"	35	850263	4.1
+	"Geauga County, OH"	"39055"	"Male"	"M"	141	825326	17.1
+	"Greene County, OH"	"39057"	"Female"	"F"	64	1452798	4.4
+	"Greene County, OH"	"39057"	"Male"	"M"	235	1390793	16.9
+	"Guernsey County, OH"	"39059"	"Female"	"F"	29	370412	7.8
+	"Guernsey County, OH"	"39059"	"Male"	"M"	91	354938	25.6
+	"Hamilton County, OH"	"39061"	"Female"	"F"	384	7634454	5.0
+	"Hamilton County, OH"	"39061"	"Male"	"M"	1274	7027627	18.1
+	"Hancock County, OH"	"39063"	"Female"	"F"	26	684735	3.8
+	"Hancock County, OH"	"39063"	"Male"	"M"	107	649091	16.5
+	"Hardin County, OH"	"39065"	"Male"	"M"	54	283939	19.0
+	"Harrison County, OH"	"39067"	"Male"	"M"	28	139705	20.0
+	"Henry County, OH"	"39069"	"Female"	"F"	13	259950	Unreliable
+	"Henry County, OH"	"39069"	"Male"	"M"	46	254107	18.1
+	"Highland County, OH"	"39071"	"Female"	"F"	20	392780	5.1
+	"Highland County, OH"	"39071"	"Male"	"M"	106	377064	28.1
+	"Hocking County, OH"	"39073"	"Female"	"F"	17	260456	Unreliable
+	"Hocking County, OH"	"39073"	"Male"	"M"	76	259541	29.3
+	"Holmes County, OH"	"39075"	"Male"	"M"	40	375844	10.6
+	"Huron County, OH"	"39077"	"Female"	"F"	32	544871	5.9
+	"Huron County, OH"	"39077"	"Male"	"M"	106	526480	20.1
+	"Jackson County, OH"	"39079"	"Male"	"M"	83	289119	28.7
+	"Jefferson County, OH"	"39081"	"Female"	"F"	24	658400	3.6
+	"Jefferson County, OH"	"39081"	"Male"	"M"	143	607873	23.5
+	"Knox County, OH"	"39083"	"Female"	"F"	23	542649	4.2
+	"Knox County, OH"	"39083"	"Male"	"M"	72	518388	13.9
+	"Lake County, OH"	"39085"	"Female"	"F"	119	2111029	5.6
+	"Lake County, OH"	"39085"	"Male"	"M"	439	2005635	21.9
+	"Lawrence County, OH"	"39087"	"Female"	"F"	11	576494	Unreliable
+	"Lawrence County, OH"	"39087"	"Male"	"M"	113	542424	20.8
+	"Licking County, OH"	"39089"	"Female"	"F"	76	1475987	5.1
+	"Licking County, OH"	"39089"	"Male"	"M"	298	1410931	21.1
+	"Logan County, OH"	"39091"	"Female"	"F"	20	419289	4.8
+	"Logan County, OH"	"39091"	"Male"	"M"	81	406088	19.9
+	"Lorain County, OH"	"39093"	"Female"	"F"	120	2714262	4.4
+	"Lorain County, OH"	"39093"	"Male"	"M"	484	2624280	18.4
+	"Lucas County, OH"	"39095"	"Female"	"F"	203	4137576	4.9
+	"Lucas County, OH"	"39095"	"Male"	"M"	760	3872782	19.6
+	"Madison County, OH"	"39097"	"Female"	"F"	16	347405	Unreliable
+	"Madison County, OH"	"39097"	"Male"	"M"	69	412565	16.7
+	"Mahoning County, OH"	"39099"	"Female"	"F"	97	2269793	4.3
+	"Mahoning County, OH"	"39099"	"Male"	"M"	448	2115798	21.2
+	"Marion County, OH"	"39101"	"Female"	"F"	28	566870	4.9
+	"Marion County, OH"	"39101"	"Male"	"M"	113	624621	18.1
+	"Medina County, OH"	"39103"	"Female"	"F"	64	1521466	4.2
+	"Medina County, OH"	"39103"	"Male"	"M"	217	1480886	14.7
+	"Meigs County, OH"	"39105"	"Female"	"F"	14	215452	Unreliable
+	"Meigs County, OH"	"39105"	"Male"	"M"	60	206542	29.0
+	"Mercer County, OH"	"39107"	"Male"	"M"	56	368496	15.2
+	"Miami County, OH"	"39109"	"Female"	"F"	39	931302	4.2
+	"Miami County, OH"	"39109"	"Male"	"M"	168	901270	18.6
+	"Monroe County, OH"	"39111"	"Male"	"M"	38	132669	28.6
+	"Montgomery County, OH"	"39113"	"Female"	"F"	286	5078952	5.6
+	"Montgomery County, OH"	"39113"	"Male"	"M"	1043	4695978	22.2
+	"Morgan County, OH"	"39115"	"Male"	"M"	34	134174	25.3
+	"Morrow County, OH"	"39117"	"Female"	"F"	10	306797	Unreliable
+	"Morrow County, OH"	"39117"	"Male"	"M"	47	307439	15.3
+	"Muskingum County, OH"	"39119"	"Female"	"F"	47	797860	5.9
+	"Muskingum County, OH"	"39119"	"Male"	"M"	177	743135	23.8
+	"Noble County, OH"	"39121"	"Male"	"M"	29	148814	19.5
+	"Ottawa County, OH"	"39123"	"Female"	"F"	19	375871	Unreliable
+	"Ottawa County, OH"	"39123"	"Male"	"M"	72	367063	19.6
+	"Paulding County, OH"	"39125"	"Male"	"M"	28	174987	16.0
+	"Perry County, OH"	"39127"	"Female"	"F"	12	319288	Unreliable
+	"Perry County, OH"	"39127"	"Male"	"M"	78	318324	24.5
+	"Pickaway County, OH"	"39129"	"Female"	"F"	21	459743	4.6
+	"Pickaway County, OH"	"39129"	"Male"	"M"	90	522440	17.2
+	"Pike County, OH"	"39131"	"Female"	"F"	10	257609	Unreliable
+	"Pike County, OH"	"39131"	"Male"	"M"	54	251964	21.4
+	"Portage County, OH"	"39133"	"Female"	"F"	67	1458249	4.6
+	"Portage County, OH"	"39133"	"Male"	"M"	236	1396405	16.9
+	"Preble County, OH"	"39135"	"Female"	"F"	18	382117	Unreliable
+	"Preble County, OH"	"39135"	"Male"	"M"	76	377917	20.1
+	"Putnam County, OH"	"39137"	"Female"	"F"	10	311431	Unreliable
+	"Putnam County, OH"	"39137"	"Male"	"M"	45	309693	14.5
+	"Richland County, OH"	"39139"	"Female"	"F"	55	1118582	4.9
+	"Richland County, OH"	"39139"	"Male"	"M"	232	1143093	20.3
+	"Ross County, OH"	"39141"	"Female"	"F"	40	653019	6.1
+	"Ross County, OH"	"39141"	"Male"	"M"	169	720586	23.5
+	"Sandusky County, OH"	"39143"	"Female"	"F"	19	559236	Unreliable
+	"Sandusky County, OH"	"39143"	"Male"	"M"	107	540631	19.8
+	"Scioto County, OH"	"39145"	"Female"	"F"	20	716833	2.8
+	"Scioto County, OH"	"39145"	"Male"	"M"	132	694441	19.0
+	"Seneca County, OH"	"39147"	"Female"	"F"	15	516379	Unreliable
+	"Seneca County, OH"	"39147"	"Male"	"M"	97	511823	19.0
+	"Shelby County, OH"	"39149"	"Female"	"F"	15	440960	Unreliable
+	"Shelby County, OH"	"39149"	"Male"	"M"	75	439575	17.1
+	"Stark County, OH"	"39151"	"Female"	"F"	177	3500263	5.1
+	"Stark County, OH"	"39151"	"Male"	"M"	662	3271545	20.2
+	"Summit County, OH"	"39153"	"Female"	"F"	267	5049420	5.3
+	"Summit County, OH"	"39153"	"Male"	"M"	951	4722510	20.1
+	"Trumbull County, OH"	"39155"	"Female"	"F"	126	1981719	6.4
+	"Trumbull County, OH"	"39155"	"Male"	"M"	456	1872448	24.4
+	"Tuscarawas County, OH"	"39157"	"Female"	"F"	15	845193	Unreliable
+	"Tuscarawas County, OH"	"39157"	"Male"	"M"	169	814203	20.8
+	"Union County, OH"	"39159"	"Female"	"F"	23	461476	5.0
+	"Union County, OH"	"39159"	"Male"	"M"	68	419143	16.2
+	"Van Wert County, OH"	"39161"	"Male"	"M"	41	254710	16.1
+	"Vinton County, OH"	"39163"	"Male"	"M"	24	118634	20.2
+	"Warren County, OH"	"39165"	"Female"	"F"	74	1779069	4.2
+	"Warren County, OH"	"39165"	"Male"	"M"	279	1803788	15.5
+	"Washington County, OH"	"39167"	"Female"	"F"	21	572467	3.7
+	"Washington County, OH"	"39167"	"Male"	"M"	110	545879	20.2
+	"Wayne County, OH"	"39169"	"Female"	"F"	34	1036660	3.3
+	"Wayne County, OH"	"39169"	"Male"	"M"	186	1015655	18.3
+	"Williams County, OH"	"39171"	"Female"	"F"	19	345878	Unreliable
+	"Williams County, OH"	"39171"	"Male"	"M"	70	341484	20.5
+	"Wood County, OH"	"39173"	"Female"	"F"	50	1155096	4.3
+	"Wood County, OH"	"39173"	"Male"	"M"	196	1102547	17.8
+	"Wyandot County, OH"	"39175"	"Female"	"F"	11	206970	Unreliable
+	"Wyandot County, OH"	"39175"	"Male"	"M"	40	200791	19.9
+"---"
+"Dataset: Underlying Cause of Death, 1999-2016"
+"Query Parameters:"
+"Title:"
+"2013 Urbanization: All"
+"Autopsy: All"
+"Gender: All"
+"Hispanic Origin: All"
+"ICD-10 Codes: X60-X84 (Intentional self-harm)"
+"Place of Death: All"
+"Race: All"
+"States: Ohio (39)"
+"Ten-Year Age Groups: All"
+"Weekday: All"
+"Year/Month: All"
+"Group By: County, Gender"
+"Show Totals: Disabled"
+"Show Zero Values: False"
+"Show Suppressed: False"
+"Calculate Rates Per: 100,000"
+"Rate Options: Default intercensal populations for years 2001-2009 (except Infant Age Groups)"
+"---"
+"Help: See http://wonder.cdc.gov/wonder/help/ucd.html for more information."
+"---"
+"Query Date: Apr 24, 2018 10:05:28 PM"
+"---"
+"Suggested Citation: Centers for Disease Control and Prevention, National Center for Health Statistics. Underlying Cause of Death"
+"1999-2016 on CDC WONDER Online Database, released December, 2017. Data are from the Multiple Cause of Death Files, 1999-2016, as"
+"compiled from data provided by the 57 vital statistics jurisdictions through the Vital Statistics Cooperative Program. Accessed"
+"at http://wonder.cdc.gov/ucd-icd10.html on Apr 24, 2018 10:05:28 PM"
+"---"
+Messages:
+"1. Totals are not available for these results due to suppression constraints. More Information:"
+"http://wonder.cdc.gov/wonder/help/faq.html#Privacy."
+"2. Rows with suppressed Deaths are hidden. Use Quick Options above to show suppressed rows."
+"---"
+Caveats:
+"1. As of April 3, 2017, the underlying cause of death has been revised for 125 deaths in 2014. More information:"
+"http://wonder.cdc.gov/wonder/help/ucd.html#2014-Revision."
+"2. Data are Suppressed when the data meet the criteria for confidentiality constraints. More information:"
+"http://wonder.cdc.gov/wonder/help/ucd.html#Assurance of Confidentiality."
+"3. Death rates are flagged as Unreliable when the rate is calculated with a numerator of 20 or less. More information:"
+"http://wonder.cdc.gov/wonder/help/ucd.html#Unreliable."
+"4. The population figures for year 2016 are bridged-race estimates of the July 1 resident population, from the Vintage 2016"
+"postcensal series released by NCHS on June 26, 2017. The population figures for year 2015 are bridged-race estimates of the July"
+"1 resident population, from the Vintage 2015 postcensal series released by NCHS on June 28, 2016. The population figures for"
+"year 2014 are bridged-race estimates of the July 1 resident population, from the Vintage 2014 postcensal series released by NCHS"
+"on June 30, 2015. The population figures for year 2013 are bridged-race estimates of the July 1 resident population, from the"
+"Vintage 2013 postcensal series released by NCHS on June 26, 2014. The population figures for year 2012 are bridged-race"
+"estimates of the July 1 resident population, from the Vintage 2012 postcensal series released by NCHS on June 13, 2013. The"
+"population figures for year 2011 are bridged-race estimates of the July 1 resident population, from the Vintage 2011 postcensal"
+"series released by NCHS on July 18, 2012. Population figures for 2010 are April 1 Census counts. The population figures for"
+"years 2001 - 2009 are bridged-race estimates of the July 1 resident population, from the revised intercensal county-level 2000 -"
+"2009 series released by NCHS on October 26, 2012. Population figures for 2000 are April 1 Census counts. Population figures for"
+"1999 are from the 1990-1999 intercensal series of July 1 estimates. Population figures for the infant age groups are the number"
+"of live births. <br/><b>Note:</b> Rates and population figures for years 2001 - 2009 differ slightly from previously published"
+"reports, due to use of the population estimates which were available at the time of release."
+"5. The population figures used in the calculation of death rates for the age group 'under 1 year' are the estimates of the"
+"resident population that is under one year of age. More information: http://wonder.cdc.gov/wonder/help/ucd.html#Age Group."

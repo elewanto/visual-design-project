@@ -1,6 +1,6 @@
 
 // dataType is already set as a global variable
-function drawHeartDiseaseUSMap(year) {
+function drawSuicideUSMap(year) {
 
   // set up the size US map within svg (left half of svg area)
   var width = 1000;
@@ -22,7 +22,7 @@ function drawHeartDiseaseUSMap(year) {
             .attr("x", 800)
             .attr("y", 40)
             .attr('id', 'mastertitle')
-            .text(year +"  Heart Disease Mortality Rates per 100,000 Population ")
+            .text(year +"  Suicide Rates per 100,000 Population (incomplete)")
             .style('font-size', 22);    
 
   // select US map group within svg
@@ -54,8 +54,8 @@ function drawHeartDiseaseUSMap(year) {
       .attr('id', 'tipg')
 
   // get data from US and Ohio to find global min max rates for color scaling
-  queue().defer(d3.csv, "data/heart_disease_data/heart_disease_mortality_us_1999_2015.csv")
-        .defer(d3.csv, "data/heart_disease_data/heart_disease_mortality_ohio_1999_2015.csv")
+  queue().defer(d3.csv, "data/suicide_data/suicide_us_1999_2016.csv")
+        .defer(d3.csv, "data/suicide_data/suicide_ohio_1999_2016.csv")
         .await(drawUS);
 
 
@@ -70,7 +70,7 @@ function drawHeartDiseaseUSMap(year) {
     dataOhio.forEach(function(d) {
       d.Rate = +d.Rate;
       d.Year = +d.Year;
-    });        
+    });    
 
     var minRate = d3.min(data, function(d) {return d.Rate});    // get min, max values from Rate column for color scaling
     var maxRate = d3.max(data, function(d) {return d.Rate});
@@ -89,7 +89,7 @@ function drawHeartDiseaseUSMap(year) {
     }
     console.log('U.S. Map min max rates: ' + minRate + ' ' + maxRate);
 
-      var color = d3.scaleSequential(d3.interpolateYlOrBr)    // set color scheme
+      var color = d3.scaleSequential(d3.interpolateYlGn)    // set color scheme
                     .domain([minRate, maxRate])     
        d3.json("data/us-states.json",function(json) {        // import GeoJSON data 
         for (var i = 0; i < data.length; i++) {             // iterate each row of data in the csv file
@@ -200,26 +200,34 @@ function drawHeartDiseaseUSMap(year) {
           });
         var legend = d3.select('#usmap')                // add legend for the svg
               .append("g")
+              .attr('id', 'mapLegend')
               .attr("class", "legend")
-              .attr("transform","translate(800,500)")                // position for the legend position
+              .attr("transform","translate(800,500)")                // position for the legend
               .selectAll("g")
-              .data([0.1, 0.4, 0.7, 1.0])
+              .data([0.1, 0.4, 0.7, 1.0, -1])
               .enter()
               .append("g")
-              .attr("transform", function(d, i) { return "translate(10," + i * 28 + ")"; });
-            legend.append("rect")               // append the rectangle box for legend
-                .attr("width", 24)
-                .attr("height", 24)
-                .style("fill", function(d, i) {
-                  return(d3.interpolateYlOrBr(d)) });
-            legend.append("text")                 // append the legend text
-                  .data([Math.round(0.1*(maxRate-minRate)+minRate) + ' Deaths per 100,000', Math.round(0.4*(maxRate-minRate)+minRate) + ' Deaths per 100,000',
-                         Math.round(0.7*(maxRate-minRate)+minRate) + ' Deaths per 100,000', Math.round(1.0*(maxRate-minRate)+minRate) + ' Deaths per 100,000'])
-                  .attr("x", 120)
-                  .attr("y", 7)
-                  .attr("dy", ".7em")
-                  .style('font-size', 16)
-                  .text(function(d) { return d; });
+              .attr("transform", function(d, i) { 
+                return "translate(10," + i * 28 + ")"; });
+        legend.append("rect")               // append the rectangle box for legend
+            .attr("width", 24)
+            .attr("height", 24)
+            .style("fill", function(d, i) {
+              if (d == -1) {
+                return '#e8e8e8';
+              }              
+              return(d3.interpolateYlGn(d)) });
+        legend.append("text")                 // append the legend text
+              .data([Math.round(0.1*(maxRate-minRate)+minRate) + ' Deaths per 100,000', Math.round(0.4*(maxRate-minRate)+minRate) + ' Deaths per 100,000',
+                     Math.round(0.7*(maxRate-minRate)+minRate) + ' Deaths per 100,000', Math.round(1.0*(maxRate-minRate)+minRate) + ' Deaths per 100,000',
+                      'Data Unavailable\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0']) // lazy justify with whitespace unicode
+              .attr("x", 120)
+              .attr("y", 7)
+              .attr("dy", ".7em")
+              .style('font-size', 16)
+              .text(function(d) { return d; });
+
+          
       }); // end d3.json data function
     } // end function(data)
 
@@ -228,7 +236,7 @@ function drawHeartDiseaseUSMap(year) {
 
 
 
-function redrawHeartDiseaseUSMap(year, delay) {
+function redrawSuicideUSMap(year, delay) {
 
   // set up the size US map within svg (left half of svg area)
   var width = 1000;
@@ -254,13 +262,13 @@ function redrawHeartDiseaseUSMap(year, delay) {
             .attr("x", 800)
             .attr("y", 40)
             .attr('id', 'mastertitle')            
-            .text(year +"  Heart Disease Mortality Rates per 100,000 Population ")  
+            .text(year +"  Suicide Rates per 100,000 Population ")  
             .style('font-size', 22);    
 
 
   // get data from US and Ohio to find global min max rates for color scaling
-  queue().defer(d3.csv, "data/heart_disease_data/heart_disease_mortality_us_1999_2015.csv")
-        .defer(d3.csv, "data/heart_disease_data/heart_disease_mortality_ohio_1999_2015.csv")
+  queue().defer(d3.csv, "data/suicide_data/suicide_us_1999_2016.csv")
+        .defer(d3.csv, "data/suicide_data/suicide_ohio_1999_2016.csv")
         .await(redrawUS);
 
 
@@ -275,7 +283,7 @@ function redrawHeartDiseaseUSMap(year, delay) {
     dataOhio.forEach(function(d) {
       d.Rate = +d.Rate;
       d.Year = +d.Year;
-    });        
+    });       
 
     minRate = d3.min(data, function(d) {return d.Rate});    // get min, max values from Rate column for color scaling
     maxRate = d3.max(data, function(d) {return d.Rate});
@@ -294,7 +302,7 @@ function redrawHeartDiseaseUSMap(year, delay) {
     console.log('U.S. Map min max rates: ' + minRate + ' ' + maxRate);
 
 
-    var color = d3.scaleSequential(d3.interpolateYlOrBr)    // set color scheme
+    var color = d3.scaleSequential(d3.interpolateYlGn)    // set color scheme
                   .domain([minRate, maxRate])     
      d3.json("data/us-states.json",function(json) {        // import GeoJSON data 
       for (var i = 0; i < data.length; i++) {             // iterate each row of data in the csv file

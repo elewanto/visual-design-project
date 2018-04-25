@@ -1,5 +1,5 @@
 
-function drawHeartDiseaseOhioMap(year) {
+function drawCancerOhioMap(year) {
 
   // set up size for the OH svg map
   var width = 500;
@@ -17,8 +17,8 @@ function drawHeartDiseaseOhioMap(year) {
                         .classed('map-layer', true);
 
   // get data from US and Ohio to find global min max rates for color scaling
-  queue().defer(d3.csv, "data/heart_disease_data/heart_disease_mortality_us_1999_2015.csv")
-        .defer(d3.csv, "data/heart_disease_data/heart_disease_mortality_ohio_1999_2015.csv")
+  queue().defer(d3.csv, "data/cancer_data/cancer_us_1999_2016.csv")
+        .defer(d3.csv, "data/cancer_data/cancer_ohio_1999_2016.csv")
         .await(drawOhio);
 
   // import data from file
@@ -32,15 +32,15 @@ function drawHeartDiseaseOhioMap(year) {
     data.forEach(function(d) {
       d.Rate = +d.Rate;
       d.Year = +d.Year;
-    });      
+    });       
 
-    minRate = d3.min(data, function(d) {return d.Rate});    // get min, max values from Rate column for color scaling
-    maxRate = d3.max(data, function(d) {return d.Rate});
+    minRate = d3.min(data, function(d) {return parseFloat(d.Rate)});    // get min, max values from Rate column for color scaling
+    maxRate = d3.max(data, function(d) {return parseFloat(d.Rate)});
 
     var minUS = -1;
     var maxUS = -1;
-    minUS = d3.min(dataUS, function(d) {return d.Rate});
-    maxUS = d3.max(dataUS, function(d) {return d.Rate});
+    minUS = d3.min(dataUS, function(d) {return parseFloat(d.Rate)});
+    maxUS = d3.max(dataUS, function(d) {return parseFloat(d.Rate)});
     console.log('US rates: ' + minUS + ' ' + maxUS);    
     if (minUS != -1 && minUS < minRate) {
       minRate = minUS;
@@ -52,7 +52,7 @@ function drawHeartDiseaseOhioMap(year) {
 
 
 
-    var color = d3.scaleSequential(d3.interpolateYlOrBr)    // set color scheme
+    var color = d3.scaleSequential(d3.interpolateGnBu)    // set color scheme
                   .domain([minRate, maxRate])      
     d3.json("data/OH_map.json", function(counties) {
       // iterate each row of data in the csv file
@@ -180,7 +180,8 @@ function drawHeartDiseaseOhioMap(year) {
 
 
 
-function redrawHeartDiseaseOhioMap(year, delay) {
+
+function redrawCancerOhioMap(year, delay) {
 
   // set up size for the OH svg map
   var width = 500;
@@ -189,8 +190,8 @@ function redrawHeartDiseaseOhioMap(year, delay) {
   var ohiomapg = d3.select('#ohiomap');
 
   // get data from US and Ohio to find global min max rates for color scaling
-  queue().defer(d3.csv, "data/heart_disease_data/heart_disease_mortality_us_1999_2015.csv")
-        .defer(d3.csv, "data/heart_disease_data/heart_disease_mortality_ohio_1999_2015.csv")
+  queue().defer(d3.csv, "data/cancer_data/cancer_us_1999_2016.csv")
+        .defer(d3.csv, "data/cancer_data/cancer_ohio_1999_2016.csv")
         .await(redrawOhio);
 
   
@@ -204,15 +205,15 @@ function redrawHeartDiseaseOhioMap(year, delay) {
     data.forEach(function(d) {
       d.Rate = +d.Rate;
       d.Year = +d.Year;
-    });    
+    });      
 
-    minRate = d3.min(data, function(d) {return d.Rate});    // get min, max values from Rate column for color scaling
-    maxRate = d3.max(data, function(d) {return d.Rate});
+    minRate = d3.min(data, function(d) {return parseFloat(d.Rate)});    // get min, max values from Rate column for color scaling
+    maxRate = d3.max(data, function(d) {return parseFloat(d.Rate)});
 
     var minUS = -1;
     var maxUS = -1;
-    minUS = d3.min(dataUS, function(d) {return d.Rate});
-    maxUS = d3.max(dataUS, function(d) {return d.Rate});
+    minUS = d3.min(dataUS, function(d) {return parseFloat(d.Rate)});
+    maxUS = d3.max(dataUS, function(d) {return parseFloat(d.Rate)});
     console.log('US rates: ' + minUS + ' ' + maxUS);    
     if (minUS != -1 && minUS < minRate) {
       minRate = minUS;
@@ -223,7 +224,7 @@ function redrawHeartDiseaseOhioMap(year, delay) {
     console.log('Ohio Map min max rates: ' + minRate + ' ' + maxRate);
 
 
-    var color = d3.scaleSequential(d3.interpolateYlOrBr)    // set color scheme
+    var color = d3.scaleSequential(d3.interpolateGnBu)    // set color scheme
                   .domain([minRate, maxRate])      
     d3.json("data/OH_map.json", function(counties) {
       // iterate each row of data in the csv file
