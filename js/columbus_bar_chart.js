@@ -16,7 +16,7 @@ function drawColumbusObesBarChart() {
 	  // add overall title group
 	  .append('g')
 	  .attr('transform', function(d) {
-	    return "translate(200,50)";
+	    return "translate(0,50) scale(1.5)";
 	  })
 	  .attr('id', function(d) {
 	    return "columbus_obes_bar_chart";
@@ -24,8 +24,8 @@ function drawColumbusObesBarChart() {
 
 	// graph size for SVG
 	var svg = d3.select("#columbus_obes_bar_chart"),
-	    margin = {top: 20, right: 140, bottom: 30, left: 40},
-	    width = 1600 - margin.left - margin.right,
+	    margin = {top: 20, right: 200, bottom: 30, left: 40},
+	    width = 1400 - margin.left - margin.right,
 	    height = 450 - margin.top - margin.bottom,
 	    g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
@@ -119,7 +119,8 @@ function drawColumbusObesBarChart() {
 	      .attr("fill", "#000")
 	      .attr("font-weight", "bold")
 	      .attr("text-anchor", "start")
-	      .text("Obesity Rate");
+	      .text("Obesity Rate")
+	      .attr("transform", "translate(70,0)");
 
 	  // add legend
 	  var legend = g.append("g")
@@ -143,7 +144,15 @@ function drawColumbusObesBarChart() {
 	      .attr("x", width - 24)
 	      .attr("y", 9.5)
 	      .attr("dy", "0.32em")
-	      .text(function(d) { return d; });
+	      .text(function(d) { return d; })
+	      .attr("transform", "translate(50,0)");
+
+	  var title = g.append("text")
+	      .attr("font-family", "sans-serif")
+	      .attr("font-size", 48)
+	      .attr("text-anchor", "end")
+	      .text("Columbus Obesity Rate Trend 2004 to 2013")
+	      .attr("transform", "translate(600,0)");	
 	});
 
 } // end drawBarCharts()
