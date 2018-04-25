@@ -8,30 +8,10 @@ var sliderValue = "2015";     //
 function drawStart() {
 
   console.log('in landingPageStart()');
-
-  // create slider object
-  // slider = $('#mapSlider').slider()
-  //                             .on('slide', sliderChange)
-  //                             .data('slider');  
-
-  // automatically draw side-by-side U.S and Ohio county map by default
   mortality1_chart1();
 }
 
-
-
 /************************************************************************************************/
-
-
-// Map Slider function
-function sliderChange() {
-  console.log('slider used: ' + slider.getValue());
-  sliderValue = slider.getValue();
-  drawMaps();
-}  
-
-
-
 
 // draw Obesity maps and charts
 function mortality1_chart1() {
@@ -41,10 +21,7 @@ function mortality1_chart1() {
 
   // Added by Sangeeta
   //Draw the bubble chart
-  drawWordCloud()
-
-  drawBubbles("data/mortality_data/OH_Rural_Counties_Mortality_rate.csv");
-  drawBubbles("data/mortality_data/OH_Urban_Counties_Mortality_Rate.csv");
+  drawWordCloud();
 
   oldChartSvg = document.getElementById('chartDiv');
   removeChildren(oldChartSvg);
@@ -54,7 +31,7 @@ function mortality1_chart1() {
                 .append('svg')
                 .attr('id', 'svgchart')       // svg ID is '#svgchart'
                 .attr('preserveAspectRatio', 'xMidYMid meet')
-                .attr('viewBox', '0 0 1200 800')
+                .attr('viewBox', '0 0 1200 400')
                 .classed('svg-content', true)
                 .attr('overflow', 'visible');
                 //.attr('width', width)
@@ -62,10 +39,11 @@ function mortality1_chart1() {
 
   // create US map group <g>  ID #usmap
   var chartGroup = chartSvg.append('g')
-                .attr('id', 'chartG')
-                .attr('transform', 'translate(5, 0)');
+                          .attr('id', 'chartG')
+                          .attr('transform', 'translate(5, 0)');
 
-  drawBarChart5start();
+  drawBubbles("data/mortality_data/OH_Rural_Counties_Mortality_rate.csv");
+  drawBubbles("data/mortality_data/OH_Urban_Counties_Mortality_Rate.csv");
 
 }
 
@@ -117,30 +95,44 @@ function drawWordCloud(){
 }
 
 function drawBubbles(file){
-  
+
   if(file == "data/mortality_data/OH_Rural_Counties_Mortality_rate.csv"){
     xtransform = 5;
   }else{
     xtransform = 200;
   }
 
-  var diameter = 300;
+  var diameter = 400;
   var color = d3.scaleOrdinal(d3.schemeCategory20c);
   var pack = d3.pack()
                 .size([diameter, diameter])
                 .padding(1);
 
-  var bubbles_svg = d3.select('#bubbles-chart')
+  var bubbles_svg = d3.select('#chartG')
             .append('svg')
             .attr('class', 'bubbles')
             .attr('id', 'bubble-chart')
-            .attr('width', 500)
-            .attr('height', 300)
+            .attr('width', 1000)
+            .attr('height', 400)
             .attr('transform', 'translate(' +xtransform+ ', 0)');
+
+  var tooltip = d3.select('#tooltip');
+  var formatterDec = new Intl.NumberFormat('en-US', {
+      style: 'decimal',
+      minimumFractionDigits: 2
+    });
 
   d3.csv(file, function(error, data){
 
-      data = data.map(function(d){ d.value = +d["Deaths_2015"]/10; d.Change = +d.Change; return d; });
+      data = data.map(function(d){ 
+        d.value = +d["Deaths_2015"]/10; 
+        d.Change = +d.Change; 
+        if(d.Change < 0)
+          d.per = "Decrease";
+        else
+          d.per = "Increase";
+        return d; 
+      });
 
       var nodes = d3.hierarchy({children: data})
                     .sum(function(d) { return d.value; })
@@ -149,10 +141,12 @@ function drawBubbles(file){
       var circle = bubbles_svg.selectAll("circle")
                       .data(pack(nodes).leaves(), function(d){ return d.Change; });
 
-
       circle.enter().append("circle")
           .attr("r", function(d){ return d.r; })
-          .attr("cx", function(d){ return d.x; })
+          .attr("cx", function(d){  
+            if(file == "data/mortality_data/OH_Rural_Counties_Mortality_rate.csv"){return d.x; }
+            else {return 600+d.x;}
+          })
           .attr("cy", function(d){ return d.y; })
           .attr("fill", function(d,i){ 
             if(d.data.Change > 0){
@@ -161,71 +155,42 @@ function drawBubbles(file){
               return "green"; 
           }})
           .attr("id", function(d){return d.data.County;})
-          .on("mouseover", function(d) {
-              showPopover.call(this, d);
+          .on('mouseover',function(d, i) {            // add mouse over function
+              tooltip.transition()
+                     .duration(200)
+                     .style('opacity', 0.9);
+              tooltip.html("The number of deaths in <b>"+ d.data.County + "</b> County changed from " + d.data.Deaths_2005 + " in 2005 to " + d.data.Deaths_2015 + " in 2015." + "Thus, noticing <b>"+ d.data.per + "</b> by <b>" + formatterDec.format(100*d.data.Change)+"%</b>")
+
+              d3.select(this)
+                .transition()
+                .duration(10)
+                .attr("opacity", 0.6)
           })
-          .on("mouseout", function(d) {
-              removePopovers();
-          })
+          .on('mouseout', function(d, i) {                // add mouse out function
+              tooltip.transition()
+                      .duration(40)
+                      .style('opacity', 0);
+              d3.select(this)
+                  .transition()
+                  .duration(200)
+                  .attr("opacity", 1)
+          });
+      var text = bubbles_svg.selectAll("text")
+                        .data(pack(nodes).leaves()).enter().append("text")
+                        .attr("x", function(d){  
+                            if(file == "data/mortality_data/OH_Rural_Counties_Mortality_rate.csv"){return d.x; }
+                            else {return 600+d.x;}
+                        })
+                        .attr("y", function(d) {
+                          return d.y;
+                        })
+                        .attr("dx",12)
+                        .attr("dy",".35em")
+                        .text(function(d){
+                          return d.data.County;
+                        });
   });
 }
-
-function removePopovers() {
-  $('.popover').each(function() {
-    $(this).remove();
-  });
-}
- 
-function showPopover(d) {
-  $(this).popover({
-      placement: 'auto top',
-      container: 'body',
-      trigger: 'manual',
-      html: true,
-      content: function() {
-        return "County: "+ d.data.County + "</br>Deaths in 2005: " + d.data.Deaths_2005 + "</br>Deaths in 2015: " + d.data.Deaths_2015 + "</br>Change: " + d.data.Change ;
-      }
-  });
-  $(this).popover('show');
-}
-
-// create SVG and groups needed to draw two maps side-by-side
-// can add data parameters to pass to function
-function drawMaps() {
-
-  console.log('in drawMaps()');
-
-  // remove any existing svg so we don't append a second one below
-  oldSvg = document.getElementById('mapDiv');   // get the parent container div for the svg
-  removeChildren(oldSvg);                       // delete previous svg element before drawing new svg
-
-  // create single SVG element for two side-by-side maps (maps share the same SVG
-  // we will use transformation to position horizontally)
-  var width = 1500;
-  var height = 700;
-  var mapSvg = d3.select('#mapDiv')
-                .append('svg')
-                .attr('id', 'svgmap')       // svg ID is '#svgmap'
-                .attr('preserveAspectRatio', 'xMinYMin meet')
-                .attr('viewBox', '0 0 1500 700')
-                .classed('svg-content', true);
-                //.attr('width', width)
-                //.attr('height', height);
-
-  // create US map group <g>  ID #usmap
-  var usmapg = mapSvg.append('g')
-                .attr('id', 'usmap')
-                .attr('transform', 'translate(5, 0)');
-
-  // create Ohio map group <g> ID #ohiomap
-  var ohiomapg = mapSvg.append('g')
-                .attr('id', 'ohiomap')
-                .attr('transform', 'translate(800, 0)');
-
-  drawUSMap();
-  drawOhioMap();
-}
-
 
 // draw SVG D3 charts 
 function drawCharts() {

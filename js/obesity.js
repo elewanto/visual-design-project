@@ -15,7 +15,7 @@ function drawStart() {
                               .data('slider');  
 
   // automatically draw side-by-side U.S and Ohio county map by default
-  obesity1_chart1();
+  columbus_bar_chart();
 }
 
 
@@ -60,12 +60,75 @@ function obesity1_chart1() {
                 .attr('id', 'chartG')
                 .attr('transform', 'translate(5, 0)');
 
-  drawBarChart5start(sliderValue);
+  drawBarChart5start();
 
 
 
 }
 
+
+// draw Columbus obesity chart
+function columbus_bar_chart() {
+  console.log('columbus_bar_chart()')
+
+  drawMaps(sliderValue);
+
+  oldChartSvg = document.getElementById('chartDiv');
+  removeChildren(oldChartSvg);
+  // draw chart here
+
+  var chartSvg = d3.select('#chartDiv')
+                .append('svg')
+                .attr('id', 'svgchart')       // svg ID is '#svgchart'
+                .attr('preserveAspectRatio', 'xMidYMid meet')
+                .attr('viewBox', '0 0 2000 1200')
+                .classed('svg-content', true)
+                .attr('overflow', 'visible');
+                //.attr('width', width)
+                //.attr('height', height);
+
+  // create US map group <g>  ID #usmap
+  var chartGroup = chartSvg.append('g')
+                .attr('id', 'chartG')
+                .attr('transform', 'translate(5, 0)');
+
+  drawColumbusObesBarChart();
+
+
+
+}
+
+
+// draw Obesity maps and charts
+function columbus_bubble() {
+  console.log('columbus_bubble()')
+
+  drawMaps(sliderValue);
+
+  oldChartSvg = document.getElementById('chartDiv');
+  removeChildren(oldChartSvg);
+  // draw chart here
+
+  var chartSvg = d3.select('#chartDiv')
+                .append('svg')
+                .attr('id', 'svgchart')       // svg ID is '#svgchart'
+                .attr('preserveAspectRatio', 'xMidYMid meet')
+                .attr('viewBox', '0 0 1200 800')
+                .classed('svg-content', true)
+                .attr('overflow', 'visible');
+                //.attr('width', width)
+                //.attr('height', height);
+
+  // create US map group <g>  ID #usmap
+  var chartGroup = chartSvg.append('g')
+                .attr('id', 'chartG')
+                .attr('transform', 'translate(5, 0)');
+
+  drawColumbusBubbleChart();
+
+
+
+}
 
 
 
@@ -131,5 +194,27 @@ function removeChildren(node) {
   while (node.firstChild) {
     node.removeChild(node.firstChild);
   }
+
+}
+
+// function for automatically change the chart for years
+async function obesity_maps_years() {
+
+  drawMaps(2004);
+
+  for (var year = 2004; year <= 2013; year++) {
+    $('#mapSlider').slider('setValue', year);
+    var mapSvg = d3.select('#svgmap');
+    var usmapg = mapSvg.select('#usmap');
+    var ohiomapg = mapSvg.select('#ohiomap');
+
+    // redraw the map for both US and OH 
+    drawMaps(year);
+    await sleep(800);
+  }
+
+  function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }  
 
 }

@@ -51,7 +51,7 @@ ul#navigation li a {
 	color:#fff;
 	text-decoration:none;
 	display:inline-block;
-	background-color: #2a7796;
+	background-color: #923025;
 	-webkit-transition:color 0.2s linear, background 0.2s linear;	
 	-moz-transition:color 0.2s linear, background 0.2s linear;	
 	-o-transition:color 0.2s linear, background 0.2s linear;	
@@ -65,7 +65,7 @@ ul#navigation li a:hover {
 
 ul#navigation li:hover > a {
 	background-color:rgb(236, 236, 236);
-	color:#2a7796;
+	color:#923025;
 }
 
 /* Drop-Down Navigation */
@@ -86,7 +86,7 @@ ul#navigation ul, ul#navigation ul li ul {
     z-index: 99999;
 	width:180px;
 	font-weight: 100;
-	background-color:  #2a7796b6  ;
+	background-color:  #923025 ;
 	opacity:0;
 	-webkit-transition:opacity 0.2s linear, visibility 0.2s linear; 
 	-moz-transition:opacity 0.2s linear, visibility 0.2s linear; 
