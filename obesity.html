@@ -17,7 +17,8 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> <!-- navbar arrow icon -->
     <link rel="stylesheet" type="text/css" href="css/homepage.css">    <!-- homepage css file --> 
     <link rel="stylesheet" type="text/css" href="css/navbar.css">   <!-- navbar css file -->
-    <link rel="stylesheet" type="text/css" href="css/data_dropdown.css">   <!-- data dropdown css file -->      
+    <link rel="stylesheet" type="text/css" href="css/data_dropdown.css">   <!-- data dropdown css file -->   
+    <link rel="stylesheet" type="text/css" href="css/columbus_bar_chart.css">    <!-- homepage css file -->    
     <!-- .js library packages -->
     <script src="https://d3js.org/d3.v4.min.js"></script>  <!-- D3 library -->
     <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>      
@@ -35,6 +36,7 @@
     <script src="js/ohio_map.js"></script>    <!-- Mike's new Ohio heat map tied to data -->
     <script src="js/us_map.js"></script>      <!-- Mike's US heat map tied to data -->
     <script src="js/test_chart.js"></script>
+    <script src="js/columbus_bar_chart.js"></script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">   
 
@@ -105,9 +107,9 @@
               <div  id="analysisDropdown">
                 <div class="drop-btn-group">
                   <div class="dropdownd">
-                    <button class="dropbtnd">drop 1 obesity graphs</button>
+                    <button class="dropbtnd">Columbus Obesity</button>
                     <div class="dropdownd-content">
-                      <a onclick="obesity1_chart1()">drop 1 graph 1 obesity stuff</a>
+                      <a onclick="columbus_bar_chart()">Columbus Counties Obesity Graph</a>
                       <a onclick="obesity1_chart2()">drop 1 graph 2 obesity stuff</a>
                     </div>
                   </div>

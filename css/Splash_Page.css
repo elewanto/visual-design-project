@@ -130,7 +130,7 @@ padding: 10px;
 }
 .b02_slide_in div:nth-child(1) {
 color: #fff;
-background-color: #2a7796;
+background-color: #923025;
 }
 .b02_slide_in div:nth-child(2) {
 background-color: #fff;
@@ -140,7 +140,7 @@ transition: top 0.1s ease;
 top: -50px;
 }
 .b02_slide_in div:nth-child(3) {
-color: #2a7796;
+color: #923025;
 transition: opacity 0.1s ease;
 -webkit-transition: opacity 0.1s ease;
 -moz-transition: opacity 0.1s ease;
@@ -181,7 +181,7 @@ transition: opacity 0.1s ease;
   outline: none;
 }
 .button1:hover {
-  background-color: #2a7796;
+  background-color: #923025;
   color: white;
   border: none;
   outline: none;
