@@ -31,7 +31,7 @@ function mortality1_chart1() {
                 .append('svg')
                 .attr('id', 'svgchart')       // svg ID is '#svgchart'
                 .attr('preserveAspectRatio', 'xMidYMid meet')
-                .attr('viewBox', '0 0 1200 800')
+                .attr('viewBox', '0 0 1200 400')
                 .classed('svg-content', true)
                 .attr('overflow', 'visible');
                 //.attr('width', width)
@@ -116,9 +116,23 @@ function drawBubbles(file){
             .attr('height', 400)
             .attr('transform', 'translate(' +xtransform+ ', 0)');
 
+  var tooltip = d3.select('#tooltip');
+  var formatterDec = new Intl.NumberFormat('en-US', {
+      style: 'decimal',
+      minimumFractionDigits: 2
+    });
+
   d3.csv(file, function(error, data){
 
-      data = data.map(function(d){ d.value = +d["Deaths_2015"]/10; d.Change = +d.Change; return d; });
+      data = data.map(function(d){ 
+        d.value = +d["Deaths_2015"]/10; 
+        d.Change = +d.Change; 
+        if(d.Change < 0)
+          d.per = "Decrease";
+        else
+          d.per = "Increase";
+        return d; 
+      });
 
       var nodes = d3.hierarchy({children: data})
                     .sum(function(d) { return d.value; })
@@ -141,38 +155,41 @@ function drawBubbles(file){
               return "green"; 
           }})
           .attr("id", function(d){return d.data.County;})
-          .on("mouseover", function(d) {
-              showPopover.call(this, d);
+          .on('mouseover',function(d, i) {            // add mouse over function
+              tooltip.transition()
+                     .duration(200)
+                     .style('opacity', 0.9);
+              tooltip.html("The number of deaths in <b>"+ d.data.County + "</b> County changed from " + d.data.Deaths_2005 + " in 2005 to " + d.data.Deaths_2015 + " in 2015." + "Thus, noticing <b>"+ d.data.per + "</b> by <b>" + formatterDec.format(100*d.data.Change)+"%</b>")
+
+              d3.select(this)
+                .transition()
+                .duration(10)
+                .attr("opacity", 0.6)
           })
-          .on("mouseout", function(d) {
-              removePopovers();
+          .on('mouseout', function(d, i) {                // add mouse out function
+              tooltip.transition()
+                      .duration(40)
+                      .style('opacity', 0);
+              d3.select(this)
+                  .transition()
+                  .duration(200)
+                  .attr("opacity", 1)
           });
-
-    circle.append("text")
-          .attr("dx",12)
-          .attr("dy",".35em")
-          .style("text-anchor", "middle")
-          .text(function(d) { return "hola" });
+      var text = bubbles_svg.selectAll("text")
+                        .data(pack(nodes).leaves()).enter().append("text")
+                        .attr("x", function(d){  
+                            if(file == "data/mortality_data/OH_Rural_Counties_Mortality_rate.csv"){return d.x; }
+                            else {return 600+d.x;}
+                        })
+                        .attr("y", function(d) {
+                          return d.y;
+                        })
+                        .attr("dx",12)
+                        .attr("dy",".35em")
+                        .text(function(d){
+                          return d.data.County;
+                        });
   });
-}
-
-function removePopovers() {
-  $('.popover').each(function() {
-    $(this).remove();
-  });
-}
- 
-function showPopover(d) {
-  $(this).popover({
-      placement: 'auto top',
-      container: 'body',
-      trigger: 'manual',
-      html: true,
-      content: function() {
-        return "County: "+ d.data.County + "</br>Deaths in 2005: " + d.data.Deaths_2005 + "</br>Deaths in 2015: " + d.data.Deaths_2015 + "</br>Change: " + d.data.Change ;
-      }
-  });
-  $(this).popover('show');
 }
 
 // draw SVG D3 charts 
