@@ -1,6 +1,6 @@
 
 // global variables
-var sliderValue = "2015";     //
+//var sliderValue = "2015";     //
 
 
 /************************************************************************************************/
@@ -8,11 +8,6 @@ var sliderValue = "2015";     //
 function drawStart() {
 
   console.log('in landingPageStart()');
-
-  // create slider object
-  slider = $('#mapSlider').slider()
-                              .on('slide', sliderChange)
-                              .data('slider');  
 
   // automatically draw side-by-side U.S and Ohio county map by default
   life1_chart1();
@@ -54,10 +49,14 @@ function life1_chart1() {
 
   // create US map group <g>  ID #usmap
   var chartGroup = chartSvg.append('g')
-                .attr('id', 'chartG')
-                .attr('transform', 'translate(5, 0)');
+                            .attr('id', 'chartF')
+                            .attr('transform', 'translate(5, 0)');
+  chartSvg.append('g')
+          .attr('id', 'chartM')
+          .attr('transform', 'translate(5, 450)');
 
-  drawIncomeChartstart();
+  drawFIncomeChartstart();
+  drawMIncomeChartstart();
 }
 
 // create SVG and groups needed to draw two maps side-by-side

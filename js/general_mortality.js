@@ -10,9 +10,9 @@ function drawStart() {
   console.log('in landingPageStart()');
 
   // create slider object
-  slider = $('#mapSlider').slider()
-                              .on('slide', sliderChange)
-                              .data('slider');  
+  // slider = $('#mapSlider').slider()
+  //                             .on('slide', sliderChange)
+  //                             .data('slider');  
 
   // automatically draw side-by-side U.S and Ohio county map by default
   mortality1_chart1();
@@ -37,10 +37,12 @@ function sliderChange() {
 function mortality1_chart1() {
   console.log('mortality1_chart1()')
 
-  drawMaps();
+  //drawMaps();
 
   // Added by Sangeeta
   //Draw the bubble chart
+  drawWordCloud()
+
   drawBubbles("data/mortality_data/OH_Rural_Counties_Mortality_rate.csv");
   drawBubbles("data/mortality_data/OH_Urban_Counties_Mortality_Rate.csv");
 
@@ -67,7 +69,52 @@ function mortality1_chart1() {
 
 }
 
+function drawWordCloud(){
+  var word_count = {};
+  d3.csv("data/mortality_data/Causes_of_death_OH_wordcloud.csv",function(data){
+    for (var i = 0; i < data.length; i++){
+      word_count[data[i]["Cause of death"]] = +data[i].Deaths/1000;
+    }
 
+    var word_entries = d3.entries(word_count);
+    var fill = d3.scaleOrdinal(d3.schemeCategory20);
+    var width = 1000;
+    var height = 1000;
+    var xScale = d3.scaleLinear()
+                  .domain([0, d3.max(word_entries, function(d) { return d.value; }) ])
+                  .range([10,100]);
+
+    d3.layout.cloud().size([width, height])
+                    .timeInterval(20)
+                    .words(word_entries)
+                    .fontSize(function(d) { return xScale(+d.value); })
+                    .text(function(d) { return d.key; })
+                    .rotate(function() { return ~~(Math.random() * 2) * 90; })
+                    .font("Impact")
+                    .on("end", draw)
+                    .start();
+
+    function draw(words) {
+        d3.select("#cloud").append("svg")
+              .attr("width", width)
+              .attr("height", height)
+              .append("g")
+              .attr("transform", "translate(" + [width >> 1, height >> 1] + ")")
+              .selectAll("text")
+              .data(words)
+              .enter().append("text")
+              .style("font-size", function(d) { return xScale(d.value) + "px"; })
+              .style("font-family", "Impact")
+              .style("fill", function(d, i) { return fill(i); })
+              .attr("text-anchor", "middle")
+              .attr("transform", function(d) {
+                return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
+              })
+              .text(function(d) { return d.key; });
+        }
+        d3.layout.cloud().stop();
+  });
+}
 
 function drawBubbles(file){
   

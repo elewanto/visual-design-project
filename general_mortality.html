@@ -35,6 +35,7 @@
     <script src="js/us_map.js"></script>      <!-- Mike's US heat map tied to data -->
     <script src="js/test_chart.js"></script>
     <script src="//d3js.org/d3.v4.js"></script>
+    <script src="js/d3.layout.cloud.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">   
 
   </head>
@@ -73,11 +74,13 @@
       <div class="container-fluid">
         <div class="panel panel-default">
           <div class="panel-body">
-
-            <div id="mapDiv" class="svg-container">
+            <div id="cloud">
             </div>
+      
+<!--      <div id="mapDiv" class="svg-container">
+          </div> 
 
-            <div id="sliderDiv" class="wrapper">
+           <div id="sliderDiv" class="wrapper">
               <b>1980 &nbsp;&nbsp;</b>
               <input id="mapSlider" data-slider-id='mSlider' type="text"
                       data-provide="slider"             
@@ -88,7 +91,7 @@
                       data-slider-tooltip="always"
               />
               <b>&nbsp;&nbsp; 2015</b>
-            </div>
+            </div> -->
 
           </div>
         </div>
