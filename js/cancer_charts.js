@@ -190,83 +190,6 @@ function drawTreemap(error, data) {
   var chartWidth = canvasWidth - marginLeft - marginRight;
   var chartHeight = canvasHeight - marginTop - marginBottom;
 
-  // word wrapping/font size from bl.ocks.org/mundhradevang
-  function fontSize(d,i) {
-  var size = d.dx/5;
-  var words = d.split(' ');
-  var word = words[0];
-  var width = d.dx;
-  var height = d.dy;
-  var length = 0;
-  d3.select(this).style("font-size", size + "px").text(word);
-  while(((this.getBBox().width >= width) || (this.getBBox().height >= height)) && (size > 12))
-   {
-    size--;
-    d3.select(this).style("font-size", size + "px");
-    this.firstChild.data = word;
-   }
-  }
-
-  function wordWrap(d, i){
-  var words = d.split(' ');
-  var line = new Array();
-  var length = 0;
-  var text = "";
-  var width = d.dx;
-  var height = d.dy;
-  var word;
-  do {
-     word = words.shift();
-     line.push(word);
-     if (words.length)
-       this.firstChild.data = line.join(' ') + " " + words[0]; 
-     else
-       this.firstChild.data = line.join(' ');
-     length = this.getBBox().width;
-     if (length < width && words.length) {
-       ;
-     }
-     else {
-       text = line.join(' ');
-       this.firstChild.data = text;
-       if (this.getBBox().width > width) { 
-         text = d3.select(this).select(function() {return this.lastChild;}).text();
-         text = text + "...";
-         d3.select(this).select(function() {return this.lastChild;}).text(text);
-         d3.select(this).classed("wordwrapped", true);
-         break;
-      }
-      else
-        ;
-
-    if (text != '') {
-      d3.select(this).append("svg:tspan")
-      .attr("x", 0)
-      .attr("dx", "0.15em")
-      .attr("dy", "0.9em")
-      .text(text);
-    }
-    else
-       ;
-
-    if(this.getBBox().height > height && words.length) {
-       text = d3.select(this).select(function() {return this.lastChild;}).text();
-       text = text + "...";
-       d3.select(this).select(function() {return this.lastChild;}).text(text);
-       d3.select(this).classed("wordwrapped", true);
-
-       break;
-    }
-    else
-       ;
-
-    line = new Array();
-      }
-    } while (words.length);
-    this.firstChild.data = '';
-  } 
-
-  // end word wrapping/font
 
   var chartGroup = d3.select('#chartG');
 
@@ -298,6 +221,8 @@ function drawTreemap(error, data) {
       .sum(sumBySize)
       .sort(function(a, b) { return b.height - a.height || b.value - a.value; });
 
+  var tooltip = d3.select('body').append('div').attr('class', 'tooltipTree');
+
   treemap(root);
 
   var cell = treemapGroup.selectAll("g")
@@ -309,7 +234,15 @@ function drawTreemap(error, data) {
       .attr("id", function(d) { return d.data.id; })
       .attr("width", function(d) { return d.x1 - d.x0; })
       .attr("height", function(d) { return d.y1 - d.y0; })
-      .attr("fill", function(d) { return color(d.parent.data.id); });
+      .attr("fill", function(d) { return color(d.parent.data.id); })
+      .on('mousemove', function(d) {
+          tooltip.style("left", d3.event.pageX + 10 + "px");
+          tooltip.style("top", d3.event.pageY - 20 + "px");
+          tooltip.style("display", "inline-block");        
+          tooltip.html(d.children ? null : d.parent.data.name + ' | ' + d.data.name + '  ' + d.data.Deaths);
+      }).on('mouseout', function(d) {
+        tooltip.style('display', 'none');
+      });
 
   cell.append("clipPath")
       .attr("id", function(d) { return "clip-" + d.data.id; })
@@ -322,18 +255,11 @@ function drawTreemap(error, data) {
       .data(function(d) { return d.data.name.split(/(?=[A-Z][^A-Z])/g); })
       .enter().append("tspan")
       .attr('x', 0)
-      .attr('dx', '0.35em')
-      .attr('dy', '0.9em')  
       .style('text-anchor', 'start')
       .style('font-size', '14px')         
-      .each(fontSize)
-      .each(wordWrap)
-      //.attr("x", 4)
-      //.attr("y", function(d, i) { return 13 + i * 10; })
-      //.text(function(d) { return d; });
-
-  cell.append("title")
-      .text(function(d) { return d.data.id + "\n" + format(d.value); });
+      .attr("x", 4)
+      .attr("y", function(d, i) { return 13 + i * 10; })
+      .text(function(d) { return d; });
 
   
 
