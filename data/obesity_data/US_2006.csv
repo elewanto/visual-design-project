@@ -1,52 +1,52 @@
-state,2006
-Mississippi,30.6
-West Virginia,29.8
-Alabama,29.4
-Louisiana,28.2
-South Carolina,27.8
-Tennessee,27.8
-Kentucky,27.5
-Arkansas,27
-Indiana,26.8
-Michigan,26.8
-Oklahoma,26.8
-Missouri,26.3
-Texas,26.3
-Georgia,26.1
-Ohio,26
-Alaska,25.8
-North Carolina,25.6
-Nebraska,25.4
-North Dakota,25.1
-Iowa,24.9
-South Dakota,24.9
-Wisconsin,24.8
-Pennsylvania,24.5
-Virginia,24.5
-Illinois,24.4
-Maryland,24.4
-Kansas,24.3
-Minnesota,23.7
-Delaware,23.6
-Oregon,23.3
-Idaho,23.2
-Washington,23.2
-Maine,23
-Florida,22.9
-Wyoming,22.8
-California,22.7
-Nevada,22.5
-New Hampshire,22.4
-New York,22.4
-District of Columbia,22.2
-New Jersey,22.2
-New Mexico,22
-Arizona,21.7
-Utah,21.1
-Montana,20.7
-Rhode Island,20.5
-Connecticut,20.1
-Hawaii,20.1
-Vermont,20
-Massachusetts,19.8
-Colorado,17.6
+state,2006,obese_2006_degree
+Mississippi,30.6,3
+West Virginia,29.8,3
+Alabama,29.4,3
+Louisiana,28.2,2
+South Carolina,27.8,2
+Tennessee,27.8,2
+Kentucky,27.5,2
+Arkansas,27,2
+Indiana,26.8,2
+Michigan,26.8,2
+Oklahoma,26.8,2
+Missouri,26.3,2
+Texas,26.3,2
+Georgia,26.1,2
+Ohio,26,1
+Alaska,25.8,1
+North Carolina,25.6,1
+Nebraska,25.4,1
+North Dakota,25.1,1
+Iowa,24.9,1
+South Dakota,24.9,1
+Wisconsin,24.8,1
+Pennsylvania,24.5,1
+Virginia,24.5,1
+Illinois,24.4,1
+Maryland,24.4,1
+Kansas,24.3,1
+Minnesota,23.7,1
+Delaware,23.6,1
+Oregon,23.3,1
+Idaho,23.2,1
+Washington,23.2,1
+Maine,23,1
+Florida,22.9,0
+Wyoming,22.8,0
+California,22.7,0
+Nevada,22.5,0
+New Hampshire,22.4,0
+New York,22.4,0
+District of Columbia,22.2,0
+New Jersey,22.2,0
+New Mexico,22,0
+Arizona,21.7,0
+Utah,21.1,0
+Montana,20.7,0
+Rhode Island,20.5,0
+Connecticut,20.1,0
+Hawaii,20.1,0
+Vermont,20,0
+Massachusetts,19.8,0
+Colorado,17.6,0

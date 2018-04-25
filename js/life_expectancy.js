@@ -21,7 +21,55 @@ function sliderChange() {
   console.log('slider used: ' + slider.getValue());
   sliderValue = slider.getValue();
   drawMaps();
-}  
+}
+
+
+function test_image1() {
+  console.log('test_image1()');
+
+  oldChartSvg = document.getElementById('chartDiv');
+  removeChildren(oldChartSvg);
+
+  var img = new Image();
+  var parentDiv = document.getElementById('chartDiv');
+  img.onload = function() {
+    parentDiv.appendChild(img);
+
+    imgNode = parentDiv.childNodes[0];
+    imgNode.setAttribute('id', 'chartImage');
+    imgNode.setAttribute('class', 'center-block');
+    //dynamically set max image width to minimize distortion
+    console.log('image width: ' + img.width);
+    imgNode.setAttribute('width', img.width);  
+  };
+
+  img.src = 'images/LE_US_gender_race.png';
+
+}
+
+
+function test_image2() {
+  console.log('test_image2()');
+
+  oldChartSvg = document.getElementById('chartDiv');
+  removeChildren(oldChartSvg);
+
+  var img = new Image();
+  var parentDiv = document.getElementById('chartDiv');
+  img.onload = function() {
+    parentDiv.appendChild(img);
+
+    imgNode = parentDiv.childNodes[0];
+    imgNode.setAttribute('id', 'chartImage');
+    imgNode.setAttribute('class', 'center-block');
+    //dynamically set max image width to minimize distortion
+    console.log('image width: ' + img.width);
+    imgNode.setAttribute('width', img.width);  
+  };
+
+  img.src = 'images/causeDeathB.png';
+
+}
 
 
 function life2_chart1(){

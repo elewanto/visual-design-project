@@ -5,7 +5,7 @@
 /* navbar container */
 .navbarm {
   overflow: hidden;
-  background-color: #5a201e;
+  background-color: #923025;
   font-family: "Europa-Light", sans-serif;  
 }
 
@@ -32,20 +32,20 @@
   outline: none;
   color: #ffffff;
   padding: 14px 16px;
-  background-color: #5a201e;
+  background-color: #923025;
   font-family: inherit;   /* for proper align on mobile */
   margin: 0;              /* for proper vertical align on mobile */
 }
 
 .navbarm a:hover, .dropdownm:hover .dropbtnm {
-  background-color: #923025;
+  background-color: #5a201e;
 }
 
 /* dropdown content */
 .dropdownm-content {
   display: none;
   position: absolute;
-  background-color: #5a201e;
+  background-color: #C70039;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;

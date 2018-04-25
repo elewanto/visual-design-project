@@ -1,6 +1,6 @@
 
 // dataType is already set as a global variable
-function drawUSMap() {
+function drawUSMap(year) {
 
   // set up the size US map within svg (left half of svg area)
   var width = 1000;
@@ -55,21 +55,28 @@ function drawUSMap() {
     .attr('transform','translate (300, 0)')
     .classed('map-layer', true);
 
+  // import the file name
+  var US_filename = 'US_'+String(year)+'.csv';
+
+  console.log('data/obesity_data/'+ US_filename);
   // import data from the obesity file
-  d3.csv("data/obesity_data/US_obesity_data.csv",  function(d, i) {
-      d['obese_2011_degree'] = +d['obese_2011_degree'];
+  d3.csv('data/obesity_data/'+US_filename,  function(d, i) {
+
+      d['obese_'+String(year)+'_degree'] = +d['obese_'+String(year)+'_degree'];
       return d;
     },function(data) {
        color.domain([0,1,2,3]);                             // set the range of the input data
        d3.json("data/us-states.json",function(json) {        // import GeoJSON data 
         for (var i = 0; i < data.length; i++) {             // iterate each row of data in the csv file
           var state = data[i].state;                        // extract the state
-          var obese_2011_degree = data[i]['obese_2011_degree'];               // extract the degree of obesity
-            //console.log(obese_2011_degree);
+          var obese_degree = data[i]['obese_'+String(year)+'_degree'];               // extract the degree of obesity
+
+
+          //console.log(obese_degree);
           for (var j = 0; j < json.features.length; j++)  {             // Find the corresponding state inside the GeoJSON
             var jsonState = json.features[j].properties.name;
             if (state == jsonState) {
-              json.features[j].properties.value = obese_2011_degree;               // assign the obese rate to json file
+              json.features[j].properties.value = obese_degree;               // assign the obese rate to json file
               break;
             }
           }

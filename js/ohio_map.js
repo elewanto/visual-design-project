@@ -1,5 +1,5 @@
 
-function drawOhioMap() {
+function drawOhioMap(year) {
 
   // set up size for the OH svg map
   var width = 500;
@@ -23,9 +23,15 @@ function drawOhioMap() {
   var mapLayer = ohiomapg
     .attr('transform','translate (1000, 0)')
     .classed('map-layer', true);
+
+  // import the file name
+  var OH_filename = 'Oh_'+String(year)+'.csv';
+
+  console.log('data/obesity_data/'+ OH_filename);
   // import data from the obesity file
-  d3.csv("data/obesity_data/Ohio_Obesity.csv",  function(d, i) {
-      d['obese_degree'] = +d['obese_degree'];
+  d3.csv('data/obesity_data/Oh_'+String(year)+'.csv',  function(d, i) {
+
+      d[String(year)+'_degree'] = +d[String(year)+'_degree'];
       return d;
     },function(data) {
       // set the range of the input data
@@ -36,7 +42,7 @@ function drawOhioMap() {
           // extract the state
           var county = data[i].County;
           // extract the degree of obesity
-          var obese_degree = data[i]['2004_degree'];
+          var obese_degree = data[i][String(year)+'_degree'];
           // Find the corresponding state inside the GeoJSON
           for (var j = 0; j < counties.features.length; j++)  {
             var jsonCounty = counties.features[j].properties.NAME;

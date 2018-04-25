@@ -1,6 +1,6 @@
 
 // global variables
-var sliderValue = "2015";     //
+var sliderValue = "2013";     //
 
 
 /************************************************************************************************/
@@ -11,7 +11,7 @@ function drawStart() {
 
   // create slider object
   slider = $('#mapSlider').slider()
-                              .on('slide', sliderChange)
+                              .on('slide slideStop', sliderChange)
                               .data('slider');  
 
   // automatically draw side-by-side U.S and Ohio county map by default
@@ -27,7 +27,9 @@ function drawStart() {
 function sliderChange() {
   console.log('slider used: ' + slider.getValue());
   sliderValue = slider.getValue();
-  drawMaps();
+
+  // pass the year value to the map
+  drawMaps(sliderValue);
 }  
 
 
@@ -37,7 +39,7 @@ function sliderChange() {
 function obesity1_chart1() {
   console.log('obesity1_chart1()')
 
-  drawMaps();
+  drawMaps(sliderValue);
 
   oldChartSvg = document.getElementById('chartDiv');
   removeChildren(oldChartSvg);
@@ -58,7 +60,7 @@ function obesity1_chart1() {
                 .attr('id', 'chartG')
                 .attr('transform', 'translate(5, 0)');
 
-  drawBarChart5start();
+  drawBarChart5start(sliderValue);
 
 
 
@@ -73,7 +75,7 @@ function obesity1_chart1() {
 
 // create SVG and groups needed to draw two maps side-by-side
 // can add data parameters to pass to function
-function drawMaps() {
+function drawMaps(year) {
 
   console.log('in drawMaps()');
 
@@ -104,8 +106,8 @@ function drawMaps() {
                 .attr('id', 'ohiomap')
                 .attr('transform', 'translate(800, 0)');
 
-  drawUSMap();
-  drawOhioMap();
+  drawUSMap(year);
+  drawOhioMap(year);
 }
 
 
