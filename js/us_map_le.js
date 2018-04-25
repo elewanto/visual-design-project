@@ -189,7 +189,7 @@ function drawLEUSMap() {
                       .attr("class", "legend")
                       .attr("transform","translate(800,500)") // position for the legend position
                       .selectAll("g")
-                      .data([minRate, 76, 78.71, maxRate])
+                      .data([0.1, 0.4, 0.7, 1.0])
                       .enter()
                       .append("g")
                       .attr("transform", function(d, i) { return "translate(10," + i * 28 + ")"; });
@@ -197,11 +197,12 @@ function drawLEUSMap() {
         legend.append("rect")               // append the rectangle box for legend
                 .attr("width", 24)
                 .attr("height", 24)
-                .style("fill", function(d, i) { return d3.interpolateYlGnBu(d) });
+                .style("fill", function(d, i) { return(d3.interpolateYlGnBu(d)) });
 
         legend.append("text")                 // append the legend text
-                  .data([minRate + ' yrs', '76 yrs', '78.71 yrs (Avg)', maxRate+' yrs'])
-                  .attr("x", 120)
+                  .data([Math.round(0.1*(parseInt(maxRate)-parseInt(minRate))+parseInt(minRate)) + ' yrs', Math.round(0.4*(parseInt(maxRate)-parseInt(minRate))+parseInt(minRate)) + ' yrs',
+                         Math.round(0.7*(parseInt(maxRate)-parseInt(minRate))+parseInt(minRate)) + ' yrs', Math.round(1.0*(parseInt(maxRate)-parseInt(minRate))+parseInt(minRate)) + ' yrs'])
+                  .attr("x", 70)
                   .attr("y", 7)
                   .attr("dy", ".7em")
                   .style('font-size', 16)
