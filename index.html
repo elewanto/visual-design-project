@@ -1,0 +1,62 @@
+<!-- index.html is the splash page / landing page.  It contains a button link to homepage.html -->
+<!-- to run locally: -->
+<!-- python -m SimpleHTTPServer 8888 -->
+<!-- http://localhost:8888 -->
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Team 3 Visual Design Project Landing Page</title>
+
+    <!-- dependent .css files -->
+    <link href="css/bootstrap.min.css" rel="stylesheet"> <!-- bootstrap css file -->      
+    <link href="css/bootstrap-slider.min.css" rel="stylesheet"> <!-- bootstrap slider plugin css file -->          
+    <link rel="stylesheet" type="text/css" href="css/index.css">    <!-- homepage css file -->
+    <link rel="stylesheet" type="text/css" href="css/Splash_Page.css">    
+
+    <!-- .js library packages -->
+    <script src="https://d3js.org/d3.v4.min.js"></script>  <!-- D3 library -->
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>      
+    <script src="js/libraries/jquery-3.3.1.min.js"></script> <!-- jquery library -->   
+    <script src="js/libraries/tether.min.js"></script> <!-- tether library (dependence of bootstrap) -->          
+    <script src="js/libraries/bootstrap.min.js"></script> <!-- bootstrap library -->    
+    <script src="js/libraries/bootstrap-slider.min.js"></script> <!-- bootstrap slider plugin -->     
+
+    <script src="https://d3js.org/queue.v1.min.js"></script> <!-- Mke map library -->
+
+    <!-- project .js files -->
+
+    <!-- set viewport for responsive page size scaling -->
+    <link href='https://fonts.googleapis.com/css?family=Lato:100,300,400,300italic' rel='stylesheet' type='text/css'>    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+
+
+  <body>
+      <header>
+         <div class="hero-text-box">
+            <div class="a">
+               <h1>
+                  Life Expectancy in<br> 
+                  Ohio Counties and the U.S.
+               </h1>
+               <div class="back">
+                  <a href="homepage.html">
+                  <div class="button_base b02_slide_in">
+                     <div>HOMEPAGE</div>		  <br>
+                  </div>
+                 </a>
+
+	  	  <br>
+	          <br>
+		  <br>
+                  <a href="about_us.html"><button class="button button1">ABOUT US</button></a>
+               </div>
+            </div>
+         </div>
+      </header>
+      <!--</div>-->
+   </body>
+
+</html>
