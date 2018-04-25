@@ -1,0 +1,344 @@
+"Notes"	"Weekday"	"Weekday Code"	"Place of Death"	"Place of Death Code"	"Cause of death"	"Cause of death Code"	Deaths	Population	Crude Rate
+	"Sunday"	"1"	"Medical Facility - Inpatient"	"1"	"Person injured in collision between other specified motor vehicles (traffic)"	"V87.7"	18	Not Applicable	Not Applicable
+	"Sunday"	"1"	"Medical Facility - Inpatient"	"1"	"Person injured in unspecified motor-vehicle accident, traffic"	"V89.2"	11	Not Applicable	Not Applicable
+	"Sunday"	"1"	"Medical Facility - Inpatient"	"1"	"Other fall on same level"	"W18"	14	Not Applicable	Not Applicable
+	"Sunday"	"1"	"Medical Facility - Inpatient"	"1"	"Unspecified fall"	"W19"	111	Not Applicable	Not Applicable
+	"Sunday"	"1"	"Medical Facility - Inpatient"	"1"	"Inhalation and ingestion of other objects causing obstruction of respiratory tract"	"W80"	33	Not Applicable	Not Applicable
+	"Sunday"	"1"	"Medical Facility - Inpatient"	"1"	"Accidental poisoning by and exposure to narcotics and psychodysleptics [hallucinogens], not elsewhere classified"	"X42"	30	Not Applicable	Not Applicable
+	"Sunday"	"1"	"Medical Facility - Inpatient"	"1"	"Accidental poisoning by and exposure to other and unspecified drugs, medicaments and biological substances"	"X44"	25	Not Applicable	Not Applicable
+	"Sunday"	"1"	"Medical Facility - Inpatient"	"1"	"Exposure to unspecified factor"	"X59"	28	Not Applicable	Not Applicable
+	"Sunday"	"1"	"Medical Facility - Inpatient"	"1"	"Intentional self-harm by other and unspecified firearm discharge"	"X74"	17	Not Applicable	Not Applicable
+	"Sunday"	"1"	"Medical Facility - Inpatient"	"1"	"Assault by other and unspecified firearm discharge"	"X95"	22	Not Applicable	Not Applicable
+	"Sunday"	"1"	"Medical Facility - Outpatient or ER"	"2"	"Pedestrian injured in traffic accident involving other and unspecified motor vehicles"	"V09.2"	12	Not Applicable	Not Applicable
+	"Sunday"	"1"	"Medical Facility - Outpatient or ER"	"2"	"Person injured in collision between other specified motor vehicles (traffic)"	"V87.7"	33	Not Applicable	Not Applicable
+	"Sunday"	"1"	"Medical Facility - Outpatient or ER"	"2"	"Person injured in unspecified motor-vehicle accident, traffic"	"V89.2"	35	Not Applicable	Not Applicable
+	"Sunday"	"1"	"Medical Facility - Outpatient or ER"	"2"	"Unspecified fall"	"W19"	16	Not Applicable	Not Applicable
+	"Sunday"	"1"	"Medical Facility - Outpatient or ER"	"2"	"Accidental poisoning by and exposure to narcotics and psychodysleptics [hallucinogens], not elsewhere classified"	"X42"	44	Not Applicable	Not Applicable
+	"Sunday"	"1"	"Medical Facility - Outpatient or ER"	"2"	"Accidental poisoning by and exposure to other and unspecified drugs, medicaments and biological substances"	"X44"	23	Not Applicable	Not Applicable
+	"Sunday"	"1"	"Medical Facility - Outpatient or ER"	"2"	"Intentional self-harm by other and unspecified firearm discharge"	"X74"	19	Not Applicable	Not Applicable
+	"Sunday"	"1"	"Medical Facility - Outpatient or ER"	"2"	"Assault by other and unspecified firearm discharge"	"X95"	80	Not Applicable	Not Applicable
+	"Sunday"	"1"	"Medical Facility - Outpatient or ER"	"2"	"Assault by sharp object"	"X99"	13	Not Applicable	Not Applicable
+	"Sunday"	"1"	"Decedent's home"	"4"	"Unspecified fall"	"W19"	26	Not Applicable	Not Applicable
+	"Sunday"	"1"	"Decedent's home"	"4"	"Exposure to uncontrolled fire in building or structure"	"X00"	22	Not Applicable	Not Applicable
+	"Sunday"	"1"	"Decedent's home"	"4"	"Accidental poisoning by and exposure to antiepileptic, sedative-hypnotic, antiparkinsonism and psychotropic drugs, not elsewhere classified"	"X41"	13	Not Applicable	Not Applicable
+	"Sunday"	"1"	"Decedent's home"	"4"	"Accidental poisoning by and exposure to narcotics and psychodysleptics [hallucinogens], not elsewhere classified"	"X42"	108	Not Applicable	Not Applicable
+	"Sunday"	"1"	"Decedent's home"	"4"	"Accidental poisoning by and exposure to other and unspecified drugs, medicaments and biological substances"	"X44"	108	Not Applicable	Not Applicable
+	"Sunday"	"1"	"Decedent's home"	"4"	"Accidental poisoning by and exposure to alcohol"	"X45"	18	Not Applicable	Not Applicable
+	"Sunday"	"1"	"Decedent's home"	"4"	"Intentional self-poisoning by and exposure to other and unspecified drugs, medicaments and biological substances"	"X64"	22	Not Applicable	Not Applicable
+	"Sunday"	"1"	"Decedent's home"	"4"	"Intentional self-poisoning by and exposure to other gases and vapours"	"X67"	18	Not Applicable	Not Applicable
+	"Sunday"	"1"	"Decedent's home"	"4"	"Intentional self-harm by hanging, strangulation and suffocation"	"X70"	61	Not Applicable	Not Applicable
+	"Sunday"	"1"	"Decedent's home"	"4"	"Intentional self-harm by other and unspecified firearm discharge"	"X74"	100	Not Applicable	Not Applicable
+	"Sunday"	"1"	"Decedent's home"	"4"	"Assault by other and unspecified firearm discharge"	"X95"	21	Not Applicable	Not Applicable
+	"Sunday"	"1"	"Decedent's home"	"4"	"Assault by sharp object"	"X99"	13	Not Applicable	Not Applicable
+	"Sunday"	"1"	"Hospice facility"	"5"	"Unspecified fall"	"W19"	13	Not Applicable	Not Applicable
+	"Sunday"	"1"	"Nursing home/long term care"	"6"	"Unspecified fall"	"W19"	14	Not Applicable	Not Applicable
+	"Sunday"	"1"	"Nursing home/long term care"	"6"	"Exposure to unspecified factor"	"X59"	23	Not Applicable	Not Applicable
+	"Sunday"	"1"	"Other"	"7"	"Pedestrian injured in traffic accident involving other and unspecified motor vehicles"	"V09.2"	11	Not Applicable	Not Applicable
+	"Sunday"	"1"	"Other"	"7"	"Car occupant injured in collision with fixed or stationary object, driver injured in traffic accident"	"V47.5"	16	Not Applicable	Not Applicable
+	"Sunday"	"1"	"Other"	"7"	"Car occupant [any] injured in unspecified traffic accident"	"V49.9"	10	Not Applicable	Not Applicable
+	"Sunday"	"1"	"Other"	"7"	"Person injured in collision between other specified motor vehicles (traffic)"	"V87.7"	24	Not Applicable	Not Applicable
+	"Sunday"	"1"	"Other"	"7"	"Person injured in unspecified motor-vehicle accident, traffic"	"V89.2"	56	Not Applicable	Not Applicable
+	"Sunday"	"1"	"Other"	"7"	"Accidental poisoning by and exposure to narcotics and psychodysleptics [hallucinogens], not elsewhere classified"	"X42"	55	Not Applicable	Not Applicable
+	"Sunday"	"1"	"Other"	"7"	"Accidental poisoning by and exposure to other and unspecified drugs, medicaments and biological substances"	"X44"	32	Not Applicable	Not Applicable
+	"Sunday"	"1"	"Other"	"7"	"Intentional self-harm by hanging, strangulation and suffocation"	"X70"	16	Not Applicable	Not Applicable
+	"Sunday"	"1"	"Other"	"7"	"Intentional self-harm by other and unspecified firearm discharge"	"X74"	49	Not Applicable	Not Applicable
+	"Sunday"	"1"	"Other"	"7"	"Assault by other and unspecified firearm discharge"	"X95"	70	Not Applicable	Not Applicable
+	"Monday"	"2"	"Medical Facility - Inpatient"	"1"	"Person injured in collision between other specified motor vehicles (traffic)"	"V87.7"	13	Not Applicable	Not Applicable
+	"Monday"	"2"	"Medical Facility - Inpatient"	"1"	"Person injured in unspecified motor-vehicle accident, traffic"	"V89.2"	25	Not Applicable	Not Applicable
+	"Monday"	"2"	"Medical Facility - Inpatient"	"1"	"Other fall on same level"	"W18"	10	Not Applicable	Not Applicable
+	"Monday"	"2"	"Medical Facility - Inpatient"	"1"	"Unspecified fall"	"W19"	104	Not Applicable	Not Applicable
+	"Monday"	"2"	"Medical Facility - Inpatient"	"1"	"Inhalation and ingestion of other objects causing obstruction of respiratory tract"	"W80"	29	Not Applicable	Not Applicable
+	"Monday"	"2"	"Medical Facility - Inpatient"	"1"	"Accidental poisoning by and exposure to narcotics and psychodysleptics [hallucinogens], not elsewhere classified"	"X42"	35	Not Applicable	Not Applicable
+	"Monday"	"2"	"Medical Facility - Inpatient"	"1"	"Accidental poisoning by and exposure to other and unspecified drugs, medicaments and biological substances"	"X44"	14	Not Applicable	Not Applicable
+	"Monday"	"2"	"Medical Facility - Inpatient"	"1"	"Exposure to unspecified factor"	"X59"	30	Not Applicable	Not Applicable
+	"Monday"	"2"	"Medical Facility - Inpatient"	"1"	"Assault by other and unspecified firearm discharge"	"X95"	21	Not Applicable	Not Applicable
+	"Monday"	"2"	"Medical Facility - Outpatient or ER"	"2"	"Person injured in collision between other specified motor vehicles (traffic)"	"V87.7"	19	Not Applicable	Not Applicable
+	"Monday"	"2"	"Medical Facility - Outpatient or ER"	"2"	"Person injured in unspecified motor-vehicle accident, traffic"	"V89.2"	20	Not Applicable	Not Applicable
+	"Monday"	"2"	"Medical Facility - Outpatient or ER"	"2"	"Unspecified fall"	"W19"	25	Not Applicable	Not Applicable
+	"Monday"	"2"	"Medical Facility - Outpatient or ER"	"2"	"Accidental poisoning by and exposure to narcotics and psychodysleptics [hallucinogens], not elsewhere classified"	"X42"	36	Not Applicable	Not Applicable
+	"Monday"	"2"	"Medical Facility - Outpatient or ER"	"2"	"Accidental poisoning by and exposure to other and unspecified drugs, medicaments and biological substances"	"X44"	28	Not Applicable	Not Applicable
+	"Monday"	"2"	"Medical Facility - Outpatient or ER"	"2"	"Intentional self-harm by other and unspecified firearm discharge"	"X74"	16	Not Applicable	Not Applicable
+	"Monday"	"2"	"Medical Facility - Outpatient or ER"	"2"	"Assault by other and unspecified firearm discharge"	"X95"	62	Not Applicable	Not Applicable
+	"Monday"	"2"	"Decedent's home"	"4"	"Unspecified fall"	"W19"	23	Not Applicable	Not Applicable
+	"Monday"	"2"	"Decedent's home"	"4"	"Exposure to uncontrolled fire in building or structure"	"X00"	12	Not Applicable	Not Applicable
+	"Monday"	"2"	"Decedent's home"	"4"	"Accidental poisoning by and exposure to antiepileptic, sedative-hypnotic, antiparkinsonism and psychotropic drugs, not elsewhere classified"	"X41"	13	Not Applicable	Not Applicable
+	"Monday"	"2"	"Decedent's home"	"4"	"Accidental poisoning by and exposure to narcotics and psychodysleptics [hallucinogens], not elsewhere classified"	"X42"	105	Not Applicable	Not Applicable
+	"Monday"	"2"	"Decedent's home"	"4"	"Accidental poisoning by and exposure to other and unspecified drugs, medicaments and biological substances"	"X44"	73	Not Applicable	Not Applicable
+	"Monday"	"2"	"Decedent's home"	"4"	"Accidental poisoning by and exposure to alcohol"	"X45"	15	Not Applicable	Not Applicable
+	"Monday"	"2"	"Decedent's home"	"4"	"Intentional self-poisoning by and exposure to other and unspecified drugs, medicaments and biological substances"	"X64"	18	Not Applicable	Not Applicable
+	"Monday"	"2"	"Decedent's home"	"4"	"Intentional self-poisoning by and exposure to other gases and vapours"	"X67"	19	Not Applicable	Not Applicable
+	"Monday"	"2"	"Decedent's home"	"4"	"Intentional self-harm by hanging, strangulation and suffocation"	"X70"	72	Not Applicable	Not Applicable
+	"Monday"	"2"	"Decedent's home"	"4"	"Intentional self-harm by rifle, shotgun and larger firearm discharge"	"X73"	20	Not Applicable	Not Applicable
+	"Monday"	"2"	"Decedent's home"	"4"	"Intentional self-harm by other and unspecified firearm discharge"	"X74"	129	Not Applicable	Not Applicable
+	"Monday"	"2"	"Decedent's home"	"4"	"Assault by other and unspecified firearm discharge"	"X95"	29	Not Applicable	Not Applicable
+	"Monday"	"2"	"Decedent's home"	"4"	"Poisoning by and exposure to other and unspecified drugs, medicaments and biological substances, undetermined intent"	"Y14"	12	Not Applicable	Not Applicable
+	"Monday"	"2"	"Nursing home/long term care"	"6"	"Unspecified fall"	"W19"	25	Not Applicable	Not Applicable
+	"Monday"	"2"	"Nursing home/long term care"	"6"	"Exposure to unspecified factor"	"X59"	25	Not Applicable	Not Applicable
+	"Monday"	"2"	"Nursing home/long term care"	"6"	"Exposure to unspecified factor causing fracture"	"X59.0"	11	Not Applicable	Not Applicable
+	"Monday"	"2"	"Other"	"7"	"Person injured in collision between other specified motor vehicles (traffic)"	"V87.7"	21	Not Applicable	Not Applicable
+	"Monday"	"2"	"Other"	"7"	"Person injured in unspecified motor-vehicle accident, traffic"	"V89.2"	40	Not Applicable	Not Applicable
+	"Monday"	"2"	"Other"	"7"	"Accidental poisoning by and exposure to narcotics and psychodysleptics [hallucinogens], not elsewhere classified"	"X42"	49	Not Applicable	Not Applicable
+	"Monday"	"2"	"Other"	"7"	"Accidental poisoning by and exposure to other and unspecified drugs, medicaments and biological substances"	"X44"	20	Not Applicable	Not Applicable
+	"Monday"	"2"	"Other"	"7"	"Intentional self-harm by hanging, strangulation and suffocation"	"X70"	18	Not Applicable	Not Applicable
+	"Monday"	"2"	"Other"	"7"	"Intentional self-harm by other and unspecified firearm discharge"	"X74"	48	Not Applicable	Not Applicable
+	"Monday"	"2"	"Other"	"7"	"Assault by other and unspecified firearm discharge"	"X95"	70	Not Applicable	Not Applicable
+	"Tuesday"	"3"	"Medical Facility - Inpatient"	"1"	"Person injured in collision between other specified motor vehicles (traffic)"	"V87.7"	13	Not Applicable	Not Applicable
+	"Tuesday"	"3"	"Medical Facility - Inpatient"	"1"	"Person injured in unspecified motor-vehicle accident, traffic"	"V89.2"	18	Not Applicable	Not Applicable
+	"Tuesday"	"3"	"Medical Facility - Inpatient"	"1"	"Fall on and from stairs and steps"	"W10"	11	Not Applicable	Not Applicable
+	"Tuesday"	"3"	"Medical Facility - Inpatient"	"1"	"Unspecified fall"	"W19"	110	Not Applicable	Not Applicable
+	"Tuesday"	"3"	"Medical Facility - Inpatient"	"1"	"Inhalation and ingestion of other objects causing obstruction of respiratory tract"	"W80"	43	Not Applicable	Not Applicable
+	"Tuesday"	"3"	"Medical Facility - Inpatient"	"1"	"Accidental poisoning by and exposure to narcotics and psychodysleptics [hallucinogens], not elsewhere classified"	"X42"	36	Not Applicable	Not Applicable
+	"Tuesday"	"3"	"Medical Facility - Inpatient"	"1"	"Accidental poisoning by and exposure to other and unspecified drugs, medicaments and biological substances"	"X44"	22	Not Applicable	Not Applicable
+	"Tuesday"	"3"	"Medical Facility - Inpatient"	"1"	"Exposure to unspecified factor"	"X59"	25	Not Applicable	Not Applicable
+	"Tuesday"	"3"	"Medical Facility - Inpatient"	"1"	"Intentional self-harm by other and unspecified firearm discharge"	"X74"	11	Not Applicable	Not Applicable
+	"Tuesday"	"3"	"Medical Facility - Inpatient"	"1"	"Assault by other and unspecified firearm discharge"	"X95"	23	Not Applicable	Not Applicable
+	"Tuesday"	"3"	"Medical Facility - Outpatient or ER"	"2"	"Person injured in collision between other specified motor vehicles (traffic)"	"V87.7"	21	Not Applicable	Not Applicable
+	"Tuesday"	"3"	"Medical Facility - Outpatient or ER"	"2"	"Person injured in unspecified motor-vehicle accident, traffic"	"V89.2"	24	Not Applicable	Not Applicable
+	"Tuesday"	"3"	"Medical Facility - Outpatient or ER"	"2"	"Unspecified fall"	"W19"	25	Not Applicable	Not Applicable
+	"Tuesday"	"3"	"Medical Facility - Outpatient or ER"	"2"	"Accidental poisoning by and exposure to narcotics and psychodysleptics [hallucinogens], not elsewhere classified"	"X42"	28	Not Applicable	Not Applicable
+	"Tuesday"	"3"	"Medical Facility - Outpatient or ER"	"2"	"Accidental poisoning by and exposure to other and unspecified drugs, medicaments and biological substances"	"X44"	16	Not Applicable	Not Applicable
+	"Tuesday"	"3"	"Medical Facility - Outpatient or ER"	"2"	"Intentional self-harm by other and unspecified firearm discharge"	"X74"	25	Not Applicable	Not Applicable
+	"Tuesday"	"3"	"Medical Facility - Outpatient or ER"	"2"	"Assault by other and unspecified firearm discharge"	"X95"	56	Not Applicable	Not Applicable
+	"Tuesday"	"3"	"Decedent's home"	"4"	"Unspecified fall"	"W19"	14	Not Applicable	Not Applicable
+	"Tuesday"	"3"	"Decedent's home"	"4"	"Accidental poisoning by and exposure to antiepileptic, sedative-hypnotic, antiparkinsonism and psychotropic drugs, not elsewhere classified"	"X41"	16	Not Applicable	Not Applicable
+	"Tuesday"	"3"	"Decedent's home"	"4"	"Accidental poisoning by and exposure to narcotics and psychodysleptics [hallucinogens], not elsewhere classified"	"X42"	116	Not Applicable	Not Applicable
+	"Tuesday"	"3"	"Decedent's home"	"4"	"Accidental poisoning by and exposure to other and unspecified drugs, medicaments and biological substances"	"X44"	89	Not Applicable	Not Applicable
+	"Tuesday"	"3"	"Decedent's home"	"4"	"Intentional self-poisoning by and exposure to other and unspecified drugs, medicaments and biological substances"	"X64"	23	Not Applicable	Not Applicable
+	"Tuesday"	"3"	"Decedent's home"	"4"	"Intentional self-poisoning by and exposure to other gases and vapours"	"X67"	10	Not Applicable	Not Applicable
+	"Tuesday"	"3"	"Decedent's home"	"4"	"Intentional self-harm by hanging, strangulation and suffocation"	"X70"	61	Not Applicable	Not Applicable
+	"Tuesday"	"3"	"Decedent's home"	"4"	"Intentional self-harm by rifle, shotgun and larger firearm discharge"	"X73"	23	Not Applicable	Not Applicable
+	"Tuesday"	"3"	"Decedent's home"	"4"	"Intentional self-harm by other and unspecified firearm discharge"	"X74"	99	Not Applicable	Not Applicable
+	"Tuesday"	"3"	"Decedent's home"	"4"	"Assault by other and unspecified firearm discharge"	"X95"	29	Not Applicable	Not Applicable
+	"Tuesday"	"3"	"Decedent's home"	"4"	"Poisoning by and exposure to other and unspecified drugs, medicaments and biological substances, undetermined intent"	"Y14"	10	Not Applicable	Not Applicable
+	"Tuesday"	"3"	"Hospice facility"	"5"	"Unspecified fall"	"W19"	10	Not Applicable	Not Applicable
+	"Tuesday"	"3"	"Nursing home/long term care"	"6"	"Unspecified fall"	"W19"	21	Not Applicable	Not Applicable
+	"Tuesday"	"3"	"Nursing home/long term care"	"6"	"Inhalation and ingestion of other objects causing obstruction of respiratory tract"	"W80"	10	Not Applicable	Not Applicable
+	"Tuesday"	"3"	"Nursing home/long term care"	"6"	"Exposure to unspecified factor"	"X59"	27	Not Applicable	Not Applicable
+	"Tuesday"	"3"	"Nursing home/long term care"	"6"	"Exposure to unspecified factor causing fracture"	"X59.0"	10	Not Applicable	Not Applicable
+	"Tuesday"	"3"	"Other"	"7"	"Pedestrian injured in traffic accident involving other and unspecified motor vehicles"	"V09.2"	11	Not Applicable	Not Applicable
+	"Tuesday"	"3"	"Other"	"7"	"Person injured in collision between other specified motor vehicles (traffic)"	"V87.7"	24	Not Applicable	Not Applicable
+	"Tuesday"	"3"	"Other"	"7"	"Person injured in unspecified motor-vehicle accident, traffic"	"V89.2"	38	Not Applicable	Not Applicable
+	"Tuesday"	"3"	"Other"	"7"	"Accidental poisoning by and exposure to narcotics and psychodysleptics [hallucinogens], not elsewhere classified"	"X42"	45	Not Applicable	Not Applicable
+	"Tuesday"	"3"	"Other"	"7"	"Accidental poisoning by and exposure to other and unspecified drugs, medicaments and biological substances"	"X44"	23	Not Applicable	Not Applicable
+	"Tuesday"	"3"	"Other"	"7"	"Intentional self-harm by hanging, strangulation and suffocation"	"X70"	22	Not Applicable	Not Applicable
+	"Tuesday"	"3"	"Other"	"7"	"Intentional self-harm by other and unspecified firearm discharge"	"X74"	34	Not Applicable	Not Applicable
+	"Tuesday"	"3"	"Other"	"7"	"Assault by other and unspecified firearm discharge"	"X95"	54	Not Applicable	Not Applicable
+	"Wednesday"	"4"	"Medical Facility - Inpatient"	"1"	"Person injured in collision between other specified motor vehicles (traffic)"	"V87.7"	17	Not Applicable	Not Applicable
+	"Wednesday"	"4"	"Medical Facility - Inpatient"	"1"	"Person injured in unspecified motor-vehicle accident, traffic"	"V89.2"	12	Not Applicable	Not Applicable
+	"Wednesday"	"4"	"Medical Facility - Inpatient"	"1"	"Unspecified fall"	"W19"	116	Not Applicable	Not Applicable
+	"Wednesday"	"4"	"Medical Facility - Inpatient"	"1"	"Inhalation and ingestion of other objects causing obstruction of respiratory tract"	"W80"	38	Not Applicable	Not Applicable
+	"Wednesday"	"4"	"Medical Facility - Inpatient"	"1"	"Accidental poisoning by and exposure to narcotics and psychodysleptics [hallucinogens], not elsewhere classified"	"X42"	30	Not Applicable	Not Applicable
+	"Wednesday"	"4"	"Medical Facility - Inpatient"	"1"	"Accidental poisoning by and exposure to other and unspecified drugs, medicaments and biological substances"	"X44"	19	Not Applicable	Not Applicable
+	"Wednesday"	"4"	"Medical Facility - Inpatient"	"1"	"Exposure to unspecified factor"	"X59"	34	Not Applicable	Not Applicable
+	"Wednesday"	"4"	"Medical Facility - Inpatient"	"1"	"Exposure to unspecified factor causing fracture"	"X59.0"	10	Not Applicable	Not Applicable
+	"Wednesday"	"4"	"Medical Facility - Inpatient"	"1"	"Intentional self-harm by other and unspecified firearm discharge"	"X74"	12	Not Applicable	Not Applicable
+	"Wednesday"	"4"	"Medical Facility - Inpatient"	"1"	"Assault by other and unspecified firearm discharge"	"X95"	27	Not Applicable	Not Applicable
+	"Wednesday"	"4"	"Medical Facility - Outpatient or ER"	"2"	"Person injured in collision between other specified motor vehicles (traffic)"	"V87.7"	16	Not Applicable	Not Applicable
+	"Wednesday"	"4"	"Medical Facility - Outpatient or ER"	"2"	"Person injured in unspecified motor-vehicle accident, traffic"	"V89.2"	26	Not Applicable	Not Applicable
+	"Wednesday"	"4"	"Medical Facility - Outpatient or ER"	"2"	"Unspecified fall"	"W19"	16	Not Applicable	Not Applicable
+	"Wednesday"	"4"	"Medical Facility - Outpatient or ER"	"2"	"Accidental poisoning by and exposure to narcotics and psychodysleptics [hallucinogens], not elsewhere classified"	"X42"	39	Not Applicable	Not Applicable
+	"Wednesday"	"4"	"Medical Facility - Outpatient or ER"	"2"	"Accidental poisoning by and exposure to other and unspecified drugs, medicaments and biological substances"	"X44"	28	Not Applicable	Not Applicable
+	"Wednesday"	"4"	"Medical Facility - Outpatient or ER"	"2"	"Intentional self-harm by other and unspecified firearm discharge"	"X74"	22	Not Applicable	Not Applicable
+	"Wednesday"	"4"	"Medical Facility - Outpatient or ER"	"2"	"Assault by other and unspecified firearm discharge"	"X95"	52	Not Applicable	Not Applicable
+	"Wednesday"	"4"	"Decedent's home"	"4"	"Unspecified fall"	"W19"	12	Not Applicable	Not Applicable
+	"Wednesday"	"4"	"Decedent's home"	"4"	"Exposure to uncontrolled fire in building or structure"	"X00"	15	Not Applicable	Not Applicable
+	"Wednesday"	"4"	"Decedent's home"	"4"	"Accidental poisoning by and exposure to antiepileptic, sedative-hypnotic, antiparkinsonism and psychotropic drugs, not elsewhere classified"	"X41"	12	Not Applicable	Not Applicable
+	"Wednesday"	"4"	"Decedent's home"	"4"	"Accidental poisoning by and exposure to narcotics and psychodysleptics [hallucinogens], not elsewhere classified"	"X42"	101	Not Applicable	Not Applicable
+	"Wednesday"	"4"	"Decedent's home"	"4"	"Accidental poisoning by and exposure to other and unspecified drugs, medicaments and biological substances"	"X44"	84	Not Applicable	Not Applicable
+	"Wednesday"	"4"	"Decedent's home"	"4"	"Intentional self-poisoning by and exposure to other and unspecified drugs, medicaments and biological substances"	"X64"	20	Not Applicable	Not Applicable
+	"Wednesday"	"4"	"Decedent's home"	"4"	"Intentional self-poisoning by and exposure to other gases and vapours"	"X67"	19	Not Applicable	Not Applicable
+	"Wednesday"	"4"	"Decedent's home"	"4"	"Intentional self-harm by hanging, strangulation and suffocation"	"X70"	71	Not Applicable	Not Applicable
+	"Wednesday"	"4"	"Decedent's home"	"4"	"Intentional self-harm by rifle, shotgun and larger firearm discharge"	"X73"	15	Not Applicable	Not Applicable
+	"Wednesday"	"4"	"Decedent's home"	"4"	"Intentional self-harm by other and unspecified firearm discharge"	"X74"	130	Not Applicable	Not Applicable
+	"Wednesday"	"4"	"Decedent's home"	"4"	"Assault by other and unspecified firearm discharge"	"X95"	43	Not Applicable	Not Applicable
+	"Wednesday"	"4"	"Decedent's home"	"4"	"Poisoning by and exposure to other and unspecified drugs, medicaments and biological substances, undetermined intent"	"Y14"	12	Not Applicable	Not Applicable
+	"Wednesday"	"4"	"Hospice facility"	"5"	"Unspecified fall"	"W19"	11	Not Applicable	Not Applicable
+	"Wednesday"	"4"	"Nursing home/long term care"	"6"	"Unspecified fall"	"W19"	26	Not Applicable	Not Applicable
+	"Wednesday"	"4"	"Nursing home/long term care"	"6"	"Inhalation and ingestion of other objects causing obstruction of respiratory tract"	"W80"	10	Not Applicable	Not Applicable
+	"Wednesday"	"4"	"Nursing home/long term care"	"6"	"Exposure to unspecified factor"	"X59"	26	Not Applicable	Not Applicable
+	"Wednesday"	"4"	"Other"	"7"	"Person injured in collision between other specified motor vehicles (traffic)"	"V87.7"	25	Not Applicable	Not Applicable
+	"Wednesday"	"4"	"Other"	"7"	"Person injured in unspecified motor-vehicle accident, traffic"	"V89.2"	35	Not Applicable	Not Applicable
+	"Wednesday"	"4"	"Other"	"7"	"Accidental poisoning by and exposure to narcotics and psychodysleptics [hallucinogens], not elsewhere classified"	"X42"	34	Not Applicable	Not Applicable
+	"Wednesday"	"4"	"Other"	"7"	"Accidental poisoning by and exposure to other and unspecified drugs, medicaments and biological substances"	"X44"	31	Not Applicable	Not Applicable
+	"Wednesday"	"4"	"Other"	"7"	"Intentional self-harm by hanging, strangulation and suffocation"	"X70"	19	Not Applicable	Not Applicable
+	"Wednesday"	"4"	"Other"	"7"	"Intentional self-harm by other and unspecified firearm discharge"	"X74"	34	Not Applicable	Not Applicable
+	"Wednesday"	"4"	"Other"	"7"	"Assault by other and unspecified firearm discharge"	"X95"	65	Not Applicable	Not Applicable
+	"Thursday"	"5"	"Medical Facility - Inpatient"	"1"	"Person injured in collision between other specified motor vehicles (traffic)"	"V87.7"	12	Not Applicable	Not Applicable
+	"Thursday"	"5"	"Medical Facility - Inpatient"	"1"	"Person injured in unspecified motor-vehicle accident, traffic"	"V89.2"	14	Not Applicable	Not Applicable
+	"Thursday"	"5"	"Medical Facility - Inpatient"	"1"	"Other fall on same level"	"W18"	13	Not Applicable	Not Applicable
+	"Thursday"	"5"	"Medical Facility - Inpatient"	"1"	"Unspecified fall"	"W19"	130	Not Applicable	Not Applicable
+	"Thursday"	"5"	"Medical Facility - Inpatient"	"1"	"Inhalation and ingestion of other objects causing obstruction of respiratory tract"	"W80"	37	Not Applicable	Not Applicable
+	"Thursday"	"5"	"Medical Facility - Inpatient"	"1"	"Accidental poisoning by and exposure to narcotics and psychodysleptics [hallucinogens], not elsewhere classified"	"X42"	26	Not Applicable	Not Applicable
+	"Thursday"	"5"	"Medical Facility - Inpatient"	"1"	"Accidental poisoning by and exposure to other and unspecified drugs, medicaments and biological substances"	"X44"	22	Not Applicable	Not Applicable
+	"Thursday"	"5"	"Medical Facility - Inpatient"	"1"	"Exposure to unspecified factor"	"X59"	23	Not Applicable	Not Applicable
+	"Thursday"	"5"	"Medical Facility - Inpatient"	"1"	"Intentional self-harm by hanging, strangulation and suffocation"	"X70"	10	Not Applicable	Not Applicable
+	"Thursday"	"5"	"Medical Facility - Inpatient"	"1"	"Intentional self-harm by other and unspecified firearm discharge"	"X74"	12	Not Applicable	Not Applicable
+	"Thursday"	"5"	"Medical Facility - Inpatient"	"1"	"Assault by other and unspecified firearm discharge"	"X95"	15	Not Applicable	Not Applicable
+	"Thursday"	"5"	"Medical Facility - Outpatient or ER"	"2"	"Person injured in collision between other specified motor vehicles (traffic)"	"V87.7"	26	Not Applicable	Not Applicable
+	"Thursday"	"5"	"Medical Facility - Outpatient or ER"	"2"	"Person injured in unspecified motor-vehicle accident, traffic"	"V89.2"	33	Not Applicable	Not Applicable
+	"Thursday"	"5"	"Medical Facility - Outpatient or ER"	"2"	"Unspecified fall"	"W19"	17	Not Applicable	Not Applicable
+	"Thursday"	"5"	"Medical Facility - Outpatient or ER"	"2"	"Accidental poisoning by and exposure to narcotics and psychodysleptics [hallucinogens], not elsewhere classified"	"X42"	36	Not Applicable	Not Applicable
+	"Thursday"	"5"	"Medical Facility - Outpatient or ER"	"2"	"Accidental poisoning by and exposure to other and unspecified drugs, medicaments and biological substances"	"X44"	31	Not Applicable	Not Applicable
+	"Thursday"	"5"	"Medical Facility - Outpatient or ER"	"2"	"Intentional self-harm by other and unspecified firearm discharge"	"X74"	18	Not Applicable	Not Applicable
+	"Thursday"	"5"	"Medical Facility - Outpatient or ER"	"2"	"Assault by other and unspecified firearm discharge"	"X95"	75	Not Applicable	Not Applicable
+	"Thursday"	"5"	"Decedent's home"	"4"	"Unspecified fall"	"W19"	21	Not Applicable	Not Applicable
+	"Thursday"	"5"	"Decedent's home"	"4"	"Exposure to uncontrolled fire in building or structure"	"X00"	12	Not Applicable	Not Applicable
+	"Thursday"	"5"	"Decedent's home"	"4"	"Accidental poisoning by and exposure to antiepileptic, sedative-hypnotic, antiparkinsonism and psychotropic drugs, not elsewhere classified"	"X41"	10	Not Applicable	Not Applicable
+	"Thursday"	"5"	"Decedent's home"	"4"	"Accidental poisoning by and exposure to narcotics and psychodysleptics [hallucinogens], not elsewhere classified"	"X42"	130	Not Applicable	Not Applicable
+	"Thursday"	"5"	"Decedent's home"	"4"	"Accidental poisoning by and exposure to other and unspecified drugs, medicaments and biological substances"	"X44"	102	Not Applicable	Not Applicable
+	"Thursday"	"5"	"Decedent's home"	"4"	"Intentional self-poisoning by and exposure to other and unspecified drugs, medicaments and biological substances"	"X64"	19	Not Applicable	Not Applicable
+	"Thursday"	"5"	"Decedent's home"	"4"	"Intentional self-poisoning by and exposure to other gases and vapours"	"X67"	14	Not Applicable	Not Applicable
+	"Thursday"	"5"	"Decedent's home"	"4"	"Intentional self-harm by hanging, strangulation and suffocation"	"X70"	61	Not Applicable	Not Applicable
+	"Thursday"	"5"	"Decedent's home"	"4"	"Intentional self-harm by rifle, shotgun and larger firearm discharge"	"X73"	12	Not Applicable	Not Applicable
+	"Thursday"	"5"	"Decedent's home"	"4"	"Intentional self-harm by other and unspecified firearm discharge"	"X74"	110	Not Applicable	Not Applicable
+	"Thursday"	"5"	"Decedent's home"	"4"	"Assault by other and unspecified firearm discharge"	"X95"	32	Not Applicable	Not Applicable
+	"Thursday"	"5"	"Decedent's home"	"4"	"Assault by sharp object"	"X99"	15	Not Applicable	Not Applicable
+	"Thursday"	"5"	"Nursing home/long term care"	"6"	"Unspecified fall"	"W19"	23	Not Applicable	Not Applicable
+	"Thursday"	"5"	"Nursing home/long term care"	"6"	"Exposure to unspecified factor"	"X59"	25	Not Applicable	Not Applicable
+	"Thursday"	"5"	"Nursing home/long term care"	"6"	"Exposure to unspecified factor causing fracture"	"X59.0"	10	Not Applicable	Not Applicable
+	"Thursday"	"5"	"Other"	"7"	"Car occupant injured in collision with fixed or stationary object, driver injured in traffic accident"	"V47.5"	10	Not Applicable	Not Applicable
+	"Thursday"	"5"	"Other"	"7"	"Person injured in collision between other specified motor vehicles (traffic)"	"V87.7"	33	Not Applicable	Not Applicable
+	"Thursday"	"5"	"Other"	"7"	"Person injured in unspecified motor-vehicle accident, traffic"	"V89.2"	45	Not Applicable	Not Applicable
+	"Thursday"	"5"	"Other"	"7"	"Accidental poisoning by and exposure to narcotics and psychodysleptics [hallucinogens], not elsewhere classified"	"X42"	50	Not Applicable	Not Applicable
+	"Thursday"	"5"	"Other"	"7"	"Accidental poisoning by and exposure to other and unspecified drugs, medicaments and biological substances"	"X44"	29	Not Applicable	Not Applicable
+	"Thursday"	"5"	"Other"	"7"	"Intentional self-harm by hanging, strangulation and suffocation"	"X70"	23	Not Applicable	Not Applicable
+	"Thursday"	"5"	"Other"	"7"	"Intentional self-harm by other and unspecified firearm discharge"	"X74"	40	Not Applicable	Not Applicable
+	"Thursday"	"5"	"Other"	"7"	"Assault by other and unspecified firearm discharge"	"X95"	67	Not Applicable	Not Applicable
+	"Friday"	"6"	"Medical Facility - Inpatient"	"1"	"Person injured in collision between other specified motor vehicles (traffic)"	"V87.7"	14	Not Applicable	Not Applicable
+	"Friday"	"6"	"Medical Facility - Inpatient"	"1"	"Person injured in unspecified motor-vehicle accident, traffic"	"V89.2"	18	Not Applicable	Not Applicable
+	"Friday"	"6"	"Medical Facility - Inpatient"	"1"	"Other fall on same level"	"W18"	14	Not Applicable	Not Applicable
+	"Friday"	"6"	"Medical Facility - Inpatient"	"1"	"Unspecified fall"	"W19"	125	Not Applicable	Not Applicable
+	"Friday"	"6"	"Medical Facility - Inpatient"	"1"	"Inhalation and ingestion of other objects causing obstruction of respiratory tract"	"W80"	28	Not Applicable	Not Applicable
+	"Friday"	"6"	"Medical Facility - Inpatient"	"1"	"Accidental poisoning by and exposure to narcotics and psychodysleptics [hallucinogens], not elsewhere classified"	"X42"	40	Not Applicable	Not Applicable
+	"Friday"	"6"	"Medical Facility - Inpatient"	"1"	"Accidental poisoning by and exposure to other and unspecified drugs, medicaments and biological substances"	"X44"	19	Not Applicable	Not Applicable
+	"Friday"	"6"	"Medical Facility - Inpatient"	"1"	"Exposure to unspecified factor"	"X59"	31	Not Applicable	Not Applicable
+	"Friday"	"6"	"Medical Facility - Inpatient"	"1"	"Exposure to unspecified factor causing fracture"	"X59.0"	11	Not Applicable	Not Applicable
+	"Friday"	"6"	"Medical Facility - Inpatient"	"1"	"Intentional self-harm by other and unspecified firearm discharge"	"X74"	11	Not Applicable	Not Applicable
+	"Friday"	"6"	"Medical Facility - Inpatient"	"1"	"Assault by other and unspecified firearm discharge"	"X95"	17	Not Applicable	Not Applicable
+	"Friday"	"6"	"Medical Facility - Inpatient"	"1"	"Surgical procedure, unspecified"	"Y83.9"	10	Not Applicable	Not Applicable
+	"Friday"	"6"	"Medical Facility - Outpatient or ER"	"2"	"Pedestrian injured in traffic accident involving other and unspecified motor vehicles"	"V09.2"	13	Not Applicable	Not Applicable
+	"Friday"	"6"	"Medical Facility - Outpatient or ER"	"2"	"Person injured in collision between other specified motor vehicles (traffic)"	"V87.7"	31	Not Applicable	Not Applicable
+	"Friday"	"6"	"Medical Facility - Outpatient or ER"	"2"	"Person injured in unspecified motor-vehicle accident, traffic"	"V89.2"	26	Not Applicable	Not Applicable
+	"Friday"	"6"	"Medical Facility - Outpatient or ER"	"2"	"Unspecified fall"	"W19"	20	Not Applicable	Not Applicable
+	"Friday"	"6"	"Medical Facility - Outpatient or ER"	"2"	"Accidental poisoning by and exposure to narcotics and psychodysleptics [hallucinogens], not elsewhere classified"	"X42"	46	Not Applicable	Not Applicable
+	"Friday"	"6"	"Medical Facility - Outpatient or ER"	"2"	"Accidental poisoning by and exposure to other and unspecified drugs, medicaments and biological substances"	"X44"	30	Not Applicable	Not Applicable
+	"Friday"	"6"	"Medical Facility - Outpatient or ER"	"2"	"Intentional self-harm by other and unspecified firearm discharge"	"X74"	15	Not Applicable	Not Applicable
+	"Friday"	"6"	"Medical Facility - Outpatient or ER"	"2"	"Assault by other and unspecified firearm discharge"	"X95"	68	Not Applicable	Not Applicable
+	"Friday"	"6"	"Decedent's home"	"4"	"Unspecified fall"	"W19"	18	Not Applicable	Not Applicable
+	"Friday"	"6"	"Decedent's home"	"4"	"Exposure to uncontrolled fire in building or structure"	"X00"	13	Not Applicable	Not Applicable
+	"Friday"	"6"	"Decedent's home"	"4"	"Accidental poisoning by and exposure to antiepileptic, sedative-hypnotic, antiparkinsonism and psychotropic drugs, not elsewhere classified"	"X41"	11	Not Applicable	Not Applicable
+	"Friday"	"6"	"Decedent's home"	"4"	"Accidental poisoning by and exposure to narcotics and psychodysleptics [hallucinogens], not elsewhere classified"	"X42"	146	Not Applicable	Not Applicable
+	"Friday"	"6"	"Decedent's home"	"4"	"Accidental poisoning by and exposure to other and unspecified drugs, medicaments and biological substances"	"X44"	102	Not Applicable	Not Applicable
+	"Friday"	"6"	"Decedent's home"	"4"	"Intentional self-poisoning by and exposure to other and unspecified drugs, medicaments and biological substances"	"X64"	20	Not Applicable	Not Applicable
+	"Friday"	"6"	"Decedent's home"	"4"	"Intentional self-harm by hanging, strangulation and suffocation"	"X70"	65	Not Applicable	Not Applicable
+	"Friday"	"6"	"Decedent's home"	"4"	"Intentional self-harm by rifle, shotgun and larger firearm discharge"	"X73"	22	Not Applicable	Not Applicable
+	"Friday"	"6"	"Decedent's home"	"4"	"Intentional self-harm by other and unspecified firearm discharge"	"X74"	93	Not Applicable	Not Applicable
+	"Friday"	"6"	"Decedent's home"	"4"	"Assault by other and unspecified firearm discharge"	"X95"	24	Not Applicable	Not Applicable
+	"Friday"	"6"	"Decedent's home"	"4"	"Assault by sharp object"	"X99"	14	Not Applicable	Not Applicable
+	"Friday"	"6"	"Decedent's home"	"4"	"Poisoning by and exposure to other and unspecified drugs, medicaments and biological substances, undetermined intent"	"Y14"	10	Not Applicable	Not Applicable
+	"Friday"	"6"	"Hospice facility"	"5"	"Unspecified fall"	"W19"	11	Not Applicable	Not Applicable
+	"Friday"	"6"	"Nursing home/long term care"	"6"	"Unspecified fall"	"W19"	15	Not Applicable	Not Applicable
+	"Friday"	"6"	"Nursing home/long term care"	"6"	"Inhalation and ingestion of other objects causing obstruction of respiratory tract"	"W80"	14	Not Applicable	Not Applicable
+	"Friday"	"6"	"Nursing home/long term care"	"6"	"Exposure to unspecified factor"	"X59"	20	Not Applicable	Not Applicable
+	"Friday"	"6"	"Other"	"7"	"Pedestrian injured in traffic accident involving other and unspecified motor vehicles"	"V09.2"	10	Not Applicable	Not Applicable
+	"Friday"	"6"	"Other"	"7"	"Car occupant injured in collision with car, pick-up truck or van, driver injured in traffic accident"	"V43.5"	11	Not Applicable	Not Applicable
+	"Friday"	"6"	"Other"	"7"	"Car occupant injured in collision with car, pick-up truck or van, passenger injured in traffic accident"	"V43.6"	11	Not Applicable	Not Applicable
+	"Friday"	"6"	"Other"	"7"	"Car occupant [any] injured in unspecified traffic accident"	"V49.9"	13	Not Applicable	Not Applicable
+	"Friday"	"6"	"Other"	"7"	"Person injured in collision between other specified motor vehicles (traffic)"	"V87.7"	27	Not Applicable	Not Applicable
+	"Friday"	"6"	"Other"	"7"	"Person injured in unspecified motor-vehicle accident, traffic"	"V89.2"	53	Not Applicable	Not Applicable
+	"Friday"	"6"	"Other"	"7"	"Accidental poisoning by and exposure to narcotics and psychodysleptics [hallucinogens], not elsewhere classified"	"X42"	44	Not Applicable	Not Applicable
+	"Friday"	"6"	"Other"	"7"	"Accidental poisoning by and exposure to other and unspecified drugs, medicaments and biological substances"	"X44"	32	Not Applicable	Not Applicable
+	"Friday"	"6"	"Other"	"7"	"Intentional self-harm by hanging, strangulation and suffocation"	"X70"	23	Not Applicable	Not Applicable
+	"Friday"	"6"	"Other"	"7"	"Intentional self-harm by other and unspecified firearm discharge"	"X74"	42	Not Applicable	Not Applicable
+	"Friday"	"6"	"Other"	"7"	"Assault by other and unspecified firearm discharge"	"X95"	72	Not Applicable	Not Applicable
+	"Saturday"	"7"	"Medical Facility - Inpatient"	"1"	"Person injured in collision between other specified motor vehicles (traffic)"	"V87.7"	10	Not Applicable	Not Applicable
+	"Saturday"	"7"	"Medical Facility - Inpatient"	"1"	"Person injured in unspecified motor-vehicle accident, traffic"	"V89.2"	19	Not Applicable	Not Applicable
+	"Saturday"	"7"	"Medical Facility - Inpatient"	"1"	"Unspecified fall"	"W19"	110	Not Applicable	Not Applicable
+	"Saturday"	"7"	"Medical Facility - Inpatient"	"1"	"Inhalation and ingestion of other objects causing obstruction of respiratory tract"	"W80"	32	Not Applicable	Not Applicable
+	"Saturday"	"7"	"Medical Facility - Inpatient"	"1"	"Accidental poisoning by and exposure to narcotics and psychodysleptics [hallucinogens], not elsewhere classified"	"X42"	23	Not Applicable	Not Applicable
+	"Saturday"	"7"	"Medical Facility - Inpatient"	"1"	"Accidental poisoning by and exposure to other and unspecified drugs, medicaments and biological substances"	"X44"	24	Not Applicable	Not Applicable
+	"Saturday"	"7"	"Medical Facility - Inpatient"	"1"	"Exposure to unspecified factor"	"X59"	35	Not Applicable	Not Applicable
+	"Saturday"	"7"	"Medical Facility - Inpatient"	"1"	"Exposure to unspecified factor causing fracture"	"X59.0"	10	Not Applicable	Not Applicable
+	"Saturday"	"7"	"Medical Facility - Inpatient"	"1"	"Exposure to unspecified factor causing other and unspecified injury"	"X59.9"	12	Not Applicable	Not Applicable
+	"Saturday"	"7"	"Medical Facility - Inpatient"	"1"	"Assault by other and unspecified firearm discharge"	"X95"	22	Not Applicable	Not Applicable
+	"Saturday"	"7"	"Medical Facility - Inpatient"	"1"	"Surgical procedure, unspecified"	"Y83.9"	11	Not Applicable	Not Applicable
+	"Saturday"	"7"	"Medical Facility - Outpatient or ER"	"2"	"Pedestrian injured in traffic accident involving other and unspecified motor vehicles"	"V09.2"	12	Not Applicable	Not Applicable
+	"Saturday"	"7"	"Medical Facility - Outpatient or ER"	"2"	"Person injured in collision between other specified motor vehicles (traffic)"	"V87.7"	25	Not Applicable	Not Applicable
+	"Saturday"	"7"	"Medical Facility - Outpatient or ER"	"2"	"Person injured in unspecified motor-vehicle accident, traffic"	"V89.2"	30	Not Applicable	Not Applicable
+	"Saturday"	"7"	"Medical Facility - Outpatient or ER"	"2"	"Unspecified fall"	"W19"	19	Not Applicable	Not Applicable
+	"Saturday"	"7"	"Medical Facility - Outpatient or ER"	"2"	"Accidental poisoning by and exposure to narcotics and psychodysleptics [hallucinogens], not elsewhere classified"	"X42"	43	Not Applicable	Not Applicable
+	"Saturday"	"7"	"Medical Facility - Outpatient or ER"	"2"	"Accidental poisoning by and exposure to other and unspecified drugs, medicaments and biological substances"	"X44"	22	Not Applicable	Not Applicable
+	"Saturday"	"7"	"Medical Facility - Outpatient or ER"	"2"	"Intentional self-harm by other and unspecified firearm discharge"	"X74"	25	Not Applicable	Not Applicable
+	"Saturday"	"7"	"Medical Facility - Outpatient or ER"	"2"	"Assault by other and unspecified firearm discharge"	"X95"	87	Not Applicable	Not Applicable
+	"Saturday"	"7"	"Medical Facility - Outpatient or ER"	"2"	"Assault by sharp object"	"X99"	18	Not Applicable	Not Applicable
+	"Saturday"	"7"	"Decedent's home"	"4"	"Unspecified fall"	"W19"	16	Not Applicable	Not Applicable
+	"Saturday"	"7"	"Decedent's home"	"4"	"Exposure to uncontrolled fire in building or structure"	"X00"	20	Not Applicable	Not Applicable
+	"Saturday"	"7"	"Decedent's home"	"4"	"Accidental poisoning by and exposure to antiepileptic, sedative-hypnotic, antiparkinsonism and psychotropic drugs, not elsewhere classified"	"X41"	16	Not Applicable	Not Applicable
+	"Saturday"	"7"	"Decedent's home"	"4"	"Accidental poisoning by and exposure to narcotics and psychodysleptics [hallucinogens], not elsewhere classified"	"X42"	141	Not Applicable	Not Applicable
+	"Saturday"	"7"	"Decedent's home"	"4"	"Accidental poisoning by and exposure to other and unspecified drugs, medicaments and biological substances"	"X44"	120	Not Applicable	Not Applicable
+	"Saturday"	"7"	"Decedent's home"	"4"	"Intentional self-poisoning by and exposure to other and unspecified drugs, medicaments and biological substances"	"X64"	13	Not Applicable	Not Applicable
+	"Saturday"	"7"	"Decedent's home"	"4"	"Intentional self-poisoning by and exposure to other gases and vapours"	"X67"	13	Not Applicable	Not Applicable
+	"Saturday"	"7"	"Decedent's home"	"4"	"Intentional self-harm by hanging, strangulation and suffocation"	"X70"	56	Not Applicable	Not Applicable
+	"Saturday"	"7"	"Decedent's home"	"4"	"Intentional self-harm by rifle, shotgun and larger firearm discharge"	"X73"	16	Not Applicable	Not Applicable
+	"Saturday"	"7"	"Decedent's home"	"4"	"Intentional self-harm by other and unspecified firearm discharge"	"X74"	90	Not Applicable	Not Applicable
+	"Saturday"	"7"	"Decedent's home"	"4"	"Assault by other and unspecified firearm discharge"	"X95"	28	Not Applicable	Not Applicable
+	"Saturday"	"7"	"Hospice facility"	"5"	"Unspecified fall"	"W19"	13	Not Applicable	Not Applicable
+	"Saturday"	"7"	"Nursing home/long term care"	"6"	"Unspecified fall"	"W19"	25	Not Applicable	Not Applicable
+	"Saturday"	"7"	"Nursing home/long term care"	"6"	"Inhalation and ingestion of other objects causing obstruction of respiratory tract"	"W80"	10	Not Applicable	Not Applicable
+	"Saturday"	"7"	"Nursing home/long term care"	"6"	"Exposure to unspecified factor"	"X59"	25	Not Applicable	Not Applicable
+	"Saturday"	"7"	"Other"	"7"	"Pedestrian injured in traffic accident involving other and unspecified motor vehicles"	"V09.2"	14	Not Applicable	Not Applicable
+	"Saturday"	"7"	"Other"	"7"	"Car occupant injured in collision with car, pick-up truck or van, driver injured in traffic accident"	"V43.5"	10	Not Applicable	Not Applicable
+	"Saturday"	"7"	"Other"	"7"	"Car occupant injured in collision with fixed or stationary object, driver injured in traffic accident"	"V47.5"	12	Not Applicable	Not Applicable
+	"Saturday"	"7"	"Other"	"7"	"Person injured in collision between other specified motor vehicles (traffic)"	"V87.7"	25	Not Applicable	Not Applicable
+	"Saturday"	"7"	"Other"	"7"	"Person injured in unspecified motor-vehicle accident, traffic"	"V89.2"	83	Not Applicable	Not Applicable
+	"Saturday"	"7"	"Other"	"7"	"Accidental poisoning by and exposure to narcotics and psychodysleptics [hallucinogens], not elsewhere classified"	"X42"	76	Not Applicable	Not Applicable
+	"Saturday"	"7"	"Other"	"7"	"Accidental poisoning by and exposure to other and unspecified drugs, medicaments and biological substances"	"X44"	36	Not Applicable	Not Applicable
+	"Saturday"	"7"	"Other"	"7"	"Intentional self-harm by hanging, strangulation and suffocation"	"X70"	23	Not Applicable	Not Applicable
+	"Saturday"	"7"	"Other"	"7"	"Intentional self-harm by other and unspecified firearm discharge"	"X74"	33	Not Applicable	Not Applicable
+	"Saturday"	"7"	"Other"	"7"	"Assault by other and unspecified firearm discharge"	"X95"	76	Not Applicable	Not Applicable
+"---"
+"Dataset: Underlying Cause of Death, 1999-2016"
+"Query Parameters:"
+"Title:"
+"2013 Urbanization: All"
+"Autopsy: All"
+"Gender: All"
+"Hispanic Origin: All"
+"ICD-10 Codes: V01-Y89 (External causes of morbidity and mortality)"
+"Place of Death: All"
+"Race: All"
+"States: Delaware County, OH (39041), Fairfield County, OH (39045), Franklin County, OH (39049), Pickaway County, OH (39129)"
+"Ten-Year Age Groups: All"
+"Weekday: All"
+"Year/Month: All"
+"Group By: Weekday, Place of Death, Cause of death"
+"Show Totals: Disabled"
+"Show Zero Values: Disabled"
+"Show Suppressed: False"
+"Calculate Rates Per: 100,000"
+"Rate Options: Default intercensal populations for years 2001-2009 (except Infant Age Groups)"
+"---"
+"Help: See http://wonder.cdc.gov/wonder/help/ucd.html for more information."
+"---"
+"Query Date: Apr 24, 2018 10:00:41 PM"
+"---"
+"Suggested Citation: Centers for Disease Control and Prevention, National Center for Health Statistics. Underlying Cause of Death"
+"1999-2016 on CDC WONDER Online Database, released December, 2017. Data are from the Multiple Cause of Death Files, 1999-2016, as"
+"compiled from data provided by the 57 vital statistics jurisdictions through the Vital Statistics Cooperative Program. Accessed"
+"at http://wonder.cdc.gov/ucd-icd10.html on Apr 24, 2018 10:00:41 PM"
+"---"
+Messages:
+"1. The full results are too long to be displayed. Due to suppression constraints rows that are zero, suppressed or a total will"
+"not be available."
+"---"
+Caveats:
+"1. Population and rates are labeled 'Not Applicable' when Autopsy, Place of Death, Weekday or Month are grouped by or limited,"
+"due to lack of a valid population. More information: http://wonder.cdc.gov/wonder/help/ucd.html#NotApplicableRates."
+"2. As of April 3, 2017, the underlying cause of death has been revised for 125 deaths in 2014. More information:"
+"http://wonder.cdc.gov/wonder/help/ucd.html#2014-Revision."
+"3. Death rates are flagged as Unreliable when the rate is calculated with a numerator of 20 or less. More information:"
+"http://wonder.cdc.gov/wonder/help/ucd.html#Unreliable."
+"4. The Place of Death category 'Medical Facility - Status unknown' is only available from 1999 - 2002, and 'Hospice facility' is"
+"only available for 2003 and later."
+"5. Changes to cause of death classification affect reporting trends. More information:"
+"http://wonder.cdc.gov/wonder/help/ucd.html#ICD-10 Changes."

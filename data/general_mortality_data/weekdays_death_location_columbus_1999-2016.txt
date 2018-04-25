@@ -1,0 +1,103 @@
+"Notes"	"Weekday"	"Weekday Code"	"Place of Death"	"Place of Death Code"	Deaths	Population	Crude Rate
+	"Sunday"	"1"	"Medical Facility - Inpatient"	"1"	9660	Not Applicable	Not Applicable
+	"Sunday"	"1"	"Medical Facility - Outpatient or ER"	"2"	1791	Not Applicable	Not Applicable
+	"Sunday"	"1"	"Medical Facility - Dead on Arrival"	"3"	80	Not Applicable	Not Applicable
+	"Sunday"	"1"	"Decedent's home"	"4"	6934	Not Applicable	Not Applicable
+	"Sunday"	"1"	"Hospice facility"	"5"	1117	Not Applicable	Not Applicable
+	"Sunday"	"1"	"Nursing home/long term care"	"6"	6993	Not Applicable	Not Applicable
+	"Sunday"	"1"	"Other"	"7"	1214	Not Applicable	Not Applicable
+	"Sunday"	"1"	"Place of death unknown"	"9"	10	Not Applicable	Not Applicable
+	"Monday"	"2"	"Medical Facility - Inpatient"	"1"	10106	Not Applicable	Not Applicable
+	"Monday"	"2"	"Medical Facility - Outpatient or ER"	"2"	1762	Not Applicable	Not Applicable
+	"Monday"	"2"	"Medical Facility - Dead on Arrival"	"3"	70	Not Applicable	Not Applicable
+	"Monday"	"2"	"Medical Facility - Status unknown"	"10"	11	Not Applicable	Not Applicable
+	"Monday"	"2"	"Decedent's home"	"4"	7087	Not Applicable	Not Applicable
+	"Monday"	"2"	"Hospice facility"	"5"	1025	Not Applicable	Not Applicable
+	"Monday"	"2"	"Nursing home/long term care"	"6"	6908	Not Applicable	Not Applicable
+	"Monday"	"2"	"Other"	"7"	1155	Not Applicable	Not Applicable
+	"Monday"	"2"	"Place of death unknown"	"9"	17	Not Applicable	Not Applicable
+	"Tuesday"	"3"	"Medical Facility - Inpatient"	"1"	10244	Not Applicable	Not Applicable
+	"Tuesday"	"3"	"Medical Facility - Outpatient or ER"	"2"	1638	Not Applicable	Not Applicable
+	"Tuesday"	"3"	"Medical Facility - Dead on Arrival"	"3"	64	Not Applicable	Not Applicable
+	"Tuesday"	"3"	"Decedent's home"	"4"	7160	Not Applicable	Not Applicable
+	"Tuesday"	"3"	"Hospice facility"	"5"	1058	Not Applicable	Not Applicable
+	"Tuesday"	"3"	"Nursing home/long term care"	"6"	6872	Not Applicable	Not Applicable
+	"Tuesday"	"3"	"Other"	"7"	1071	Not Applicable	Not Applicable
+	"Tuesday"	"3"	"Place of death unknown"	"9"	14	Not Applicable	Not Applicable
+	"Wednesday"	"4"	"Medical Facility - Inpatient"	"1"	10329	Not Applicable	Not Applicable
+	"Wednesday"	"4"	"Medical Facility - Outpatient or ER"	"2"	1642	Not Applicable	Not Applicable
+	"Wednesday"	"4"	"Medical Facility - Dead on Arrival"	"3"	73	Not Applicable	Not Applicable
+	"Wednesday"	"4"	"Decedent's home"	"4"	7031	Not Applicable	Not Applicable
+	"Wednesday"	"4"	"Hospice facility"	"5"	1153	Not Applicable	Not Applicable
+	"Wednesday"	"4"	"Nursing home/long term care"	"6"	6891	Not Applicable	Not Applicable
+	"Wednesday"	"4"	"Other"	"7"	1086	Not Applicable	Not Applicable
+	"Thursday"	"5"	"Medical Facility - Inpatient"	"1"	10285	Not Applicable	Not Applicable
+	"Thursday"	"5"	"Medical Facility - Outpatient or ER"	"2"	1712	Not Applicable	Not Applicable
+	"Thursday"	"5"	"Medical Facility - Dead on Arrival"	"3"	71	Not Applicable	Not Applicable
+	"Thursday"	"5"	"Decedent's home"	"4"	7065	Not Applicable	Not Applicable
+	"Thursday"	"5"	"Hospice facility"	"5"	1140	Not Applicable	Not Applicable
+	"Thursday"	"5"	"Nursing home/long term care"	"6"	6885	Not Applicable	Not Applicable
+	"Thursday"	"5"	"Other"	"7"	1101	Not Applicable	Not Applicable
+	"Friday"	"6"	"Medical Facility - Inpatient"	"1"	10696	Not Applicable	Not Applicable
+	"Friday"	"6"	"Medical Facility - Outpatient or ER"	"2"	1710	Not Applicable	Not Applicable
+	"Friday"	"6"	"Medical Facility - Dead on Arrival"	"3"	77	Not Applicable	Not Applicable
+	"Friday"	"6"	"Decedent's home"	"4"	7221	Not Applicable	Not Applicable
+	"Friday"	"6"	"Hospice facility"	"5"	1118	Not Applicable	Not Applicable
+	"Friday"	"6"	"Nursing home/long term care"	"6"	7050	Not Applicable	Not Applicable
+	"Friday"	"6"	"Other"	"7"	1227	Not Applicable	Not Applicable
+	"Friday"	"6"	"Place of death unknown"	"9"	17	Not Applicable	Not Applicable
+	"Saturday"	"7"	"Medical Facility - Inpatient"	"1"	9924	Not Applicable	Not Applicable
+	"Saturday"	"7"	"Medical Facility - Outpatient or ER"	"2"	1761	Not Applicable	Not Applicable
+	"Saturday"	"7"	"Medical Facility - Dead on Arrival"	"3"	89	Not Applicable	Not Applicable
+	"Saturday"	"7"	"Decedent's home"	"4"	7183	Not Applicable	Not Applicable
+	"Saturday"	"7"	"Hospice facility"	"5"	1147	Not Applicable	Not Applicable
+	"Saturday"	"7"	"Nursing home/long term care"	"6"	7270	Not Applicable	Not Applicable
+	"Saturday"	"7"	"Other"	"7"	1292	Not Applicable	Not Applicable
+	"Saturday"	"7"	"Place of death unknown"	"9"	13	Not Applicable	Not Applicable
+"---"
+"Dataset: Underlying Cause of Death, 1999-2016"
+"Query Parameters:"
+"Title:"
+"2013 Urbanization: All"
+"Autopsy: All"
+"Gender: All"
+"Hispanic Origin: All"
+"ICD-10 Codes: All"
+"Place of Death: All"
+"Race: All"
+"States: Delaware County, OH (39041), Fairfield County, OH (39045), Franklin County, OH (39049), Pickaway County, OH (39129)"
+"Ten-Year Age Groups: All"
+"Weekday: All"
+"Year/Month: All"
+"Group By: Weekday, Place of Death"
+"Show Totals: Disabled"
+"Show Zero Values: False"
+"Show Suppressed: False"
+"Calculate Rates Per: 100,000"
+"Rate Options: Default intercensal populations for years 2001-2009 (except Infant Age Groups)"
+"---"
+"Help: See http://wonder.cdc.gov/wonder/help/ucd.html for more information."
+"---"
+"Query Date: Apr 24, 2018 9:59:32 PM"
+"---"
+"Suggested Citation: Centers for Disease Control and Prevention, National Center for Health Statistics. Underlying Cause of Death"
+"1999-2016 on CDC WONDER Online Database, released December, 2017. Data are from the Multiple Cause of Death Files, 1999-2016, as"
+"compiled from data provided by the 57 vital statistics jurisdictions through the Vital Statistics Cooperative Program. Accessed"
+"at http://wonder.cdc.gov/ucd-icd10.html on Apr 24, 2018 9:59:32 PM"
+"---"
+Messages:
+"1. Totals are not available for these results due to suppression constraints. More Information:"
+"http://wonder.cdc.gov/wonder/help/faq.html#Privacy."
+"2. Rows with suppressed Deaths are hidden. Use Quick Options above to show suppressed rows."
+"---"
+Caveats:
+"1. Population and rates are labeled 'Not Applicable' when Autopsy, Place of Death, Weekday or Month are grouped by or limited,"
+"due to lack of a valid population. More information: http://wonder.cdc.gov/wonder/help/ucd.html#NotApplicableRates."
+"2. As of April 3, 2017, the underlying cause of death has been revised for 125 deaths in 2014. More information:"
+"http://wonder.cdc.gov/wonder/help/ucd.html#2014-Revision."
+"3. Data are Suppressed when the data meet the criteria for confidentiality constraints. More information:"
+"http://wonder.cdc.gov/wonder/help/ucd.html#Assurance of Confidentiality."
+"4. Death rates are flagged as Unreliable when the rate is calculated with a numerator of 20 or less. More information:"
+"http://wonder.cdc.gov/wonder/help/ucd.html#Unreliable."
+"5. The Place of Death category 'Medical Facility - Status unknown' is only available from 1999 - 2002, and 'Hospice facility' is"
+"only available for 2003 and later."

@@ -5,6 +5,7 @@
 <!doctype html>
 <html>
   <head>
+   <meta charset="UTF-8">    
     <title>Team 3 Visual Design Project Homepage</title>
 
     <!-- dependent .css files --> 
@@ -19,21 +20,22 @@
     <link rel="stylesheet" type="text/css" href="css/data_dropdown.css">   <!-- data dropdown css file -->      
     <!-- .js library packages -->
     <script src="https://d3js.org/d3.v4.min.js"></script>  <!-- D3 library -->
-    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>      
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+    <script src="https://d3js.org/d3-color.v1.min.js"></script>
+    <script src="https://d3js.org/d3-interpolate.v1.min.js"></script>             
     <script src="js/libraries/jquery-3.3.1.min.js"></script> <!-- jquery library -->   
     <script src="js/libraries/tether.min.js"></script> <!-- tether library (dependence of bootstrap) -->          
  <!--   <script src="js/libraries/bootstrap.min.js"></script> --><!-- bootstrap library -->    
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="js/libraries/bootstrap-slider.min.js"></script> <!-- bootstrap slider plugin -->     
     <script src="https://d3js.org/queue.v1.min.js"></script> <!-- Mke map library -->
-
+    <script src="https://d3js.org/d3-queue.v3.min.js"></script>
 
     <!-- project .js files -->
     <script src="js/cancer.js"></script>    
-    <script src="js/ohio_map_v1.js"></script>  <!-- Mike's original Ohio map imported to standalone .js file -->
-    <script src="js/ohio_map.js"></script>    <!-- Mike's new Ohio heat map tied to data -->
-    <script src="js/us_map.js"></script>      <!-- Mike's US heat map tied to data -->
-    <script src="js/test_chart.js"></script>
+    <script src="js/ohio_map_cancer.js"></script>
+    <script src="js/us_map_cancer.js"></script> 
+    <script src="js/cancer_charts.js"></script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">   
 
@@ -69,7 +71,6 @@
       </div>
 
       <!-- SVG for map is build as child to mapDiv -->
-      <!-- TODO: wrap SVGs in bootstrap panel or well? -->
       <div class="container-fluid">
         <div class="panel panel-default">
           <div class="panel-body">
@@ -78,16 +79,16 @@
             </div>
 
             <div id="sliderDiv" class="wrapper">
-              <b>1980 &nbsp;&nbsp;</b>
+              <b>1999 &nbsp;&nbsp;</b>
               <input id="mapSlider" data-slider-id='mSlider' type="text"
                       data-provide="slider"             
-                      data-slider-min="1980"
-                      data-slider-max="2015"
-                      data-slider-step="5"
-                      data-slider-value="2015"
+                      data-slider-min="1999"
+                      data-slider-max="2016"
+                      data-slider-step="1"
+                      data-slider-value="2016"
                       data-slider-tooltip="always"
               />
-              <b>&nbsp;&nbsp; 2015</b>
+              <b>&nbsp;&nbsp; 2016</b>
             </div>
 
           </div>
@@ -104,19 +105,19 @@
               <div  id="analysisDropdown">
                 <div class="drop-btn-group">
                   <div class="dropdownd">
-                    <button class="dropbtnd">drop 1 cancer graphs</button>
-                    <div class="dropdownd-content">
-                      <a onclick="cancer1_chart1()">drop 1 graph 1 cancer stuff</a>
-                      <a onclick="cancer1_chart2()">drop 1 graph 2 cancer stuff</a>
-                    </div>
+                    <button class="dropbtnd" onclick="cancer_maps_years()">Map Cancer Over The Years</button>
                   </div>
                   <div class="dropdownd">
-                    <button class="dropbtnd">drop 2 cancer graphs</button>
+                    <button class="dropbtnd" onclick="cancer_maps_1999_2016()">Map Cancer 1999 vs. 2016</button>
+                  </div>                          
+                  <div class="dropdownd">
+                    <button class="dropbtnd">Cancer Mortality Rate Graphs</button>
                     <div class="dropdownd-content">
-                      <a onclick="cancer2_chart1()">drop 2 graph 1 cancer stuff</a>
-                      <a onclick="cancer2_chart2()">drop 2 graph 2 cancer stuff</a>
-                    </div>              
-                  </div>            
+                      <a onclick="cancerLineChartUS()">U.S. Cancer Trends 1999 - 2016</a>
+                      <a onclick="cancerLineChartOhio()">Ohio Cancer Trends 1999 - 2016</a>
+                      <a onclick="cancerLineChartOhioUS()">Ohio and U.S. Cancer Trends 1999 - 2016</a>
+                    </div>
+                  </div>  
                 </div>
               </div>
             </div>
