@@ -160,7 +160,7 @@ function drawHeartDiseaseUSMap(year) {
             //  d3.select('#statename' + i)
             //    .attr('display', '')
           })
-            .on('mouseout', function(d, i) {                // add mouse out function
+            .on('mouseout', function(d, i) {                // add mouse out function          
                 tooltip.transition()
                       .duration(400)
                       .style('opacity', 0);

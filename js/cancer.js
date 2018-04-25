@@ -35,6 +35,75 @@ async function sliderChange() {
 }
 
 
+function cancerTreemapColumbus() {
+  // delete old chart elements
+  oldChartSvg = document.getElementById('chartDiv');
+  removeChildren(oldChartSvg);
+
+  var chartSvg = d3.select('#chartDiv')
+                .append('svg')
+                .attr('id', 'svgchart')       // svg ID is '#svgchart'
+                .attr('preserveAspectRatio', 'xMidYMid meet')
+                .attr('viewBox', '0 0 1200 1000')
+                .classed('svg-content', true)
+                .attr('overflow', 'visible');
+
+  // create chart group as child of svg
+  var chartGroup = chartSvg.append('g')
+                .attr('id', 'chartG')
+                .attr('transform', 'translate(0, 0)');
+
+  queue().defer(d3.csv, "data/cancer_data/cancer_types_columbus.csv")
+        .await(drawTreemap);  
+}
+
+
+function cancerBubbleColumbus() {
+  // delete old chart elements
+  oldChartSvg = document.getElementById('chartDiv');
+  removeChildren(oldChartSvg);
+
+  var chartSvg = d3.select('#chartDiv')
+                .append('svg')
+                .attr('id', 'svgchart')       // svg ID is '#svgchart'
+                .attr('preserveAspectRatio', 'xMidYMid meet')
+                .attr('viewBox', '0 0 1200 1000')
+                .classed('svg-content', true)
+                .attr('overflow', 'visible');
+
+  // create chart group as child of svg
+  var chartGroup = chartSvg.append('g')
+                .attr('id', 'chartG')
+                .attr('transform', 'translate(0, 0)');
+
+  queue().defer(d3.csv, "data/cancer_data/cancer_types_columbus.csv")
+        .await(drawBubble);  
+}
+
+
+
+function cancerSunburstColumbus() {
+  // delete old chart elements
+  oldChartSvg = document.getElementById('chartDiv');
+  removeChildren(oldChartSvg);
+
+  var chartSvg = d3.select('#chartDiv')
+                .append('svg')
+                .attr('id', 'svgchart')       // svg ID is '#svgchart'
+                .attr('preserveAspectRatio', 'xMidYMid meet')
+                .attr('viewBox', '0 0 1200 1000')
+                .classed('svg-content', true)
+                .attr('overflow', 'visible');
+
+  // create chart group as child of svg
+  var chartGroup = chartSvg.append('g')
+                .attr('id', 'chartG')
+                .attr('transform', 'translate(0, 0)');
+
+  queue().defer(d3.csv, "data/cancer_data/cancer_types_columbus.csv")
+        .await(drawSunburst);  
+}
+
 
 
 

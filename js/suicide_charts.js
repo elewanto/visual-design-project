@@ -26,7 +26,7 @@ function drawLineChartUS(error, dataUS, dataOhio) {
 
   var marginLeft = 60;
   var marginRight = 20;
-  var marginTop = 20;
+  var marginTop = 100;
   var marginBottom = 20;  
 
   var chartWidth = canvasWidth - marginLeft - marginRight;
@@ -56,7 +56,6 @@ function drawLineChartUS(error, dataUS, dataOhio) {
                 })
                 .entries(dataUS);
 
-  console.log(states);
   console.log('states length: ' + states.length);
 
   // normalize ranges
@@ -90,7 +89,20 @@ function drawLineChartUS(error, dataUS, dataOhio) {
             .attr('dy', '1em')
             .style('text-anchor', 'middle')
             .style('font-size', '20px')            
-            .text('Deaths Per 100,000 People');            
+            .text('Deaths Per 100,000 People');
+
+  // vertical grid lines
+  function make_x_gridlines() {
+    return d3.axisBottom(xScale).ticks(7);
+  }
+
+  chartGroup.append('g')
+            .attr('class', 'grid')
+            .attr('transform', 'translate(0,' + (chartHeight+marginBottom) + ')')
+            .call(make_x_gridlines()
+              .tickSize(-(chartHeight-marginTop))
+              .tickFormat("")
+            );   
 
   //var color = d3.scaleOrdinal(d3.schemeCategory10);   // choose color scheme
 
@@ -111,7 +123,7 @@ function drawLineChartUS(error, dataUS, dataOhio) {
 
   var lineGroup = chartGroup.append('g');
   //chartGroup.append('g')
-  lineGroup.selectAll('path')
+  var lines = lineGroup.selectAll('path')
             .data(states, function(d) {return d.key;})
             .enter()
             .append('path')
@@ -151,7 +163,21 @@ function drawLineChartUS(error, dataUS, dataOhio) {
               if (d.key == 'Ohio') {return colors[1];}
               return colors[0];
               });                       
-            });            
+            });     
+
+  lines.each(function(d) {d.totalLength = this.getTotalLength();})
+  .attr("stroke-dasharray", function(d) {return d.totalLength + " " + d.totalLength})
+  .attr("stroke-dashoffset", function(d) {return d.totalLength;})
+  .transition()
+  .delay(function(d) {
+    if (d.key == 'Ohio') {
+      return 2600;
+    }
+    return 400;
+  })
+  .duration(2000)
+  .ease(d3.easeLinear)
+  .attr("stroke-dashoffset", 0);                     
 
   // legend
   var barHeight = 5;
@@ -165,7 +191,7 @@ function drawLineChartUS(error, dataUS, dataOhio) {
             .style('text-anchor', 'end')        
             .attr('x', chartWidth-350)
             .attr('y', function(d, i) {
-              return (chartHeight/2 - 430) + (i+1)*(barHeight + padding);
+              return (chartHeight/2 - 330) + (i+1)*(barHeight + padding);
             })
             .style('font-size', 20)
             .text(function(d) {
@@ -176,7 +202,7 @@ function drawLineChartUS(error, dataUS, dataOhio) {
     .enter().append('rect')
     .attr('x', chartWidth-330)
     .attr('y', function(d, i) {
-      return (chartHeight/2 - 440) + (i+1)*(barHeight + padding+2);
+      return (chartHeight/2 - 340) + (i+1)*(barHeight + padding+2);
     })
     .attr('width', function(d, i) {
       return 50;
@@ -219,7 +245,7 @@ function drawLineChartOhio(error, dataUS, dataOhio) {
 
   var marginLeft = 60;
   var marginRight = 15;
-  var marginTop = 20;
+  var marginTop = 100;
   var marginBottom = 20;  
 
   var chartWidth = canvasWidth - marginLeft - marginRight;
@@ -283,7 +309,20 @@ function drawLineChartOhio(error, dataUS, dataOhio) {
             .attr('dy', '1em')
             .style('text-anchor', 'middle')
             .style('font-size', '20px')            
-            .text('Deaths Per 100,000 People');            
+            .text('Deaths Per 100,000 People');
+
+  // vertical grid lines
+  function make_x_gridlines() {
+    return d3.axisBottom(xScale).ticks(7);
+  }
+
+  chartGroup.append('g')
+            .attr('class', 'grid')
+            .attr('transform', 'translate(0,' + (chartHeight+marginBottom) + ')')
+            .call(make_x_gridlines()
+              .tickSize(-(chartHeight-marginTop))
+              .tickFormat("")
+            );           
 
   //var color = d3.scaleOrdinal(d3.schemeCategory10);   // choose color scheme
 
@@ -304,7 +343,7 @@ function drawLineChartOhio(error, dataUS, dataOhio) {
 
   var lineGroup = chartGroup.append('g');
   //chartGroup.append('g')
-  lineGroup.selectAll('path')
+  var lines = lineGroup.selectAll('path')
             .data(states, function(d) {return d.key;})
             .enter()
             .append('path')
@@ -344,7 +383,21 @@ function drawLineChartOhio(error, dataUS, dataOhio) {
               if (d.key == 'Franklin' || d.key == 'Delaware' || d.key == 'Fairfield' || d.key == 'Pickaway') {return colors[1];}
               return colors[0];
               });                       
-            });            
+            });        
+
+  lines.each(function(d) {d.totalLength = this.getTotalLength();})
+  .attr("stroke-dasharray", function(d) {return d.totalLength + " " + d.totalLength})
+  .attr("stroke-dashoffset", function(d) {return d.totalLength;})
+  .transition()
+  .delay(function(d) {
+    if (d.key == 'Franklin' || d.key == 'Delaware' || d.key == 'Fairfield' || d.key == 'Pickaway') {
+      return 2600;
+    }
+    return 400;
+  })
+  .duration(2000)
+  .ease(d3.easeLinear)
+  .attr("stroke-dashoffset", 0);                        
 
   // legend
   var barHeight = 5;
@@ -358,7 +411,7 @@ function drawLineChartOhio(error, dataUS, dataOhio) {
             .style('text-anchor', 'end')        
             .attr('x', chartWidth-50)
             .attr('y', function(d, i) {
-              return (chartHeight/2 - 430) + (i+1)*(barHeight + padding);
+              return (chartHeight/2 - 330) + (i+1)*(barHeight + padding);
             })
             .style('font-size', 20)
             .text(function(d) {
@@ -369,7 +422,7 @@ function drawLineChartOhio(error, dataUS, dataOhio) {
     .enter().append('rect')
     .attr('x', chartWidth-30)
     .attr('y', function(d, i) {
-      return (chartHeight/2 - 440) + (i+1)*(barHeight + padding+2);
+      return (chartHeight/2 - 340) + (i+1)*(barHeight + padding+2);
     })
     .attr('width', function(d, i) {
       return 50;
@@ -410,7 +463,7 @@ function partialDrawLineChartUS(error, dataUS, dataOhio) {
 
   var marginLeft = 60;
   var marginRight = 15;
-  var marginTop = 20;
+  var marginTop = 100;
   var marginBottom = 20;  
 
   var chartWidth = canvasWidth - marginLeft - marginRight;
@@ -474,7 +527,20 @@ function partialDrawLineChartUS(error, dataUS, dataOhio) {
             .attr('dy', '1em')
             .style('text-anchor', 'middle')
             .style('font-size', '20px')            
-            .text('Deaths Per 100,000 People');            
+            .text('Deaths Per 100,000 People');
+
+  // vertical grid lines
+  function make_x_gridlines() {
+    return d3.axisBottom(xScale).ticks(7);
+  }
+
+  chartGroup.append('g')
+            .attr('class', 'grid')
+            .attr('transform', 'translate(0,' + (chartHeight+marginBottom) + ')')
+            .call(make_x_gridlines()
+              .tickSize(-(chartHeight-marginTop))
+              .tickFormat("")
+            );          
 
   //var color = d3.scaleOrdinal(d3.schemeCategory10);   // choose color scheme
 
@@ -495,7 +561,7 @@ function partialDrawLineChartUS(error, dataUS, dataOhio) {
 
   var lineGroup = chartGroup.append('g');
   //chartGroup.append('g')
-  lineGroup.selectAll('path')
+  var lines = lineGroup.selectAll('path')
             .data(states, function(d) {return d.key;})
             .enter()
             .append('path')
@@ -537,6 +603,20 @@ function partialDrawLineChartUS(error, dataUS, dataOhio) {
               });                       
             });            
 
+  lines.each(function(d) {d.totalLength = this.getTotalLength();})
+  .attr("stroke-dasharray", function(d) {return d.totalLength + " " + d.totalLength})
+  .attr("stroke-dashoffset", function(d) {return d.totalLength;})
+  .transition()
+  .delay(function(d) {
+    if (d.key == 'Ohio') {
+      return 2600;
+    }
+    return 400;
+  })
+  .duration(2000)
+  .ease(d3.easeLinear)
+  .attr("stroke-dashoffset", 0); 
+
   // legend
   var barHeight = 5;
   var padding = 35;
@@ -549,7 +629,7 @@ function partialDrawLineChartUS(error, dataUS, dataOhio) {
             .style('text-anchor', 'end')        
             .attr('x', chartWidth-350)
             .attr('y', function(d, i) {
-              return (chartHeight/2 - 430) + (i+1)*(barHeight + padding);
+              return (chartHeight/2 - 330) + (i+1)*(barHeight + padding);
             })
             .style('font-size', 20)
             .text(function(d) {
@@ -560,7 +640,7 @@ function partialDrawLineChartUS(error, dataUS, dataOhio) {
     .enter().append('rect')
     .attr('x', chartWidth-330)
     .attr('y', function(d, i) {
-      return (chartHeight/2 - 440) + (i+1)*(barHeight + padding+2);
+      return (chartHeight/2 - 340) + (i+1)*(barHeight + padding+2);
     })
     .attr('width', function(d, i) {
       return 50;
@@ -595,7 +675,7 @@ function partialDrawLineChartOhio(error, dataUS, dataOhio) {
 
   var marginLeft = 60;
   var marginRight = 15;
-  var marginTop = 20;
+  var marginTop = 100;
   var marginBottom = 20;  
 
   var chartWidth = canvasWidth - marginLeft - marginRight;
@@ -652,7 +732,7 @@ function partialDrawLineChartOhio(error, dataUS, dataOhio) {
 
   var lineGroup = chartGroup.append('g');
   //chartGroup.append('g')
-  lineGroup.selectAll('path')
+  var lines = lineGroup.selectAll('path')
             .data(states, function(d) {return d.key;})
             .enter()
             .append('path')
@@ -692,7 +772,21 @@ function partialDrawLineChartOhio(error, dataUS, dataOhio) {
               if (d.key == 'Franklin' || d.key == 'Delaware' || d.key == 'Fairfield' || d.key == 'Pickaway') {return colors[1];}
               return colors[0];
               });                       
-            });            
+            });     
+
+  lines.each(function(d) {d.totalLength = this.getTotalLength();})
+  .attr("stroke-dasharray", function(d) {return d.totalLength + " " + d.totalLength})
+  .attr("stroke-dashoffset", function(d) {return d.totalLength;})
+  .transition()
+  .delay(function(d) {
+    if (d.key == 'Franklin' || d.key == 'Delaware' || d.key == 'Fairfield' || d.key == 'Pickaway') {
+      return 6600;
+    }
+    return 4600;
+  })
+  .duration(2000)
+  .ease(d3.easeLinear)
+  .attr("stroke-dashoffset", 0);                     
 
   // legend
   var barHeight = 5;
@@ -706,7 +800,7 @@ function partialDrawLineChartOhio(error, dataUS, dataOhio) {
             .style('text-anchor', 'end')        
             .attr('x', chartWidth-50)
             .attr('y', function(d, i) {
-              return (chartHeight/2 - 430) + (i+1)*(barHeight + padding);
+              return (chartHeight/2 - 330) + (i+1)*(barHeight + padding);
             })
             .style('font-size', 20)
             .text(function(d) {
@@ -717,7 +811,7 @@ function partialDrawLineChartOhio(error, dataUS, dataOhio) {
     .enter().append('rect')
     .attr('x', chartWidth-30)
     .attr('y', function(d, i) {
-      return (chartHeight/2 - 440) + (i+1)*(barHeight + padding+2);
+      return (chartHeight/2 - 340) + (i+1)*(barHeight + padding+2);
     })
     .attr('width', function(d, i) {
       return 50;

@@ -30,6 +30,7 @@
     <script src="js/libraries/bootstrap-slider.min.js"></script> <!-- bootstrap slider plugin -->     
     <script src="https://d3js.org/queue.v1.min.js"></script> <!-- Mke map library -->
     <script src="https://d3js.org/d3-queue.v3.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/0.10.0/lodash.min.js"></script>    
 
     <!-- project .js files -->
     <script src="js/cancer.js"></script>    
@@ -117,7 +118,15 @@
                       <a onclick="cancerLineChartOhio()">Ohio Cancer Trends 1999 - 2016</a>
                       <a onclick="cancerLineChartOhioUS()">Ohio and U.S. Cancer Trends 1999 - 2016</a>
                     </div>
-                  </div>  
+                  </div>
+                  <div class="dropdownd">
+                    <button class="dropbtnd">Cancer Mortality By Types</button>
+                    <div class="dropdownd-content">
+                      <a onclick="cancerTreemapColumbus()">Columbus Cancer Deaths by Type Treemap 1999 - 2016</a>
+                      <a onclick="cancerBubbleColumbus()">Columbus Cancer Deaths by Type Bubbles 1999 - 2016</a>
+                      <a onclick="cancerSunburstColumbus()">Columbus Cancer Deaths by Type Sunburst 1999 - 2016</a>                                            
+                    </div>
+                  </div>                    
                 </div>
               </div>
             </div>

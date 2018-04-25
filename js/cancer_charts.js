@@ -1,4 +1,453 @@
 
+// using Mike Bostick's Treemap example
+function drawBubble(error, data) {
+
+  console.log('drawBubble');
+
+  groups = ['Category'];
+
+  // convert string data to numbers
+  data.forEach(function(d) {
+    d.Deaths = +d.Deaths;
+  });
+
+  // parse csv data to hierarchical json format
+  var genGroups = function(data) {
+    return _.map(data, function(element, index) {
+      return { name : index, children : element };
+    });
+  };
+
+  var nest = function(node, curIndex) {
+    if (curIndex === 0) {
+      node.children = genGroups(_.groupBy(data, groups[0]));
+      _.each(node.children, function (child) {
+        nest(child, curIndex + 1);
+      });
+    }
+    else {
+      if (curIndex < groups.length) {
+        node.children = genGroups(
+          _.groupBy(node.children, groups[curIndex])
+        );
+        _.each(node.children, function (child) {
+          nest(child, curIndex + 1);
+        });
+      }
+    }
+    return node;
+  };
+
+  jsonData = nest({}, 0);
+
+
+  jsonData.name = 'Cancer';
+  console.log(jsonData);  
+  console.log(jsonData.name);  
+
+  var canvasWidth = 1200;
+  var canvasHeight = 1000;
+
+  var marginLeft = 60;
+  var marginRight = 20;
+  var marginTop = 100;
+  var marginBottom = 20;  
+
+  var chartWidth = canvasWidth - marginLeft - marginRight;
+  var chartHeight = canvasHeight - marginTop - marginBottom;
+
+  var chartGroup = d3.select('#chartG');
+
+  chartGroup.append('g')
+            .attr('transform', 'translate(650, 50)')
+            .attr('id', '#chartTitle')
+            .append('text')
+            .text('Columbus Cancer Deaths by Type (1999 - 2015)')
+            .attr('class', 'title');
+
+
+  var fader = function(color) { return d3.interpolateRgb(color, "#fff")(0.2); },
+      color = d3.scaleOrdinal(d3.schemeCategory20.map(fader)),
+      format = d3.format(",d");
+
+  var treemapGroup = chartGroup.append('g')
+       .attr('transform', 'translate(0,' + marginTop + ')')     
+
+  var treemap = d3.treemap()
+      .tile(d3.treemapResquarify)
+      .size([chartWidth, chartHeight])
+      .round(true)
+      .paddingInner(1);
+
+  data = jsonData;
+
+  var root = d3.hierarchy(data)
+      .eachBefore(function(d) { d.data.id = (d.parent ? d.parent.data.id + "." : "") + d.data.name; })
+      .sum(sumBySize)
+      .sort(function(a, b) { return b.height - a.height || b.value - a.value; });
+
+  treemap(root);
+
+  var cell = treemapGroup.selectAll("g")
+    .data(root.leaves())
+    .enter().append("g")
+    .attr("transform", function(d) { return "translate(" + d.x0 + "," + d.y0 + ")"; });
+
+  cell.append("rect")
+      .attr("id", function(d) { return d.data.id; })
+      .attr("width", function(d) { return d.x1 - d.x0; })
+      .attr("height", function(d) { return d.y1 - d.y0; })
+      .attr("fill", function(d) { return color(d.parent.data.id); });
+
+  cell.append("clipPath")
+      .attr("id", function(d) { return "clip-" + d.data.id; })
+      .append("use")
+      .attr("xlink:href", function(d) { return "#" + d.data.id; });
+
+  cell.append("text")
+      .attr("clip-path", function(d) { return "url(#clip-" + d.data.id + ")"; })
+      .selectAll("tspan")
+      .data(function(d) { return d.data.name.split(/(?=[A-Z][^A-Z])/g); })
+      .enter().append("tspan")
+      //.style('text-anchor', 'start')
+      //.style('font-size', '14px')
+      .attr("x", 4)
+      .attr("y", function(d, i) { return 13 + i * 10; })
+      .text(function(d) { return d; });
+
+  cell.append("title")
+      .text(function(d) { return d.data.id + "\n" + format(d.value); });
+
+  
+
+  function sumBySize(d) {
+    return d.Deaths;
+  }
+
+
+
+
+}
+
+
+
+
+
+// using Mike Bostick's Treemap example
+function drawTreemap(error, data) {
+
+  console.log('drawTreemap');
+
+  groups = ['Category'];
+
+  // convert string data to numbers
+  data.forEach(function(d) {
+    d.Deaths = +d.Deaths;
+  });
+
+  // parse csv data to hierarchical json format
+  var genGroups = function(data) {
+    return _.map(data, function(element, index) {
+      return { name : index, children : element };
+    });
+  };
+
+  var nest = function(node, curIndex) {
+    if (curIndex === 0) {
+      node.children = genGroups(_.groupBy(data, groups[0]));
+      _.each(node.children, function (child) {
+        nest(child, curIndex + 1);
+      });
+    }
+    else {
+      if (curIndex < groups.length) {
+        node.children = genGroups(
+          _.groupBy(node.children, groups[curIndex])
+        );
+        _.each(node.children, function (child) {
+          nest(child, curIndex + 1);
+        });
+      }
+    }
+    return node;
+  };
+
+  jsonData = nest({}, 0);
+
+
+  jsonData.name = 'Cancer';
+  console.log(jsonData);  
+  console.log(jsonData.name);  
+
+  var canvasWidth = 1200;
+  var canvasHeight = 1000;
+
+  var marginLeft = 60;
+  var marginRight = 20;
+  var marginTop = 100;
+  var marginBottom = 20;  
+
+  var chartWidth = canvasWidth - marginLeft - marginRight;
+  var chartHeight = canvasHeight - marginTop - marginBottom;
+
+  // word wrapping/font size from bl.ocks.org/mundhradevang
+  function fontSize(d,i) {
+  var size = d.dx/5;
+  var words = d.split(' ');
+  var word = words[0];
+  var width = d.dx;
+  var height = d.dy;
+  var length = 0;
+  d3.select(this).style("font-size", size + "px").text(word);
+  while(((this.getBBox().width >= width) || (this.getBBox().height >= height)) && (size > 12))
+   {
+    size--;
+    d3.select(this).style("font-size", size + "px");
+    this.firstChild.data = word;
+   }
+  }
+
+  function wordWrap(d, i){
+  var words = d.split(' ');
+  var line = new Array();
+  var length = 0;
+  var text = "";
+  var width = d.dx;
+  var height = d.dy;
+  var word;
+  do {
+     word = words.shift();
+     line.push(word);
+     if (words.length)
+       this.firstChild.data = line.join(' ') + " " + words[0]; 
+     else
+       this.firstChild.data = line.join(' ');
+     length = this.getBBox().width;
+     if (length < width && words.length) {
+       ;
+     }
+     else {
+       text = line.join(' ');
+       this.firstChild.data = text;
+       if (this.getBBox().width > width) { 
+         text = d3.select(this).select(function() {return this.lastChild;}).text();
+         text = text + "...";
+         d3.select(this).select(function() {return this.lastChild;}).text(text);
+         d3.select(this).classed("wordwrapped", true);
+         break;
+      }
+      else
+        ;
+
+    if (text != '') {
+      d3.select(this).append("svg:tspan")
+      .attr("x", 0)
+      .attr("dx", "0.15em")
+      .attr("dy", "0.9em")
+      .text(text);
+    }
+    else
+       ;
+
+    if(this.getBBox().height > height && words.length) {
+       text = d3.select(this).select(function() {return this.lastChild;}).text();
+       text = text + "...";
+       d3.select(this).select(function() {return this.lastChild;}).text(text);
+       d3.select(this).classed("wordwrapped", true);
+
+       break;
+    }
+    else
+       ;
+
+    line = new Array();
+      }
+    } while (words.length);
+    this.firstChild.data = '';
+  } 
+
+  // end word wrapping/font
+
+  var chartGroup = d3.select('#chartG');
+
+  chartGroup.append('g')
+            .attr('transform', 'translate(650, 50)')
+            .attr('id', '#chartTitle')
+            .append('text')
+            .text('Columbus Cancer Deaths by Type (1999 - 2015)')
+            .attr('class', 'title');
+
+
+  var fader = function(color) { return d3.interpolateRgb(color, "#fff")(0.2); },
+      color = d3.scaleOrdinal(d3.schemeCategory20.map(fader)),
+      format = d3.format(",d");
+
+  var treemapGroup = chartGroup.append('g')
+       .attr('transform', 'translate(0,' + marginTop + ')')     
+
+  var treemap = d3.treemap()
+      .tile(d3.treemapResquarify)
+      .size([chartWidth, chartHeight])
+      .round(true)
+      .paddingInner(1);
+
+  data = jsonData;
+
+  var root = d3.hierarchy(data)
+      .eachBefore(function(d) { d.data.id = (d.parent ? d.parent.data.id + "." : "") + d.data.name; })
+      .sum(sumBySize)
+      .sort(function(a, b) { return b.height - a.height || b.value - a.value; });
+
+  treemap(root);
+
+  var cell = treemapGroup.selectAll("g")
+    .data(root.leaves())
+    .enter().append("g")
+    .attr("transform", function(d) { return "translate(" + d.x0 + "," + d.y0 + ")"; });
+
+  cell.append("rect")
+      .attr("id", function(d) { return d.data.id; })
+      .attr("width", function(d) { return d.x1 - d.x0; })
+      .attr("height", function(d) { return d.y1 - d.y0; })
+      .attr("fill", function(d) { return color(d.parent.data.id); });
+
+  cell.append("clipPath")
+      .attr("id", function(d) { return "clip-" + d.data.id; })
+      .append("use")
+      .attr("xlink:href", function(d) { return "#" + d.data.id; });
+
+  cell.append("text")
+      .attr("clip-path", function(d) { return "url(#clip-" + d.data.id + ")"; })
+      .selectAll("tspan")
+      .data(function(d) { return d.data.name.split(/(?=[A-Z][^A-Z])/g); })
+      .enter().append("tspan")
+      .attr('x', 0)
+      .attr('dx', '0.35em')
+      .attr('dy', '0.9em')  
+      .style('text-anchor', 'start')
+      .style('font-size', '14px')         
+      .each(fontSize)
+      .each(wordWrap)
+      //.attr("x", 4)
+      //.attr("y", function(d, i) { return 13 + i * 10; })
+      //.text(function(d) { return d; });
+
+  cell.append("title")
+      .text(function(d) { return d.data.id + "\n" + format(d.value); });
+
+  
+
+  function sumBySize(d) {
+    return d.Deaths;
+  }
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function drawSunburst(error, data) {
+  console.log('drawSunburst');
+
+  groups = ['Category'];
+
+  data.forEach(function(d) {
+    d.Deaths = +d.Deaths;
+  });
+
+  // parse csv data to hierarchical json format
+  var genGroups = function(data) {
+    return _.map(data, function(element, index) {
+      return { name : index, children : element };
+    });
+  };
+
+  var nest = function(node, curIndex) {
+    if (curIndex === 0) {
+      node.children = genGroups(_.groupBy(data, groups[0]));
+      _.each(node.children, function (child) {
+        nest(child, curIndex + 1);
+      });
+    }
+    else {
+      if (curIndex < groups.length) {
+        node.children = genGroups(
+          _.groupBy(node.children, groups[curIndex])
+        );
+        _.each(node.children, function (child) {
+          nest(child, curIndex + 1);
+        });
+      }
+    }
+    return node;
+  };
+
+  jsonData = nest({}, 0);
+
+  console.log(jsonData);
+
+  var canvasWidth = 1200;
+  var canvasHeight = 1000;
+
+  var marginLeft = 60;
+  var marginRight = 20;
+  var marginTop = 100;
+  var marginBottom = 20;  
+
+  var chartWidth = canvasWidth - marginLeft - marginRight;
+  var chartHeight = canvasHeight - marginTop - marginBottom;
+
+  var radius = 300;
+
+  var color = d3.scaleOrdinal().range(['#74E600','#26527C','#61D7A4','#6CAC2B','#408AD2','#218359','#36D792','#679ED2','#B0F26D','#4B9500','#98F23D','#04396C','#007241']);
+
+  var chartGroup = d3.select('#chartG');
+
+  chartGroup.append("g")
+    .attr("transform", "translate(" + chartWidth / 2 + "," + chartHeight * .52 + ")");
+
+  var partition = d3.layout.partition()
+    .size([2 * Math.PI, radius * radius])
+    .value(function(d) { return d.Deaths; });
+
+  var arc = d3.arc()
+    .startAngle(function(d) { return d.x; })
+    .endAngle(function(d) { return d.x + d.dx; })
+    .innerRadius(function(d) { return Math.sqrt(d.y); })
+    .outerRadius(function(d) { return Math.sqrt(d.y + d.dy); });  
+
+  var path = chartGroup.datum(jsonData).selectAll("path")
+    .data(partition.nodes)
+    .enter().append("path")
+    .attr("display", function(d) { return d.depth ? null : "none"; }) // hide inner ring
+    .attr("d", arc)
+    .attr("class", function(d) { return (d.children ? d : d.parent).name; })
+    .style("stroke", "#fff")
+    .style("fill", function(d) { return color((d.children ? d : d.parent).name); })
+    .style("fill-rule", "evenodd");    
+
+
+
+}
+
+
+
+
 function drawLineChartUS(error, dataUS, dataOhio) {
   console.log('drawLine chart');
 
@@ -26,7 +475,7 @@ function drawLineChartUS(error, dataUS, dataOhio) {
 
   var marginLeft = 60;
   var marginRight = 20;
-  var marginTop = 20;
+  var marginTop = 100;
   var marginBottom = 20;  
 
   var chartWidth = canvasWidth - marginLeft - marginRight;
@@ -56,7 +505,6 @@ function drawLineChartUS(error, dataUS, dataOhio) {
                 })
                 .entries(dataUS);
 
-  console.log(states);
   console.log('states length: ' + states.length);
 
   // normalize ranges
@@ -90,7 +538,20 @@ function drawLineChartUS(error, dataUS, dataOhio) {
             .attr('dy', '1em')
             .style('text-anchor', 'middle')
             .style('font-size', '20px')            
-            .text('Deaths Per 100,000 People');            
+            .text('Deaths Per 100,000 People');
+
+  // vertical grid lines
+  function make_x_gridlines() {
+    return d3.axisBottom(xScale).ticks(7);
+  }
+
+  chartGroup.append('g')
+            .attr('class', 'grid')
+            .attr('transform', 'translate(0,' + (chartHeight+marginBottom) + ')')
+            .call(make_x_gridlines()
+              .tickSize(-(chartHeight-marginTop))
+              .tickFormat("")
+            );          
 
   //var color = d3.scaleOrdinal(d3.schemeCategory10);   // choose color scheme
 
@@ -111,7 +572,7 @@ function drawLineChartUS(error, dataUS, dataOhio) {
 
   var lineGroup = chartGroup.append('g');
   //chartGroup.append('g')
-  lineGroup.selectAll('path')
+  var lines = lineGroup.selectAll('path')
             .data(states, function(d) {return d.key;})
             .enter()
             .append('path')
@@ -151,7 +612,21 @@ function drawLineChartUS(error, dataUS, dataOhio) {
               if (d.key == 'Ohio') {return colors[1];}
               return colors[0];
               });                       
-            });            
+            });   
+
+  lines.each(function(d) {d.totalLength = this.getTotalLength();})
+  .attr("stroke-dasharray", function(d) {return d.totalLength + " " + d.totalLength})
+  .attr("stroke-dashoffset", function(d) {return d.totalLength;})
+  .transition()
+  .delay(function(d) {
+    if (d.key == 'Ohio') {
+      return 2600;
+    }
+    return 400;
+  })
+  .duration(2000)
+  .ease(d3.easeLinear)
+  .attr("stroke-dashoffset", 0);                       
 
   // legend
   var barHeight = 5;
@@ -165,7 +640,7 @@ function drawLineChartUS(error, dataUS, dataOhio) {
             .style('text-anchor', 'end')        
             .attr('x', chartWidth-350)
             .attr('y', function(d, i) {
-              return (chartHeight/2 - 430) + (i+1)*(barHeight + padding);
+              return (chartHeight/2 - 330) + (i+1)*(barHeight + padding);
             })
             .style('font-size', 20)
             .text(function(d) {
@@ -176,7 +651,7 @@ function drawLineChartUS(error, dataUS, dataOhio) {
     .enter().append('rect')
     .attr('x', chartWidth-330)
     .attr('y', function(d, i) {
-      return (chartHeight/2 - 440) + (i+1)*(barHeight + padding+2);
+      return (chartHeight/2 - 340) + (i+1)*(barHeight + padding+2);
     })
     .attr('width', function(d, i) {
       return 50;
@@ -219,7 +694,7 @@ function drawLineChartOhio(error, dataUS, dataOhio) {
 
   var marginLeft = 60;
   var marginRight = 15;
-  var marginTop = 20;
+  var marginTop = 100;
   var marginBottom = 20;  
 
   var chartWidth = canvasWidth - marginLeft - marginRight;
@@ -283,7 +758,20 @@ function drawLineChartOhio(error, dataUS, dataOhio) {
             .attr('dy', '1em')
             .style('text-anchor', 'middle')
             .style('font-size', '20px')            
-            .text('Deaths Per 100,000 People');            
+            .text('Deaths Per 100,000 People');
+
+  // vertical grid lines
+  function make_x_gridlines() {
+    return d3.axisBottom(xScale).ticks(7);
+  }
+
+  chartGroup.append('g')
+            .attr('class', 'grid')
+            .attr('transform', 'translate(0,' + (chartHeight+marginBottom) + ')')
+            .call(make_x_gridlines()
+              .tickSize(-(chartHeight-marginTop))
+              .tickFormat("")
+            );        
 
   //var color = d3.scaleOrdinal(d3.schemeCategory10);   // choose color scheme
 
@@ -304,7 +792,7 @@ function drawLineChartOhio(error, dataUS, dataOhio) {
 
   var lineGroup = chartGroup.append('g');
   //chartGroup.append('g')
-  lineGroup.selectAll('path')
+  var lines = lineGroup.selectAll('path')
             .data(states, function(d) {return d.key;})
             .enter()
             .append('path')
@@ -344,7 +832,21 @@ function drawLineChartOhio(error, dataUS, dataOhio) {
               if (d.key == 'Franklin' || d.key == 'Delaware' || d.key == 'Fairfield' || d.key == 'Pickaway') {return colors[1];}
               return colors[0];
               });                       
-            });            
+            });        
+
+  lines.each(function(d) {d.totalLength = this.getTotalLength();})
+  .attr("stroke-dasharray", function(d) {return d.totalLength + " " + d.totalLength})
+  .attr("stroke-dashoffset", function(d) {return d.totalLength;})
+  .transition()
+  .delay(function(d) {
+    if (d.key == 'Franklin' || d.key == 'Delaware' || d.key == 'Fairfield' || d.key == 'Pickaway') {
+      return 2600;
+    }
+    return 400;
+  })
+  .duration(2000)
+  .ease(d3.easeLinear)
+  .attr("stroke-dashoffset", 0);                    
 
   // legend
   var barHeight = 5;
@@ -358,7 +860,7 @@ function drawLineChartOhio(error, dataUS, dataOhio) {
             .style('text-anchor', 'end')        
             .attr('x', chartWidth-50)
             .attr('y', function(d, i) {
-              return (chartHeight/2 - 430) + (i+1)*(barHeight + padding);
+              return (chartHeight/2 - 330) + (i+1)*(barHeight + padding);
             })
             .style('font-size', 20)
             .text(function(d) {
@@ -369,7 +871,7 @@ function drawLineChartOhio(error, dataUS, dataOhio) {
     .enter().append('rect')
     .attr('x', chartWidth-30)
     .attr('y', function(d, i) {
-      return (chartHeight/2 - 440) + (i+1)*(barHeight + padding+2);
+      return (chartHeight/2 - 340) + (i+1)*(barHeight + padding+2);
     })
     .attr('width', function(d, i) {
       return 50;
@@ -410,7 +912,7 @@ function partialDrawLineChartUS(error, dataUS, dataOhio) {
 
   var marginLeft = 60;
   var marginRight = 15;
-  var marginTop = 20;
+  var marginTop = 100;
   var marginBottom = 20;  
 
   var chartWidth = canvasWidth - marginLeft - marginRight;
@@ -474,7 +976,20 @@ function partialDrawLineChartUS(error, dataUS, dataOhio) {
             .attr('dy', '1em')
             .style('text-anchor', 'middle')
             .style('font-size', '20px')            
-            .text('Deaths Per 100,000 People');            
+            .text('Deaths Per 100,000 People');
+
+  // vertical grid lines
+  function make_x_gridlines() {
+    return d3.axisBottom(xScale).ticks(7);
+  }
+
+  chartGroup.append('g')
+            .attr('class', 'grid')
+            .attr('transform', 'translate(0,' + (chartHeight+marginBottom) + ')')
+            .call(make_x_gridlines()
+              .tickSize(-(chartHeight-marginTop))
+              .tickFormat("")
+            );         
 
   //var color = d3.scaleOrdinal(d3.schemeCategory10);   // choose color scheme
 
@@ -495,7 +1010,7 @@ function partialDrawLineChartUS(error, dataUS, dataOhio) {
 
   var lineGroup = chartGroup.append('g');
   //chartGroup.append('g')
-  lineGroup.selectAll('path')
+  var lines = lineGroup.selectAll('path')
             .data(states, function(d) {return d.key;})
             .enter()
             .append('path')
@@ -535,7 +1050,22 @@ function partialDrawLineChartUS(error, dataUS, dataOhio) {
               if (d.key == 'Ohio') {return colors[1];}
               return colors[0];
               });                       
-            });            
+            });  
+
+  lines.each(function(d) {d.totalLength = this.getTotalLength();})
+  .attr("stroke-dasharray", function(d) {return d.totalLength + " " + d.totalLength})
+  .attr("stroke-dashoffset", function(d) {return d.totalLength;})
+  .transition()
+  .delay(function(d) {
+    if (d.key == 'Ohio') {
+      return 2600;
+    }
+    return 400;
+  })
+  .duration(2000)
+  .ease(d3.easeLinear)
+  .attr("stroke-dashoffset", 0);       
+
 
   // legend
   var barHeight = 5;
@@ -549,7 +1079,7 @@ function partialDrawLineChartUS(error, dataUS, dataOhio) {
             .style('text-anchor', 'end')        
             .attr('x', chartWidth-350)
             .attr('y', function(d, i) {
-              return (chartHeight/2 - 430) + (i+1)*(barHeight + padding);
+              return (chartHeight/2 - 330) + (i+1)*(barHeight + padding);
             })
             .style('font-size', 20)
             .text(function(d) {
@@ -560,7 +1090,7 @@ function partialDrawLineChartUS(error, dataUS, dataOhio) {
     .enter().append('rect')
     .attr('x', chartWidth-330)
     .attr('y', function(d, i) {
-      return (chartHeight/2 - 440) + (i+1)*(barHeight + padding+2);
+      return (chartHeight/2 - 340) + (i+1)*(barHeight + padding+2);
     })
     .attr('width', function(d, i) {
       return 50;
@@ -595,7 +1125,7 @@ function partialDrawLineChartOhio(error, dataUS, dataOhio) {
 
   var marginLeft = 60;
   var marginRight = 15;
-  var marginTop = 20;
+  var marginTop = 100;
   var marginBottom = 20;  
 
   var chartWidth = canvasWidth - marginLeft - marginRight;
@@ -652,7 +1182,7 @@ function partialDrawLineChartOhio(error, dataUS, dataOhio) {
 
   var lineGroup = chartGroup.append('g');
   //chartGroup.append('g')
-  lineGroup.selectAll('path')
+  var lines = lineGroup.selectAll('path')
             .data(states, function(d) {return d.key;})
             .enter()
             .append('path')
@@ -692,7 +1222,22 @@ function partialDrawLineChartOhio(error, dataUS, dataOhio) {
               if (d.key == 'Franklin' || d.key == 'Delaware' || d.key == 'Fairfield' || d.key == 'Pickaway') {return colors[1];}
               return colors[0];
               });                       
-            });            
+            });           
+
+  //var totalLength = lines.node().getTotalLength();
+  lines.each(function(d) {d.totalLength = this.getTotalLength();})
+  .attr("stroke-dasharray", function(d) {return d.totalLength + " " + d.totalLength})
+  .attr("stroke-dashoffset", function(d) {return d.totalLength;})
+  .transition()
+  .delay(function(d) {
+    if (d.key == 'Franklin' || d.key == 'Delaware' || d.key == 'Fairfield' || d.key == 'Pickaway') {
+      return 6600;
+    }
+    return 4600;
+  })
+  .duration(2000)
+  .ease(d3.easeLinear)
+  .attr("stroke-dashoffset", 0);               
 
   // legend
   var barHeight = 5;
@@ -706,7 +1251,7 @@ function partialDrawLineChartOhio(error, dataUS, dataOhio) {
             .style('text-anchor', 'end')        
             .attr('x', chartWidth-50)
             .attr('y', function(d, i) {
-              return (chartHeight/2 - 430) + (i+1)*(barHeight + padding);
+              return (chartHeight/2 - 330) + (i+1)*(barHeight + padding);
             })
             .style('font-size', 20)
             .text(function(d) {
@@ -717,7 +1262,7 @@ function partialDrawLineChartOhio(error, dataUS, dataOhio) {
     .enter().append('rect')
     .attr('x', chartWidth-30)
     .attr('y', function(d, i) {
-      return (chartHeight/2 - 440) + (i+1)*(barHeight + padding+2);
+      return (chartHeight/2 - 340) + (i+1)*(barHeight + padding+2);
     })
     .attr('width', function(d, i) {
       return 50;

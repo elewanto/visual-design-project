@@ -1,0 +1,111 @@
+name,Category,Subcategory,Cause of death Code,Deaths,Population,Rate
+Bone and articular cartilage,Bone and Articular Cartilage,,C41.9,60,26983563,0.2
+Breast,Breast,,C50.9,3655,26983563,13.5
+Colon,Digestive Organs,Colon,C18.9,3244,26983563,12
+Pancreas,Digestive Organs,,C25.9,2626,26983563,9.7
+Oesophagus,Digestive Organs,,C15.9,1167,26983563,4.3
+Stomach,Digestive Organs,,C16.9,629,26983563,2.3
+Rectum,Digestive Organs,,C20,603,26983563,2.2
+Liver cell carcinoma,Digestive Organs,Liver and Bile Ducts,C22.0,603,26983563,2.2
+Liver,Digestive Organs,Liver and Bile Ducts,C22.9,384,26983563,1.4
+Intrahepatic bile duct carcinoma,Digestive Organs,Liver and Bile Ducts,C22.1,366,26983563,1.4
+Rectosigmoid junction,Digestive Organs,,C19,182,26983563,0.7
+Gallbladder,Digestive Organs,,C23,138,26983563,0.5
+Ill-defined digestive system,Digestive Organs,,C26.9,54,26983563,0.2
+Cardia,Digestive Organs,,C16.0,52,26983563,0.2
+Anus,Digestive Organs,,C21.0,52,26983563,0.2
+Duodenum,Digestive Organs,,C17.0,50,26983563,0.2
+Appendix,Digestive Organs,Colon,C18.1,44,26983563,0.2
+Extrahepatic bile duct,Digestive Organs,Biliary Tract,C24.0,36,26983563,0.1
+Sigmoid colon,Digestive Organs,Colon,C18.7,33,26983563,0.1
+Small intestine,Digestive Organs,,C17.9,30,26983563,0.1
+Biliary tract,Digestive Organs,Biliary Tract,C24.9,30,26983563,0.1
+Caecum,Digestive Organs,Colon,C18.0,26,26983563,0.1
+Intestinal tract,Digestive Organs,,C26.0,20,26983563,0.1
+Ascending colon,Digestive Organs,Colon,C18.2,17,26983563,Unreliable
+Ampulla of Vater,Digestive Organs,Biliary Tract,C24.1,15,26983563,Unreliable
+Brain,"Eye, Brain, and Nervous System",Brain,C71.9,1040,26983563,3.9
+Brain stem,"Eye, Brain, and Nervous System",Brain,C71.7,26,26983563,0.1
+Cerebrum,"Eye, Brain, and Nervous System",Brain,C71.0,14,26983563,Unreliable
+Eye,"Eye, Brain, and Nervous System",,C69.9,13,26983563,Unreliable
+Cerebellum,"Eye, Brain, and Nervous System",Brain,C71.6,10,26983563,Unreliable
+Ovary,Female Genital Organs,,C56,1111,26983563,4.1
+Uterus,Female Genital Organs,,C55,383,26983563,1.4
+Endometrium,Female Genital Organs,,C54.1,327,26983563,1.2
+Cervix uteri,Female Genital Organs,,C53.9,326,26983563,1.2
+Vulva,Female Genital Organs,,C51.9,88,26983563,0.3
+Vagina,Female Genital Organs,,C52,36,26983563,0.1
+Fallopian tube,Female Genital Organs,,C57.0,18,26983563,Unreliable
+Female genital organ,Female Genital Organs,,C57.9,17,26983563,Unreliable
+No specification of site,Ill-defined and Secondary Sites,,C80,2073,26983563,7.7
+Secondary other specified sites,Ill-defined and Secondary Sites,,C79.8,248,26983563,0.9
+Secondary liver,Ill-defined and Secondary Sites,,C78.7,111,26983563,0.4
+"Head, face and neck",Ill-defined and Secondary Sites,,C76.0,73,26983563,0.3
+Abdomen,Ill-defined and Secondary Sites,,C76.2,51,26983563,0.2
+Secondary retroperitoneum and,Ill-defined and Secondary Sites,,C78.6,49,26983563,0.2
+Secondary brain and cerebral,Ill-defined and Secondary Sites,,C79.3,47,26983563,0.2
+Secondary bone and bone marrow,Ill-defined and Secondary Sites,,C79.5,22,26983563,0.1
+Pelvis,Ill-defined and Secondary Sites,,C76.3,20,26983563,0.1
+Secondary lung,Ill-defined and Secondary Sites,,C78.0,18,26983563,Unreliable
+Other ill-defined sites,Ill-defined and Secondary Sites,,C76.7,15,26983563,Unreliable
+Multiple sites,Independent Mulitiple Sites,,C97,310,26983563,1.1
+Tongue,"Lip, Oral, and Pharynx",,C02.9,136,26983563,0.5
+Pharynx,"Lip, Oral, and Pharynx",,C14.0,95,26983563,0.4
+Tonsil,"Lip, Oral, and Pharynx",,C09.9,79,26983563,0.3
+Mouth,"Lip, Oral, and Pharynx",,C06.9,65,26983563,0.2
+Parotid gland,"Lip, Oral, and Pharynx",,C07,36,26983563,0.1
+Nasopharynx,"Lip, Oral, and Pharynx",,C11.9,36,26983563,0.1
+Oropharynx,"Lip, Oral, and Pharynx",,C10.9,34,26983563,0.1
+Major salivary gland,"Lip, Oral, and Pharynx",,C08.9,12,26983563,Unreliable
+Hypopharynx,"Lip, Oral, and Pharynx",,C13.9,11,26983563,Unreliable
+Non-Hodgkin's lymphoma type,Lymphoid and Haematopoietic Tissue,,C85.9,1114,26983563,4.1
+Multiple myeloma,Lymphoid and Haematopoietic Tissue,,C90.0,836,26983563,3.1
+Acute myeloid leukaemia,Lymphoid and Haematopoietic Tissue,,C92.0,665,26983563,2.5
+Chronic lymphocytic leukaemia,Lymphoid and Haematopoietic Tissue,,C91.1,341,26983563,1.3
+Leukaemia,Lymphoid and Haematopoietic Tissue,,C95.9,175,26983563,0.6
+B-cell lymphoma,Lymphoid and Haematopoietic Tissue,,C85.1,156,26983563,0.6
+Acute leukaemia,Lymphoid and Haematopoietic Tissue,,C95.0,146,26983563,0.5
+Large cell (diffuse),Lymphoid and Haematopoietic Tissue,Non-Hodgkin's Lymphoma,C83.3,111,26983563,0.4
+Hodgkin's disease,Lymphoid and Haematopoietic Tissue,,C81.9,100,26983563,0.4
+Acute lymphoblastic leukaemia,Lymphoid and Haematopoietic Tissue,,C91.0,87,26983563,0.3
+Chronic myeloid leukaemia,Lymphoid and Haematopoietic Tissue,,C92.1,85,26983563,0.3
+Small cleaved cell (diffuse),Lymphoid and Haematopoietic Tissue,Non-Hodgkin's Lymphoma,C83.1,63,26983563,0.2
+Other T-cell lymphomas,Lymphoid and Haematopoietic Tissue,,C84.5,43,26983563,0.2
+Other myeloid leukaemia,Lymphoid and Haematopoietic Tissue,,C92.7,39,26983563,0.1
+Follicular non-Hodgkin's lymphoma,Lymphoid and Haematopoietic Tissue,,C82.9,29,26983563,0.1
+Burkitt's tumour,Lymphoid and Haematopoietic Tissue,Non-Hodgkin's Lymphoma,C83.7,17,26983563,Unreliable
+Small cell (diffuse),Lymphoid and Haematopoietic Tissue,Non-Hodgkin's Lymphoma,C83.0,15,26983563,Unreliable
+Hairy-cell leukaemia,Lymphoid and Haematopoietic Tissue,,C91.4,15,26983563,Unreliable
+Waldenstrom's macroglob.,Lymphoid and Haematopoietic Tissue,,C88.0,14,26983563,Unreliable
+Acute promy. leukaemia,Lymphoid and Haematopoietic Tissue,,C92.4,12,26983563,Unreliable
+Chronic leukaemia,Lymphoid and Haematopoietic Tissue,,C95.1,12,26983563,Unreliable
+Prostate,Male Genital Organs,,C61,1993,26983563,7.4
+Penis,Male Genital Organs,,C60.9,28,26983563,0.1
+Testis,Male Genital Organs,,C62.9,23,26983563,0.1
+Melanoma of skin,Melanoma and Skin,,C43.9,653,26983563,2.4
+Skin,Melanoma and Skin,Other Skin,C44.9,91,26983563,0.3
+Skin of scalp and neck,Melanoma and Skin,Other Skin,C44.4,86,26983563,0.3
+Skin of face,Melanoma and Skin,Other Skin,C44.3,12,26983563,Unreliable
+Connective and soft tissue,Mesothelial and Soft Tissue,,C49.9,250,26983563,0.9
+Mesothelioma,Mesothelial and Soft Tissue,,C45.9,129,26983563,0.5
+Peritoneum,Mesothelial and Soft Tissue,,C48.2,78,26983563,0.3
+Lower limb tissue,Mesothelial and Soft Tissue,,C49.2,17,26983563,Unreliable
+Abdomen tissue,Mesothelial and Soft Tissue,,C49.4,17,26983563,Unreliable
+Retroperitoneum,Mesothelial and Soft Tissue,,C48.0,14,26983563,Unreliable
+Bronchus or lung,Respiratory and Intrathoracic Organs,Bronchus and Lung,C34.9,13280,26983563,49.2
+Larynx,Respiratory and Intrathoracic Organs,Larynx,C32.9,301,26983563,1.1
+"Lung, upper lobe",Respiratory and Intrathoracic Organs,Bronchus and Lung,C34.1,68,26983563,0.3
+"Lung, lower lobe",Respiratory and Intrathoracic Organs,Bronchus and Lung,C34.3,30,26983563,0.1
+Accessory sinus,Respiratory and Intrathoracic Organs,,C31.9,19,26983563,Unreliable
+Supraglottis,Respiratory and Intrathoracic Organs,Larynx,C32.1,18,26983563,Unreliable
+Trachea,Respiratory and Intrathoracic Organs,,C33,18,26983563,Unreliable
+Thymus,Respiratory and Intrathoracic Organs,,C37,15,26983563,Unreliable
+Glottis,Respiratory and Intrathoracic Organs,,C32.0,10,26983563,Unreliable
+Thyroid gland,Thyroid and Endocrine Glands,,C73,105,26983563,0.4
+Adrenal gland,Thyroid and Endocrine Glands,,C74.9,44,26983563,0.2
+Bladder,Urinary Tract,,C67.9,1064,26983563,3.9
+Kidney,Urinary Tract,,C64,983,26983563,3.6
+Ureter,Urinary Tract,,C66,36,26983563,0.1
+Renal pelvis,Urinary Tract,,C65,17,26983563,Unreliable
+Urethra,Urinary Tract,,C68.0,15,26983563,Unreliable
+Urinary organ,Urinary Tract,,C68.9,15,26983563,Unreliable
