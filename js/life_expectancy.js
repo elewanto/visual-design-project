@@ -140,8 +140,8 @@ function drawMaps() {
                 .attr('id', 'ohiomap')
                 .attr('transform', 'translate(800, 0)');
 
-  drawUSMap();
-  drawOhioMap();
+  drawLEUSMap();
+  drawLEOhioMap();
 }
 
 

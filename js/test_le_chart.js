@@ -12,7 +12,7 @@ function drawIncomeCharts(error, data) {
   var str = 'F';
   var str_txt = "Female";
   var ytrans_g = 30;
-  if(data[0]["le_raceadj_q1_F"] == ""){
+  if(data[1]["le_raceadj_q1_F"] == ""){
     str='M';
     str_txt = "Male";
   }
