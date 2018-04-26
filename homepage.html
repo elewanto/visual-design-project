@@ -1,0 +1,89 @@
+
+<!-- homepage.html is NOT the splash page.  index.html is the splash page and links to homepage.html -->
+<!-- homepage.html contains navbar links and problem statement text -->
+
+<!doctype html>
+<html>
+  <head>
+    <title>Team 3 Visual Design Project Homepage</title>
+
+    <!-- dependent .css files --> 
+    <link href="css/bootstrap.min.css" rel="stylesheet"> <!-- bootstrap css file -->      
+    <link href="css/bootstrap-slider.min.css" rel="stylesheet"> <!-- bootstrap slider plugin css file -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> <!-- navbar arrow icon -->
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/grid.css">
+    <link href='https://fonts.googleapis.com/css?family=Lato:100,300,400,300italic' rel='stylesheet' type='text/css'>    
+    <link rel="stylesheet" type="text/css" href="css/homepageSam.css">    <!-- homepage css file --> 
+    <link rel="stylesheet" type="text/css" href="css/navbar.css">   <!-- navbar css file -->  
+
+
+
+    <!-- .js library packages -->
+    <script src="https://d3js.org/d3.v4.min.js"></script>  <!-- D3 library -->
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>      
+    <script src="js/libraries/jquery-3.3.1.min.js"></script> <!-- jquery library -->   
+    <script src="js/libraries/tether.min.js"></script> <!-- tether library (dependence of bootstrap) -->          
+    <script src="js/libraries/bootstrap.min.js"></script> <!-- bootstrap library -->    
+    <script src="js/libraries/bootstrap-slider.min.js"></script> <!-- bootstrap slider plugin -->     
+
+    <script src="https://d3js.org/queue.v1.min.js"></script> <!-- Mke map library -->
+
+    <!-- project .js files -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+
+  </head>
+
+
+  <body>
+
+    <div id="container">
+
+      <!-- top navigation bar -->
+      <div class="navbarm">
+        <a href="homepage.html">Home</a>
+        <a href="life_expectancy.html">Life Expectancy</a>
+        <div class="dropdownm">
+          <button class="dropbtnm">Mortality
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdownm-content">
+            <a href="heart_disease.html">Heart Disease</a>
+            <a href="cancer.html">Cancer</a>
+            <a href="suicide.html">Suicide</a>
+            <a href="general_mortality.html">General</a>
+          </div>
+        </div>
+        <a href="opioid.html">Opioid</a>
+        <a href="obesity.html">Obesity</a>
+        <a id="aboutus" href="about_us.html">About Us</a>
+      </div>
+
+    <!--end wrapper-->
+    <section class="section-steps" id="works">
+         <div class="row">
+                     <!--Concept Statement-->
+                     <div class="col span-1-of-2">
+                        <h1>Concept Statement</h1>
+                        <p class="long-copy">
+                           Despite high economic status and availability of reliable healthcare services, Columbus residents are lagging behind the United States and other parts of Ohio in life expectancy, obesity rates, and abuse of opioids.  We will identify the trends in opioid abuse and obesity and their possible effects on life expectancy in Columbus Ohio, with focus on Columbus counties (information). Our goal is to show trends in Columbus residents’ life expectancy, opioid use, and obesity relative to the rest of the country over time, possible correlations between them, and to explore other potential influencing factors.
+                        </p>
+          </div>
+
+        <div class="row">
+           <!--Container of Graphs-->
+           <div class="col span-1-of-2 steps-box">
+              <!--National graph goes here-->
+              <div class="graph_left clearfix">
+                  <h4>Data Analysis to <span>Heart Diseases</span></h4>
+                    <!--Placeholder picture-->
+                    <img src="images/data chart placeholder.png" alt="#" width="800px" height="450px">
+              </div>
+            </div>
+         </div>
+    </section>
+    <!--end data analysis-->
+  </body>
+
+</html>
