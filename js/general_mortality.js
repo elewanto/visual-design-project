@@ -8,24 +8,84 @@ var sliderValue = "2015";     //
 function drawStart() {
 
   console.log('in landingPageStart()');
-  mortality1_chart1();
+  draw_static_word_cloud();
 }
 
 /************************************************************************************************/
+function draw_static_word_cloud(){
+  var img = new Image();
+  var parentDiv = document.getElementById('cloud');
+  img.onload = function() {
+                parentDiv.appendChild(img);
+                imgNode = parentDiv.childNodes[0];
+                imgNode.setAttribute('id', 'chartImage');
+                imgNode.setAttribute('class', 'center-block');
+                imgNode.setAttribute('width', img.width);    
+  }
+  img.src = 'images/wordcloud.png';
+}
 
-// draw Obesity maps and charts
-function mortality1_chart1() {
-  console.log('mortality1_chart1()')
-
-  //drawMaps();
-
-  // Added by Sangeeta
-  //Draw the bubble chart
-  drawWordCloud();
+function display_image_mortality(img_id){
+  console.log('display_image_mortality()');
 
   oldChartSvg = document.getElementById('chartDiv');
   removeChildren(oldChartSvg);
-  // draw chart here
+
+  var img = new Image();
+  var parentDiv = document.getElementById('chartDiv');
+  img.onload = function() {
+                parentDiv.appendChild(img);
+                imgNode = parentDiv.childNodes[0];
+                imgNode.setAttribute('id', 'chartImage');
+                imgNode.setAttribute('class', 'center-block');
+                imgNode.setAttribute('width', img.width);  
+  };
+
+  switch(parseInt(img_id)){
+    case 0: img.src = 'images/Deaths_Race_Cbus.png';
+            break;
+    default:
+            break; 
+  }
+}
+
+function deaths_BW_Gap(img_id){
+  console.log('deaths_BW_Gap()')
+
+  oldChartSvg = document.getElementById('chartDiv');
+  removeChildren(oldChartSvg);
+
+  var img1 = new Image();
+  var img2 = new Image();
+  var parentDiv = document.getElementById('chartDiv');
+  img1.onload = function() {
+                parentDiv.appendChild(img1);
+                imgNode = parentDiv.childNodes[0];
+                imgNode.setAttribute('id', 'chartImage');
+                imgNode.setAttribute('class', 'center-block');
+                imgNode.setAttribute('width', img1.width);  
+  };
+  img2.onload = function() {
+                parentDiv.appendChild(img2);
+                imgNode = parentDiv.childNodes[1];
+                imgNode.setAttribute('id', 'chartImage');
+                imgNode.setAttribute('class', 'center-block');
+                imgNode.setAttribute('width', img2.width);  
+  };
+  switch(parseInt(img_id)){
+    case 0: img1.src = 'images/Diff_Deaths_White_OH.png';
+            img2.src = 'images/Diff_Deaths_Black_OH.png';
+            break;
+    default:
+            break; 
+  }
+}
+
+function deaths_rural_urban_OH() {
+  console.log('deaths_rural_urban_OH()')
+
+  oldChartSvg = document.getElementById('chartDiv');
+  removeChildren(oldChartSvg);
 
   var chartSvg = d3.select('#chartDiv')
                 .append('svg')
@@ -34,17 +94,13 @@ function mortality1_chart1() {
                 .attr('viewBox', '0 0 1200 400')
                 .classed('svg-content', true)
                 .attr('overflow', 'visible');
-                //.attr('width', width)
-                //.attr('height', height);
 
-  // create US map group <g>  ID #usmap
   var chartGroup = chartSvg.append('g')
                           .attr('id', 'chartG')
                           .attr('transform', 'translate(5, 0)');
 
   drawBubbles("data/mortality_data/OH_Rural_Counties_Mortality_rate.csv");
   drawBubbles("data/mortality_data/OH_Urban_Counties_Mortality_Rate.csv");
-
 }
 
 function drawWordCloud(){
@@ -194,9 +250,7 @@ function drawBubbles(file){
 
 // draw SVG D3 charts 
 function drawCharts() {
-
   console.log('in drawCharts()');
-
   // remove any existing svg so we don't append a second one below
   oldSvg = document.getElementById('chartDiv');   // get the parent container div for the svg
   removeChildren(oldSvg);                       // delete previous svg element before drawing new svg
@@ -206,11 +260,9 @@ function drawCharts() {
 
 // remove document html children of node parameter
 function removeChildren(node) {
-
   console.log('in removeChildren()');
 
   while (node.firstChild) {
     node.removeChild(node.firstChild);
   }
-
 }
