@@ -143,6 +143,7 @@ div.tooltip {
     box-shadow: -3px 3px 15px #888888;
     color: black;
     font: 16px sans-serif;
+    font-weight: bold;    
     padding: 5px;
     text-align: center;
 }

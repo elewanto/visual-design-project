@@ -1,6 +1,7 @@
 
 // global variables
 var sliderValue = "2016";     //
+var donutType = 'none';
 
 
 /************************************************************************************************/
@@ -16,7 +17,7 @@ function drawStart() {
 
   // automatically draw side-by-side U.S and Ohio county map by default
   drawMaps(sliderValue);  
-  suicideLineChartUS();
+  suicideDonuts('Method')
 }
 
 
@@ -32,6 +33,36 @@ async function sliderChange() {
   var ret2 = redrawSuicideOhioMap(sliderValue, 500);
   var hold = [await ret1, await ret2]
   return 1;
+}
+
+function suicideDonuts(selection) {
+  console.log(selection);
+  donutType = selection;
+  // delete old chart elements
+  oldChartSvg = document.getElementById('chartDiv');
+  removeChildren(oldChartSvg);
+
+  var chartSvg = d3.select('#chartDiv')
+                .append('svg')
+                .attr('id', 'svgchart')       // svg ID is '#svgchart'
+                .attr('preserveAspectRatio', 'xMidYMid meet')
+                .attr('viewBox', '0 0 1200 1000')
+                .classed('svg-content', true)
+                .attr('overflow', 'visible');
+
+  // create chart group as child of svg
+  var chartGroup = chartSvg.append('g')
+                .attr('id', 'chartG')
+                .attr('transform', 'translate(0, 0)');
+
+
+  queue().defer(d3.csv, "data/suicide_data/suicide_types_columbus_1999_2016.csv")
+        .defer(d3.csv, "data/suicide_data/suicide_age_columbus_1999_2016.csv")
+        .defer(d3.csv, "data/suicide_data/suicide_gender_columbus_1999_2016.csv")
+        .defer(d3.csv, "data/suicide_data/suicide_race_columbus_1999_2016.csv")
+        .defer(d3.csv, "data/suicide_data/suicide_month_columbus_1999_2016.csv")
+        .defer(d3.csv, "data/suicide_data/suicide_day_columbus_1999_2016.csv")
+        .await(drawDonut); // file in heart_disease_charts.js
 }
 
 
@@ -60,6 +91,7 @@ function suicideLineChartUS() {
   queue().defer(d3.csv, "data/suicide_data/suicide_us_1999_2016.csv")
         .defer(d3.csv, "data/suicide_data/suicide_ohio_1999_2016.csv")
         .await(drawLineChartUS); // file in heart_disease_charts.js
+
 }
 
 
@@ -86,7 +118,7 @@ function suicideLineChartOhio() {
 
   queue().defer(d3.csv, "data/suicide_data/suicide_us_1999_2016.csv")
         .defer(d3.csv, "data/suicide_data/suicide_ohio_1999_2016.csv")
-        .await(drawLineChartOhio); // file in heart_disease_charts.js
+        .await(drawLineChartOhio); // file in heart_disease_charts.js    
 
 }
 
@@ -117,6 +149,7 @@ function suicideLineChartOhioUS() {
   queue().defer(d3.csv, "data/suicide_data/suicide_us_1999_2016.csv")
         .defer(d3.csv, "data/suicide_data/suicide_ohio_1999_2016.csv")
         .await(partialDrawLineChartUS); // file in heart_disease_charts.js
+    
 }
 
 

@@ -2,59 +2,82 @@
 
 function drawDonut(error, dType, dAge, dGender, dRace, dMonth, dDay) {
 
+  var data0 = [], data1 = [], data2 = [], data3 = [], data4 = [], data5 = [];
+  var data = [data0, data1, data2, data3, data4, data5];
+  var label0 = [], label1 = [], label2 = [], label3 = [], label4 = [], label5 = [];
+  var labels = [];  
+  var n = 16;
+
   // convert strings to numbers
   dType.forEach(function(d) {
     d.Deaths = +d.Deaths;
-    d.Percent = +d.Percent
+    data0.push(d.Deaths);
+    label0.push(d.Cause);
   });
   dAge.forEach(function(d) {
     d.Deaths = +d.Deaths;
-    d.Percent = +d.Percent    
+    data1.push(d.Deaths);   
+    label1.push(d.Cause);     
   });  
   dGender.forEach(function(d) {
     d.Deaths = +d.Deaths;
-    d.Percent = +d.Percent    
+    data2.push(d.Deaths); 
+    label2.push(d.Cause);       
   });  
   dRace.forEach(function(d) {
     d.Deaths = +d.Deaths;
     d.Rate = +d.Rate;
     d.Deaths = d.Rate;
-    d.Percent = +d.Percent    
+    data3.push(d.Deaths); 
+    label3.push(d.Cause);       
   });  
   dMonth.forEach(function(d) {
     d.Deaths = +d.Deaths;
-    d.Percent = +d.Percent    
+    data4.push(d.Deaths); 
+    label4.push(d.Cause);       
   });  
   dDay.forEach(function(d) {
     d.Deaths = +d.Deaths;
-    d.Percent = +d.Percent    
-  });            
+    data5.push(d.Deaths); 
+    label5.push(d.Cause);       
+  });
 
-  var data = dType;
+  data.forEach(function(d) {
+    while (d.length < n) {
+      d.push(0);
+    }
+  });     
+
+  console.log(data);
+  
+  console.log(data0);
+  console.log(data1);
+
   switch (donutType) {    // donutType is global variable from suicide.js
     case 'Method':
-      data = dType;
+      labels = label0;
       break;
     case 'Age':
-      data = dAge;
+      labels = label1;
       break;
     case 'Gender':
-      data = dGender;
+      labels = label2;
       break;
     case 'Race':
-      data = dRace;
+      labels = label3;
       break;
     case 'Month':
-      data = dMonth;
+      labels = label4;
       break;
     case 'Day':
-      data = dDay;
+      labels = label5;
       break;
     default:
-      data = dType;
+      labels = label0;
       donutType = 'Method'
   }
 
+console.log(labels);
 
   var chartGroup = d3.select('#chartG');
 
@@ -64,9 +87,9 @@ function drawDonut(error, dType, dAge, dGender, dRace, dMonth, dDay) {
             .append('text')
             .text(function (d) {
               if (donutType == 'Race') {
-                return ('Columbus Total Suicides by ' + donutType + ' 1999 - 2016');
+                return ('Columbus Counties Suicides by ' + donutType + ' (Rate) (1999 - 2016)');
               } else {
-                return ('Columbus Total Suicides by ' + donutType + ' 1999 - 2016');                
+                return ('Columbus Counties Suicides by ' + donutType + ' (Number) (1999 - 2016)');                
               }
             })
             .attr('class', 'title');
@@ -77,7 +100,14 @@ function drawDonut(error, dType, dAge, dGender, dRace, dMonth, dDay) {
   var marginLeft = 60;
   var marginRight = 20;
   var marginTop = 100;
-  var marginBottom = 20;  
+  var marginBottom = 20;
+
+  var innerRadius = 200;
+  var outerRadius = 400;
+
+  var radiusScale = d3.scaleSqrt()
+      .range([0, outerRadius])
+      .domain([0, 110]); 
 
   var chartWidth = canvasWidth - marginLeft - marginRight;
   var chartHeight = canvasHeight - marginTop - marginBottom;
@@ -89,13 +119,12 @@ function drawDonut(error, dType, dAge, dGender, dRace, dMonth, dDay) {
     minimumFractionDigits: 1,
   });  
 
-  var pieMaker = d3.pie().value(function(d, i) { return d.Deaths; });
-  var pieData = pieMaker(data);
+  var arc = d3.arc().innerRadius(0);
+  var pie = d3.pie().sort(null);
+
 
   var pieGroup = chartGroup.append('g')
         .attr('transform', 'translate(' + canvasWidth/2 + ',' + canvasHeight/2 +')');
-
-
 
   var arcGenerator = d3.arc()
       .innerRadius(200)
@@ -105,84 +134,78 @@ function drawDonut(error, dType, dAge, dGender, dRace, dMonth, dDay) {
       .innerRadius(220)
       .outerRadius(400);
 
-  var tooltip = d3.select('body').append('div').attr('class', 'tooltipTree');      
+  var svg = d3.select('#svgchart');
 
-  var path = pieGroup.selectAll('path')
-      .data(pieData)
+  svg.selectAll('.arc')
+      .data(arcs(data0, data1))
       .enter()
+      .append('g')
+      .attr('class', 'arc')
+      .attr('transform', 'translate(' + canvasWidth/2 + ',' + canvasHeight/2 +')')      
       .append('path')
-      //.each(function(d) {this._current = Object.assign({}, d, { startAngle: d.endAngle}); })
-      .attr('d', arcGenerator)
-      .style('fill', function(d, i) {
+      .attr('fill', function(d, i) {
         return colors(i);
       })
-      .each(function(d) { this._current = d; })
-      .on('mousemove', function(d) {
-          tooltip.style("left", d3.event.pageX + 10 + "px");
-          tooltip.style("top", d3.event.pageY - 20 + "px");
-          tooltip.style("display", "inline-block");        
-          tooltip.html(d.data.Cause + ' | ' + d.data.Percent.toFixed(1) + '%');
-      }).on('mouseout', function(d) {
-        tooltip.style('display', 'none');
-      });  // save initial angles
+      .attr('d', arc);
+
+
+  // create pie slice labels
+  svg.selectAll('text.title')
+    .data(arcs(data0, data1))
+    .enter()
+    .append('text')  
+      .attr('transform', 'translate(' + canvasWidth/2 + ',' + canvasHeight/2 +')')         
+    .each(function(d, i) {
+      var cen = arcGenerator.centroid(d);
+      d3.select(this)
+        .attr("transform", function(d) {
+          var midAngle = d.startAngle < Math.PI ? d.startAngle/2 + d.endAngle/2 : d.startAngle/2  + d.endAngle/2 + Math.PI;               // line used from web tutorial 
+          return "translate(" + arcLabel.centroid(d)[0] + "," +arcLabel.centroid(d)[1] + ") rotate(-90) rotate(" + (midAngle * 180/Math.PI) + ")";  // line used from web tutorial            
+        })
+        .attr('dy', '.35em')
+        .attr('text-anchor', 'middle')
+        .text(function(d) { 
+              console.log(i + labels[i]);
+              return labels[i] + '\xa0\xa0\xa0\xa0\xa0' + data1[i];
+            })
+        .style("font-size", function(d) {
+          if (data1[i] > 600) {
+            return 18;
+          } else if (d.data.Deaths > 100) {
+            return 16;
+          } else {
+            return 14;
+          }
+        });
+    });
+
+
       
-    // create pie slice labels
-    pieGroup.selectAll('text')
-      .data(pieData)
-      .enter()
-      .append('text')
-      .each(function(d) {
-        var cen = arcGenerator.centroid(d);
-        d3.select(this)
-          .attr("transform", function(d) {
-            var midAngle = d.startAngle < Math.PI ? d.startAngle/2 + d.endAngle/2 : d.startAngle/2  + d.endAngle/2 + Math.PI;               // line used from web tutorial 
-            return "translate(" + arcLabel.centroid(d)[0] + "," +arcLabel.centroid(d)[1] + ") rotate(-90) rotate(" + (midAngle * 180/Math.PI) + ")";  // line used from web tutorial            
-          })
-          .attr('dy', '.35em')
-          .attr('text-anchor', 'middle')
-          .text(function(d, i) { 
-                return d.data.Cause + '\xa0\xa0\xa0' + d.data.Deaths.toLocaleString('en');
-              })
-          .style("font-size", function(d) {
-            console.log(d.data.Percent);
-            if (d.data.Percent > 20) {
-              return 24;
-            } else if (d.data.Percent > 10) {
-              return 22;
-            } else if (d.data.Percent > 1.7) {
-              return 18;
-            } 
-              else if (d.data.Percent > 0.9) {
-              return 14;
-            } else {
-              return 12;
-            }            
-          });
-      });
+  function arcs(data0, data1) {
+
+    var arcs0 = pie(data0),
+        arcs1 = pie(data1),
+        i = -1,
+        arc;
+        //var outerRad0 = radiusScale(d3.sum(data0)),
+        //var outerRad1 = radiusScale(d3.sum(data1));
+        var outerRad0 = outerRadius;
+        var outerRad1 = outerRadius;
+    
+    console.log("hi", outerRad0, outerRad1) 
+    
+    while (++i < n) {
+      arc = arcs0[i];
+      arc.outerRadius = outerRad0;
+      arc.startAngle = arc.startAngle + 0.1;
+      arc.endAngle = arc.endAngle + 0.1;
+      arc.next = arcs1[i];
+      arc.next.outerRadius = outerRad1; 
+    }
+    return arcs0;
+  }
 
 
-  pieGroup.append('text')
-      .text(function (d) {
-        if (donutType == 'Race') {
-          return ('Suicide Rate per 100,000');
-        } else {
-          return ('Number of Suicides');                
-        }
-      })
-      .style('font-size', '24px')
-      .attr('transform', 'translate(0,30)');
-      //.attr('class', 'titlechart');       
-
-  pieGroup.append('text')
-      .text(function (d) {
-        if (donutType == 'Race') {
-          return (d3.sum(data, function(d){return d.Deaths;}).toFixed(1) + ' Rate');
-        } else {
-          return (d3.sum(data, function(d){return d.Deaths;}).toLocaleString('en') + ' Total Deaths');                
-        }
-      })
-      .style('font-size', '24px')
-      .attr('transform', 'translate(0,-30)');      
 
   d3.select('#sMethod')
     .on('mouseover', changeMethod);
@@ -204,14 +227,7 @@ function drawDonut(error, dType, dAge, dGender, dRace, dMonth, dDay) {
   }
 
   function changeAge() {
-/*    data = dAge;    
-    console.log('data: ' + data);
-    console.log('value: ' + this.value);
-    var value = this.value;
-    pieMaker.value(function(d) {return d[value]; });
-    path = path.data(pieData);
-    console.log('path: ' + path);
-    path.transition().duration(750).attrTween('d', arcTween); */
+
 
   }
 
@@ -229,16 +245,27 @@ function drawDonut(error, dType, dAge, dGender, dRace, dMonth, dDay) {
 
   function changeDay() {
 
-  }      
+  }    
 
-  function arcTween(a) {
-    console.log('test arcTween');
-    var i = d3.interpolate(this._current, a);
-    this._current = i(0);
-    return function(t) {
-      return arcGenerator(i(t));
+
+  function arcTween(b) {
+    return function(a, i) {
+      var d = b.call(this, a, i), i = d3.interpolate(a, d);
+      for (var k in d) a[k] = d[k];
+      return function(t) { return arc(i(t)); };
     };
   }
+
+
+
+
+
+
+
+
+  //pieGroup.append('text')
+  //    .text('Number of Suicides')
+  //    .attr('class', 'titlechart');
 
 
 

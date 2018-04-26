@@ -239,7 +239,7 @@ function drawTreemap(error, data) {
           tooltip.style("left", d3.event.pageX + 10 + "px");
           tooltip.style("top", d3.event.pageY - 20 + "px");
           tooltip.style("display", "inline-block");        
-          tooltip.html(d.children ? null : d.parent.data.name + ' | ' + d.data.name + '  ' + d.data.Deaths);
+          tooltip.html(d.children ? null : d.parent.data.name + ' | ' + d.data.name + '  ' + d.data.Deaths.toLocaleString('en'));
       }).on('mouseout', function(d) {
         tooltip.style('display', 'none');
       });

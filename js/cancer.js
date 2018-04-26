@@ -16,7 +16,7 @@ function drawStart() {
 
   // automatically draw side-by-side U.S and Ohio county map by default
   drawMaps(sliderValue);  
-  cancerLineChartUS();
+  cancerTreemapColumbus();
 }
 
 

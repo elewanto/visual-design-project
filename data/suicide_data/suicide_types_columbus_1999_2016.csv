@@ -1,17 +1,17 @@
-Cause,Deaths
-"Nonopioid analgesics, antipyretics and antirheumatics",25
-"Antiepileptic, sedative, and psychotropic drugs",82
-Narcotics and hallucinogens,32
-Unspecified drugs andbiological substances,203
-Other gases and vapours,132
-Unspecified chemicals and noxious substances,11
-"Hanging, strangulation and suffocation",693
-Drowning and submersion,26
-Handgun discharge,52
-"Rifle, shotgun and larger firearm discharge",163
-Unspecified firearm discharge,1252
-"Intentional self-harm by smoke, fire and flames",16
-Sharp object,51
-Jumping from a high place,47
-Jumping or lying before moving object,26
-Crashing motor vehicle,12
+Cause,Deaths,Percent
+Firearm,1252,44.3
+Hanging,693,24.5
+Other Drugs,203,7.2
+Rifle / Shotgun,163,5.8
+Gases / Vapors,132,4.7
+Sedative / Psych,82,2.9
+Handgun ,52,1.8
+Sharp Object,51,1.8
+Jumping (Height),47,1.7
+Narcotics / Halluc.,32,1.1
+Drowning,26,0.9
+Jumping (Object),26,0.9
+Nonopioid Drugs,25,0.9
+Fire / Smoke,16,0.6
+Vehicle Crash,12,0.4
+Chemicals,11,0.4
