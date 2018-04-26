@@ -217,7 +217,5 @@ function drawIncomeCharts(error, data) {
         }
         return formatterDec.format(baseNum);
     });
-
-  }  // end for loop
-
-} // end drawBarCharts()
+  }
+}

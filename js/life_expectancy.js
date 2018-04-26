@@ -10,7 +10,8 @@ function drawStart() {
   console.log('in landingPageStart()');
 
   // automatically draw side-by-side U.S and Ohio county map by default
-  life1_chart1();
+  drawMaps();
+  display_image(0);
 }
 
 /************************************************************************************************/
@@ -23,33 +24,8 @@ function sliderChange() {
   drawMaps();
 }
 
-
-function test_image1() {
-  console.log('test_image1()');
-
-  oldChartSvg = document.getElementById('chartDiv');
-  removeChildren(oldChartSvg);
-
-  var img = new Image();
-  var parentDiv = document.getElementById('chartDiv');
-  img.onload = function() {
-    parentDiv.appendChild(img);
-
-    imgNode = parentDiv.childNodes[0];
-    imgNode.setAttribute('id', 'chartImage');
-    imgNode.setAttribute('class', 'center-block');
-    //dynamically set max image width to minimize distortion
-    console.log('image width: ' + img.width);
-    imgNode.setAttribute('width', img.width);  
-  };
-
-  img.src = 'images/LE_US_gender_race.png';
-
-}
-
-
-function test_image2() {
-  console.log('test_image2()');
+function display_image(img_id){
+  console.log('display_image()');
 
   oldChartSvg = document.getElementById('chartDiv');
   removeChildren(oldChartSvg);
@@ -57,33 +33,67 @@ function test_image2() {
   var img = new Image();
   var parentDiv = document.getElementById('chartDiv');
   img.onload = function() {
-    parentDiv.appendChild(img);
-
-    imgNode = parentDiv.childNodes[0];
-    imgNode.setAttribute('id', 'chartImage');
-    imgNode.setAttribute('class', 'center-block');
-    //dynamically set max image width to minimize distortion
-    console.log('image width: ' + img.width);
-    imgNode.setAttribute('width', img.width);  
+                parentDiv.appendChild(img);
+                imgNode = parentDiv.childNodes[0];
+                imgNode.setAttribute('id', 'chartImage');
+                imgNode.setAttribute('class', 'center-block');
+                imgNode.setAttribute('width', img.width);  
   };
 
-  img.src = 'images/causeDeathB.png';
-
+  switch(parseInt(img_id)){
+    case 0: img.src = 'images/LE_temporal_Cbus.png';
+            break;
+    case 1: img.src = 'images/LE_US_gender_race.png';
+            break;
+    case 2: img.src = 'images/LE_physical_activity_Cbus.png';
+            break;
+    case 3: img.src = 'images/LE_obesity_Cbus.png';
+            break;
+    default:
+            break; 
+  }
 }
 
-
-function life2_chart1(){
-}
-
-// draw Obesity maps and charts
-function life1_chart1() {
-  console.log('life1_chart1()')
-
-  drawMaps();
+function LE_MF_Gap(img_id){
+  console.log('LE_MF_Gap()')
 
   oldChartSvg = document.getElementById('chartDiv');
   removeChildren(oldChartSvg);
-  // draw chart here
+
+  var img1 = new Image();
+  var img2 = new Image();
+  var parentDiv = document.getElementById('chartDiv');
+  img1.onload = function() {
+                parentDiv.appendChild(img1);
+                imgNode = parentDiv.childNodes[0];
+                imgNode.setAttribute('id', 'chartImage');
+                imgNode.setAttribute('class', 'center-block');
+                imgNode.setAttribute('width', img1.width);  
+  };
+  img2.onload = function() {
+                parentDiv.appendChild(img2);
+                imgNode = parentDiv.childNodes[1];
+                imgNode.setAttribute('id', 'chartImage');
+                imgNode.setAttribute('class', 'center-block');
+                imgNode.setAttribute('width', img2.width);  
+  };
+  switch(parseInt(img_id)){
+    case 0: img1.src = 'images/LE_Q1_US.png';
+            img2.src = 'images/LE_Q4_US.png';
+            break;
+    case 1: img1.src = 'images/LE_Q1_Cbus.png';
+            img2.src = 'images/LE_Q4_Cbus.png';
+            break;
+    default:
+            break; 
+  }
+}
+
+function LE_income_OH() {
+  console.log('LE_income_OH()')
+
+  oldChartSvg = document.getElementById('chartDiv');
+  removeChildren(oldChartSvg);
 
   var chartSvg = d3.select('#chartDiv')
                 .append('svg')
@@ -92,10 +102,7 @@ function life1_chart1() {
                 .attr('viewBox', '0 0 1200 800')
                 .classed('svg-content', true)
                 .attr('overflow', 'visible');
-                //.attr('width', width)
-                //.attr('height', height);
 
-  // create US map group <g>  ID #usmap
   var chartGroup = chartSvg.append('g')
                             .attr('id', 'chartF')
                             .attr('transform', 'translate(5, 0)');
@@ -147,7 +154,6 @@ function drawMaps() {
 
 // draw SVG D3 charts 
 function drawCharts() {
-
   console.log('in drawCharts()');
 
   // remove any existing svg so we don't append a second one below
@@ -159,13 +165,11 @@ function drawCharts() {
 
 // remove document html children of node parameter
 function removeChildren(node) {
-
   console.log('in removeChildren()');
 
   while (node.firstChild) {
     node.removeChild(node.firstChild);
   }
-
 }
 
 

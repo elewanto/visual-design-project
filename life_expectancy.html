@@ -29,11 +29,10 @@
     <script src="https://d3js.org/queue.v1.min.js"></script> <!-- Mke map library -->
 
     <!-- project .js files -->
-    <script src="js/test_le_chart.js"></script>
+    <script src="js/le_charts.js"></script>
     <script src="js/life_expectancy.js"></script>    
     <script src="js/ohio_map_le.js"></script>    <!-- Mike's new Ohio heat map tied to data -->
     <script src="js/us_map_le.js"></script>      <!-- Mike's US heat map tied to data -->
-    <script src="js/test_chart.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">   
 
   </head>
@@ -89,26 +88,25 @@
               <div  id="analysisDropdown">
                 <div class="drop-btn-group">
                   <div class="dropdownd">
-                    <button class="dropbtnd">drop 1 life expectancy graphs</button>
-                    <div class="dropdownd-content">
-                      <a onclick="life1_chart1()">drop 1 graph 1 life expectancy stuff</a>
-                      <a onclick="life1_chart2()">drop 1 graph 2 life expectancy stuff</a>
-                    </div>
+                    <button class="dropbtnd" onclick="display_image(0)">Life Expectancy Trend over years in Columbus</button>
                   </div>
                   <div class="dropdownd">
-                    <button class="dropbtnd">drop 2 life expectancy graphs</button>
-                    <div class="dropdownd-content">
-                      <a onclick="life2_chart1()">drop 2 graph 1 life expectancy stuff</a>
-                      <a onclick="life2_chart2()">drop 2 graph 2 life expectancy stuff</a>
-                    </div>              
+                    <button class="dropbtnd" onclick="display_image(1)">Life Expectancy with Gender/Race in US</button>
                   </div>
                   <div class="dropdownd">
-                    <button class="dropbtnd">Life Expectancy Image Tests</button>
+                    <button class="dropbtnd" onclick="display_image(2)">Life Expectancy and Physical Activity (Columbus)</button>
+                  </div>
+                  <div class="dropdownd">
+                    <button class="dropbtnd" onclick="display_image(3)">Life Expectancy and Obesity (Columbus)</button>
+                  </div>
+                  <div class="dropdownd">
+                    <button class="dropbtnd">Life Expectancy and Income</button>
                     <div class="dropdownd-content">
-                      <a onclick="test_image1()">Image 1</a>
-                      <a onclick="test_image2()">Image 2</a>
+                      <a onclick="LE_income_OH()">Ohio Male Female LE with Income Quartiles</a>
+                      <a onclick="LE_MF_Gap(0)">LE Gap in Male Female Income Quartiles in US</a>
+                      <a onclick="LE_MF_Gap(1)">LE Gap in Male Female Income Quartiles in Columbus</a>
                     </div>              
-                  </div>                               
+                  </div>                              
                 </div>
               </div>
             </div>
