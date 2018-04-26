@@ -18,7 +18,6 @@ function drawDonut(error, dType, dAge, dGender, dRace, dMonth, dDay) {
   dRace.forEach(function(d) {
     d.Deaths = +d.Deaths;
     d.Rate = +d.Rate;
-    d.Deaths = d.Rate;
     d.Percent = +d.Percent    
   });  
   dMonth.forEach(function(d) {
@@ -63,11 +62,7 @@ function drawDonut(error, dType, dAge, dGender, dRace, dMonth, dDay) {
             .attr('id', '#chartTitle')
             .append('text')
             .text(function (d) {
-              if (donutType == 'Race') {
                 return ('Columbus Total Suicides by ' + donutType + ' 1999 - 2016');
-              } else {
-                return ('Columbus Total Suicides by ' + donutType + ' 1999 - 2016');                
-              }
             })
             .attr('class', 'title');
 
@@ -116,7 +111,6 @@ function drawDonut(error, dType, dAge, dGender, dRace, dMonth, dDay) {
       .style('fill', function(d, i) {
         return colors(i);
       })
-      .each(function(d) { this._current = d; })
       .on('mousemove', function(d) {
           tooltip.style("left", d3.event.pageX + 10 + "px");
           tooltip.style("top", d3.event.pageY - 20 + "px");
@@ -144,7 +138,6 @@ function drawDonut(error, dType, dAge, dGender, dRace, dMonth, dDay) {
                 return d.data.Cause + '\xa0\xa0\xa0' + d.data.Deaths.toLocaleString('en');
               })
           .style("font-size", function(d) {
-            console.log(d.data.Percent);
             if (d.data.Percent > 20) {
               return 24;
             } else if (d.data.Percent > 10) {
@@ -175,11 +168,7 @@ function drawDonut(error, dType, dAge, dGender, dRace, dMonth, dDay) {
 
   pieGroup.append('text')
       .text(function (d) {
-        if (donutType == 'Race') {
-          return (d3.sum(data, function(d){return d.Deaths;}).toFixed(1) + ' Rate');
-        } else {
-          return (d3.sum(data, function(d){return d.Deaths;}).toLocaleString('en') + ' Total Deaths');                
-        }
+        return (d3.sum(data, function(d){return d.Deaths;}).toLocaleString('en') + ' Total Deaths');
       })
       .style('font-size', '24px')
       .attr('transform', 'translate(0,-30)');      
@@ -240,8 +229,206 @@ function drawDonut(error, dType, dAge, dGender, dRace, dMonth, dDay) {
     };
   }
 
+}
 
 
+
+
+function drawDonutR(error, dAge, dGender, dRace) {
+
+  // convert strings to numbers
+  dAge.forEach(function(d) {
+    d.Rate = +d.Rate;
+    d.Total_Rate = +d.Total_Rate;
+    d.Deaths = +d.Deaths;
+    d.Percent = +d.Percent    
+  });  
+  dGender.forEach(function(d) {
+    d.Rate = +d.Rate;    
+    d.Total_Rate = +d.Total_Rate;    
+    d.Deaths = +d.Deaths;
+    d.Percent = +d.Percent    
+  });  
+  dRace.forEach(function(d) {
+    d.Deaths = +d.Deaths;
+    d.Rate = +d.Rate;
+    d.Total_Rate = +d.Total_Rate;    
+    d.Percent = +d.Percent    
+  });           
+
+  var data = dAge;
+  switch (donutType) {    // donutType is global variable from suicide.js
+    case 'Age':
+      data = dAge;
+      break;
+    case 'Gender':
+      data = dGender;
+      break;
+    case 'Race':
+      data = dRace;
+      break;
+    default:
+      data = dAge;
+      donutType = 'Method'
+  }
+
+
+  var chartGroup = d3.select('#chartG');
+
+  chartGroup.append('g')
+            .attr('transform', 'translate(650, 50)')
+            .attr('id', '#chartTitle')
+            .append('text')
+            .text(function (d) {
+              return ('Columbus Total Suicide Rates per 100,000 Population by ' + donutType + ' 1999 - 2016');
+            })
+            .attr('class', 'title');
+
+  var canvasWidth = 1200;
+  var canvasHeight = 1000;
+
+  var marginLeft = 60;
+  var marginRight = 20;
+  var marginTop = 100;
+  var marginBottom = 20;  
+
+  var chartWidth = canvasWidth - marginLeft - marginRight;
+  var chartHeight = canvasHeight - marginTop - marginBottom;
+
+  var colors = d3.scaleOrdinal(d3.schemePaired);  
+
+  var formatter = new Intl.NumberFormat('en-US', {
+    style: 'percent',
+    minimumFractionDigits: 1,
+  });  
+
+  var pieMaker = d3.pie().value(function(d, i) { return d.Rate; });
+  var pieData = pieMaker(data);
+
+  var pieGroup = chartGroup.append('g')
+        .attr('transform', 'translate(' + canvasWidth/2 + ',' + canvasHeight/2 +')');
+
+
+
+  var arcGenerator = d3.arc()
+      .innerRadius(200)
+      .outerRadius(400);
+
+  var arcLabel = d3.arc()
+      .innerRadius(220)
+      .outerRadius(400);
+
+  var tooltip = d3.select('body').append('div').attr('class', 'tooltipTree');      
+
+  var path = pieGroup.selectAll('path')
+      .data(pieData)
+      .enter()
+      .append('path')
+      //.each(function(d) {this._current = Object.assign({}, d, { startAngle: d.endAngle}); })
+      .attr('d', arcGenerator)
+      .style('fill', function(d, i) {
+        return colors(i);
+      })
+      .on('mousemove', function(d) {
+          tooltip.style("left", d3.event.pageX + 10 + "px");
+          tooltip.style("top", d3.event.pageY - 20 + "px");
+          tooltip.style("display", "inline-block");        
+          tooltip.html(d.data.Cause + ' | ' + d.data.Rate.toFixed(1));
+      }).on('mouseout', function(d) {
+        tooltip.style('display', 'none');
+      });  // save initial angles
+      
+    // create pie slice labels
+    pieGroup.selectAll('text')
+      .data(pieData)
+      .enter()
+      .append('text')
+      .each(function(d) {
+        var cen = arcGenerator.centroid(d);
+        d3.select(this)
+          .attr("transform", function(d) {
+            var midAngle = d.startAngle < Math.PI ? d.startAngle/2 + d.endAngle/2 : d.startAngle/2  + d.endAngle/2 + Math.PI;               // line used from web tutorial 
+            return "translate(" + arcLabel.centroid(d)[0] + "," +arcLabel.centroid(d)[1] + ") rotate(-90) rotate(" + (midAngle * 180/Math.PI) + ")";  // line used from web tutorial            
+          })
+          .attr('dy', '.35em')
+          .attr('text-anchor', 'middle')
+          .text(function(d, i) { 
+                return d.data.Cause + '\xa0\xa0\xa0' + d.data.Rate;
+              })
+          .style("font-size", function(d) {
+            if (d.data.Percent > 20) {
+              return 24;
+            } else if (d.data.Percent > 10) {
+              return 22;
+            } else if (d.data.Percent > 1.7) {
+              return 18;
+            } 
+              else if (d.data.Percent > 0.9) {
+              return 14;
+            } else {
+              return 12;
+            }            
+          });
+      });
+
+
+  pieGroup.append('text')
+      .text(function (d) {
+        return ('Suicide Rate per 100,000');
+      })
+      .style('font-size', '24px')
+      .attr('transform', 'translate(0,30)');
+      //.attr('class', 'titlechart');       
+
+console.log(data);
+  var total = data[0].Total_Rate;
+  console.log('total' + total);
+
+  pieGroup.append('text')
+      .text(function () {
+          return (data[0].Total_Rate + ' Average Rate');
+      })
+      .style('font-size', '24px')
+      .attr('transform', 'translate(0,-30)');      
+
+  d3.select('#sAge')
+    .on('mouseover', changeAge);
+  d3.select('#sGender')
+    .on('mouseover', changeGender);
+  d3.select('#sRace')
+    .on('mouseover', changeGender);
+
+
+
+  function changeAge() {
+/*    data = dAge;    
+    console.log('data: ' + data);
+    console.log('value: ' + this.value);
+    var value = this.value;
+    pieMaker.value(function(d) {return d[value]; });
+    path = path.data(pieData);
+    console.log('path: ' + path);
+    path.transition().duration(750).attrTween('d', arcTween); */
+
+  }
+
+  function changeGender() {
+
+  }
+
+  function changeRace() {
+
+  }
+  
+
+  function arcTween(a) {
+    console.log('test arcTween');
+    var i = d3.interpolate(this._current, a);
+    this._current = i(0);
+    return function(t) {
+      return arcGenerator(i(t));
+    };
+  }
 
 
 
@@ -252,8 +439,18 @@ function drawDonut(error, dType, dAge, dGender, dRace, dMonth, dDay) {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 function drawLineChartUS(error, dataUS, dataOhio) {
-  console.log('drawLine chart');
 
   // convert strings to numbers
   dataUS.forEach(function(d) {
@@ -299,17 +496,13 @@ function drawLineChartUS(error, dataUS, dataOhio) {
   if (maxUS != -1 && maxUS > maxRate) {
     maxRate = maxUS;
   }
-  console.log('Chart min max rates: ' + minRate + ' ' + maxRate);  
 
   var states = d3.nest()
                 .key(function(d) {return d.State;})
                 .sortKeys(function(a, b) {
-                  //console.log(a);
                   return a == 'Ohio' ? 1 : -1;    // sort Ohio to end of list for drawing on top
                 })
                 .entries(dataUS);
-
-  console.log('states length: ' + states.length);
 
   // normalize ranges
   var xScale = d3.scaleLinear().domain([1999, 2016]).range([marginLeft, chartWidth + marginLeft]);
@@ -472,7 +665,6 @@ function drawLineChartUS(error, dataUS, dataOhio) {
 
 
 function drawLineChartOhio(error, dataUS, dataOhio) {
-  console.log('drawLine chart');
 
   // convert strings to numbers
   dataUS.forEach(function(d) {

@@ -111,7 +111,7 @@
                     <button class="dropbtnd" onclick="suicide_maps_1999_2016()">Map Suicide 1999 vs. 2016</button>
                   </div>                          
                   <div class="dropdownd">
-                    <button class="dropbtnd">Suicide Rate Graphs</button>
+                    <button class="dropbtnd">Suicide Trend Charts</button>
                     <div class="dropdownd-content">
                       <a onclick="suicideLineChartUS()">U.S. Suicide Rates 1999 - 2016</a>
                       <a onclick="suicideLineChartOhio()">Ohio Suicide Rates 1999 - 2016</a>
@@ -119,16 +119,24 @@
                     </div>
                   </div>
                   <div class="dropdownd">
-                    <button class="dropbtnd">Suicide in Columbus 1999 - 2016 </button>
+                    <button class="dropbtnd">Suicide Numbers in Columbus</button>
                     <div class="dropdownd-content">
-                      <a onclick="suicideDonuts('Method')" id="sMethod">By Method</a>
                       <a onclick="suicideDonuts('Age')" id="sAge">By Age</a>
                       <a onclick="suicideDonuts('Gender')" id="sGender">By Gender</a>
                       <a onclick="suicideDonuts('Race')" id="sRace">By Race</a>
+                      <a onclick="suicideDonuts('Method')" id="sMethod">By Method</a>                      
                       <a onclick="suicideDonuts('Month')" id="sMonth">By Month</a>
                       <a onclick="suicideDonuts('Day')" id="sDay">By Day of Week</a>
                     </div>
-                  </div>                  
+                  </div>
+                  <div class="dropdownd">
+                    <button class="dropbtnd">Suicide Rates in Columbus</button>
+                    <div class="dropdownd-content">
+                      <a onclick="suicideDonutsR('Age')" id="sAge">By Age</a>
+                      <a onclick="suicideDonutsR('Gender')" id="sGender">By Gender</a>
+                      <a onclick="suicideDonutsR('Race')" id="sRace">By Race</a>
+                    </div>
+                  </div>                                    
                 </div>
               </div>
             </div>

@@ -17,7 +17,7 @@ function drawStart() {
 
   // automatically draw side-by-side U.S and Ohio county map by default
   drawMaps(sliderValue);  
-  suicideDonuts('Method')
+  suicideDonuts('Age')
 }
 
 
@@ -63,6 +63,34 @@ function suicideDonuts(selection) {
         .defer(d3.csv, "data/suicide_data/suicide_month_columbus_1999_2016.csv")
         .defer(d3.csv, "data/suicide_data/suicide_day_columbus_1999_2016.csv")
         .await(drawDonut); // file in heart_disease_charts.js
+}
+
+
+function suicideDonutsR(selection) {
+  console.log(selection);
+  donutType = selection;
+  // delete old chart elements
+  oldChartSvg = document.getElementById('chartDiv');
+  removeChildren(oldChartSvg);
+
+  var chartSvg = d3.select('#chartDiv')
+                .append('svg')
+                .attr('id', 'svgchart')       // svg ID is '#svgchart'
+                .attr('preserveAspectRatio', 'xMidYMid meet')
+                .attr('viewBox', '0 0 1200 1000')
+                .classed('svg-content', true)
+                .attr('overflow', 'visible');
+
+  // create chart group as child of svg
+  var chartGroup = chartSvg.append('g')
+                .attr('id', 'chartG')
+                .attr('transform', 'translate(0, 0)');
+
+
+  queue().defer(d3.csv, "data/suicide_data/suicide_age_columbus_1999_2016.csv")
+        .defer(d3.csv, "data/suicide_data/suicide_gender_columbus_1999_2016.csv")
+        .defer(d3.csv, "data/suicide_data/suicide_race_columbus_1999_2016.csv")
+        .await(drawDonutR); // file in heart_disease_charts.js
 }
 
 
