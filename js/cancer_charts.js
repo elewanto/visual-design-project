@@ -139,11 +139,13 @@ function drawTreemap(error, data) {
   console.log('drawTreemap');
 
   groups = ['Category'];
-
+  var totalDeaths = 0;
   // convert string data to numbers
   data.forEach(function(d) {
     d.Deaths = +d.Deaths;
+    totalDeaths += d.Deaths;
   });
+  console.log(totalDeaths);
 
   // parse csv data to hierarchical json format
   var genGroups = function(data) {
@@ -239,7 +241,9 @@ function drawTreemap(error, data) {
           tooltip.style("left", d3.event.pageX + 10 + "px");
           tooltip.style("top", d3.event.pageY - 20 + "px");
           tooltip.style("display", "inline-block");        
-          tooltip.html(d.children ? null : d.parent.data.name + ' | ' + d.data.name + '  ' + d.data.Deaths.toLocaleString('en'));
+          tooltip.html(d.children ? null : 'Category: ' + d.parent.data.name + ' | Type: ' + d.data.name + ' | ' + d.data.Deaths.toLocaleString('en')
+                                            + ' deaths' + ' | ' + (d.data.Deaths*100/totalDeaths).toLocaleString('en') + '% of ' 
+                                            + totalDeaths.toLocaleString('en') + ' total deaths');
       }).on('mouseout', function(d) {
         tooltip.style('display', 'none');
       });
