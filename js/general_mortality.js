@@ -8,7 +8,7 @@ var sliderValue = "2015";     //
 function drawStart() {
 
   console.log('in landingPageStart()');
-  draw_static_word_cloud();
+  //draw_static_word_cloud();
 }
 
 /************************************************************************************************/
@@ -21,7 +21,7 @@ function draw_static_word_cloud(){
                 imgNode.setAttribute('id', 'chartImage');
                 imgNode.setAttribute('class', 'center-block');
                 imgNode.setAttribute('width', img.width);    
-  }
+  };
   img.src = 'images/wordcloud.png';
 }
 
@@ -79,6 +79,10 @@ function deaths_BW_Gap(img_id){
     default:
             break; 
   }
+}
+
+function mortality_age(){
+
 }
 
 function deaths_rural_urban_OH() {
