@@ -15,7 +15,7 @@ function drawStart() {
                               .data('slider');  
 
   // automatically draw side-by-side U.S and Ohio county map by default
-  opioid1_chart1();
+  drawMaps(sliderValue);  
 }
 
 
@@ -24,11 +24,14 @@ function drawStart() {
 
 
 // Map Slider function
-function sliderChange() {
+async function sliderChange() {
   console.log('slider used: ' + slider.getValue());
-  sliderValue = slider.getValue();
-  drawMaps();
-}  
+  sliderValue = await slider.getValue();
+  var ret1 = redrawOpioidUSMap(sliderValue, 500);
+  var ret2 = redrawdrawOpiodOhioMap(sliderValue, 500);
+  var hold = [await ret1, await ret2]
+  return 1;
+} 
 
 
 
@@ -64,6 +67,45 @@ function opioid1_chart1() {
 
 }
 
+async function opioid_maps_years() {
+
+  drawMaps(1999);
+
+  for (var year = 1999; year <= 2015; year++) {
+    $('#mapSlider').slider('setValue', year);
+    var mapSvg = d3.select('#svgmap');
+    var usmapg = mapSvg.select('#usmap');
+    var ohiomapg = mapSvg.select('#ohiomap');
+    delay = 500 // transition milliseconds
+    redrawOpioidUSMap(year, delay);
+    redrawdrawOpiodOhioMap(year, delay);
+    await sleep(600);
+  }
+
+  function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }  
+
+}
+
+
+async function opioid_maps_1999_2015() {
+
+  $('#mapSlider').slider('setValue', 1999);
+  drawMaps(1999);  
+  await sleep(1500);
+
+  delay = 800 // transition milliseconds
+  redrawOpioidUSMap(2015, delay);
+  redrawdrawOpiodOhioMap(2015, delay);
+
+  $('#mapSlider').slider('setValue', 2015);  
+
+  function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }  
+
+}
 
 
 
@@ -73,7 +115,7 @@ function opioid1_chart1() {
 
 // create SVG and groups needed to draw two maps side-by-side
 // can add data parameters to pass to function
-function drawMaps() {
+function drawMaps(year) {
 
   console.log('in drawMaps()');
 
@@ -104,8 +146,8 @@ function drawMaps() {
                 .attr('id', 'ohiomap')
                 .attr('transform', 'translate(800, 0)');
 
-  drawUSMap();
-  drawOhioMap();
+  drawOpiodOhioMap(year);
+  drawOpioidUSMap(year);
 }
 
 
@@ -123,8 +165,6 @@ function drawCharts() {
 
 // remove document html children of node parameter
 function removeChildren(node) {
-
-  console.log('in removeChildren()');
 
   while (node.firstChild) {
     node.removeChild(node.firstChild);

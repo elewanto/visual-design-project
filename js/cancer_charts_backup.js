@@ -43,6 +43,7 @@ function drawBubble() {
             d.class = id.slice(i + 1);
           }
         });
+    console.log(classes);
 
     var chartGroup = d3.select('#chartG');
 
@@ -70,6 +71,7 @@ function drawBubble() {
         .attr("r", function(d) { return d.r; })
         .style("fill", function(d) { return color(d.package); })
         .on('mousemove', function(d) {
+            //console.log(d);
             tooltip.style("left", d3.event.pageX + 10 + "px");
             tooltip.style("top", d3.event.pageY - 20 + "px");
             tooltip.style("display", "inline-block");        
@@ -108,10 +110,14 @@ function drawBubble() {
           labelArr.forEach(function(d) {
             labelJoin.push({'wordV': d, 'sizeF': fontSize});
           })
+          //console.log(fontSize);
+          //return label.split(" ");
           return labelJoin;
+          //return d.class.split(/(?=[A-Z][^A-Z])/g); 
         })
         .enter().append("tspan")
         .style('font-size', function(d) {
+          //console.log(d);
           return d.sizeF + 'px';
           //return fontSize + 'px';
 
@@ -251,38 +257,37 @@ function drawTreemap(error, data) {
       .selectAll("tspan")
       .data(function(d) { 
         var fontSize = 14;
-        var maxLen = parseInt((d.x1-d.x0)/10);
-        var maxWord = parseInt ((d.y1-d.y0)/14);
-        var label = d.data.name.slice(0, maxLen);
-        if (maxLen == 0 || maxWord == 0) {
-          return ([{'wordV':"", 'sizeF':fontSize}]);
+        var maxLen = parseInt((d.y1-d.y0)/5)
+        nameArr = d.data.name.split(" ");
+        if (maxLen == 0) {
+          return ([{'wordV':"", 'sizeF':fontSize}])
         }
-        if (maxLen > 30) {
-          fontSize = 24;
-        } else if (maxLen > 10) {
-          fontSize = 18;
+        if (d.y1 - d.y0 < 14) {
+          return ("");
         }
-        var labelJoin = [];
-        var labelArr = label.split(" ");
-        labelArr.forEach(function(d) {
-          if (maxWord > 0) {
-            labelJoin.push({'wordV': d, 'sizeF': fontSize});
-            maxWord--;
-          }
-        })
-        //return label.split(" ");
-        return labelJoin;  
+        if (d.x1 - d.x0 < 40) {
+          return ("");
+        } 
+        if (d.y1 - d.y0 < 40 && nameArr.length > 2) {
+          return nameArr.slice(0, 1);
+        }
+        if (d.y1 - d.y0 < 60 && nameArr.length > 3) {
+          return nameArr.slice(0, 3);
+        }        
+
+        return d.data.name.split(" ");        
+        //return d.data.name.split(/(?=[A-Z][^A-Z])/g); 
       })
       .enter().append("tspan")
       .attr('x', 0)
       .style('font-weight', 'bold')
       .style('text-anchor', 'start')
       .style('font-size', function(d) {
-        return d.sizeF + 'px';
+        return '16px';
       })         
       .attr("x", 4)
-      .attr("y", function(d, i) { return (4+d.sizeF) + i*d.sizeF; })
-      .text(function(d) { return d.wordV; });
+      .attr("y", function(d, i) { return 13 + i * 14; })
+      .text(function(d) { return d; });
 
   
 
@@ -347,6 +352,7 @@ function drawSunburst(error, data) {
 
   jsonData = nest({}, 0);
 
+  console.log(jsonData);
 
   var canvasWidth = 1200;
   var canvasHeight = 1000;
@@ -396,6 +402,7 @@ function drawSunburst(error, data) {
 
 
 function drawLineChartUS(error, dataUS, dataOhio) {
+  console.log('drawLine chart');
 
   // convert strings to numbers
   dataUS.forEach(function(d) {
@@ -441,10 +448,12 @@ function drawLineChartUS(error, dataUS, dataOhio) {
   if (maxUS != -1 && maxUS > maxRate) {
     maxRate = maxUS;
   }
+  console.log('Chart min max rates: ' + minRate + ' ' + maxRate);  
 
   var states = d3.nest()
                 .key(function(d) {return d.State;})
                 .sortKeys(function(a, b) {
+                  //console.log(a);
                   return a == 'Ohio' ? 1 : -1;    // sort Ohio to end of list for drawing on top
                 })
                 .entries(dataUS);
@@ -610,6 +619,7 @@ function drawLineChartUS(error, dataUS, dataOhio) {
 
 
 function drawLineChartOhio(error, dataUS, dataOhio) {
+  console.log('drawLine chart');
 
   // convert strings to numbers
   dataUS.forEach(function(d) {
@@ -659,6 +669,7 @@ function drawLineChartOhio(error, dataUS, dataOhio) {
   var states = d3.nest()
                 .key(function(d) {return d.County;})
                 .sortKeys(function(a, b) {
+                 // console.log(a);
                   return (a == 'Franklin' || a == 'Delaware' || a == 'Fairfield' || a == 'Pickaway') ? 1 : -1;    // sort Ohio to end of list for drawing on top
                 })
                 .entries(dataOhio);
@@ -823,6 +834,7 @@ function drawLineChartOhio(error, dataUS, dataOhio) {
 
 
 function partialDrawLineChartUS(error, dataUS, dataOhio) {
+  console.log('drawLine chart');
 
   // convert strings to numbers
   dataUS.forEach(function(d) {
@@ -868,13 +880,18 @@ function partialDrawLineChartUS(error, dataUS, dataOhio) {
   if (maxUS != -1 && maxUS > maxRate) {
     maxRate = maxUS;
   }
+  console.log('Chart min max rates: ' + minRate + ' ' + maxRate);  
 
   var states = d3.nest()
                 .key(function(d) {return d.State;})
                 .sortKeys(function(a, b) {
+                 // console.log(a);
                   return a == 'Ohio' ? 1 : -1;    // sort Ohio to end of list for drawing on top
                 })
                 .entries(dataUS);
+
+  console.log(states);
+  console.log('states length: ' + states.length);
 
   // normalize ranges
   var xScale = d3.scaleLinear().domain([1999, 2016]).range([marginLeft, chartWidth + marginLeft]);
@@ -1037,6 +1054,7 @@ function partialDrawLineChartUS(error, dataUS, dataOhio) {
 
 
 function partialDrawLineChartOhio(error, dataUS, dataOhio) {
+  console.log('drawLine chart');
 
   // convert strings to numbers
   dataUS.forEach(function(d) {
@@ -1075,13 +1093,18 @@ function partialDrawLineChartOhio(error, dataUS, dataOhio) {
   if (maxUS != -1 && maxUS > maxRate) {
     maxRate = maxUS;
   }
+  console.log('Chart min max rates: ' + minRate + ' ' + maxRate);  
 
   var states = d3.nest()
                 .key(function(d) {return d.County;})
                 .sortKeys(function(a, b) {
+                //  console.log(a);
                   return (a == 'Franklin' || a == 'Delaware' || a == 'Fairfield' || a == 'Pickaway') ? 1 : -1;    // sort Ohio to end of list for drawing on top
                 })
                 .entries(dataOhio);
+
+  console.log(states);
+  console.log('states length: ' + states.length);
 
   // normalize ranges
   var xScale = d3.scaleLinear().domain([1999, 2016]).range([marginLeft, chartWidth + marginLeft]);
