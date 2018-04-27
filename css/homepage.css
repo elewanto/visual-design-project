@@ -10,7 +10,7 @@ html, body {
   /*margin: 0;
   padding: 0;  */
 
-  font-family: "Helvetica Neue", Helvetica, sans-serif; /* Mike map */
+  font-family: "Leto", sans-serif; /* Mike map */
   font-size: 14px;
   color: #333;
 }
@@ -60,9 +60,11 @@ html, body {
 
 
 #titleDiv {
-  font-family: "Arial", Sans-serif;
+  text-align: left;
+  font-family: "Lato", Sans-serif;
   font-size: 3em;
   font-weight: bold;
+  padding-left: 20px;
 }
 
 #chart-container {
