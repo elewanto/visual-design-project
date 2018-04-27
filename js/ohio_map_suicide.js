@@ -41,14 +41,12 @@ function drawSuicideOhioMap(year) {
     var maxUS = -1;
     minUS = d3.min(dataUS, function(d) {return parseFloat(d.Rate)});
     maxUS = d3.max(dataUS, function(d) {return parseFloat(d.Rate)});
-    console.log('US rates: ' + minUS + ' ' + maxUS);    
     if (minUS != -1 && minUS < minRate) {
       minRate = minUS;
     }
     if (maxUS != -1 && maxUS > maxRate) {
       maxRate = maxUS;
     }
-    console.log('Ohio Map min max rates: ' + minRate + ' ' + maxRate);
 
 
 
@@ -217,14 +215,12 @@ function redrawSuicideOhioMap(year, delay) {
     var maxUS = -1;
     minUS = d3.min(dataUS, function(d) {return parseFloat(d.Rate)});
     maxUS = d3.max(dataUS, function(d) {return parseFloat(d.Rate)});
-    console.log('US rates: ' + minUS + ' ' + maxUS);    
     if (minUS != -1 && minUS < minRate) {
       minRate = minUS;
     }
     if (maxUS != -1 && maxUS > maxRate) {
       maxRate = maxUS;
     }
-    console.log('Ohio Map min max rates: ' + minRate + ' ' + maxRate);
 
 
     var color = d3.scaleSequential(d3.interpolateYlGn)    // set color scheme

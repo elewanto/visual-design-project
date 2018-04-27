@@ -26,13 +26,20 @@ function drawLEUSMap() {
             .style('font-size', 22);    
 
   // select US map group within svg
+  d3.select('#svgmap').append('g')               //apend the graph title                     
+    .attr("transform","translate(400,70)")
+    .append("text")    
+    .text("U.S.")
+    .style('font-size', 18);  
+
+
   var usmapg = d3.select("#usmap")
                   .attr("class", "maptitle")
-                  .append("text")               //apend the graph title                     
-                  .attr("x", 400)
-                  .attr("y", 50)
-                  .text("U.S.")
-                  .style('font-size', 18);
+               //   .append("text")               //apend the graph title                     
+               //   .attr("x", 400)
+               //   .attr("y", 50)
+               //   .text("U.S.")
+               //   .style('font-size', 18);
 
   // append Div for tooltip
   var div = d3.select("body")

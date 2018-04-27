@@ -26,13 +26,20 @@ function drawHeartDiseaseUSMap(year) {
             .style('font-size', 22);    
 
   // select US map group within svg
+  d3.select('#svgmap').append('g')               //apend the graph title                     
+    .attr("transform","translate(400,70)")
+    .append("text")    
+    .text("U.S.")
+    .style('font-size', 18);               
+
+  // select US map group within svg
   var usmapg = d3.select("#usmap")
     .attr("class", "maptitle")
-    .append("text")               //apend the graph title                     
-            .attr("x", 400)
-            .attr("y", 50)
-            .text("U.S.")
-            .style('font-size', 18);
+    //.append("text")               //apend the graph title                     
+    //        .attr("x", 400)
+      //      .attr("y", 50)
+      //      .text("U.S.")
+      //      .style('font-size', 18);
 
   // append Div for tooltip
   var div = d3.select("body")
@@ -74,104 +81,98 @@ function drawHeartDiseaseUSMap(year) {
 
     var minRate = d3.min(data, function(d) {return d.Rate});    // get min, max values from Rate column for color scaling
     var maxRate = d3.max(data, function(d) {return d.Rate});
-    console.log('U.S. rates: ' + minRate + ' ' + maxRate);
     // check if Ohio min/max is less/greater and use global
     var minOhio = -1;
     var maxOhio = -1;
     minOhio = d3.min(dataOhio, function(d) {return d.Rate});
     maxOhio = d3.max(dataOhio, function(d) {return d.Rate});
-    console.log('Ohio rates: ' + minOhio + ' ' + maxOhio);    
+  
     if (minOhio != -1 && minOhio < minRate) {
       minRate = minOhio;
     }
     if (maxOhio != -1 && maxOhio > maxRate) {
       maxRate = maxOhio;
     }
-    console.log('U.S. Map min max rates: ' + minRate + ' ' + maxRate);
 
-      var color = d3.scaleSequential(d3.interpolateYlOrBr)    // set color scheme
-                    .domain([minRate, maxRate])     
-       d3.json("data/us-states.json",function(json) {        // import GeoJSON data 
-        for (var i = 0; i < data.length; i++) {             // iterate each row of data in the csv file
-          if (data[i].Year == year) {                        // filter only selected year
-            var state = data[i].State;                        // extract the state
-            var rate = data[i].Rate;                   
-            for (var j = 0; j < json.features.length; j++)  {             // Find the corresponding state inside the GeoJSON
-              var jsonState = json.features[j].properties.name;
-              if (state == jsonState) {
-                json.features[j].properties.value = rate;
-                break;
-              }
+    var color = d3.scaleSequential(d3.interpolateYlOrBr)    // set color scheme
+                  .domain([minRate, maxRate])     
+    d3.json("data/us-states.json",function(json) {        // import GeoJSON data 
+      for (var i = 0; i < data.length; i++) {             // iterate each row of data in the csv file
+        if (data[i].Year == year) {                        // filter only selected year
+          var state = data[i].State;                        // extract the state
+          var rate = data[i].Rate;                   
+          for (var j = 0; j < json.features.length; j++)  {             // Find the corresponding state inside the GeoJSON
+            var jsonState = json.features[j].properties.name;
+            if (state == jsonState) {
+              json.features[j].properties.value = rate;
+              break;
             }
           }
         }
+      }
 
-        var tooltip = d3.select('body').append('div')
-          .attr('class', 'tooltipAlt')
-          .style('opacity', 0);
+      var tooltip = d3.select('body').append('div')
+        .attr('class', 'tooltipAlt')
+        .style('opacity', 0);
 
-        var t = d3.transition()
-                  .duration(400)
-                  .ease(d3.easeLinear);  
+      var t = d3.transition()
+                .duration(400)
+                .ease(d3.easeLinear);  
 
-        var paths = d3.select('#usmap')         // assign the color for each state
-          .selectAll("path")
-          .data(json.features)
-          .enter()
-          .append("path")
-          .attr("d", path)
-          .style("stroke", function(d, i) {
-            if (d.properties.name == 'Ohio') {
-              return '#e40005';       // border Ohio in red
-            }
-            return "#606060";
-          })
-          .style("stroke-width", function(d, i) {
-            if (d.properties.name == 'Ohio') {
-              return 3;       // border Ohio in thicker path line
-            }
-            return 1;
-          }) 
-          .style("fill", function(d) {
-            return color(d.properties.value);
-          })
-          .on('mouseover',function(d, i) {            // add mouse over function
+      var paths = d3.select('#usmap')         // assign the color for each state
+        .selectAll("path")
+        .data(json.features)
+        .enter()
+        .append("path")
+        .attr("d", path)
+        .style("stroke", function(d, i) {
+          if (d.properties.name == 'Ohio') {
+            return '#e40005';       // border Ohio in red
+          }
+          return "#606060";
+        })
+        .style("stroke-width", function(d, i) {
+          if (d.properties.name == 'Ohio') {
+            return 3;       // border Ohio in thicker path line
+          }
+          return 1;
+        }) 
+        .style("fill", function(d) {
+          return color(d.properties.value);
+        })
+        .on('mouseover',function(d, i) {            // add mouse over function
+            tooltip.transition()
+                  .duration(200)
+                  .style('opacity', 0.9);
+            tooltip.html(d.properties.value + '&ensp;' + d.properties.name)
+                  .style('left', (d3.event.pageX - 70) + 'px')
+                  .style('top', (d3.event.pageY - 35) + 'px')
+                  .style('background-color', color(parseInt(d.properties.value)))
+                  .style('width', function() {
+                    var pixwidth = 140;
+                    try {
+                      pixwidth = d.properties.name.length * 9 + 50;
+                    } 
+                    catch(e) { }
+                    return pixwidth + 'px'; 
+                  });
+            d3.select(this)
+              .transition()
+              .duration(1)
+              .attr("opacity", 0.6)
+        })
+          .on('mouseout', function(d, i) {                // add mouse out function          
               tooltip.transition()
-                    .duration(200)
-                    .style('opacity', 0.9);
-              tooltip.html(d.properties.value + '&ensp;' + d.properties.name)
-                    .style('left', (d3.event.pageX - 70) + 'px')
-                    .style('top', (d3.event.pageY - 35) + 'px')
-                    .style('background-color', color(parseInt(d.properties.value)))
-                    .style('width', function() {
-                      var pixwidth = 140;
-                      try {
-                        pixwidth = d.properties.name.length * 9 + 50;
-                      } 
-                      catch(e) { }
-                      return pixwidth + 'px'; 
-                    });
-
+                    .duration(400)
+                    .style('opacity', 0);
               d3.select(this)
                 .transition()
-                .duration(1)
-                .attr("opacity", 0.6)
-
-            //  d3.select('#statename' + i)
-            //    .attr('display', '')
-          })
-            .on('mouseout', function(d, i) {                // add mouse out function          
-                tooltip.transition()
-                      .duration(400)
-                      .style('opacity', 0);
-                d3.select(this)
-                  .transition()
-                  .duration(200)
-                  .attr("opacity", 1)
-                  .style('fill', color(d.properties.value));
-             //   d3.select('#statename' + i)
-             //     .attr('display', 'none')
-          });
+                .duration(200)
+                .attr("opacity", 1)
+                .style('fill', color(d.properties.value));
+           //   d3.select('#statename' + i)
+           //     .attr('display', 'none')
+        });
         var texts = d3.select('#usmap')         // add text notation to map
           .selectAll('text')
           .data(json.features)
@@ -186,7 +187,7 @@ function drawHeartDiseaseUSMap(year) {
           .style('opacity', 0.7)
           .style('font-size', 8)
           .attr('display', '')
-          .text(function(d) {
+          .text(function(d, i) {
             if (d.properties.name == 'Puerto Rico') {
               return '';
             }
@@ -220,8 +221,14 @@ function drawHeartDiseaseUSMap(year) {
                   .attr("dy", ".7em")
                   .style('font-size', 16)
                   .text(function(d) { return d; });
-      }); // end d3.json data function
-    } // end function(data)
+    }); // end d3.json data function
+
+
+
+
+  } // end drawUS function
+
+ 
 
   return 1;
 } // end drawUSMap ()
@@ -283,7 +290,6 @@ function redrawHeartDiseaseUSMap(year, delay) {
     var maxOhio = -1;
     minOhio = d3.min(dataOhio, function(d) {return d.Rate});
     maxOhio = d3.max(dataOhio, function(d) {return d.Rate});
-    console.log('Ohio rates: ' + minOhio + ' ' + maxOhio);    
 
     if (minOhio != -1 && minOhio < minRate) {
       minRate = minOhio;
@@ -291,8 +297,6 @@ function redrawHeartDiseaseUSMap(year, delay) {
     if (maxOhio != -1 && maxOhio > maxRate) {
       maxRate = maxOhio;
     }
-    console.log('U.S. Map min max rates: ' + minRate + ' ' + maxRate);
-
 
     var color = d3.scaleSequential(d3.interpolateYlOrBr)    // set color scheme
                   .domain([minRate, maxRate])     

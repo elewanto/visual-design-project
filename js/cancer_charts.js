@@ -435,8 +435,6 @@ function drawLineChartUS(error, dataUS, dataOhio) {
                 })
                 .entries(dataUS);
 
-  console.log('states length: ' + states.length);
-
   // normalize ranges
   var xScale = d3.scaleLinear().domain([1999, 2016]).range([marginLeft, chartWidth + marginLeft]);
   var yScale = d3.scaleLinear().domain([80, Math.round(maxRate)]).range([chartHeight + marginBottom, marginTop]);
@@ -644,7 +642,6 @@ function drawLineChartOhio(error, dataUS, dataOhio) {
   if (maxUS != -1 && maxUS > maxRate) {
     maxRate = maxUS;
   }
-  console.log('Chart min max rates: ' + minRate + ' ' + maxRate);  
 
   var states = d3.nest()
                 .key(function(d) {return d.County;})
@@ -654,8 +651,6 @@ function drawLineChartOhio(error, dataUS, dataOhio) {
                 })
                 .entries(dataOhio);
 
-  console.log(states);
-  console.log('states length: ' + states.length);
 
   // normalize ranges
   var xScale = d3.scaleLinear().domain([1999, 2016]).range([marginLeft, chartWidth + marginLeft]);

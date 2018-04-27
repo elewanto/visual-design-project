@@ -209,7 +209,7 @@ async function suicide_maps_1999_2016() {
 
   $('#mapSlider').slider('setValue', 1999);
   drawMaps(1999);  
-  await sleep(2500);
+  await sleep(1500);
 
   delay = 800 // transition milliseconds
   redrawSuicideUSMap(2015, delay);

@@ -189,7 +189,7 @@ async function heart_disease_maps_1999_2015() {
 
   $('#mapSlider').slider('setValue', 1999);
   drawMaps(1999);  
-  await sleep(2500);
+  await sleep(1500);
 
   delay = 800 // transition milliseconds
   redrawHeartDiseaseUSMap(2015, delay);

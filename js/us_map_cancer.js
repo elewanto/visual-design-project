@@ -25,14 +25,20 @@ function drawCancerUSMap(year) {
             .text(year +"  Cancer Mortality Rates per 100,000 Population ")
             .style('font-size', 22);    
 
-  // select US map group within svg
+  d3.select('#svgmap').append('g')               //apend the graph title                     
+    .attr("transform","translate(400,70)")
+    .append("text")    
+    .text("U.S.")
+    .style('font-size', 18);                   
+
+   //select US map group within svg
   var usmapg = d3.select("#usmap")
     .attr("class", "maptitle")
-    .append("text")               //apend the graph title                     
-            .attr("x", 400)
-            .attr("y", 50)
-            .text("U.S.")
-            .style('font-size', 18);
+//    .append("text")               //apend the graph title                     
+//            .attr("x", 400)
+//            .attr("y", 50)
+//            .text("U.S.")
+//            .style('font-size', 18);
 
   // append Div for tooltip
   var div = d3.select("body")
@@ -74,20 +80,17 @@ function drawCancerUSMap(year) {
 
     var minRate = d3.min(data, function(d) {return d.Rate});    // get min, max values from Rate column for color scaling
     var maxRate = d3.max(data, function(d) {return d.Rate});
-    console.log('U.S. rates: ' + minRate + ' ' + maxRate);
     // check if Ohio min/max is less/greater and use global
     var minOhio = -1;
     var maxOhio = -1;
     minOhio = d3.min(dataOhio, function(d) {return d.Rate});
     maxOhio = d3.max(dataOhio, function(d) {return d.Rate});
-    console.log('Ohio rates: ' + minOhio + ' ' + maxOhio);    
     if (minOhio != -1 && minOhio < minRate) {
       minRate = minOhio;
     }
     if (maxOhio != -1 && maxOhio > maxRate) {
       maxRate = maxOhio;
     }
-    console.log('U.S. Map min max rates: ' + minRate + ' ' + maxRate);
 
       var color = d3.scaleSequential(d3.interpolateGnBu)    // set color scheme
                     .domain([minRate, maxRate])     
@@ -283,7 +286,6 @@ function redrawCancerUSMap(year, delay) {
     var maxOhio = -1;
     minOhio = d3.min(dataOhio, function(d) {return d.Rate});
     maxOhio = d3.max(dataOhio, function(d) {return d.Rate});
-    console.log('Ohio rates: ' + minOhio + ' ' + maxOhio);    
 
     if (minOhio != -1 && minOhio < minRate) {
       minRate = minOhio;
@@ -291,7 +293,6 @@ function redrawCancerUSMap(year, delay) {
     if (maxOhio != -1 && maxOhio > maxRate) {
       maxRate = maxOhio;
     }
-    console.log('U.S. Map min max rates: ' + minRate + ' ' + maxRate);
 
 
     var color = d3.scaleSequential(d3.interpolateGnBu)    // set color scheme
