@@ -16,6 +16,7 @@ function drawStart() {
 
   // automatically draw side-by-side U.S and Ohio county map by default
   drawMaps(sliderValue);  
+  opioidLineChartUS();
 }
 
 
@@ -67,48 +68,89 @@ function opioid1_chart1() {
 
 }
 
-async function opioid_maps_years() {
-
-  drawMaps(1999);
-
-  for (var year = 1999; year <= 2015; year++) {
-    $('#mapSlider').slider('setValue', year);
-    var mapSvg = d3.select('#svgmap');
-    var usmapg = mapSvg.select('#usmap');
-    var ohiomapg = mapSvg.select('#ohiomap');
-    delay = 500 // transition milliseconds
-    redrawOpioidUSMap(year, delay);
-    redrawdrawOpiodOhioMap(year, delay);
-    await sleep(600);
-  }
-
-  function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-  }  
-
-}
 
 
-async function opioid_maps_1999_2015() {
+function opioidLineChartUS() {
 
-  $('#mapSlider').slider('setValue', 1999);
-  drawMaps(1999);  
-  await sleep(1500);
+  // delete old chart elements
+  oldChartSvg = document.getElementById('chartDiv');
+  removeChildren(oldChartSvg);
 
-  delay = 800 // transition milliseconds
-  redrawOpioidUSMap(2015, delay);
-  redrawdrawOpiodOhioMap(2015, delay);
+  var chartSvg = d3.select('#chartDiv')
+                .append('svg')
+                .attr('id', 'svgchart')       // svg ID is '#svgchart'
+                .attr('preserveAspectRatio', 'xMidYMid meet')
+                .attr('viewBox', '0 0 1200 1000')
+                .classed('svg-content', true)
+                .attr('overflow', 'visible');
 
-  $('#mapSlider').slider('setValue', 2015);  
+  // create chart group as child of svg
+  var chartGroup = chartSvg.append('g')
+                .attr('id', 'chartG')
+                .attr('transform', 'translate(0, 0)');
 
-  function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-  }  
 
+  queue().defer(d3.csv, "data/opiod_data/opiodDataState.csv")
+        .defer(d3.csv, "data/opiod_data/opiodData.csv")
+        .await(drawLineChartUS); // file in heart_disease_charts.js
 }
 
 
 
+function opioidLineChartOhio() {
+
+  // delete old chart elements
+  oldChartSvg = document.getElementById('chartDiv');
+  removeChildren(oldChartSvg);
+
+  var chartSvg = d3.select('#chartDiv')
+                .append('svg')
+                .attr('id', 'svgchart')       // svg ID is '#svgchart'
+                .attr('preserveAspectRatio', 'xMidYMid meet')
+                .attr('viewBox', '0 0 1200 1000')
+                .classed('svg-content', true)
+                .attr('overflow', 'visible');
+
+  // create chart group as child of svg
+  var chartGroup = chartSvg.append('g')
+                .attr('id', 'chartG')
+                .attr('transform', 'translate(0, 0)');
+
+
+  queue().defer(d3.csv, "data/opiod_data/opiodDataState.csv")
+        .defer(d3.csv, "data/opiod_data/opiodData.csv")
+        .await(drawLineChartOhio); // file in heart_disease_charts.js
+
+}
+
+
+function opioidLineChartOhioUS() {
+
+  // delete old chart elements
+  oldChartSvg = document.getElementById('chartDiv');
+  removeChildren(oldChartSvg);
+
+  var chartSvg = d3.select('#chartDiv')
+                .append('svg')
+                .attr('id', 'svgchart')       // svg ID is '#svgchart'
+                .attr('preserveAspectRatio', 'xMidYMid meet')
+                .attr('viewBox', '0 0 1200 1000')
+                .classed('svg-content', true)
+                .attr('overflow', 'visible');
+
+  // create chart group as child of svg
+  var chartGroup = chartSvg.append('g')
+                .attr('id', 'chartG')
+                .attr('transform', 'translate(0, 0)');
+
+  queue().defer(d3.csv, "data/opiod_data/opiodDataState.csv")
+        .defer(d3.csv, "data/opiod_data/opiodData.csv")
+        .await(partialDrawLineChartOhio); // file in heart_disease_charts.js
+
+  queue().defer(d3.csv, "data/opiod_data/opiodDataState.csv")
+        .defer(d3.csv, "data/opiod_data/opiodData.csv")
+        .await(partialDrawLineChartUS); // file in heart_disease_charts.js
+}
 
 
 
