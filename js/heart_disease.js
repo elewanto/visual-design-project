@@ -94,6 +94,18 @@ function heartTreemapColumbus() {
                 .attr('id', 'chartG')
                 .attr('transform', 'translate(0, 0)');
 
+  var linkGroup = chartSvg.append('g')
+    .attr('transform', 'translate(1100, 1000)')      
+    .append('a')
+    .attr("href", "data/heart_disease_data/heart_disease_type_columbus_tree_1999_2016.csv")    
+    .append('text')
+    .style("fill", "darkblue")
+    .style("font-size", "18px")
+    .attr("text-anchor", "middle")
+    .style("pointer-events", "all")
+    .style('cursor', 'pointer')
+    .text('Data Source');               
+
   queue().defer(d3.csv, "data/heart_disease_data/heart_disease_type_columbus_tree_1999_2016.csv")
         .await(drawTreemap);  
 }
@@ -116,6 +128,18 @@ function heartBubbleColumbus() {
   var chartGroup = chartSvg.append('g')
                 .attr('id', 'chartG')
                 .attr('transform', 'translate(0, 0)');
+
+  var linkGroup = chartSvg.append('g')
+    .attr('transform', 'translate(1100, 1000)')      
+    .append('a')
+    .attr("href", "data/heart_disease_data/heart_disease_type_columbus_1999_2016.csv")    
+    .append('text')
+    .style("fill", "darkblue")
+    .style("font-size", "18px")
+    .attr("text-anchor", "middle")
+    .style("pointer-events", "all")
+    .style('cursor', 'pointer')
+    .text('Data Source');                
  
   drawBubble();
 }
@@ -134,6 +158,8 @@ function heartSunburstColumbus() {
                 .attr('viewBox', '0 0 1200 1000')
                 .classed('svg-content', true)
                 .attr('overflow', 'visible');
+
+
 
   // create chart group as child of svg
   var chartGroup = chartSvg.append('g')
@@ -206,6 +232,18 @@ function heartDiseaseLineChartOhio() {
                 .attr('id', 'chartG')
                 .attr('transform', 'translate(0, 0)');
 
+  var linkGroup = chartSvg.append('g')
+    .attr('transform', 'translate(1100, 980)')      
+    .append('a')
+    .attr("href", "data/heart_disease_data/heart_disease_mortality_ohio_1999_2015.csv")    
+    .append('text')
+    .style("fill", "darkblue")
+    .style("font-size", "18px")
+    .attr("text-anchor", "middle")
+    .style("pointer-events", "all")
+    .style('cursor', 'pointer')
+    .text('Data Source');                
+
 
   queue().defer(d3.csv, "data/heart_disease_data/heart_disease_mortality_us_1999_2015.csv")
         .defer(d3.csv, "data/heart_disease_data/heart_disease_mortality_ohio_1999_2015.csv")
@@ -232,6 +270,18 @@ function heartDiseaseLineChartOhioUS() {
   var chartGroup = chartSvg.append('g')
                 .attr('id', 'chartG')
                 .attr('transform', 'translate(0, 0)');
+
+  var linkGroup = chartSvg.append('g')
+    .attr('transform', 'translate(1100, 980)')      
+    .append('a')
+    .attr("href", "data/heart_disease_data/heart_disease_mortality_us_1999_2015.csv")    
+    .append('text')
+    .style("fill", "darkblue")
+    .style("font-size", "18px")
+    .attr("text-anchor", "middle")
+    .style("pointer-events", "all")
+    .style('cursor', 'pointer')
+    .text('Data Source');                
 
   queue().defer(d3.csv, "data/heart_disease_data/heart_disease_mortality_us_1999_2015.csv")
         .defer(d3.csv, "data/heart_disease_data/heart_disease_mortality_ohio_1999_2015.csv")

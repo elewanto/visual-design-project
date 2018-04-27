@@ -54,17 +54,16 @@
   border-width: 1px;
   border-color: #666;
   display: block;
-  border-radius: 10px;    
+  border-radius: 10px;      
 }
 
 .dropdownd-content a:hover {
   background-color: #5a201e;
-
 }
 
 .dropdownd:hover .dropdownd-content {
-    display: block;
-
+  display: block;
+  cursor: pointer;
 }
 
 .dropdownd:hover .dropbtnd {
