@@ -68,6 +68,33 @@ function opioid1_chart1() {
 
 }
 
+function display_image(img_id){
+  console.log('display_image()');
+
+  oldChartSvg = document.getElementById('chartDiv');
+  removeChildren(oldChartSvg);
+
+  var img = new Image();
+  var parentDiv = document.getElementById('chartDiv');
+  img.onload = function() {
+                parentDiv.appendChild(img);
+                imgNode = parentDiv.childNodes[0];
+                imgNode.setAttribute('id', 'chartImage');
+                imgNode.setAttribute('class', 'center-block');
+                imgNode.setAttribute('width', img.width);  
+  };
+
+  switch(parseInt(img_id)){
+    case 0: img.src = 'images/opioidByGender.png';
+            break;
+    case 1: img.src = 'images/opioidByRace.png';
+            break;
+    case 2: img.src = 'images/opioidByAge.png';
+            break;
+    default:
+            break; 
+  }
+}
 
 
 function opioidLineChartUS() {
