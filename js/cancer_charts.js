@@ -1,128 +1,90 @@
 
 // using Mike Bostick's Treemap example
-function drawBubble(error, data) {
-
-  console.log('drawBubble');
-
-  groups = ['Category'];
-
-  // convert string data to numbers
-  data.forEach(function(d) {
-    d.Deaths = +d.Deaths;
-  });
-
-  // parse csv data to hierarchical json format
-  var genGroups = function(data) {
-    return _.map(data, function(element, index) {
-      return { name : index, children : element };
-    });
-  };
-
-  var nest = function(node, curIndex) {
-    if (curIndex === 0) {
-      node.children = genGroups(_.groupBy(data, groups[0]));
-      _.each(node.children, function (child) {
-        nest(child, curIndex + 1);
-      });
-    }
-    else {
-      if (curIndex < groups.length) {
-        node.children = genGroups(
-          _.groupBy(node.children, groups[curIndex])
-        );
-        _.each(node.children, function (child) {
-          nest(child, curIndex + 1);
-        });
-      }
-    }
-    return node;
-  };
-
-  jsonData = nest({}, 0);
-
-
-  jsonData.name = 'Cancer';
-  console.log(jsonData);  
-  console.log(jsonData.name);  
+function drawBubble() {
 
   var canvasWidth = 1200;
   var canvasHeight = 1000;
 
-  var marginLeft = 60;
+  var marginLeft = 20;
   var marginRight = 20;
   var marginTop = 100;
-  var marginBottom = 20;  
+  var marginBottom = 20;
 
   var chartWidth = canvasWidth - marginLeft - marginRight;
   var chartHeight = canvasHeight - marginTop - marginBottom;
 
-  var chartGroup = d3.select('#chartG');
+  var format = d3.format(',d');
 
-  chartGroup.append('g')
-            .attr('transform', 'translate(650, 50)')
-            .attr('id', '#chartTitle')
-            .append('text')
-            .text('Columbus Cancer Deaths by Type (1999 - 2015)')
-            .attr('class', 'title');
+  var pack = d3.pack()                // set size of chart
+      //.size([chartWidth, chartHeight])
+      .size([1200,1000])
+      .padding(.5);
 
+  var totalDeaths = 0;
+  d3.csv("data/cancer_data/cancer_types_columbus_bubble.csv", function(d) {
+    d.value = +d.value;
+    if (d.value) {
+      totalDeaths += d.value;
+      return d;
+    }
+  }, function(error, classes) {
+    if (error) throw error;
 
-  var fader = function(color) { return d3.interpolateRgb(color, "#fff")(0.2); },
-      color = d3.scaleOrdinal(d3.schemeCategory20.map(fader)),
-      format = d3.format(",d");
+    console.log(classes);
 
-  var treemapGroup = chartGroup.append('g')
-       .attr('transform', 'translate(0,' + marginTop + ')')     
+    var root = d3.hierarchy({children: classes})
+        .sum(function(d) { return d.value; })
+        .each(function(d) {
+          if (id = d.data.id) {
+            var id, i = id.lastIndexOf(".");
+            d.id = id;
+            d.package = id.slice(0, i);
+            d.class = id.slice(i + 1);
+          }
+        });
+    console.log(classes);
 
-  var treemap = d3.treemap()
-      .tile(d3.treemapResquarify)
-      .size([chartWidth, chartHeight])
-      .round(true)
-      .paddingInner(1);
+    var chartGroup = d3.select('#chartG');
 
-  data = jsonData;
+    chartGroup.append('g')
+              .attr('transform', 'translate(650, 50)')
+              .attr('id', '#chartTitle')
+              .append('text')
+              .text('Columbus Cancer Deaths by Type (1999 - 2015)')
+              .attr('class', 'title');
 
-  var root = d3.hierarchy(data)
-      .eachBefore(function(d) { d.data.id = (d.parent ? d.parent.data.id + "." : "") + d.data.name; })
-      .sum(sumBySize)
-      .sort(function(a, b) { return b.height - a.height || b.value - a.value; });
+    var color = d3.scaleOrdinal(d3.schemeCategory20c);              
 
-  treemap(root);
+    var node = chartGroup.append('g')
+      .attr('transform', 'translate(0, 0)')
+      .selectAll(".node")
+      .data(pack(root).leaves())
+      .enter().append("g")
+        .attr("class", "node")
+        .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
 
-  var cell = treemapGroup.selectAll("g")
-    .data(root.leaves())
-    .enter().append("g")
-    .attr("transform", function(d) { return "translate(" + d.x0 + "," + d.y0 + ")"; });
+    node.append("circle")
+        .attr("id", function(d) { return d.id; })
+        .attr("r", function(d) { return d.r; })
+        .style("fill", function(d) { return color(d.package); });
 
-  cell.append("rect")
-      .attr("id", function(d) { return d.data.id; })
-      .attr("width", function(d) { return d.x1 - d.x0; })
-      .attr("height", function(d) { return d.y1 - d.y0; })
-      .attr("fill", function(d) { return color(d.parent.data.id); });
-
-  cell.append("clipPath")
-      .attr("id", function(d) { return "clip-" + d.data.id; })
+    node.append("clipPath")
+        .attr("id", function(d) { return "clip-" + d.id; })
       .append("use")
-      .attr("xlink:href", function(d) { return "#" + d.data.id; });
+        .attr("xlink:href", function(d) { return "#" + d.id; });
 
-  cell.append("text")
-      .attr("clip-path", function(d) { return "url(#clip-" + d.data.id + ")"; })
+    node.append("text")
+        .attr("clip-path", function(d) { return "url(#clip-" + d.id + ")"; })
       .selectAll("tspan")
-      .data(function(d) { return d.data.name.split(/(?=[A-Z][^A-Z])/g); })
+      .data(function(d) { return d.class.split(/(?=[A-Z][^A-Z])/g); })
       .enter().append("tspan")
-      //.style('text-anchor', 'start')
-      //.style('font-size', '14px')
-      .attr("x", 4)
-      .attr("y", function(d, i) { return 13 + i * 10; })
-      .text(function(d) { return d; });
+        .attr("x", 0)
+        .attr("y", function(d, i, nodes) { return 13 + (i - nodes.length / 2 - 0.5) * 10; })
+        .text(function(d) { return d; });
 
-  cell.append("title")
-      .text(function(d) { return d.data.id + "\n" + format(d.value); });
-
-  
-
-  function sumBySize(d) {
-    return d.Deaths;
-  }
+    node.append("title")
+        .text(function(d) { return d.id + "\n" + format(d.value); });
+  });
 
 
 
@@ -136,8 +98,6 @@ function drawBubble(error, data) {
 // using Mike Bostick's Treemap example
 function drawTreemap(error, data) {
 
-  console.log('drawTreemap');
-
   groups = ['Category'];
   var totalDeaths = 0;
   // convert string data to numbers
@@ -145,7 +105,6 @@ function drawTreemap(error, data) {
     d.Deaths = +d.Deaths;
     totalDeaths += d.Deaths;
   });
-  console.log(totalDeaths);
 
   // parse csv data to hierarchical json format
   var genGroups = function(data) {
@@ -178,8 +137,6 @@ function drawTreemap(error, data) {
 
 
   jsonData.name = 'Cancer';
-  console.log(jsonData);  
-  console.log(jsonData.name);  
 
   var canvasWidth = 1200;
   var canvasHeight = 1000;
@@ -256,13 +213,35 @@ function drawTreemap(error, data) {
   cell.append("text")
       .attr("clip-path", function(d) { return "url(#clip-" + d.data.id + ")"; })
       .selectAll("tspan")
-      .data(function(d) { return d.data.name.split(/(?=[A-Z][^A-Z])/g); })
+      .data(function(d) { 
+        console.log(d)
+        console.log(d.data.name.split(" "));
+        nameArr = d.data.name.split(" ");
+        if (d.y1 - d.y0 < 14) {
+          return ("");
+        }
+        if (d.x1 - d.x0 < 40) {
+          return ("");
+        } 
+        if (d.y1 - d.y0 < 40 && nameArr.length > 2) {
+          return nameArr.slice(0, 1);
+        }
+        if (d.y1 - d.y0 < 60 && nameArr.length > 3) {
+          return nameArr.slice(0, 3);
+        }        
+
+        return d.data.name.split(" ");        
+        //return d.data.name.split(/(?=[A-Z][^A-Z])/g); 
+      })
       .enter().append("tspan")
       .attr('x', 0)
+      .style('font-weight', 'bold')
       .style('text-anchor', 'start')
-      .style('font-size', '14px')         
+      .style('font-size', function(d) {
+        return '16px';
+      })         
       .attr("x", 4)
-      .attr("y", function(d, i) { return 13 + i * 10; })
+      .attr("y", function(d, i) { return 13 + i * 14; })
       .text(function(d) { return d; });
 
   
@@ -292,7 +271,6 @@ function drawTreemap(error, data) {
 
 
 function drawSunburst(error, data) {
-  console.log('drawSunburst');
 
   groups = ['Category'];
 

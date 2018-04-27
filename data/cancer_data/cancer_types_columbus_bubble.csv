@@ -1,0 +1,125 @@
+id,value
+cancer,
+cancer.Bone and Articular Cartilage,
+cancer.Bone and Articular Cartilage.Bone and articular cartilage,60
+cancer.Breast,
+cancer.Breast.Breast,3655
+cancer.Digestive Organs,
+cancer.Digestive Organs.Colon,3244
+cancer.Digestive Organs.Pancreas,2626
+cancer.Digestive Organs.Oesophagus,1167
+cancer.Digestive Organs.Stomach,629
+cancer.Digestive Organs.Rectum,603
+cancer.Digestive Organs.Liver cell carcinoma,603
+cancer.Digestive Organs.Liver,384
+cancer.Digestive Organs.Bile duct carcinoma,366
+cancer.Digestive Organs.Rectosigmoid junction,182
+cancer.Digestive Organs.Gallbladder,138
+cancer.Digestive Organs.Ill-defined digestive system,54
+cancer.Digestive Organs.Cardia,52
+cancer.Digestive Organs.Anus,52
+cancer.Digestive Organs.Duodenum,50
+cancer.Digestive Organs.Appendix,44
+cancer.Digestive Organs.Extrahepatic bile duct,36
+cancer.Digestive Organs.Sigmoid colon,33
+cancer.Digestive Organs.Small intestine,30
+cancer.Digestive Organs.Biliary tract,30
+cancer.Digestive Organs.Caecum,26
+cancer.Digestive Organs.Intestinal tract,20
+cancer.Digestive Organs.Ascending colon,17
+cancer.Digestive Organs.Ampulla of Vater,15
+"cancer.Eye, Brain, and Nervous System",
+"cancer.Eye, Brain, and Nervous System.Brain",1040
+"cancer.Eye, Brain, and Nervous System.Brain stem",26
+"cancer.Eye, Brain, and Nervous System.Cerebrum",14
+"cancer.Eye, Brain, and Nervous System.Eye",13
+"cancer.Eye, Brain, and Nervous System.Cerebellum",10
+cancer.Female Genital Organs,
+cancer.Female Genital Organs.Ovary,1111
+cancer.Female Genital Organs.Uterus,383
+cancer.Female Genital Organs.Endometrium,327
+cancer.Female Genital Organs.Cervix uteri,326
+cancer.Female Genital Organs.Vulva,88
+cancer.Female Genital Organs.Vagina,36
+cancer.Female Genital Organs.Fallopian tube,18
+cancer.Female Genital Organs.Female genital organ,17
+cancer.Ill-defined and Secondary Sites,
+cancer.Ill-defined and Secondary Sites.No specification of site,2073
+cancer.Ill-defined and Secondary Sites.Other specified sites,248
+cancer.Ill-defined and Secondary Sites.Liver,111
+"cancer.Ill-defined and Secondary Sites.Head, face and neck",73
+cancer.Ill-defined and Secondary Sites.Abdomen,51
+cancer.Ill-defined and Secondary Sites.Retroperitoneum,49
+cancer.Ill-defined and Secondary Sites.Brain and cerebral,47
+cancer.Ill-defined and Secondary Sites.Bone and bone marrow,22
+cancer.Ill-defined and Secondary Sites.Pelvis,20
+cancer.Ill-defined and Secondary Sites.Secondary lung,18
+cancer.Ill-defined and Secondary Sites.Other ill-defined sites,15
+cancer.Independent Mulitiple Sites.Multiple sites,310
+"cancer.Lip, Oral, and Pharynx",
+"cancer.Lip, Oral, and Pharynx.Tongue",136
+"cancer.Lip, Oral, and Pharynx.Pharynx",95
+"cancer.Lip, Oral, and Pharynx.Tonsil",79
+"cancer.Lip, Oral, and Pharynx.Mouth",65
+"cancer.Lip, Oral, and Pharynx.Parotid gland",36
+"cancer.Lip, Oral, and Pharynx.Nasopharynx",36
+"cancer.Lip, Oral, and Pharynx.Oropharynx",34
+"cancer.Lip, Oral, and Pharynx.Major salivary gland",12
+"cancer.Lip, Oral, and Pharynx.Hypopharynx",11
+cancer.Lymphoid and Haematopoietic Tissue,
+cancer.Lymphoid and Haematopoietic Tissue.Non-Hodgkin's lymphoma,1114
+cancer.Lymphoid and Haematopoietic Tissue.Multiple myeloma,836
+cancer.Lymphoid and Haematopoietic Tissue.Acute myeloid leukaemia,665
+cancer.Lymphoid and Haematopoietic Tissue.Lymphocytic leukaemia,341
+cancer.Lymphoid and Haematopoietic Tissue.Leukaemia,175
+cancer.Lymphoid and Haematopoietic Tissue.B-cell lymphoma,156
+cancer.Lymphoid and Haematopoietic Tissue.Acute leukaemia,146
+cancer.Lymphoid and Haematopoietic Tissue.Large cell (diffuse),111
+cancer.Lymphoid and Haematopoietic Tissue.Hodgkin's disease,100
+cancer.Lymphoid and Haematopoietic Tissue.Lymphoblastic leukaemia,87
+cancer.Lymphoid and Haematopoietic Tissue.Chronic myeloid leukaemia,85
+cancer.Lymphoid and Haematopoietic Tissue.Small cleaved cell (diffuse),63
+cancer.Lymphoid and Haematopoietic Tissue.Other T-cell lymphomas,43
+cancer.Lymphoid and Haematopoietic Tissue.Other myeloid leukaemia,39
+cancer.Lymphoid and Haematopoietic Tissue.Non-Hodgkin's lymphoma,29
+cancer.Lymphoid and Haematopoietic Tissue.Burkitt's tumour,17
+cancer.Lymphoid and Haematopoietic Tissue.Small cell (diffuse),15
+cancer.Lymphoid and Haematopoietic Tissue.Hairy-cell leukaemia,15
+cancer.Lymphoid and Haematopoietic Tissue.Waldenstrom's macroglob.,14
+cancer.Lymphoid and Haematopoietic Tissue.Acute promy. leukaemia,12
+cancer.Lymphoid and Haematopoietic Tissue.Chronic leukaemia,12
+cancer.Male Genital Organs,
+cancer.Male Genital Organs.Prostate,1993
+cancer.Male Genital Organs.Penis,28
+cancer.Male Genital Organs.Testis,23
+cancer.Melanoma and Skin.Melanoma of skin,653
+cancer.Melanoma and Skin.Skin,91
+cancer.Melanoma and Skin.Skin of scalp and neck,86
+cancer.Melanoma and Skin.Skin of face,12
+cancer.Mesothelial and Soft Tissue,
+cancer.Mesothelial and Soft Tissue.Connective and soft tissue,250
+cancer.Mesothelial and Soft Tissue.Mesothelioma,129
+cancer.Mesothelial and Soft Tissue.Peritoneum,78
+cancer.Mesothelial and Soft Tissue.Lower limb tissue,17
+cancer.Mesothelial and Soft Tissue.Abdomen tissue,17
+cancer.Mesothelial and Soft Tissue.Retroperitoneum,14
+cancer.Respiratory and Intrathoracic Organs,
+cancer.Respiratory and Intrathoracic Organs.Bronchus / Lung,13280
+cancer.Respiratory and Intrathoracic Organs.Larynx,301
+"cancer.Respiratory and Intrathoracic Organs.Lung, upper lobe",68
+"cancer.Respiratory and Intrathoracic Organs.Lung, lower lobe",30
+cancer.Respiratory and Intrathoracic Organs.Accessory sinus,19
+cancer.Respiratory and Intrathoracic Organs.Supraglottis,18
+cancer.Respiratory and Intrathoracic Organs.Trachea,18
+cancer.Respiratory and Intrathoracic Organs.Thymus,15
+cancer.Respiratory and Intrathoracic Organs.Glottis,10
+cancer.Thyroid and Endocrine Glands,
+cancer.Thyroid and Endocrine Glands.Thyroid gland,105
+cancer.Thyroid and Endocrine Glands.Adrenal gland,44
+cancer.Urinary Tract,
+cancer.Urinary Tract.Bladder,1064
+cancer.Urinary Tract.Kidney,983
+cancer.Urinary Tract.Ureter,36
+cancer.Urinary Tract.Renal pelvis,17
+cancer.Urinary Tract.Urethra,15
+cancer.Urinary Tract.Urinary organ,15

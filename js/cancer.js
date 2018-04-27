@@ -26,7 +26,6 @@ function drawStart() {
 
 // Map Slider function
 async function sliderChange() {
-  console.log('slider used: ' + slider.getValue());
   sliderValue = await slider.getValue();
   var ret1 = redrawCancerUSMap(sliderValue, 500);
   var ret2 = redrawCancerOhioMap(sliderValue, 500);
@@ -76,8 +75,9 @@ function cancerBubbleColumbus() {
                 .attr('id', 'chartG')
                 .attr('transform', 'translate(0, 0)');
 
-  queue().defer(d3.csv, "data/cancer_data/cancer_types_columbus.csv")
-        .await(drawBubble);  
+  //queue().defer(d3.csv, "data/cancer_data/cancer_types_columbus_bubble.csv")
+  //      .await(drawBubble);  
+  drawBubble();
 }
 
 
