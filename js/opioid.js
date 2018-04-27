@@ -36,38 +36,6 @@ async function sliderChange() {
 
 
 
-
-// draw Obesity maps and charts
-function opioid1_chart1() {
-  console.log('opioid1_chart1()')
-
-  drawMaps();
-
-  oldChartSvg = document.getElementById('chartDiv');
-  removeChildren(oldChartSvg);
-  // draw chart here
-
-  var chartSvg = d3.select('#chartDiv')
-                .append('svg')
-                .attr('id', 'svgchart')       // svg ID is '#svgchart'
-                .attr('preserveAspectRatio', 'xMidYMid meet')
-                .attr('viewBox', '0 0 1200 800')
-                .classed('svg-content', true)
-                .attr('overflow', 'visible');
-                //.attr('width', width)
-                //.attr('height', height);
-
-  // create US map group <g>  ID #usmap
-  var chartGroup = chartSvg.append('g')
-                .attr('id', 'chartG')
-                .attr('transform', 'translate(5, 0)');
-
-  drawBarChart5start();
-
-
-
-}
-
 function display_image(img_id){
   console.log('display_image()');
 
@@ -180,6 +148,26 @@ function opioidLineChartOhioUS() {
 }
 
 
+async function opioid_maps_years() {
+
+  drawMaps(1999);
+
+  for (var year = 1999; year <= 2015; year++) {
+    $('#mapSlider').slider('setValue', year);
+    var mapSvg = d3.select('#svgmap');
+    var usmapg = mapSvg.select('#usmap');
+    var ohiomapg = mapSvg.select('#ohiomap');
+
+    // redraw the map for both US and OH 
+    drawMaps(year);
+    await sleep(800);
+  }
+
+  function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }  
+
+}
 
 
 // create SVG and groups needed to draw two maps side-by-side
