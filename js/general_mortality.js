@@ -8,22 +8,24 @@ var sliderValue = "2015";     //
 function drawStart() {
 
   console.log('in landingPageStart()');
-  draw_static_word_cloud();
+  //draw_static_word_cloud();
 }
 
 /************************************************************************************************/
 function draw_static_word_cloud(){
   var img = new Image();
+  img.src = 'images/wordcloud.png';
+
   var parentDiv = document.getElementById('cloud');
-  console.log(parentDiv.nodeType)
+
   img.onload = function() {
                 parentDiv.appendChild(img);
                 imgNode = parentDiv.childNodes[0];
+                console.log(imgNode);
                 imgNode.setAttribute('id', 'chartImage');
                 imgNode.setAttribute('class', 'center-block');
                 imgNode.setAttribute('width', img.width);    
   };
-  img.src = 'images/wordcloud.png';
 }
 
 function display_image_mortality(img_id){
