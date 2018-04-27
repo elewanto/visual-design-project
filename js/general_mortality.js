@@ -49,6 +49,8 @@ function display_image_mortality(img_id){
   switch(parseInt(img_id)){
     case 0: img.src = 'images/Deaths_Race_Cbus.png';
             break;
+    case 1: img.src = 'images/mortality_risk.png';
+            break;
     default:
             break; 
   }
@@ -84,10 +86,6 @@ function deaths_BW_Gap(img_id){
     default:
             break; 
   }
-}
-
-function mortality_age(){
-
 }
 
 function deaths_rural_urban_OH() {
