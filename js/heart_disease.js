@@ -167,6 +167,18 @@ function heartDiseaseLineChartUS() {
                 .attr('id', 'chartG')
                 .attr('transform', 'translate(0, 0)');
 
+  var linkGroup = chartSvg.append('g')
+    .attr('transform', 'translate(1100, 980)')      
+    .append('a')
+    .attr("href", "data/heart_disease_data/heart_disease_mortality_us_1999_2015.csv")    
+    .append('text')
+    .style("fill", "darkblue")
+    .style("font-size", "18px")
+    .attr("text-anchor", "middle")
+    .style("pointer-events", "all")
+    .style('cursor', 'pointer')
+    .text('Data Source');
+
 
   queue().defer(d3.csv, "data/heart_disease_data/heart_disease_mortality_us_1999_2015.csv")
         .defer(d3.csv, "data/heart_disease_data/heart_disease_mortality_ohio_1999_2015.csv")
