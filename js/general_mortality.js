@@ -8,7 +8,7 @@ var sliderValue = "2015";     //
 function drawStart() {
 
   console.log('in landingPageStart()');
-  //draw_static_word_cloud();
+  draw_static_word_cloud();
 }
 
 /************************************************************************************************/
