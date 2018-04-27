@@ -70,6 +70,10 @@ function drawBubble() {
         .attr("r", function(d) { return d.r; })
         .style("fill", function(d) { return color(d.package); })
         .on('mousemove', function(d) {
+            d3.select(this)
+              .transition()
+              .attr('r', 1.1*d.r)
+              .duration(300);
             tooltip.style("left", d3.event.pageX + 10 + "px");
             tooltip.style("top", d3.event.pageY - 20 + "px");
             tooltip.style("display", "inline-block");        
@@ -78,6 +82,11 @@ function drawBubble() {
                                             + ' deaths' + ' | ' + (d.data.value*100/totalDeaths).toLocaleString('en') + '% of ' 
                                             + totalDeaths.toLocaleString('en') + ' total deaths');
         }).on('mouseout', function(d) {
+            d3.select(this)
+              .transition()
+              .ease(d3.easeBounce)
+              .attr('r', d.r)
+              .duration(300);            
           tooltip.style('display', 'none');
         });        
 
@@ -231,6 +240,10 @@ function drawTreemap(error, data) {
       .attr("height", function(d) { return d.y1 - d.y0; })
       .attr("fill", function(d) { return color(d.parent.data.id); })
       .on('mousemove', function(d) {
+          d3.select(this)
+            .transition()
+            .style('opacity', 0.8)
+            .duration(10);        
           tooltip.style("left", d3.event.pageX + 10 + "px");
           tooltip.style("top", d3.event.pageY - 20 + "px");
           tooltip.style("display", "inline-block");        
@@ -238,6 +251,10 @@ function drawTreemap(error, data) {
                                             + ' deaths' + ' | ' + (d.data.Deaths*100/totalDeaths).toLocaleString('en') + '% of ' 
                                             + totalDeaths.toLocaleString('en') + ' total deaths');
       }).on('mouseout', function(d) {
+        d3.select(this)
+          .transition()
+          .style('opacity', 1)
+          .duration(400);         
         tooltip.style('display', 'none');
       });
 

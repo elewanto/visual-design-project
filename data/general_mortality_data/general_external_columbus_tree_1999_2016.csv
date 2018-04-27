@@ -1,0 +1,108 @@
+Category,name,Deaths
+Transport accidents,"Pedestrian injured in collision with car, pick-up truck or van, nontraffic accident",10
+Transport accidents,"Pedestrian injured in collision with car, pick-up truck or van, traffic accident",124
+Transport accidents,Unspecified whether traffic or nontraffic accident,18
+Transport accidents,Pedestrian injured in traffic accident involving other and unspecified motor vehicles,178
+Transport accidents,Pedestrian injured in unspecified transport accident,14
+Transport accidents,Driver injured in collision with other and unspecified motor vehicles in traffic accident,11
+Transport accidents,"Motorcycle rider injured in collision with car, pick-up truck or van, driver injured in traffic accident",48
+Transport accidents,"Motorcycle rider injured in collision with fixed or stationary object, driver injured in traffic accident",48
+Transport accidents,"Motorcycle rider injured in noncollision transport accident, driver injured in traffic accident",17
+Transport accidents,Driver injured in collision with other and unspecified motor vehicles in traffic accident,56
+Transport accidents,Motorcycle rider [any] injured in unspecified traffic accident,65
+Transport accidents,"Car occupant injured in collision with car, pick-up truck or van, driver injured in traffic accident",135
+Transport accidents,"Car occupant injured in collision with car, pick-up truck or van, passenger injured in traffic accident",68
+Transport accidents,"Car occupant injured in collision with car, pick-up truck or van, unspecified car occupant injured in traffic accident",21
+Transport accidents,"Car occupant injured in collision with heavy transport vehicle or bus, driver injured in traffic accident",13
+Transport accidents,"Car occupant injured in collision with fixed or stationary object, driver injured in traffic accident",121
+Transport accidents,"Car occupant injured in collision with fixed or stationary object, passenger injured in traffic accident",41
+Transport accidents,"Car occupant injured in noncollision transport accident, driver injured in traffic accident",21
+Transport accidents,"Car occupant injured in noncollision transport accident, unspecified car occupant injured in traffic accident",15
+Transport accidents,Driver injured in collision with other and unspecified motor vehicles in traffic accident,11
+Transport accidents,Car occupant [any] injured in unspecified traffic accident,86
+Transport accidents,Person injured in collision between car and two- or three-wheeled motor vehicle (traffic),10
+Transport accidents,Person injured in collision between car and pick-up truck or van (traffic),23
+Transport accidents,Person injured in collision between car and heavy transport vehicle (traffic),20
+Transport accidents,Person injured in collision between other specified motor vehicles (traffic),469
+Transport accidents,"Person injured in unspecified motor-vehicle accident, traffic",693
+Transport accidents,Person injured in unspecified vehicle accident,20
+Transport accidents,Unspecified aircraft accident injuring occupant,23
+Other external causes of accidental injury,"Fall on same level from slipping, tripping and stumbling",14
+Other external causes of accidental injury,Fall involving wheelchair,17
+Other external causes of accidental injury,Fall involving bed,20
+Other external causes of accidental injury,Fall on and from stairs and steps,123
+Other external causes of accidental injury,Fall on and from ladder,15
+Other external causes of accidental injury,"Fall from, out of or through building or structure",23
+Other external causes of accidental injury,Other fall from one level to another,67
+Other external causes of accidental injury,Other fall on same level,134
+Other external causes of accidental injury,Unspecified fall,1320
+Other external causes of accidental injury,"Struck by thrown, projected or falling object",22
+Other external causes of accidental injury,Discharge from other and unspecified firearms,29
+Other external causes of accidental injury,Drowning and submersion while in bath-tub,10
+Other external causes of accidental injury,Drowning and submersion while in natural water,45
+Other external causes of accidental injury,Unspecified drowning and submersion,112
+Other external causes of accidental injury,Accidental suffocation and strangulation in bed,63
+Other external causes of accidental injury,Other accidental hanging and strangulation,23
+Other external causes of accidental injury,Inhalation of gastric contents,19
+Other external causes of accidental injury,Inhalation and ingestion of food causing obstruction of respiratory tract,52
+Other external causes of accidental injury,Inhalation and ingestion of other objects causing obstruction of respiratory tract,357
+Other external causes of accidental injury,Other specified threats to breathing,12
+Other external causes of accidental injury,Unspecified threat to breathing,38
+Other external causes of accidental injury,Exposure to unspecified electric current,11
+Other external causes of accidental injury,Exposure to uncontrolled fire in building or structure,186
+Other external causes of accidental injury,"Exposure to unspecified smoke, fire and flames",10
+Other external causes of accidental injury,Exposure to excessive natural heat,11
+Other external causes of accidental injury,Exposure to excessive natural cold,34
+Other external causes of accidental injury,"Accidental poisoning by and exposure to nonopioid analgesics, antipyretics and antirheumatics",18
+Other external causes of accidental injury,"Accidental poisoning by and exposure to antiepileptic, sedative-hypnotic, antiparkinsonism and psychotropic drugs, not elsewhere classified",136
+Other external causes of accidental injury,"Accidental poisoning by and exposure to narcotics and psychodysleptics [hallucinogens], not elsewhere classified",1719
+Other external causes of accidental injury,"Accidental poisoning by and exposure to other and unspecified drugs, medicaments and biological substances",1217
+Other external causes of accidental injury,Accidental poisoning by and exposure to alcohol,103
+Other external causes of accidental injury,Accidental poisoning by and exposure to organic solvents and halogenated hydrocarbons and their vapours,10
+Other external causes of accidental injury,Accidental poisoning by and exposure to other gases and vapours,52
+Other external causes of accidental injury,Accidental poisoning by and exposure to other and unspecified chemicals and noxious substances,12
+Other external causes of accidental injury,Exposure to unspecified factor,435
+Other external causes of accidental injury,Exposure to unspecified factor causing fracture,140
+Other external causes of accidental injury,Exposure to unspecified factor causing other and unspecified injury,94
+Intentional self-harm,"Intentional self-poisoning by and exposure to nonopioid analgesics, antipyretics and antirheumatics",25
+Intentional self-harm,"Intentional self-poisoning by and exposure to antiepileptic, sedative-hypnotic, antiparkinsonism and psychotropic drugs, not elsewhere classified",82
+Intentional self-harm,"Intentional self-poisoning by and exposure to narcotics and psychodysleptics [hallucinogens], not elsewhere classified",32
+Intentional self-harm,"Intentional self-poisoning by and exposure to other and unspecified drugs, medicaments and biological substances",203
+Intentional self-harm,Intentional self-poisoning by and exposure to other gases and vapours,132
+Intentional self-harm,Intentional self-poisoning by and exposure to other and unspecified chemicals and noxious substances,11
+Intentional self-harm,"Intentional self-harm by hanging, strangulation and suffocation",693
+Intentional self-harm,Intentional self-harm by drowning and submersion,26
+Intentional self-harm,Intentional self-harm by handgun discharge,52
+Intentional self-harm,"Intentional self-harm by rifle, shotgun and larger firearm discharge",163
+Intentional self-harm,Intentional self-harm by other and unspecified firearm discharge,1252
+Intentional self-harm,"Intentional self-harm by smoke, fire and flames",16
+Intentional self-harm,Intentional self-harm by sharp object,51
+Intentional self-harm,Intentional self-harm by jumping from a high place,47
+Intentional self-harm,Intentional self-harm by jumping or lying before moving object,26
+Intentional self-harm,Intentional self-harm by crashing of motor vehicle,12
+Assault,"Assault by hanging, strangulation and suffocation",51
+Assault,"Assault by rifle, shotgun and larger firearm discharge",40
+Assault,Assault by other and unspecified firearm discharge,1324
+Assault,"Assault by smoke, fire and flames",17
+Assault,Assault by sharp object,175
+Assault,By unspecified person,19
+Assault,Assault by other specified means,75
+Assault,Assault by unspecified means,93
+Event of undetermined intent,"Poisoning by and exposure to antiepileptic, sedative-hypnotic, antiparkinsonism and psychotropic drugs, not elsewhere classified, undetermined intent",35
+Event of undetermined intent,"Poisoning by and exposure to narcotics and psychodysleptics [hallucinogens], not elsewhere classified, undetermined intent",40
+Event of undetermined intent,"Poisoning by and exposure to other and unspecified drugs, medicaments and biological substances, undetermined intent",100
+Event of undetermined intent,"Hanging, strangulation and suffocation, undetermined intent",11
+Event of undetermined intent,"Drowning and submersion, undetermined intent",19
+Event of undetermined intent,"Other and unspecified firearm discharge, undetermined intent",28
+Event of undetermined intent,"Exposure to smoke, fire and flames, undetermined intent",10
+Event of undetermined intent,"Other specified events, undetermined intent",12
+Event of undetermined intent,"Unspecified event, undetermined intent",30
+Complications of medical and surgical care,"Drug or medicament, unspecified",11
+Complications of medical and surgical care,Surgical operation with implant of artificial internal device,24
+Complications of medical and surgical care,"Surgical operation with anastomosis, bypass or graft",18
+Complications of medical and surgical care,"Surgical procedure, unspecified",74
+Complications of medical and surgical care,Other medical procedures,27
+Sequelae of external causes of morbidity and mortality,Sequelae of motor-vehicle accident,39
+Sequelae of external causes of morbidity and mortality,Sequelae of other accidents,74
+Sequelae of external causes of morbidity and mortality,Sequelae of assault,27
+Sequelae of external causes of morbidity and mortality,"Sequelae of surgical and medical procedures as the cause of abnormal reaction of the patient, or of later complication, without mention of misadventure at the time of the procedure",10
