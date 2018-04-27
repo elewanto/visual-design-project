@@ -1,0 +1,166 @@
+Notes	ICD Chapter	ICD Sub-Chapter	Cause of death	Deaths	Population
+	External causes of morbidity and mortality	Transport accidents	"Pedestrian injured in collision with car, pick-up truck or van, nontraffic accident"	10	26990678
+	External causes of morbidity and mortality	Transport accidents	"Pedestrian injured in collision with car, pick-up truck or van, traffic accident"	124	26990678
+	External causes of morbidity and mortality	Transport accidents	Unspecified whether traffic or nontraffic accident	18	26990678
+	External causes of morbidity and mortality	Transport accidents	Pedestrian injured in traffic accident involving other and unspecified motor vehicles	178	26990678
+	External causes of morbidity and mortality	Transport accidents	Pedestrian injured in unspecified transport accident	14	26990678
+	External causes of morbidity and mortality	Transport accidents	Driver injured in collision with other and unspecified motor vehicles in traffic accident	11	26990678
+	External causes of morbidity and mortality	Transport accidents	"Motorcycle rider injured in collision with car, pick-up truck or van, driver injured in traffic accident"	48	26990678
+	External causes of morbidity and mortality	Transport accidents	"Motorcycle rider injured in collision with fixed or stationary object, driver injured in traffic accident"	48	26990678
+	External causes of morbidity and mortality	Transport accidents	"Motorcycle rider injured in noncollision transport accident, driver injured in traffic accident"	17	26990678
+	External causes of morbidity and mortality	Transport accidents	Driver injured in collision with other and unspecified motor vehicles in traffic accident	56	26990678
+	External causes of morbidity and mortality	Transport accidents	Motorcycle rider [any] injured in unspecified traffic accident	65	26990678
+	External causes of morbidity and mortality	Transport accidents	"Car occupant injured in collision with car, pick-up truck or van, driver injured in traffic accident"	135	26990678
+	External causes of morbidity and mortality	Transport accidents	"Car occupant injured in collision with car, pick-up truck or van, passenger injured in traffic accident"	68	26990678
+	External causes of morbidity and mortality	Transport accidents	"Car occupant injured in collision with car, pick-up truck or van, unspecified car occupant injured in traffic accident"	21	26990678
+	External causes of morbidity and mortality	Transport accidents	"Car occupant injured in collision with heavy transport vehicle or bus, driver injured in traffic accident"	13	26990678
+	External causes of morbidity and mortality	Transport accidents	"Car occupant injured in collision with fixed or stationary object, driver injured in traffic accident"	121	26990678
+	External causes of morbidity and mortality	Transport accidents	"Car occupant injured in collision with fixed or stationary object, passenger injured in traffic accident"	41	26990678
+	External causes of morbidity and mortality	Transport accidents	"Car occupant injured in noncollision transport accident, driver injured in traffic accident"	21	26990678
+	External causes of morbidity and mortality	Transport accidents	"Car occupant injured in noncollision transport accident, unspecified car occupant injured in traffic accident"	15	26990678
+	External causes of morbidity and mortality	Transport accidents	Driver injured in collision with other and unspecified motor vehicles in traffic accident	11	26990678
+	External causes of morbidity and mortality	Transport accidents	Car occupant [any] injured in unspecified traffic accident	86	26990678
+	External causes of morbidity and mortality	Transport accidents	Person injured in collision between car and two- or three-wheeled motor vehicle (traffic)	10	26990678
+	External causes of morbidity and mortality	Transport accidents	Person injured in collision between car and pick-up truck or van (traffic)	23	26990678
+	External causes of morbidity and mortality	Transport accidents	Person injured in collision between car and heavy transport vehicle (traffic)	20	26990678
+	External causes of morbidity and mortality	Transport accidents	Person injured in collision between other specified motor vehicles (traffic)	469	26990678
+	External causes of morbidity and mortality	Transport accidents	"Person injured in unspecified motor-vehicle accident, traffic"	693	26990678
+	External causes of morbidity and mortality	Transport accidents	Person injured in unspecified vehicle accident	20	26990678
+	External causes of morbidity and mortality	Transport accidents	Unspecified aircraft accident injuring occupant	23	26990678
+Total	External causes of morbidity and mortality	Transport accidents		2683	26990678
+	External causes of morbidity and mortality	Other external causes of accidental injury	"Fall on same level from slipping, tripping and stumbling"	14	26990678
+	External causes of morbidity and mortality	Other external causes of accidental injury	Fall involving wheelchair	17	26990678
+	External causes of morbidity and mortality	Other external causes of accidental injury	Fall involving bed	20	26990678
+	External causes of morbidity and mortality	Other external causes of accidental injury	Fall on and from stairs and steps	123	26990678
+	External causes of morbidity and mortality	Other external causes of accidental injury	Fall on and from ladder	15	26990678
+	External causes of morbidity and mortality	Other external causes of accidental injury	"Fall from, out of or through building or structure"	23	26990678
+	External causes of morbidity and mortality	Other external causes of accidental injury	Other fall from one level to another	67	26990678
+	External causes of morbidity and mortality	Other external causes of accidental injury	Other fall on same level	134	26990678
+	External causes of morbidity and mortality	Other external causes of accidental injury	Unspecified fall	1320	26990678
+	External causes of morbidity and mortality	Other external causes of accidental injury	"Struck by thrown, projected or falling object"	22	26990678
+	External causes of morbidity and mortality	Other external causes of accidental injury	Discharge from other and unspecified firearms	29	26990678
+	External causes of morbidity and mortality	Other external causes of accidental injury	Drowning and submersion while in bath-tub	10	26990678
+	External causes of morbidity and mortality	Other external causes of accidental injury	Drowning and submersion while in natural water	45	26990678
+	External causes of morbidity and mortality	Other external causes of accidental injury	Unspecified drowning and submersion	112	26990678
+	External causes of morbidity and mortality	Other external causes of accidental injury	Accidental suffocation and strangulation in bed	63	26990678
+	External causes of morbidity and mortality	Other external causes of accidental injury	Other accidental hanging and strangulation	23	26990678
+	External causes of morbidity and mortality	Other external causes of accidental injury	Inhalation of gastric contents	19	26990678
+	External causes of morbidity and mortality	Other external causes of accidental injury	Inhalation and ingestion of food causing obstruction of respiratory tract	52	26990678
+	External causes of morbidity and mortality	Other external causes of accidental injury	Inhalation and ingestion of other objects causing obstruction of respiratory tract	357	26990678
+	External causes of morbidity and mortality	Other external causes of accidental injury	Other specified threats to breathing	12	26990678
+	External causes of morbidity and mortality	Other external causes of accidental injury	Unspecified threat to breathing	38	26990678
+	External causes of morbidity and mortality	Other external causes of accidental injury	Exposure to unspecified electric current	11	26990678
+	External causes of morbidity and mortality	Other external causes of accidental injury	Exposure to uncontrolled fire in building or structure	186	26990678
+	External causes of morbidity and mortality	Other external causes of accidental injury	"Exposure to unspecified smoke, fire and flames"	10	26990678
+	External causes of morbidity and mortality	Other external causes of accidental injury	Exposure to excessive natural heat	11	26990678
+	External causes of morbidity and mortality	Other external causes of accidental injury	Exposure to excessive natural cold	34	26990678
+	External causes of morbidity and mortality	Other external causes of accidental injury	"Accidental poisoning by and exposure to nonopioid analgesics, antipyretics and antirheumatics"	18	26990678
+	External causes of morbidity and mortality	Other external causes of accidental injury	"Accidental poisoning by and exposure to antiepileptic, sedative-hypnotic, antiparkinsonism and psychotropic drugs, not elsewhere classified"	136	26990678
+	External causes of morbidity and mortality	Other external causes of accidental injury	"Accidental poisoning by and exposure to narcotics and psychodysleptics [hallucinogens], not elsewhere classified"	1719	26990678
+	External causes of morbidity and mortality	Other external causes of accidental injury	"Accidental poisoning by and exposure to other and unspecified drugs, medicaments and biological substances"	1217	26990678
+	External causes of morbidity and mortality	Other external causes of accidental injury	Accidental poisoning by and exposure to alcohol	103	26990678
+	External causes of morbidity and mortality	Other external causes of accidental injury	Accidental poisoning by and exposure to organic solvents and halogenated hydrocarbons and their vapours	10	26990678
+	External causes of morbidity and mortality	Other external causes of accidental injury	Accidental poisoning by and exposure to other gases and vapours	52	26990678
+	External causes of morbidity and mortality	Other external causes of accidental injury	Accidental poisoning by and exposure to other and unspecified chemicals and noxious substances	12	26990678
+	External causes of morbidity and mortality	Other external causes of accidental injury	Exposure to unspecified factor	435	26990678
+	External causes of morbidity and mortality	Other external causes of accidental injury	Exposure to unspecified factor causing fracture	140	26990678
+	External causes of morbidity and mortality	Other external causes of accidental injury	Exposure to unspecified factor causing other and unspecified injury	94	26990678
+Total	External causes of morbidity and mortality	Other external causes of accidental injury		6850	26990678
+	External causes of morbidity and mortality	Intentional self-harm	"Intentional self-poisoning by and exposure to nonopioid analgesics, antipyretics and antirheumatics"	25	26990678
+	External causes of morbidity and mortality	Intentional self-harm	"Intentional self-poisoning by and exposure to antiepileptic, sedative-hypnotic, antiparkinsonism and psychotropic drugs, not elsewhere classified"	82	26990678
+	External causes of morbidity and mortality	Intentional self-harm	"Intentional self-poisoning by and exposure to narcotics and psychodysleptics [hallucinogens], not elsewhere classified"	32	26990678
+	External causes of morbidity and mortality	Intentional self-harm	"Intentional self-poisoning by and exposure to other and unspecified drugs, medicaments and biological substances"	203	26990678
+	External causes of morbidity and mortality	Intentional self-harm	Intentional self-poisoning by and exposure to other gases and vapours	132	26990678
+	External causes of morbidity and mortality	Intentional self-harm	Intentional self-poisoning by and exposure to other and unspecified chemicals and noxious substances	11	26990678
+	External causes of morbidity and mortality	Intentional self-harm	"Intentional self-harm by hanging, strangulation and suffocation"	693	26990678
+	External causes of morbidity and mortality	Intentional self-harm	Intentional self-harm by drowning and submersion	26	26990678
+	External causes of morbidity and mortality	Intentional self-harm	Intentional self-harm by handgun discharge	52	26990678
+	External causes of morbidity and mortality	Intentional self-harm	"Intentional self-harm by rifle, shotgun and larger firearm discharge"	163	26990678
+	External causes of morbidity and mortality	Intentional self-harm	Intentional self-harm by other and unspecified firearm discharge	1252	26990678
+	External causes of morbidity and mortality	Intentional self-harm	"Intentional self-harm by smoke, fire and flames"	16	26990678
+	External causes of morbidity and mortality	Intentional self-harm	Intentional self-harm by sharp object	51	26990678
+	External causes of morbidity and mortality	Intentional self-harm	Intentional self-harm by jumping from a high place	47	26990678
+	External causes of morbidity and mortality	Intentional self-harm	Intentional self-harm by jumping or lying before moving object	26	26990678
+	External causes of morbidity and mortality	Intentional self-harm	Intentional self-harm by crashing of motor vehicle	12	26990678
+Total	External causes of morbidity and mortality	Intentional self-harm		2847	26990678
+	External causes of morbidity and mortality	Assault	"Assault by hanging, strangulation and suffocation"	51	26990678
+	External causes of morbidity and mortality	Assault	"Assault by rifle, shotgun and larger firearm discharge"	40	26990678
+	External causes of morbidity and mortality	Assault	Assault by other and unspecified firearm discharge	1324	26990678
+	External causes of morbidity and mortality	Assault	"Assault by smoke, fire and flames"	17	26990678
+	External causes of morbidity and mortality	Assault	Assault by sharp object	175	26990678
+	External causes of morbidity and mortality	Assault	By unspecified person	19	26990678
+	External causes of morbidity and mortality	Assault	Assault by other specified means	75	26990678
+	External causes of morbidity and mortality	Assault	Assault by unspecified means	93	26990678
+Total	External causes of morbidity and mortality	Assault		1825	26990678
+	External causes of morbidity and mortality	Event of undetermined intent	"Poisoning by and exposure to antiepileptic, sedative-hypnotic, antiparkinsonism and psychotropic drugs, not elsewhere classified, undetermined intent"	35	26990678
+	External causes of morbidity and mortality	Event of undetermined intent	"Poisoning by and exposure to narcotics and psychodysleptics [hallucinogens], not elsewhere classified, undetermined intent"	40	26990678
+	External causes of morbidity and mortality	Event of undetermined intent	"Poisoning by and exposure to other and unspecified drugs, medicaments and biological substances, undetermined intent"	100	26990678
+	External causes of morbidity and mortality	Event of undetermined intent	"Hanging, strangulation and suffocation, undetermined intent"	11	26990678
+	External causes of morbidity and mortality	Event of undetermined intent	"Drowning and submersion, undetermined intent"	19	26990678
+	External causes of morbidity and mortality	Event of undetermined intent	"Other and unspecified firearm discharge, undetermined intent"	28	26990678
+	External causes of morbidity and mortality	Event of undetermined intent	"Exposure to smoke, fire and flames, undetermined intent"	10	26990678
+	External causes of morbidity and mortality	Event of undetermined intent	"Other specified events, undetermined intent"	12	26990678
+	External causes of morbidity and mortality	Event of undetermined intent	"Unspecified event, undetermined intent"	30	26990678
+Total	External causes of morbidity and mortality	Event of undetermined intent		324	26990678
+Total	External causes of morbidity and mortality	Legal intervention and operations of war		11	26990678
+	External causes of morbidity and mortality	Complications of medical and surgical care	"Drug or medicament, unspecified"	11	26990678
+	External causes of morbidity and mortality	Complications of medical and surgical care	Surgical operation with implant of artificial internal device	24	26990678
+	External causes of morbidity and mortality	Complications of medical and surgical care	"Surgical operation with anastomosis, bypass or graft"	18	26990678
+	External causes of morbidity and mortality	Complications of medical and surgical care	"Surgical procedure, unspecified"	74	26990678
+	External causes of morbidity and mortality	Complications of medical and surgical care	Other medical procedures	27	26990678
+Total	External causes of morbidity and mortality	Complications of medical and surgical care		228	26990678
+	External causes of morbidity and mortality	Sequelae of external causes of morbidity and mortality	Sequelae of motor-vehicle accident	39	26990678
+	External causes of morbidity and mortality	Sequelae of external causes of morbidity and mortality	Sequelae of other accidents	74	26990678
+	External causes of morbidity and mortality	Sequelae of external causes of morbidity and mortality	Sequelae of assault	27	26990678
+	External causes of morbidity and mortality	Sequelae of external causes of morbidity and mortality	"Sequelae of surgical and medical procedures as the cause of abnormal reaction of the patient, or of later complication, without mention of misadventure at the time of the procedure"	10	26990678
+Total	External causes of morbidity and mortality	Sequelae of external causes of morbidity and mortality		160	26990678
+Total	External causes of morbidity and mortality			14928	26990678
+Total				14928	26990678
+---					
+"Dataset: Compressed Mortality, 1999-2016"					
+Query Parameters:					
+Title: external_type_columbus_1999_2016					
+2013 Urbanization: All					
+Age Group: All					
+Gender: All					
+Hispanic Origin: All					
+ICD-10 Codes: V01-Y89 (External causes of morbidity and mortality)					
+Race: All					
+"States: Delaware County, OH (39041), Fairfield County, OH (39045), Franklin County, OH (39049), Pickaway County, OH (39129)"					
+"Year: All, 1999 to 2016"					
+"Group By: ICD Chapter, ICD Sub-Chapter, Cause of death"					
+Show Totals: True					
+Show Zero Values: False					
+Show Suppressed: False					
+"Calculate Rates Per: 100,000"					
+---					
+Help: See http://wonder.cdc.gov/wonder/help/cmf.html for more information.					
+---					
+"Query Date: Apr 27, 2018 3:28:06 AM"					
+---					
+"Suggested Citation: Centers for Disease Control and Prevention, National Center for Health Statistics. Compressed Mortality File"					
+"1999-2016 on CDC WONDER Online Database, released December 2017. Data are from the Compressed Mortality File 1999-2016 Series 20"					
+"No. 2V, 2017, as compiled from data provided by the 57 vital statistics jurisdictions through the Vital Statistics Cooperative"					
+"Program. Accessed at http://wonder.cdc.gov/cmf-icd10.html on Apr 27, 2018 3:28:06 AM"					
+---					
+Messages:					
+"1. Rows with suppressed Deaths are hidden, but the Deaths and Population values in those rows are included in the totals. Use"					
+Quick Options above to show suppressed rows.					
+---					
+Caveats:					
+"1. Due to confidentiality constraints, sub-national death counts and rates are suppressed when the number of deaths is less than"					
+10. Figures representing infant deaths and births have additional constraints for national and local data. More information:					
+http://wonder.cdc.gov/wonder/help/cmf.html#Assurance of Confidentiality.					
+2. Death rates are flagged as Unreliable when the rate is calculated with a numerator of 20 or less. More information:					
+http://wonder.cdc.gov/wonder/help/cmf.html#Unreliable.					
+"3. About sub-national population figures for regions, divisions, states and counties: population figures for 1999 are from the"					
+1990-1999 series of bridged-race intercensal estimates of the July 1 resident population; population figures for 2000 and 2010					
+are bridged-race April 1 census counts; population figures for 2001-2009 are from the revised 2000-2009 series of bridged-race					
+intercensal estimates of the July 1 resident population; and population figures for 2011-2016 are bridged-race postcensal					
+"estimates of the July 1 resident population, from the Vintage 2016 series released by NCHS on June 26, 2017."					
+4. The population figures used in the calculation of death rates for the age group 'under 1 year' are the estimates of the					
+resident population that is under one year of age. More information: http://wonder.cdc.gov/wonder/help/cmf.html#Age Group.					
+5. Changes to cause of death classification affect reporting trends. More information:					
+http://wonder.cdc.gov/wonder/help/cmf.html#ICD-10 Changes.					
+"6. As of April 3, 2017, the underlying cause of death has been revised for 125 deaths in 2014. More information:"					
+http://wonder.cdc.gov/wonder/help/cmf.html#2014-Revision.					
