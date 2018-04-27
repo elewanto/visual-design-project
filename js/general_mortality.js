@@ -15,6 +15,7 @@ function drawStart() {
 function draw_static_word_cloud(){
   var img = new Image();
   var parentDiv = document.getElementById('cloud');
+  console.log(parentDiv.nodeType)
   img.onload = function() {
                 parentDiv.appendChild(img);
                 imgNode = parentDiv.childNodes[0];
