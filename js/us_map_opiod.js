@@ -224,7 +224,7 @@ function drawOpioidUSMap(year) {
             legend.append("text")                 // append the legend text
                   .data([Math.round(0.1*(maxRate-minRate)+minRate) + ' Deaths per 100,000', Math.round(0.4*(maxRate-minRate)+minRate) + ' Deaths per 100,000',
                          Math.round(0.7*(maxRate-minRate)+minRate) + ' Deaths per 100,000', Math.round(1.0*(maxRate-minRate)+minRate) + ' Deaths per 100,000',
-                                               'Data Unavailable\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0']) // lazy justify with whitespace unicode
+                          'Data Unavailable\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0']) // lazy justify with whitespace unicode
                   .attr("x", 120)
                   .attr("y", 7)
                   .attr("dy", ".7em")
