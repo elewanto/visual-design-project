@@ -49,7 +49,7 @@ function display_image_mortality(img_id){
   switch(parseInt(img_id)){
     case 0: img.src = 'images/Deaths_Race_Cbus.png';
             break;
-    case 1: img.src = 'images/mortality_risk.png';
+    case 1: img.src = 'images/mortality_risk_age.png';
             break;
     default:
             break; 
@@ -255,16 +255,6 @@ function drawBubbles(file){
   });
 }
 
-// draw SVG D3 charts 
-function drawCharts() {
-  console.log('in drawCharts()');
-  // remove any existing svg so we don't append a second one below
-  oldSvg = document.getElementById('chartDiv');   // get the parent container div for the svg
-  removeChildren(oldSvg);                       // delete previous svg element before drawing new svg
-
-}
-
-
 // remove document html children of node parameter
 function removeChildren(node) {
   console.log('in removeChildren()');
@@ -273,3 +263,4 @@ function removeChildren(node) {
     node.removeChild(node.firstChild);
   }
 }
+

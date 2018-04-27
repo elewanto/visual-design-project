@@ -1,8 +1,4 @@
 
-// global variables
-//var sliderValue = "2015";     //
-
-
 /************************************************************************************************/
 // main function called from index.html homepage
 function drawStart() {
@@ -15,15 +11,6 @@ function drawStart() {
 }
 
 /************************************************************************************************/
-
-
-// Map Slider function
-function sliderChange() {
-  console.log('slider used: ' + slider.getValue());
-  sliderValue = slider.getValue();
-  drawMaps();
-}
-
 function display_image(img_id){
   console.log('display_image()');
 
@@ -42,6 +29,7 @@ function display_image(img_id){
 
   switch(parseInt(img_id)){
     case 0: img.src = 'images/LE_temporal_Cbus.png';
+            link = 'data/le_data/LE_ParallelCord.csv';
             break;
     case 1: img.src = 'images/LE_US_gender_race.png';
             break;
@@ -52,6 +40,21 @@ function display_image(img_id){
     default:
             break; 
   }
+  var chartGroup = parentDiv.append('g')
+                .attr('id', 'chartG')
+                .attr('transform', 'translate(0, 0)');
+
+  var linkGroup = chartSvg.append('g')
+    .attr('transform', 'translate(1100, 980)')      
+    .append('a')
+    .attr("href", link)    
+    .append('text')
+    .style("fill", "darkblue")
+    .style("font-size", "18px")
+    .attr("text-anchor", "middle")
+    .style("pointer-events", "all")
+    .style('cursor', 'pointer')
+    .text('Data Source');
 }
 
 function LE_MF_Gap(img_id){
