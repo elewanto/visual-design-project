@@ -69,8 +69,9 @@ function drawBubble() {
         .attr("id", function(d) { return d.id; })
         .attr("r", function(d) { return d.r; })
         .style("fill", function(d) { return color(d.package); })
+        .style('cursor', 'pointer')
         .on('mousemove', function(d) {
-            d3.select(this)
+            d3.select(this)   
               .transition()
               //.ease(d3.easeBounce)
               .attr('r', 1.1*d.r)
@@ -139,11 +140,12 @@ function drawBubble() {
           })
           return labelJoin;
         })
-        .enter().append("tspan")
+        .enter().append("tspan")       
         .style('font-size', function(d) {
           return d.sizeF + 'px';
         })
         .style('font-weight', 'bold')
+        .style('cursor', 'pointer')        
         .attr("x", 0)
         .attr("y", function(d, i, nodes) { return 20 + (i - nodes.length / 2 - 0.5) * (d.sizeF-2); })
         .text(function(d) { return d.wordV; });

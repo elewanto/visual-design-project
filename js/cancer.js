@@ -52,6 +52,18 @@ function cancerTreemapColumbus() {
                 .attr('id', 'chartG')
                 .attr('transform', 'translate(0, 0)');
 
+  var linkGroup = chartSvg.append('g')
+    .attr('transform', 'translate(1100, 1000)')      
+    .append('a')
+    .attr("href", "data/cancer_data/cancer_types_columbus.csv")    
+    .append('text')
+    .style("fill", "darkblue")
+    .style("font-size", "18px")
+    .attr("text-anchor", "middle")
+    .style("pointer-events", "all")
+    .style('cursor', 'pointer')
+    .text('Data Source');                 
+
   queue().defer(d3.csv, "data/cancer_data/cancer_types_columbus.csv")
         .await(drawTreemap);  
 }
@@ -74,6 +86,19 @@ function cancerBubbleColumbus() {
   var chartGroup = chartSvg.append('g')
                 .attr('id', 'chartG')
                 .attr('transform', 'translate(0, 0)');
+
+
+  var linkGroup = chartSvg.append('g')
+    .attr('transform', 'translate(1100, 980)')      
+    .append('a')
+    .attr("href", "data/cancer_data/cancer_types_columbus_bubble.csv")    
+    .append('text')
+    .style("fill", "darkblue")
+    .style("font-size", "18px")
+    .attr("text-anchor", "middle")
+    .style("pointer-events", "all")
+    .style('cursor', 'pointer')
+    .text('Data Source');                    
 
   //queue().defer(d3.csv, "data/cancer_data/cancer_types_columbus_bubble.csv")
   //      .await(drawBubble);  
@@ -126,6 +151,18 @@ function cancerLineChartUS() {
                 .attr('id', 'chartG')
                 .attr('transform', 'translate(0, 0)');
 
+  var linkGroup = chartSvg.append('g')
+    .attr('transform', 'translate(1100, 980)')      
+    .append('a')
+    .attr("href", "data/cancer_data/cancer_us_1999_2016.csv")    
+    .append('text')
+    .style("fill", "darkblue")
+    .style("font-size", "18px")
+    .attr("text-anchor", "middle")
+    .style("pointer-events", "all")
+    .style('cursor', 'pointer')
+    .text('Data Source');                 
+
   queue().defer(d3.csv, "data/cancer_data/cancer_us_1999_2016.csv")
         .defer(d3.csv, "data/cancer_data/cancer_ohio_1999_2016.csv")
         .await(drawLineChartUS); 
@@ -151,6 +188,18 @@ function cancerLineChartOhio() {
   var chartGroup = chartSvg.append('g')
                 .attr('id', 'chartG')
                 .attr('transform', 'translate(0, 0)');
+
+  var linkGroup = chartSvg.append('g')
+    .attr('transform', 'translate(1100, 980)')      
+    .append('a')
+    .attr("href", "data/cancer_data/cancer_ohio_1999_2016.csv")    
+    .append('text')
+    .style("fill", "darkblue")
+    .style("font-size", "18px")
+    .attr("text-anchor", "middle")
+    .style("pointer-events", "all")
+    .style('cursor', 'pointer')
+    .text('Data Source');                 
 
 
   queue().defer(d3.csv, "data/cancer_data/cancer_us_1999_2016.csv")
@@ -178,6 +227,18 @@ function cancerLineChartOhioUS() {
   var chartGroup = chartSvg.append('g')
                 .attr('id', 'chartG')
                 .attr('transform', 'translate(0, 0)');
+
+  var linkGroup = chartSvg.append('g')
+    .attr('transform', 'translate(1100, 980)')      
+    .append('a')
+    .attr("href", "data/cancer_data/cancer_us_1999_2016.csv")    
+    .append('text')
+    .style("fill", "darkblue")
+    .style("font-size", "18px")
+    .attr("text-anchor", "middle")
+    .style("pointer-events", "all")
+    .style('cursor', 'pointer')
+    .text('Data Source');                  
 
   queue().defer(d3.csv, "data/cancer_data/cancer_us_1999_2016.csv")
         .defer(d3.csv, "data/cancer_data/cancer_ohio_1999_2016.csv")

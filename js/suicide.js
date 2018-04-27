@@ -55,6 +55,18 @@ function suicideDonuts(selection) {
                 .attr('id', 'chartG')
                 .attr('transform', 'translate(0, 0)');
 
+  var linkGroup = chartSvg.append('g')
+    .attr('transform', 'translate(1100, 980)')      
+    .append('a')
+    .attr("href", "data/suicide_data/suicide_types_columbus_1999_2016.csv")    
+    .append('text')
+    .style("fill", "darkblue")
+    .style("font-size", "18px")
+    .attr("text-anchor", "middle")
+    .style("pointer-events", "all")
+    .style('cursor', 'pointer')
+    .text('Data Source');                  
+
 
   queue().defer(d3.csv, "data/suicide_data/suicide_types_columbus_1999_2016.csv")
         .defer(d3.csv, "data/suicide_data/suicide_age_columbus_1999_2016.csv")
@@ -86,6 +98,18 @@ function suicideDonutsR(selection) {
                 .attr('id', 'chartG')
                 .attr('transform', 'translate(0, 0)');
 
+  var linkGroup = chartSvg.append('g')
+    .attr('transform', 'translate(1100, 980)')      
+    .append('a')
+    .attr("href", "data/suicide_data/suicide_age_columbus_1999_2016.csv")    
+    .append('text')
+    .style("fill", "darkblue")
+    .style("font-size", "18px")
+    .attr("text-anchor", "middle")
+    .style("pointer-events", "all")
+    .style('cursor', 'pointer')
+    .text('Data Source');                  
+
 
   queue().defer(d3.csv, "data/suicide_data/suicide_age_columbus_1999_2016.csv")
         .defer(d3.csv, "data/suicide_data/suicide_gender_columbus_1999_2016.csv")
@@ -115,6 +139,18 @@ function suicideLineChartUS() {
                 .attr('id', 'chartG')
                 .attr('transform', 'translate(0, 0)');
 
+  var linkGroup = chartSvg.append('g')
+    .attr('transform', 'translate(1100, 980)')      
+    .append('a')
+    .attr("href", "data/suicide_data/suicide_us_1999_2016.csv")    
+    .append('text')
+    .style("fill", "darkblue")
+    .style("font-size", "18px")
+    .attr("text-anchor", "middle")
+    .style("pointer-events", "all")
+    .style('cursor', 'pointer')
+    .text('Data Source');                     
+
 
   queue().defer(d3.csv, "data/suicide_data/suicide_us_1999_2016.csv")
         .defer(d3.csv, "data/suicide_data/suicide_ohio_1999_2016.csv")
@@ -143,6 +179,18 @@ function suicideLineChartOhio() {
                 .attr('id', 'chartG')
                 .attr('transform', 'translate(0, 0)');
 
+  var linkGroup = chartSvg.append('g')
+    .attr('transform', 'translate(1100, 980)')      
+    .append('a')
+    .attr("href", "data/suicide_data/suicide_ohio_1999_2016.csv")    
+    .append('text')
+    .style("fill", "darkblue")
+    .style("font-size", "18px")
+    .attr("text-anchor", "middle")
+    .style("pointer-events", "all")
+    .style('cursor', 'pointer')
+    .text('Data Source');                 
+
 
   queue().defer(d3.csv, "data/suicide_data/suicide_us_1999_2016.csv")
         .defer(d3.csv, "data/suicide_data/suicide_ohio_1999_2016.csv")
@@ -169,6 +217,19 @@ function suicideLineChartOhioUS() {
   var chartGroup = chartSvg.append('g')
                 .attr('id', 'chartG')
                 .attr('transform', 'translate(0, 0)');
+
+  var linkGroup = chartSvg.append('g')
+    .attr('transform', 'translate(1100, 980)')      
+    .append('a')
+    .attr("href", "data/suicide_data/suicide_us_1999_2016.csv")    
+    .append('text')
+    .style("fill", "darkblue")
+    .style("font-size", "18px")
+    .attr("text-anchor", "middle")
+    .style("pointer-events", "all")
+    .style('cursor', 'pointer')
+    .text('Data Source'); 
+                
 
   queue().defer(d3.csv, "data/suicide_data/suicide_us_1999_2016.csv")
         .defer(d3.csv, "data/suicide_data/suicide_ohio_1999_2016.csv")
