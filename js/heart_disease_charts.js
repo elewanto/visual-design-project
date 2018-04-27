@@ -1,6 +1,323 @@
 
+// using Mike Bostick's Treemap example
+function drawBubble() {
+
+  var canvasWidth = 1200;
+  var canvasHeight = 1000;
+
+  var marginLeft = 20;
+  var marginRight = 20;
+  var marginTop = 100;
+  var marginBottom = 20;
+
+  var chartWidth = canvasWidth - marginLeft - marginRight;
+  var chartHeight = canvasHeight - marginTop - marginBottom;
+
+  var format = d3.format(',d');
+
+  var pack = d3.pack()                // set size of chart
+      //.size([chartWidth, chartHeight])
+      .size([1200,1000])
+      .padding(1);
+
+  var totalDeaths = 0;
+
+  var tooltip = d3.select('body').append('div').attr('class', 'tooltipTree'); 
+
+  d3.csv("data/heart_disease_data/heart_disease_type_columbus_1999_2016.csv", function(d) {
+    d.value = +d.value;
+    if (d.value) {
+      totalDeaths += d.value;
+      return d;
+    }
+  }, function(error, classes) {
+    if (error) throw error;
+
+    var root = d3.hierarchy({children: classes})
+        .sum(function(d) { return d.value; })
+        .each(function(d) {
+          if (id = d.data.id) {
+            var id, i = id.lastIndexOf(".");
+            d.id = id;
+            d.package = id.slice(0, i);
+            d.class = id.slice(i + 1);
+          }
+        });
+
+    var chartGroup = d3.select('#chartG');
+
+    chartGroup.append('g')
+              .attr('transform', 'translate(650, 50)')
+              .attr('id', '#chartTitle')
+              .append('text')
+              .text('Columbus Heart Disease Deaths by Type (1999 - 2015)')
+              .attr('class', 'title');
+
+    var color = d3.scaleOrdinal(d3.schemeCategory20b);     
+
+
+
+    var node = chartGroup.append('g')
+      .attr('transform', 'translate(0, 50)')
+      .selectAll(".node")
+      .data(pack(root).leaves())
+      .enter().append("g")
+        .attr("class", "node")
+        .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
+
+    node.append("circle")
+        .attr("id", function(d) { return d.id; })
+        .attr("r", function(d) { return d.r; })
+        .style("fill", function(d) { return color(d.package); })
+        .on('mousemove', function(d) {
+            tooltip.style("left", d3.event.pageX + 10 + "px");
+            tooltip.style("top", d3.event.pageY - 20 + "px");
+            tooltip.style("display", "inline-block");        
+            tooltip.html(d.children ? null : 'Category: ' + d.package.slice(35, d.package.length+1) 
+                                            + ' | Type: ' + d.class + ' | ' + d.data.value.toLocaleString('en')
+                                            + ' deaths' + ' | ' + (d.data.value*100/totalDeaths).toLocaleString('en') + '% of ' 
+                                            + totalDeaths.toLocaleString('en') + ' total deaths');
+        }).on('mouseout', function(d) {
+          tooltip.style('display', 'none');
+        });        
+
+    node.append("clipPath")
+        .attr("id", function(d) { return "clip-" + d.id; })
+        .append("use")
+        .attr("xlink:href", function(d) { return "#" + d.id; });
+
+    node.append("text")
+        .attr("clip-path", function(d) { return "url(#clip-" + d.id + ")"; })
+        .selectAll("tspan")
+        .data(function(d) { 
+          var fontSize = 14;
+          var maxLenPerWord = parseInt(d.r/6.5);
+          var maxWord = parseInt(d.r/15);
+          //var label = d.class.slice(0, maxLen);
+          var label = d.class
+          if (maxLenPerWord == 0 || maxWord == 0) {
+            return ([{'wordV':"", 'sizeF':fontSize}]);
+          }
+          console.log(d);
+          if (d.r > 100) {
+            fontSize = 24;
+          } else if (d.r > 80) {
+            fontSize = 22;
+          } else if (d.r > 50){
+            fontSize = 20;
+          } else if (d.r > 20) {
+            fontSize = 18;
+          } else {
+            fontSize = 16;
+          }
+          var labelJoin = [];
+          var labelArr = label.split(" ");
+          if (maxWord > 3) {
+            maxWord = 3;
+          }          
+          labelArr.forEach(function(d) {
+            if (maxWord > 0) {
+              if (d.length > maxLenPerWord) { 
+                labelJoin.push({'wordV': d.slice(0, maxLenPerWord+1), 'sizeF': fontSize});
+              } else {
+                labelJoin.push({'wordV': d.slice(0, maxLenPerWord+1), 'sizeF': fontSize});
+              }
+              maxWord--;              
+            }
+          })
+          return labelJoin;
+        })
+        .enter().append("tspan")
+        .style('font-size', function(d) {
+          return d.sizeF + 'px';
+        })
+        .style('font-weight', 'bold')
+        .attr("x", 0)
+        .attr("y", function(d, i, nodes) { return 20 + (i - nodes.length / 2 - 0.5) * (d.sizeF-2); })
+        .text(function(d) { return d.wordV; });
+
+  });
+
+}
+
+
+
+
+
+// using Mike Bostick's Treemap example
+function drawTreemap(error, data) {
+
+  groups = ['Category'];
+  var totalDeaths = 0;
+  // convert string data to numbers
+  data.forEach(function(d) {
+    d.Deaths = +d.Deaths;
+    totalDeaths += d.Deaths;
+  });
+
+  // parse csv data to hierarchical json format
+  var genGroups = function(data) {
+    return _.map(data, function(element, index) {
+      return { name : index, children : element };
+    });
+  };
+
+  var nest = function(node, curIndex) {
+    if (curIndex === 0) {
+      node.children = genGroups(_.groupBy(data, groups[0]));
+      _.each(node.children, function (child) {
+        nest(child, curIndex + 1);
+      });
+    }
+    else {
+      if (curIndex < groups.length) {
+        node.children = genGroups(
+          _.groupBy(node.children, groups[curIndex])
+        );
+        _.each(node.children, function (child) {
+          nest(child, curIndex + 1);
+        });
+      }
+    }
+    return node;
+  };
+
+  jsonData = nest({}, 0);
+
+
+  jsonData.name = 'Cancer';
+
+  var canvasWidth = 1200;
+  var canvasHeight = 1000;
+
+  var marginLeft = 60;
+  var marginRight = 20;
+  var marginTop = 100;
+  var marginBottom = 20;  
+
+  var chartWidth = canvasWidth - marginLeft - marginRight;
+  var chartHeight = canvasHeight - marginTop - marginBottom;
+
+
+  var chartGroup = d3.select('#chartG');
+
+  chartGroup.append('g')
+            .attr('transform', 'translate(650, 50)')
+            .attr('id', '#chartTitle')
+            .append('text')
+            .text('Columbus Heart Disease Deaths by Type (1999 - 2015)')
+            .attr('class', 'title');
+
+
+  var fader = function(color) { return d3.interpolateRgb(color, "#fff")(0.2); },
+      color = d3.scaleOrdinal(d3.schemeCategory10.map(fader)),
+      format = d3.format(",d");
+
+  var treemapGroup = chartGroup.append('g')
+       .attr('transform', 'translate(0,' + marginTop + ')')     
+
+  var treemap = d3.treemap()
+      .tile(d3.treemapResquarify)
+      .size([chartWidth, chartHeight])
+      .round(true)
+      .paddingInner(1);
+
+  data = jsonData;
+
+  var root = d3.hierarchy(data)
+      .eachBefore(function(d) { d.data.id = (d.parent ? d.parent.data.id + "." : "") + d.data.name; })
+      .sum(sumBySize)
+      .sort(function(a, b) { return b.height - a.height || b.value - a.value; });
+
+  var tooltip = d3.select('body').append('div').attr('class', 'tooltipTree');
+
+  treemap(root);
+
+  var cell = treemapGroup.selectAll("g")
+    .data(root.leaves())
+    .enter().append("g")
+    .attr("transform", function(d) { return "translate(" + d.x0 + "," + d.y0 + ")"; });
+
+  cell.append("rect")
+      .attr("id", function(d) { return d.data.id; })
+      .attr("width", function(d) { return d.x1 - d.x0; })
+      .attr("height", function(d) { return d.y1 - d.y0; })
+      .attr("fill", function(d) { return color(d.parent.data.id); })
+      .on('mousemove', function(d) {
+          tooltip.style("left", d3.event.pageX + 10 + "px");
+          tooltip.style("top", d3.event.pageY - 20 + "px");
+          tooltip.style("display", "inline-block");        
+          tooltip.html(d.children ? null : 'Category: ' + d.parent.data.name + ' | Type: ' + d.data.name + ' | ' + d.data.Deaths.toLocaleString('en')
+                                            + ' deaths' + ' | ' + (d.data.Deaths*100/totalDeaths).toLocaleString('en') + '% of ' 
+                                            + totalDeaths.toLocaleString('en') + ' total deaths');
+      }).on('mouseout', function(d) {
+        tooltip.style('display', 'none');
+      });
+
+  cell.append("clipPath")
+      .attr("id", function(d) { return "clip-" + d.data.id; })
+      .append("use")
+      .attr("xlink:href", function(d) { return "#" + d.data.id; });
+
+  cell.append("text")
+      .attr("clip-path", function(d) { return "url(#clip-" + d.data.id + ")"; })
+      .selectAll("tspan")
+      .data(function(d) { 
+        var fontSize = 14;
+        var maxLenPerWord = parseInt((d.x1-d.x0)/7.7);
+        var maxWord = parseInt ((d.y1-d.y0)/18);
+        //var label = d.data.name.slice(0, maxLen);
+        var label = d.data.name;
+        if (maxLenPerWord == 0 || maxWord == 0) {
+          return ([{'wordV':"", 'sizeF':fontSize}]);
+        }
+        if (maxLenPerWord > 30) {
+          fontSize = 24;
+        } else if (maxLenPerWord > 10) {
+          fontSize = 18;
+        }
+        var labelJoin = [];
+        var labelArr = label.split(" ");
+        if (maxWord > 3) {
+          maxWord = 3;
+        }          
+        labelArr.forEach(function(d) {
+          if (maxWord > 0) {
+            if (d.length > maxLenPerWord) {
+              if (maxLenPerWord > 2) {
+                labelJoin.push({'wordV': d.slice(0, maxLenPerWord-1), 'sizeF': fontSize});
+              }
+            } else {
+              labelJoin.push({'wordV': d, 'sizeF': fontSize});
+            }
+            maxWord--;              
+          }
+        })
+        //return label.split(" ");
+        return labelJoin;  
+      })
+      .enter().append("tspan")
+      .attr('x', 0)
+      .style('font-weight', 'bold')
+      .style('text-anchor', 'start')
+      .style('font-size', function(d) {
+        return d.sizeF + 'px';
+      })         
+      .attr("x", 4)
+      .attr("y", function(d, i) { return (1+d.sizeF) + i*d.sizeF; })
+      .text(function(d) { return d.wordV; });
+
+  
+
+  function sumBySize(d) {
+    return d.Deaths;
+  }
+
+}
+
+
+
 function drawLineChartUS(error, dataUS, dataOhio) {
-  console.log('drawLine chart');
 
   // convert strings to numbers
   dataUS.forEach(function(d) {
@@ -46,12 +363,10 @@ function drawLineChartUS(error, dataUS, dataOhio) {
   if (maxUS != -1 && maxUS > maxRate) {
     maxRate = maxUS;
   }
-  console.log('Chart min max rates: ' + minRate + ' ' + maxRate);  
 
   var states = d3.nest()
                 .key(function(d) {return d.State;})
                 .sortKeys(function(a, b) {
-                  //console.log(a);
                   return a == 'Ohio' ? 1 : -1;    // sort Ohio to end of list for drawing on top
                 })
                 .entries(dataUS);
@@ -221,7 +536,6 @@ function drawLineChartUS(error, dataUS, dataOhio) {
 
 
 function drawLineChartOhio(error, dataUS, dataOhio) {
-  console.log('drawLine chart');
 
   // convert strings to numbers
   dataUS.forEach(function(d) {
@@ -267,18 +581,14 @@ function drawLineChartOhio(error, dataUS, dataOhio) {
   if (maxUS != -1 && maxUS > maxRate) {
     maxRate = maxUS;
   }
-  console.log('Chart min max rates: ' + minRate + ' ' + maxRate);  
 
   var states = d3.nest()
                 .key(function(d) {return d.County;})
                 .sortKeys(function(a, b) {
-                 // console.log(a);
                   return (a == 'Franklin' || a == 'Delaware' || a == 'Fairfield' || a == 'Pickaway') ? 1 : -1;    // sort Ohio to end of list for drawing on top
                 })
                 .entries(dataOhio);
 
-  console.log(states);
-  console.log('states length: ' + states.length);
 
   // normalize ranges
   var xScale = d3.scaleLinear().domain([1999, 2015]).range([marginLeft, chartWidth + marginLeft]);
@@ -440,7 +750,6 @@ function drawLineChartOhio(error, dataUS, dataOhio) {
 
 
 function partialDrawLineChartUS(error, dataUS, dataOhio) {
-  console.log('drawLine chart');
 
   // convert strings to numbers
   dataUS.forEach(function(d) {
@@ -486,18 +795,14 @@ function partialDrawLineChartUS(error, dataUS, dataOhio) {
   if (maxUS != -1 && maxUS > maxRate) {
     maxRate = maxUS;
   }
-  console.log('Chart min max rates: ' + minRate + ' ' + maxRate);  
 
   var states = d3.nest()
                 .key(function(d) {return d.State;})
                 .sortKeys(function(a, b) {
-                 // console.log(a);
                   return a == 'Ohio' ? 1 : -1;    // sort Ohio to end of list for drawing on top
                 })
                 .entries(dataUS);
 
-  console.log(states);
-  console.log('states length: ' + states.length);
 
   // normalize ranges
   var xScale = d3.scaleLinear().domain([1999, 2015]).range([marginLeft, chartWidth + marginLeft]);
@@ -660,7 +965,6 @@ function partialDrawLineChartUS(error, dataUS, dataOhio) {
 
 
 function partialDrawLineChartOhio(error, dataUS, dataOhio) {
-  console.log('drawLine chart');
 
   // convert strings to numbers
   dataUS.forEach(function(d) {
@@ -699,18 +1003,14 @@ function partialDrawLineChartOhio(error, dataUS, dataOhio) {
   if (maxUS != -1 && maxUS > maxRate) {
     maxRate = maxUS;
   }
-  console.log('Chart min max rates: ' + minRate + ' ' + maxRate);  
 
   var states = d3.nest()
                 .key(function(d) {return d.County;})
                 .sortKeys(function(a, b) {
-                //  console.log(a);
                   return (a == 'Franklin' || a == 'Delaware' || a == 'Fairfield' || a == 'Pickaway') ? 1 : -1;    // sort Ohio to end of list for drawing on top
                 })
                 .entries(dataOhio);
 
-  console.log(states);
-  console.log('states length: ' + states.length);
 
   // normalize ranges
   var xScale = d3.scaleLinear().domain([1999, 2015]).range([marginLeft, chartWidth + marginLeft]);

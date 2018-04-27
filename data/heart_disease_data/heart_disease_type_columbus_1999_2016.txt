@@ -1,0 +1,370 @@
+"Notes"	"Cause of death"	"Cause of death Code"	Deaths	Population	Crude Rate
+	"Rheumatic fever without mention of heart involvement"	"I00"	Suppressed	26990678	Suppressed
+	"Acute rheumatic pericarditis"	"I01.0"	Suppressed	26990678	Suppressed
+	"Acute rheumatic endocarditis"	"I01.1"	Suppressed	26990678	Suppressed
+	"Acute rheumatic myocarditis"	"I01.2"	Suppressed	26990678	Suppressed
+	"Other acute rheumatic heart disease"	"I01.8"	Suppressed	26990678	Suppressed
+	"Acute rheumatic heart disease, unspecified"	"I01.9"	Suppressed	26990678	Suppressed
+	"Rheumatic chorea with heart involvement"	"I02.0"	Suppressed	26990678	Suppressed
+	"Rheumatic chorea without heart involvement"	"I02.9"	Suppressed	26990678	Suppressed
+	"Mitral stenosis"	"I05.0"	39	26990678	0.1
+	"Rheumatic mitral insufficiency"	"I05.1"	Suppressed	26990678	Suppressed
+	"Mitral stenosis with insufficiency"	"I05.2"	Suppressed	26990678	Suppressed
+	"Other mitral valve diseases"	"I05.8"	Suppressed	26990678	Suppressed
+	"Mitral valve disease, unspecified"	"I05.9"	86	26990678	0.3
+	"Rheumatic aortic stenosis"	"I06.0"	Suppressed	26990678	Suppressed
+	"Rheumatic aortic insufficiency"	"I06.1"	Suppressed	26990678	Suppressed
+	"Rheumatic aortic stenosis with insufficiency"	"I06.2"	Suppressed	26990678	Suppressed
+	"Other rheumatic aortic valve diseases"	"I06.8"	Suppressed	26990678	Suppressed
+	"Rheumatic aortic valve disease, unspecified"	"I06.9"	Suppressed	26990678	Suppressed
+	"Tricuspid stenosis"	"I07.0"	Suppressed	26990678	Suppressed
+	"Tricuspid insufficiency"	"I07.1"	17	26990678	0.1 (Unreliable)
+	"Tricuspid stenosis with insufficiency"	"I07.2"	Suppressed	26990678	Suppressed
+	"Other tricuspid valve diseases"	"I07.8"	Suppressed	26990678	Suppressed
+	"Tricuspid valve disease, unspecified"	"I07.9"	Suppressed	26990678	Suppressed
+	"Disorders of both mitral and aortic valves"	"I08.0"	59	26990678	0.2
+	"Disorders of both mitral and tricuspid valves"	"I08.1"	Suppressed	26990678	Suppressed
+	"Disorders of both aortic and tricuspid valves"	"I08.2"	Suppressed	26990678	Suppressed
+	"Combined disorders of mitral, aortic and tricuspid valves"	"I08.3"	Suppressed	26990678	Suppressed
+	"Other multiple valve diseases"	"I08.8"	Suppressed	26990678	Suppressed
+	"Multiple valve disease, unspecified"	"I08.9"	Suppressed	26990678	Suppressed
+	"Rheumatic myocarditis"	"I09.0"	Suppressed	26990678	Suppressed
+	"Rheumatic diseases of endocardium, valve unspecified"	"I09.1"	12	26990678	0.0 (Unreliable)
+	"Chronic rheumatic pericarditis"	"I09.2"	Suppressed	26990678	Suppressed
+	"Other specified rheumatic heart diseases"	"I09.8"	Suppressed	26990678	Suppressed
+	"Rheumatic heart disease, unspecified"	"I09.9"	16	26990678	0.1 (Unreliable)
+	"Essential (primary) hypertension"	"I10"	1298	26990678	4.8
+	"Hypertensive heart disease with (congestive) heart failure"	"I11.0"	662	26990678	2.5
+	"Hypertensive heart disease without (congestive) heart failure"	"I11.9"	1775	26990678	6.6
+	"Hypertensive renal disease with renal failure"	"I12.0"	806	26990678	3.0
+	"Hypertensive renal disease without renal failure"	"I12.9"	13	26990678	0.0 (Unreliable)
+	"Hypertensive heart and renal disease with (congestive) heart failure"	"I13.0"	10	26990678	0.0 (Unreliable)
+	"Hypertensive heart and renal disease with renal failure"	"I13.1"	110	26990678	0.4
+	"Hypertensive heart and renal disease with both (congestive) heart failure and renal failure"	"I13.2"	144	26990678	0.5
+	"Hypertensive heart and renal disease, unspecified"	"I13.9"	18	26990678	0.1 (Unreliable)
+	"Renovascular hypertension"	"I15.0"	Suppressed	26990678	Suppressed
+	"Secondary hypertension, unspecified"	"I15.9"	Suppressed	26990678	Suppressed
+	"Unstable angina"	"I20.0"	Suppressed	26990678	Suppressed
+	"Angina pectoris with documented spasm"	"I20.1"	Suppressed	26990678	Suppressed
+	"Other forms of angina pectoris"	"I20.8"	Suppressed	26990678	Suppressed
+	"Angina pectoris, unspecified"	"I20.9"	15	26990678	0.1 (Unreliable)
+	"Acute transmural myocardial infarction of anterior wall"	"I21.0"	Suppressed	26990678	Suppressed
+	"Acute transmural myocardial infarction of inferior wall"	"I21.1"	Suppressed	26990678	Suppressed
+	"Acute transmural myocardial infarction of other sites"	"I21.2"	Suppressed	26990678	Suppressed
+	"Acute transmural myocardial infarction of unspecified site"	"I21.3"	Suppressed	26990678	Suppressed
+	"Acute subendocardial myocardial infarction"	"I21.4"	31	26990678	0.1
+	"Acute myocardial infarction, unspecified"	"I21.9"	9637	26990678	35.7
+	"Subsequent myocardial infarction of anterior wall"	"I22.0"	Suppressed	26990678	Suppressed
+	"Subsequent myocardial infarction of inferior wall"	"I22.1"	Suppressed	26990678	Suppressed
+	"Subsequent myocardial infarction of other sites"	"I22.8"	Suppressed	26990678	Suppressed
+	"Subsequent myocardial infarction of unspecified site"	"I22.9"	Suppressed	26990678	Suppressed
+	"Dressler's syndrome"	"I24.1"	Suppressed	26990678	Suppressed
+	"Other forms of acute ischaemic heart disease"	"I24.8"	27	26990678	0.1
+	"Acute ischaemic heart disease, unspecified"	"I24.9"	115	26990678	0.4
+	"Atherosclerotic cardiovascular disease, so described"	"I25.0"	3248	26990678	12.0
+	"Atherosclerotic heart disease"	"I25.1"	12573	26990678	46.6
+	"Old myocardial infarction"	"I25.2"	Suppressed	26990678	Suppressed
+	"Aneurysm of heart"	"I25.3"	Suppressed	26990678	Suppressed
+	"Coronary artery aneurysm"	"I25.4"	Suppressed	26990678	Suppressed
+	"Ischaemic cardiomyopathy"	"I25.5"	1266	26990678	4.7
+	"Silent myocardial ischaemia"	"I25.6"	Suppressed	26990678	Suppressed
+	"Other forms of chronic ischaemic heart disease"	"I25.8"	168	26990678	0.6
+	"Chronic ischaemic heart disease, unspecified"	"I25.9"	481	26990678	1.8
+	"Pulmonary embolism with mention of acute cor pulmonale"	"I26.0"	Suppressed	26990678	Suppressed
+	"Pulmonary embolism without mention of acute cor pulmonale"	"I26.9"	654	26990678	2.4
+	"Primary pulmonary hypertension"	"I27.0"	115	26990678	0.4
+	"Kyphoscoliotic heart disease"	"I27.1"	Suppressed	26990678	Suppressed
+	"Other secondary pulmonary hypertension"	"I27.2"	400	26990678	1.5
+	"Other specified pulmonary heart diseases"	"I27.8"	11	26990678	0.0 (Unreliable)
+	"Pulmonary heart disease, unspecified"	"I27.9"	85	26990678	0.3
+	"Arteriovenous fistula of pulmonary vessels"	"I28.0"	Suppressed	26990678	Suppressed
+	"Aneurysm of pulmonary artery"	"I28.1"	Suppressed	26990678	Suppressed
+	"Other specified diseases of pulmonary vessels"	"I28.8"	Suppressed	26990678	Suppressed
+	"Disease of pulmonary vessels, unspecified"	"I28.9"	Suppressed	26990678	Suppressed
+	"Acute nonspecific idiopathic pericarditis"	"I30.0"	Suppressed	26990678	Suppressed
+	"Infective pericarditis"	"I30.1"	Suppressed	26990678	Suppressed
+	"Other forms of acute pericarditis"	"I30.8"	Suppressed	26990678	Suppressed
+	"Acute pericarditis, unspecified"	"I30.9"	Suppressed	26990678	Suppressed
+	"Chronic adhesive pericarditis"	"I31.0"	Suppressed	26990678	Suppressed
+	"Chronic constrictive pericarditis"	"I31.1"	Suppressed	26990678	Suppressed
+	"Haemopericardium, not elsewhere classified"	"I31.2"	Suppressed	26990678	Suppressed
+	"Pericardial effusion (noninflammatory)"	"I31.3"	26	26990678	0.1
+	"Other specified diseases of pericardium"	"I31.8"	Suppressed	26990678	Suppressed
+	"Disease of pericardium, unspecified"	"I31.9"	22	26990678	0.1
+	"Acute and subacute infective endocarditis"	"I33.0"	111	26990678	0.4
+	"Acute endocarditis, unspecified"	"I33.9"	Suppressed	26990678	Suppressed
+	"Mitral (valve) insufficiency"	"I34.0"	192	26990678	0.7
+	"Mitral (valve) prolapse"	"I34.1"	20	26990678	0.1
+	"Nonrheumatic mitral (valve) stenosis"	"I34.2"	Suppressed	26990678	Suppressed
+	"Other nonrheumatic mitral valve disorders"	"I34.8"	11	26990678	0.0 (Unreliable)
+	"Nonrheumatic mitral valve disorder, unspecified"	"I34.9"	Suppressed	26990678	Suppressed
+	"Aortic (valve) stenosis"	"I35.0"	874	26990678	3.2
+	"Aortic (valve) insufficiency"	"I35.1"	53	26990678	0.2
+	"Aortic (valve) stenosis with insufficiency"	"I35.2"	11	26990678	0.0 (Unreliable)
+	"Other aortic valve disorders"	"I35.8"	15	26990678	0.1 (Unreliable)
+	"Aortic valve disorder, unspecified"	"I35.9"	134	26990678	0.5
+	"Nonrheumatic tricuspid (valve) stenosis"	"I36.0"	Suppressed	26990678	Suppressed
+	"Nonrheumatic tricuspid (valve) insufficiency"	"I36.1"	Suppressed	26990678	Suppressed
+	"Nonrheumatic tricuspid (valve) stenosis with insufficiency"	"I36.2"	Suppressed	26990678	Suppressed
+	"Other nonrheumatic tricuspid valve disorders"	"I36.8"	Suppressed	26990678	Suppressed
+	"Nonrheumatic tricuspid valve disorder, unspecified"	"I36.9"	Suppressed	26990678	Suppressed
+	"Pulmonary valve stenosis"	"I37.0"	Suppressed	26990678	Suppressed
+	"Pulmonary valve insufficiency"	"I37.1"	Suppressed	26990678	Suppressed
+	"Pulmonary valve stenosis with insufficiency"	"I37.2"	Suppressed	26990678	Suppressed
+	"Other pulmonary valve disorders"	"I37.8"	Suppressed	26990678	Suppressed
+	"Pulmonary valve disorder, unspecified"	"I37.9"	Suppressed	26990678	Suppressed
+	"Endocarditis, valve unspecified"	"I38"	408	26990678	1.5
+	"Infective myocarditis"	"I40.0"	21	26990678	0.1
+	"Isolated myocarditis"	"I40.1"	Suppressed	26990678	Suppressed
+	"Other acute myocarditis"	"I40.8"	Suppressed	26990678	Suppressed
+	"Acute myocarditis, unspecified"	"I40.9"	Suppressed	26990678	Suppressed
+	"Dilated cardiomyopathy"	"I42.0"	314	26990678	1.2
+	"Obstructive hypertrophic cardiomyopathy"	"I42.1"	14	26990678	0.1 (Unreliable)
+	"Other hypertrophic cardiomyopathy"	"I42.2"	62	26990678	0.2
+	"Endomyocardial (eosinophilic) disease"	"I42.3"	Suppressed	26990678	Suppressed
+	"Endocardial fibroelastosis"	"I42.4"	Suppressed	26990678	Suppressed
+	"Other restrictive cardiomyopathy"	"I42.5"	14	26990678	0.1 (Unreliable)
+	"Alcoholic cardiomyopathy"	"I42.6"	53	26990678	0.2
+	"Cardiomyopathy due to drugs and other external agents"	"I42.7"	Suppressed	26990678	Suppressed
+	"Other cardiomyopathies"	"I42.8"	Suppressed	26990678	Suppressed
+	"Cardiomyopathy, unspecified"	"I42.9"	2039	26990678	7.6
+	"Atrioventricular block, first degree"	"I44.0"	Suppressed	26990678	Suppressed
+	"Atrioventricular block, second degree"	"I44.1"	Suppressed	26990678	Suppressed
+	"Atrioventricular block, complete"	"I44.2"	25	26990678	0.1
+	"Other and unspecified atrioventricular block"	"I44.3"	Suppressed	26990678	Suppressed
+	"Left anterior fascicular block"	"I44.4"	Suppressed	26990678	Suppressed
+	"Left posterior fascicular block"	"I44.5"	Suppressed	26990678	Suppressed
+	"Other and unspecified fascicular block"	"I44.6"	Suppressed	26990678	Suppressed
+	"Left bundle-branch block, unspecified"	"I44.7"	Suppressed	26990678	Suppressed
+	"Right fascicular block"	"I45.0"	Suppressed	26990678	Suppressed
+	"Other and unspecified right bundle-branch block"	"I45.1"	Suppressed	26990678	Suppressed
+	"Bifascicular block"	"I45.2"	Suppressed	26990678	Suppressed
+	"Trifascicular block"	"I45.3"	Suppressed	26990678	Suppressed
+	"Nonspecific intraventricular block"	"I45.4"	Suppressed	26990678	Suppressed
+	"Other specified heart block"	"I45.5"	Suppressed	26990678	Suppressed
+	"Pre-excitation syndrome"	"I45.6"	Suppressed	26990678	Suppressed
+	"Other specified conduction disorders"	"I45.8"	71	26990678	0.3
+	"Conduction disorder, unspecified"	"I45.9"	20	26990678	0.1
+	"Cardiac arrest with successful resuscitation"	"I46.0"	Suppressed	26990678	Suppressed
+	"Sudden cardiac death, so described"	"I46.1"	257	26990678	1.0
+	"Cardiac arrest, unspecified"	"I46.9"	1179	26990678	4.4
+	"Re-entry ventricular arrhythmia"	"I47.0"	Suppressed	26990678	Suppressed
+	"Supraventricular tachycardia"	"I47.1"	18	26990678	0.1 (Unreliable)
+	"Ventricular tachycardia"	"I47.2"	68	26990678	0.3
+	"Paroxysmal tachycardia, unspecified"	"I47.9"	Suppressed	26990678	Suppressed
+	"Atrial fibrillation and flutter"	"I48"	1410	26990678	5.2
+	"Ventricular fibrillation and flutter"	"I49.0"	128	26990678	0.5
+	"Atrial premature depolarization"	"I49.1"	Suppressed	26990678	Suppressed
+	"Junctional premature depolarization"	"I49.2"	Suppressed	26990678	Suppressed
+	"Ventricular premature depolarization"	"I49.3"	Suppressed	26990678	Suppressed
+	"Other and unspecified premature depolarization"	"I49.4"	Suppressed	26990678	Suppressed
+	"Sick sinus syndrome"	"I49.5"	47	26990678	0.2
+	"Other specified cardiac arrhythmias"	"I49.8"	Suppressed	26990678	Suppressed
+	"Cardiac arrhythmia, unspecified"	"I49.9"	764	26990678	2.8
+	"Congestive heart failure"	"I50.0"	3618	26990678	13.4
+	"Left ventricular failure"	"I50.1"	18	26990678	0.1 (Unreliable)
+	"Heart failure, unspecified"	"I50.9"	529	26990678	2.0
+	"Cardiac septal defect, acquired"	"I51.0"	Suppressed	26990678	Suppressed
+	"Rupture of chordae tendineae, not elsewhere classified"	"I51.1"	Suppressed	26990678	Suppressed
+	"Rupture of papillary muscle, not elsewhere classified"	"I51.2"	Suppressed	26990678	Suppressed
+	"Intracardiac thrombosis, not elsewhere classified"	"I51.3"	Suppressed	26990678	Suppressed
+	"Myocarditis, unspecified"	"I51.4"	36	26990678	0.1
+	"Myocardial degeneration"	"I51.5"	25	26990678	0.1
+	"Cardiovascular disease, unspecified"	"I51.6"	148	26990678	0.5
+	"Cardiomegaly"	"I51.7"	116	26990678	0.4
+	"Other ill-defined heart diseases"	"I51.8"	148	26990678	0.5
+	"Heart disease, unspecified"	"I51.9"	496	26990678	1.8
+	"Subarachnoid haemorrhage from carotid siphon and bifurcation"	"I60.0"	Suppressed	26990678	Suppressed
+	"Subarachnoid haemorrhage from middle cerebral artery"	"I60.1"	Suppressed	26990678	Suppressed
+	"Subarachnoid haemorrhage from anterior communicating artery"	"I60.2"	Suppressed	26990678	Suppressed
+	"Subarachnoid haemorrhage from posterior communicating artery"	"I60.3"	Suppressed	26990678	Suppressed
+	"Subarachnoid haemorrhage from basilar artery"	"I60.4"	Suppressed	26990678	Suppressed
+	"Subarachnoid haemorrhage from vertebral artery"	"I60.5"	Suppressed	26990678	Suppressed
+	"Subarachnoid haemorrhage from other intracranial arteries"	"I60.6"	Suppressed	26990678	Suppressed
+	"Subarachnoid haemorrhage from intracranial artery, unspecified"	"I60.7"	27	26990678	0.1
+	"Other subarachnoid haemorrhage"	"I60.8"	17	26990678	0.1 (Unreliable)
+	"Subarachnoid haemorrhage, unspecified"	"I60.9"	477	26990678	1.8
+	"Intracerebral haemorrhage in hemisphere, subcortical"	"I61.0"	15	26990678	0.1 (Unreliable)
+	"Intracerebral haemorrhage in hemisphere, cortical"	"I61.1"	12	26990678	0.0 (Unreliable)
+	"Intracerebral haemorrhage in hemisphere, unspecified"	"I61.2"	Suppressed	26990678	Suppressed
+	"Intracerebral haemorrhage in brain stem"	"I61.3"	38	26990678	0.1
+	"Intracerebral haemorrhage in cerebellum"	"I61.4"	43	26990678	0.2
+	"Intracerebral haemorrhage, intraventricular"	"I61.5"	69	26990678	0.3
+	"Intracerebral haemorrhage, multiple localized"	"I61.6"	Suppressed	26990678	Suppressed
+	"Other intracerebral haemorrhage"	"I61.8"	Suppressed	26990678	Suppressed
+	"Intracerebral haemorrhage, unspecified"	"I61.9"	1073	26990678	4.0
+	"Subdural haemorrhage (acute)(nontraumatic)"	"I62.0"	240	26990678	0.9
+	"Nontraumatic extradural haemorrhage"	"I62.1"	Suppressed	26990678	Suppressed
+	"Intracranial haemorrhage (nontraumatic), unspecified"	"I62.9"	791	26990678	2.9
+	"Cerebral infarction due to thrombosis of precerebral arteries"	"I63.0"	10	26990678	0.0 (Unreliable)
+	"Cerebral infarction due to embolism of precerebral arteries"	"I63.1"	Suppressed	26990678	Suppressed
+	"Cerebral infarction due to unspecified occlusion or stenosis of precerebral arteries"	"I63.2"	58	26990678	0.2
+	"Cerebral infarction due to thrombosis of cerebral arteries"	"I63.3"	54	26990678	0.2
+	"Cerebral infarction due to embolism of cerebral arteries"	"I63.4"	64	26990678	0.2
+	"Cerebral infarction due to unspecified occlusion or stenosis of cerebral arteries"	"I63.5"	14	26990678	0.1 (Unreliable)
+	"Cerebral infarction due to cerebral venous thrombosis, nonpyogenic"	"I63.6"	Suppressed	26990678	Suppressed
+	"Other cerebral infarction"	"I63.8"	Suppressed	26990678	Suppressed
+	"Cerebral infarction, unspecified"	"I63.9"	331	26990678	1.2
+	"Stroke, not specified as haemorrhage or infarction"	"I64"	5534	26990678	20.5
+	"Dissection of cerebral arteries, nonruptured"	"I67.0"	Suppressed	26990678	Suppressed
+	"Cerebral aneurysm, nonruptured"	"I67.1"	29	26990678	0.1
+	"Cerebral atherosclerosis"	"I67.2"	68	26990678	0.3
+	"Progressive vascular leukoencephalopathy"	"I67.3"	Suppressed	26990678	Suppressed
+	"Hypertensive encephalopathy"	"I67.4"	Suppressed	26990678	Suppressed
+	"Moyamoya disease"	"I67.5"	Suppressed	26990678	Suppressed
+	"Nonpyogenic thrombosis of intracranial venous system"	"I67.6"	Suppressed	26990678	Suppressed
+	"Cerebral arteritis, not elsewhere classified"	"I67.7"	Suppressed	26990678	Suppressed
+	"Other specified cerebrovascular diseases"	"I67.8"	74	26990678	0.3
+	"Cerebrovascular disease, unspecified"	"I67.9"	258	26990678	1.0
+	"Sequelae of subarachnoid haemorrhage"	"I69.0"	Suppressed	26990678	Suppressed
+	"Sequelae of intracerebral haemorrhage"	"I69.1"	17	26990678	0.1 (Unreliable)
+	"Sequelae of other nontraumatic intracranial haemorrhage"	"I69.2"	14	26990678	0.1 (Unreliable)
+	"Sequelae of cerebral infarction"	"I69.3"	54	26990678	0.2
+	"Sequelae of stroke, not specified as haemorrhage or infarction"	"I69.4"	1097	26990678	4.1
+	"Sequelae of other and unspecified cerebrovascular diseases"	"I69.8"	663	26990678	2.5
+	"Atherosclerosis of aorta"	"I70.0"	Suppressed	26990678	Suppressed
+	"Atherosclerosis of renal artery"	"I70.1"	Suppressed	26990678	Suppressed
+	"Atherosclerosis of arteries of extremities"	"I70.2"	19	26990678	0.1 (Unreliable)
+	"Atherosclerosis of other arteries"	"I70.8"	Suppressed	26990678	Suppressed
+	"Generalized and unspecified atherosclerosis"	"I70.9"	563	26990678	2.1
+	"Dissection of aorta [any part]"	"I71.0"	291	26990678	1.1
+	"Thoracic aortic aneurysm, ruptured"	"I71.1"	76	26990678	0.3
+	"Thoracic aortic aneurysm, without mention of rupture"	"I71.2"	61	26990678	0.2
+	"Abdominal aortic aneurysm, ruptured"	"I71.3"	314	26990678	1.2
+	"Abdominal aortic aneurysm, without mention of rupture"	"I71.4"	123	26990678	0.5
+	"Thoracoabdominal aortic aneurysm, ruptured"	"I71.5"	Suppressed	26990678	Suppressed
+	"Thoracoabdominal aortic aneurysm, without mention of rupture"	"I71.6"	10	26990678	0.0 (Unreliable)
+	"Aortic aneurysm of unspecified site, ruptured"	"I71.8"	92	26990678	0.3
+	"Aortic aneurysm of unspecified site, without mention of rupture"	"I71.9"	51	26990678	0.2
+	"Aneurysm of carotid artery"	"I72.0"	Suppressed	26990678	Suppressed
+	"Aneurysm of artery of upper extremity"	"I72.1"	Suppressed	26990678	Suppressed
+	"Aneurysm of renal artery"	"I72.2"	Suppressed	26990678	Suppressed
+	"Aneurysm of iliac artery"	"I72.3"	10	26990678	0.0 (Unreliable)
+	"Aneurysm of artery of lower extremity"	"I72.4"	Suppressed	26990678	Suppressed
+	"Aneurysm and dissection of other precerebral arteries"	"I72.5"	Suppressed	26990678	Suppressed
+	"Aneurysm of other specified arteries"	"I72.8"	Suppressed	26990678	Suppressed
+	"Aneurysm of unspecified site"	"I72.9"	25	26990678	0.1
+	"Raynaud's syndrome"	"I73.0"	Suppressed	26990678	Suppressed
+	"Thromboangiitis obliterans [Buerger]"	"I73.1"	Suppressed	26990678	Suppressed
+	"Other specified peripheral vascular diseases"	"I73.8"	Suppressed	26990678	Suppressed
+	"Peripheral vascular disease, unspecified"	"I73.9"	629	26990678	2.3
+	"Embolism and thrombosis of abdominal aorta"	"I74.0"	Suppressed	26990678	Suppressed
+	"Embolism and thrombosis of other and unspecified parts of aorta"	"I74.1"	22	26990678	0.1
+	"Embolism and thrombosis of arteries of upper extremities"	"I74.2"	Suppressed	26990678	Suppressed
+	"Embolism and thrombosis of arteries of lower extremities"	"I74.3"	Suppressed	26990678	Suppressed
+	"Embolism and thrombosis of arteries of extremities, unspecified"	"I74.4"	Suppressed	26990678	Suppressed
+	"Embolism and thrombosis of iliac artery"	"I74.5"	Suppressed	26990678	Suppressed
+	"Embolism and thrombosis of other arteries"	"I74.8"	Suppressed	26990678	Suppressed
+	"Embolism and thrombosis of unspecified artery"	"I74.9"	46	26990678	0.2
+	"Arteriovenous fistula, acquired"	"I77.0"	Suppressed	26990678	Suppressed
+	"Stricture of artery"	"I77.1"	10	26990678	0.0 (Unreliable)
+	"Rupture of artery"	"I77.2"	Suppressed	26990678	Suppressed
+	"Arterial fibromuscular dysplasia"	"I77.3"	Suppressed	26990678	Suppressed
+	"Coeliac artery compression syndrome"	"I77.4"	Suppressed	26990678	Suppressed
+	"Necrosis of artery"	"I77.5"	Suppressed	26990678	Suppressed
+	"Arteritis, unspecified"	"I77.6"	22	26990678	0.1
+	"Other specified disorders of arteries and arterioles"	"I77.8"	Suppressed	26990678	Suppressed
+	"Disorder of arteries and arterioles, unspecified"	"I77.9"	19	26990678	0.1 (Unreliable)
+	"Hereditary haemorrhagic telangiectasia"	"I78.0"	Suppressed	26990678	Suppressed
+	"Naevus, non-neoplastic"	"I78.1"	Suppressed	26990678	Suppressed
+	"Other diseases of capillaries"	"I78.8"	Suppressed	26990678	Suppressed
+	"Disease of capillaries, unspecified"	"I78.9"	Suppressed	26990678	Suppressed
+	"Phlebitis and thrombophlebitis of superficial vessels of lower extremities"	"I80.0"	Suppressed	26990678	Suppressed
+	"Phlebitis and thrombophlebitis of femoral vein"	"I80.1"	Suppressed	26990678	Suppressed
+	"Phlebitis and thrombophlebitis of other deep vessels of lower extremities"	"I80.2"	251	26990678	0.9
+	"Phlebitis and thrombophlebitis of lower extremities, unspecified"	"I80.3"	21	26990678	0.1
+	"Phlebitis and thrombophlebitis of other sites"	"I80.8"	Suppressed	26990678	Suppressed
+	"Phlebitis and thrombophlebitis of unspecified site"	"I80.9"	12	26990678	0.0 (Unreliable)
+	"Portal vein thrombosis"	"I81"	Suppressed	26990678	Suppressed
+	"Budd-Chiari syndrome"	"I82.0"	Suppressed	26990678	Suppressed
+	"Thrombophlebitis migrans"	"I82.1"	Suppressed	26990678	Suppressed
+	"Embolism and thrombosis of vena cava"	"I82.2"	Suppressed	26990678	Suppressed
+	"Embolism and thrombosis of renal vein"	"I82.3"	Suppressed	26990678	Suppressed
+	"Embolism and thrombosis of other specified veins"	"I82.8"	Suppressed	26990678	Suppressed
+	"Embolism and thrombosis of unspecified vein"	"I82.9"	Suppressed	26990678	Suppressed
+	"Varicose veins of lower extremities with ulcer"	"I83.0"	Suppressed	26990678	Suppressed
+	"Varicose veins of lower extremities with inflammation"	"I83.1"	Suppressed	26990678	Suppressed
+	"Varicose veins of lower extremities with both ulcer and inflammation"	"I83.2"	Suppressed	26990678	Suppressed
+	"Varicose veins of lower extremities without ulcer or inflammation"	"I83.9"	Suppressed	26990678	Suppressed
+	"Internal thrombosed haemorrhoids"	"I84.0"	Suppressed	26990678	Suppressed
+	"Internal haemorrhoids with other complications"	"I84.1"	Suppressed	26990678	Suppressed
+	"Internal haemorrhoids without complication"	"I84.2"	Suppressed	26990678	Suppressed
+	"External thrombosed haemorrhoids"	"I84.3"	Suppressed	26990678	Suppressed
+	"External haemorrhoids with other complications"	"I84.4"	Suppressed	26990678	Suppressed
+	"External haemorrhoids without complication"	"I84.5"	Suppressed	26990678	Suppressed
+	"Residual haemorrhoidal skin tags"	"I84.6"	Suppressed	26990678	Suppressed
+	"Unspecified thrombosed haemorrhoids"	"I84.7"	Suppressed	26990678	Suppressed
+	"Unspecified haemorrhoids with other complications"	"I84.8"	Suppressed	26990678	Suppressed
+	"Unspecified haemorrhoids without complication"	"I84.9"	Suppressed	26990678	Suppressed
+	"Oesophageal varices with bleeding"	"I85.0"	11	26990678	0.0 (Unreliable)
+	"Oesophageal varices without bleeding"	"I85.9"	Suppressed	26990678	Suppressed
+	"Sublingual varices"	"I86.0"	Suppressed	26990678	Suppressed
+	"Scrotal varices"	"I86.1"	Suppressed	26990678	Suppressed
+	"Pelvic varices"	"I86.2"	Suppressed	26990678	Suppressed
+	"Vulval varices"	"I86.3"	Suppressed	26990678	Suppressed
+	"Gastric varices"	"I86.4"	Suppressed	26990678	Suppressed
+	"Varicose veins of other specified sites"	"I86.8"	Suppressed	26990678	Suppressed
+	"Postphlebitic syndrome"	"I87.0"	Suppressed	26990678	Suppressed
+	"Compression of vein"	"I87.1"	Suppressed	26990678	Suppressed
+	"Venous insufficiency (chronic)(peripheral)"	"I87.2"	Suppressed	26990678	Suppressed
+	"Other specified disorders of veins"	"I87.8"	Suppressed	26990678	Suppressed
+	"Disorder of vein, unspecified"	"I87.9"	Suppressed	26990678	Suppressed
+	"Nonspecific mesenteric lymphadenitis"	"I88.0"	Suppressed	26990678	Suppressed
+	"Chronic lymphadenitis, except mesenteric"	"I88.1"	Suppressed	26990678	Suppressed
+	"Other nonspecific lymphadenitis"	"I88.8"	Suppressed	26990678	Suppressed
+	"Nonspecific lymphadenitis, unspecified"	"I88.9"	Suppressed	26990678	Suppressed
+	"Lymphoedema, not elsewhere classified"	"I89.0"	11	26990678	0.0 (Unreliable)
+	"Lymphangitis"	"I89.1"	Suppressed	26990678	Suppressed
+	"Other specified noninfective disorders of lymphatic vessels and lymph nodes"	"I89.8"	Suppressed	26990678	Suppressed
+	"Noninfective disorder of lymphatic vessels and lymph nodes, unspecified"	"I89.9"	Suppressed	26990678	Suppressed
+	"Idiopathic hypotension"	"I95.0"	Suppressed	26990678	Suppressed
+	"Orthostatic hypotension"	"I95.1"	Suppressed	26990678	Suppressed
+	"Hypotension due to drugs"	"I95.2"	Suppressed	26990678	Suppressed
+	"Other hypotension"	"I95.8"	Suppressed	26990678	Suppressed
+	"Hypotension, unspecified"	"I95.9"	20	26990678	0.1
+	"Other and unspecified disorders of circulatory system"	"I99"	17	26990678	0.1 (Unreliable)
+"Total"			61593	26990678	228.2
+"---"
+"Dataset: Compressed Mortality, 1999-2016"
+"Query Parameters:"
+"Title: heart_disease_type_columbus_1999_2016"
+"2013 Urbanization: All"
+"Age Group: All"
+"Gender: All"
+"Hispanic Origin: All"
+"ICD-10 Codes: I00-I99 (Diseases of the circulatory system)"
+"Race: All"
+"States: Delaware County, OH (39041), Fairfield County, OH (39045), Franklin County, OH (39049), Pickaway County, OH (39129)"
+"Year: All, 1999 to 2016"
+"Group By: Cause of death"
+"Show Totals: True"
+"Show Zero Values: False"
+"Show Suppressed: True"
+"Calculate Rates Per: 100,000"
+"---"
+"Help: See http://wonder.cdc.gov/wonder/help/cmf.html for more information."
+"---"
+"Query Date: Apr 27, 2018 1:30:10 AM"
+"---"
+"Suggested Citation: Centers for Disease Control and Prevention, National Center for Health Statistics. Compressed Mortality File"
+"1999-2016 on CDC WONDER Online Database, released December 2017. Data are from the Compressed Mortality File 1999-2016 Series 20"
+"No. 2V, 2017, as compiled from data provided by the 57 vital statistics jurisdictions through the Vital Statistics Cooperative"
+"Program. Accessed at http://wonder.cdc.gov/cmf-icd10.html on Apr 27, 2018 1:30:10 AM"
+"---"
+Caveats:
+"1. Due to confidentiality constraints, sub-national death counts and rates are suppressed when the number of deaths is less than"
+"10. Figures representing infant deaths and births have additional constraints for national and local data. More information:"
+"http://wonder.cdc.gov/wonder/help/cmf.html#Assurance of Confidentiality."
+"2. Death rates are flagged as Unreliable when the rate is calculated with a numerator of 20 or less. More information:"
+"http://wonder.cdc.gov/wonder/help/cmf.html#Unreliable."
+"3. About sub-national population figures for regions, divisions, states and counties: population figures for 1999 are from the"
+"1990-1999 series of bridged-race intercensal estimates of the July 1 resident population; population figures for 2000 and 2010"
+"are bridged-race April 1 census counts; population figures for 2001-2009 are from the revised 2000-2009 series of bridged-race"
+"intercensal estimates of the July 1 resident population; and population figures for 2011-2016 are bridged-race postcensal"
+"estimates of the July 1 resident population, from the Vintage 2016 series released by NCHS on June 26, 2017."
+"4. The population figures used in the calculation of death rates for the age group 'under 1 year' are the estimates of the"
+"resident population that is under one year of age. More information: http://wonder.cdc.gov/wonder/help/cmf.html#Age Group."
+"5. Changes to cause of death classification affect reporting trends. More information:"
+"http://wonder.cdc.gov/wonder/help/cmf.html#ICD-10 Changes."
+"6. As of April 3, 2017, the underlying cause of death has been revised for 125 deaths in 2014. More information:"
+"http://wonder.cdc.gov/wonder/help/cmf.html#2014-Revision."
