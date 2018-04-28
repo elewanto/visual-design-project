@@ -9,6 +9,7 @@ function drawStart() {
 
   console.log('in landingPageStart()');
   draw_static_word_cloud();
+  display_image_mortality(1);
 }
 
 /************************************************************************************************/
