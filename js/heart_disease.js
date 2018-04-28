@@ -15,8 +15,6 @@ function drawStart() {
   heartDiseaseLineChartUS();
 }
 
-
-
 // Map Slider function
 async function sliderChange() {
   console.log('slider used: ' + slider.getValue());
@@ -26,55 +24,6 @@ async function sliderChange() {
   var hold = [await ret1, await ret2]
   return 1;
 }
-
-
-function test_image1() {
-  console.log('test_image1()');
-
-  oldChartSvg = document.getElementById('chartDiv');
-  removeChildren(oldChartSvg);
-
-  var img = new Image();
-  var parentDiv = document.getElementById('chartDiv');
-  img.onload = function() {
-    parentDiv.appendChild(img);
-
-    imgNode = parentDiv.childNodes[0];
-    imgNode.setAttribute('id', 'chartImage');
-    imgNode.setAttribute('class', 'center-block');
-    //dynamically set max image width to minimize distortion
-    console.log('image width: ' + img.width);
-    imgNode.setAttribute('width', img.width);  
-  };
-
-  img.src = 'images/LE_US_gender_race.png';
-
-}
-
-
-function test_image2() {
-  console.log('test_image2()');
-
-  oldChartSvg = document.getElementById('chartDiv');
-  removeChildren(oldChartSvg);
-
-  var img = new Image();
-  var parentDiv = document.getElementById('chartDiv');
-  img.onload = function() {
-    parentDiv.appendChild(img);
-
-    imgNode = parentDiv.childNodes[0];
-    imgNode.setAttribute('id', 'chartImage');
-    imgNode.setAttribute('class', 'center-block');
-    //dynamically set max image width to minimize distortion
-    console.log('image width: ' + img.width);
-    imgNode.setAttribute('width', img.width);  
-  };
-
-  img.src = 'images/causeDeathB.png';
-
-}
-
 
 function heartTreemapColumbus() {
   // delete old chart elements
@@ -144,15 +93,6 @@ function heartBubbleColumbus() {
   drawBubble();
 }
 
-
-
-
-
-
-
-
-
-
 function heartDiseaseLineChartUS() {
 
   // delete old chart elements
@@ -189,7 +129,6 @@ function heartDiseaseLineChartUS() {
         .defer(d3.csv, "data/heart_disease_data/heart_disease_mortality_ohio_1999_2015.csv")
         .await(drawLineChartUS); // file in heart_disease_charts.js
 }
-
 
 
 function heartDiseaseLineChartOhio() {
@@ -313,9 +252,6 @@ async function heart_disease_maps_1999_2015() {
   }  
 
 }
-
-
-
 
 // create SVG and groups needed to draw two maps side-by-side
 // can add data parameters to pass to function

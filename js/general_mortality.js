@@ -34,13 +34,10 @@ function draw_static_word_cloud(){
 function display_image_mortality(img_id){
   console.log('display_image_mortality()');
 
-  oldChartSvg = document.getElementById('chartDiv');
-  removeChildren(oldChartSvg);
-
-  oldDataSrc = document.getElementById('dataSource');
-  removeChildren(oldDataSrc);
+  clearAll();
 
   var img = new Image();
+
   var parentDiv = document.getElementById('chartDiv');
   img.onload = function() {
                 parentDiv.appendChild(img);
@@ -51,16 +48,19 @@ function display_image_mortality(img_id){
   };
 
   switch(parseInt(img_id)){
-    case 0: img.src = 'images/Deaths_Race_Cbus.png';
+    case 0: displayTitle("Columbus Deaths for White and Black population from 2000 to 2015");
+            img.src = 'images/Deaths_Race_Cbus.png';
             link = 'data/mortality_data/Black_White_Mortality_OH_County_2000_2015.csv';
             break;
-    case 1: img.src = 'images/mortality_risk_age.png';
+    case 1: displayTitle("Mortality Risk in different Age Groups for Columbus people (2014)");
+            img.src = 'images/mortality_risk_age.png';
             link = 'data/mortality_data/mortality_risk_age_grps.csv';
             break;
     default:
             break; 
   }
 
+  //parentDiv.prepend(t);
   var parentDiv2 = document.getElementById('dataSource');
   parentDiv2.setAttribute("top", img.height);
 
@@ -74,11 +74,7 @@ function display_image_mortality(img_id){
 function deaths_BW_Gap(img_id){
   console.log('deaths_BW_Gap()')
 
-  oldChartSvg = document.getElementById('chartDiv');
-  removeChildren(oldChartSvg);
-
-  oldDataSrc = document.getElementById('dataSource');
-  removeChildren(oldDataSrc);
+  clearAll();
 
   var img1 = new Image();
   var img2 = new Image();
@@ -98,7 +94,8 @@ function deaths_BW_Gap(img_id){
                 imgNode.setAttribute('width', img2.width);  
   };
   switch(parseInt(img_id)){
-    case 0: img1.src = 'images/Diff_Deaths_White_OH.png';
+    case 0: displayTitle("Changes in Top 12 Causes of Deaths in White and Black Ohio Population (2011-2015)");
+            img1.src = 'images/Diff_Deaths_White_OH.png';
             img2.src = 'images/Diff_Deaths_Black_OH.png';
             link = "data/mortality_data/Causes_of_death_OH_2011_2015";
             break;
@@ -119,11 +116,7 @@ function deaths_BW_Gap(img_id){
 function deaths_rural_urban_OH() {
   console.log('deaths_rural_urban_OH()')
 
-  oldChartSvg = document.getElementById('chartDiv');
-  removeChildren(oldChartSvg);
-
-  oldDataSrc = document.getElementById('dataSource');
-  removeChildren(oldDataSrc);
+  clearAll();
 
   link1 = "data/mortality_data/OH_Rural_Counties_Mortality_rate.csv";
   link2 = "data/mortality_data/OH_Urban_Counties_Mortality_Rate.csv";
@@ -139,7 +132,7 @@ function deaths_rural_urban_OH() {
   var chartGroup = chartSvg.append('g')
                           .attr('id', 'chartG')
                           .attr('transform', 'translate(5, 0)');
-
+  displayTitle("Deaths in Rural and Urban Counties of Ohio (2015)");
   drawBubbles(link1, 1);
   drawBubbles(link2, 2);
 }
@@ -210,7 +203,7 @@ function drawBubbles(file, link_id){
             .attr('class', 'bubbles')
             .attr('id', 'bubble-chart')
             .attr('width', 1000)
-            .attr('height', 400)
+            .attr('height', 500)
             .attr('transform', 'translate(' +xtransform+ ', 0)');
 
   var tooltip = d3.select('#tooltip');
@@ -255,6 +248,7 @@ function drawBubbles(file, link_id){
           .on('mouseover',function(d, i) {            // add mouse over function
               tooltip.transition()
                      .duration(200)
+                     .style("padding-top", 50 + "px")
                      .style('opacity', 0.9);
               tooltip.html("The number of deaths in <b>"+ d.data.County + "</b> County changed from " + d.data.Deaths_2005 + " in 2005 to " + d.data.Deaths_2015 + " in 2015." + "Thus, noticing <b>"+ d.data.per + "</b> by <b>" + formatterDec.format(100*d.data.Change)+"%</b>")
 
@@ -289,7 +283,7 @@ function drawBubbles(file, link_id){
   });
 
   var parentDiv2 = document.getElementById('dataSource');
-  parentDiv2.setAttribute("top", 400);
+  parentDiv2.setAttribute("top", 500);
   if(link_id == 1){
     var anchorTag = document.createElement('a');
     anchorTag.setAttribute("href", file); 
@@ -309,9 +303,7 @@ function drawBubbles(file, link_id){
 
 
 function generalBubbleColumbus() {
-  // delete old chart elements
-  oldChartSvg = document.getElementById('chartDiv');
-  removeChildren(oldChartSvg);
+  clearAll();
 
   var chartSvg = d3.select('#chartDiv')
                 .append('svg')
@@ -320,8 +312,6 @@ function generalBubbleColumbus() {
                 .attr('viewBox', '0 0 1200 1000')
                 .classed('svg-content', true)
                 .attr('overflow', 'visible');
-
-
 
   // create chart group as child of svg
   var chartGroup = chartSvg.append('g')
@@ -353,3 +343,26 @@ function removeChildren(node) {
   }
 }
 
+function clearAll(){
+  oldChartSvg = document.getElementById('chartDiv');
+  removeChildren(oldChartSvg);
+
+  oldDataSrc = document.getElementById('dataSource');
+  removeChildren(oldDataSrc);
+
+  oldTitle = document.getElementById('chartTitle');
+  removeChildren(oldTitle);
+
+  oldText = document.getElementById('chartTitle');
+  removeChildren(oldText);
+}
+
+function displayTitle(text){
+  var t = document.createTextNode(text);
+  var parentDiv = document.getElementById('chartTitle');
+  parentDiv.style.fontSize = "24px";
+  parentDiv.style.fontWeight = "800";
+  parentDiv.style.fontFamily = "Lato";
+  parentDiv.style.textAlign = "middle";
+  parentDiv.appendChild(t);
+}

@@ -60,8 +60,9 @@ function drawIncomeCharts(error, data) {
   // create chart master label 
   d3.select('#chart'+str).select('#g5mastertitle')
     .append("text")
-    .text(str_txt +" Life Expectancy of Different Income Levels (Columbus Counties)")
-    .attr("class", "title");   
+    .text(str_txt +" Life Expectancy of Different Income Levels")
+    .attr("font-size", "20px") 
+    .attr("font-weight", 700); 
 
   // left side chart labels
   var barHeightStep = 25;
