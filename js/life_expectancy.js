@@ -97,13 +97,23 @@ function LE_MF_Gap(img_id){
   switch(parseInt(img_id)){
     case 0: img1.src = 'images/LE_Q1_US.png';
             img2.src = 'images/LE_Q4_US.png';
+            link = "data/le_data/LE_M_F_States_Income_2015.csv";
             break;
     case 1: img1.src = 'images/LE_Q1_Cbus.png';
             img2.src = 'images/LE_Q4_Cbus.png';
+            link = "data/le_data/LE_M_F_County_Income_2015.csv";
             break;
     default:
             break; 
   }
+  var parentDiv2 = document.getElementById('dataSource');
+  parentDiv2.setAttribute("top", img1.height+img2.height-40);
+
+  var anchorTag1 = document.createElement('a');
+  anchorTag1.setAttribute("href", link); 
+  anchorTag1.setAttribute("style", "float:right");
+  anchorTag1.innerHTML = "Data Source";
+  parentDiv2.appendChild(anchorTag1);
 }
 
 function LE_income_OH() {
@@ -132,6 +142,16 @@ function LE_income_OH() {
 
   drawFIncomeChartstart();
   drawMIncomeChartstart();
+
+  var parentDiv2 = document.getElementById('dataSource');
+  parentDiv2.setAttribute("top", 1200);
+  var anchorTag = document.createElement('a');
+  anchorTag.setAttribute("href", "data/le_data/LE_M_F_County_Income_2015.csv"); 
+  anchorTag.setAttribute("style", "float:right");
+  anchorTag.setAttribute("fill", "darkblue");
+  anchorTag.setAttribute("font-size", "18px");
+  anchorTag.innerHTML = "Data Source";
+  parentDiv2.appendChild(anchorTag); 
 }
 
 // create SVG and groups needed to draw two maps side-by-side
