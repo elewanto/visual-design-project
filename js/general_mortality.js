@@ -292,6 +292,42 @@ function generalBubbleColumbus() {
 }
 
 
+function generalSunburstColumbus() {
+  // delete old chart elements
+  oldChartSvg = document.getElementById('chartDiv');
+  removeChildren(oldChartSvg);
+
+  var chartSvg = d3.select('#chartDiv')
+                .append('svg')
+                .attr('id', 'svgchart')       // svg ID is '#svgchart'
+                .attr('preserveAspectRatio', 'xMidYMid meet')
+                .attr('viewBox', '0 0 1200 1000')
+                .classed('svg-content', true)
+                .attr('overflow', 'visible');
+
+
+
+  // create chart group as child of svg
+  var chartGroup = chartSvg.append('g')
+                .attr('id', 'chartG')
+                .attr('transform', 'translate(0, 0)');
+
+  var linkGroup = chartSvg.append('g')
+    .attr('transform', 'translate(1100, 1000)')      
+    .append('a')
+    .attr("href", "data/general_mortality_data/general_mortality_all_causes_sunburst_1999_2016.csv")    
+    .append('text')
+    .style("fill", "darkblue")
+    .style("font-size", "18px")
+    .attr("text-anchor", "middle")
+    .style("pointer-events", "all")
+    .style('cursor', 'pointer')
+    .text('Data Source');                  
+
+  drawAllCauseSunburst(); 
+}
+
+
 // remove document html children of node parameter
 function removeChildren(node) {
   console.log('in removeChildren()');
