@@ -17,6 +17,9 @@ function display_image(img_id){
   oldChartSvg = document.getElementById('chartDiv');
   removeChildren(oldChartSvg);
 
+  oldDataSrc = document.getElementById('dataSource');
+  removeChildren(oldDataSrc);
+
   var img = new Image();
   var parentDiv = document.getElementById('chartDiv');
   img.onload = function() {
@@ -29,32 +32,40 @@ function display_image(img_id){
 
   switch(parseInt(img_id)){
     case 0: img.src = 'images/LE_temporal_Cbus.png';
-            link = 'data/le_data/LE_ParallelCord.csv';
+            link1 = "";
+            link2 = 'data/le_data/LE_ParallelCord.csv';
             break;
     case 1: img.src = 'images/LE_US_gender_race.png';
+            link1 = "";
+            link2 = 'data/le_data/NCHS_-_Death_rates_and_life_expectancy_at_birth.csv';
             break;
     case 2: img.src = 'images/LE_physical_activity_Cbus.png';
+            link1 = 'data/le_data/IHME_county_data_LifeExpectancy_OHIO.csv';
+            link2 = 'data/le_data/IHME_county_data_PhysicalActivity_OHIO.csv';
             break;
     case 3: img.src = 'images/LE_obesity_Cbus.png';
+            link1 = 'data/le_data/IHME_county_data_LifeExpectancy_OHIO.csv';
+            link2 = 'data/le_data/IHME_county_data_Obesity_OHIO.csv';
             break;
     default:
             break; 
   }
-  var chartGroup = parentDiv.append('g')
-                .attr('id', 'chartG')
-                .attr('transform', 'translate(0, 0)');
 
-  var linkGroup = chartSvg.append('g')
-    .attr('transform', 'translate(1100, 980)')      
-    .append('a')
-    .attr("href", link)    
-    .append('text')
-    .style("fill", "darkblue")
-    .style("font-size", "18px")
-    .attr("text-anchor", "middle")
-    .style("pointer-events", "all")
-    .style('cursor', 'pointer')
-    .text('Data Source');
+  var parentDiv2 = document.getElementById('dataSource');
+  parentDiv2.setAttribute("top", img.height);
+  if(link1 != ""){
+    var anchorTag = document.createElement('a');
+    anchorTag.setAttribute("href", link1); 
+    anchorTag.setAttribute("style", "float:left");
+    anchorTag.innerHTML = "Data Source";
+    parentDiv2.appendChild(anchorTag);
+  }
+
+  var anchorTag = document.createElement('a');
+  anchorTag.setAttribute("href", link2); 
+  anchorTag.setAttribute("style", "float:right");
+  anchorTag.innerHTML = "Data Source";
+  parentDiv2.appendChild(anchorTag);
 }
 
 function LE_MF_Gap(img_id){
@@ -62,6 +73,9 @@ function LE_MF_Gap(img_id){
 
   oldChartSvg = document.getElementById('chartDiv');
   removeChildren(oldChartSvg);
+
+  oldDataSrc = document.getElementById('dataSource');
+  removeChildren(oldDataSrc);
 
   var img1 = new Image();
   var img2 = new Image();
@@ -97,6 +111,9 @@ function LE_income_OH() {
 
   oldChartSvg = document.getElementById('chartDiv');
   removeChildren(oldChartSvg);
+
+  oldDataSrc = document.getElementById('dataSource');
+  removeChildren(oldDataSrc);
 
   var chartSvg = d3.select('#chartDiv')
                 .append('svg')
@@ -153,18 +170,6 @@ function drawMaps() {
   drawLEUSMap();
   drawLEOhioMap();
 }
-
-
-// draw SVG D3 charts 
-function drawCharts() {
-  console.log('in drawCharts()');
-
-  // remove any existing svg so we don't append a second one below
-  oldSvg = document.getElementById('chartDiv');   // get the parent container div for the svg
-  removeChildren(oldSvg);                       // delete previous svg element before drawing new svg
-
-}
-
 
 // remove document html children of node parameter
 function removeChildren(node) {
