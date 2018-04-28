@@ -42,6 +42,9 @@ function display_image(img_id){
   oldChartSvg = document.getElementById('chartDiv');
   removeChildren(oldChartSvg);
 
+  oldDataSrc = document.getElementById('dataSource');
+  removeChildren(oldDataSrc);
+
   var img = new Image();
   var parentDiv = document.getElementById('chartDiv');
   img.onload = function() {
@@ -54,14 +57,29 @@ function display_image(img_id){
 
   switch(parseInt(img_id)){
     case 0: img.src = 'images/opioidByGender.png';
+            link1 = 'data/opiod_data/opioidDataByGender.csv';
             break;
     case 1: img.src = 'images/opioidByRace.png';
+            link1 = 'data/opiod_data/opioidDataByRace.csv';
             break;
     case 2: img.src = 'images/opioidByAge.png';
+            link1 = 'data/opiod_data/opioidDataByAge.csv';
             break;
     default:
             break; 
   }
+
+  var parentDiv2 = document.getElementById('dataSource');
+  parentDiv2.setAttribute("top", img.height);
+  
+  var anchorTag = document.createElement('a');
+  anchorTag.setAttribute("href", link1); 
+  anchorTag.setAttribute("style", "float:right");
+  anchorTag.setAttribute("font-size", '18px');
+  anchorTag.setAttribute("fill", "darkblue");
+  anchorTag.setAttribute("font-weight", "bold");
+  anchorTag.innerHTML = "Data Source";
+  parentDiv2.appendChild(anchorTag);
 }
 
 
@@ -70,6 +88,9 @@ function opioidLineChartUS() {
   // delete old chart elements
   oldChartSvg = document.getElementById('chartDiv');
   removeChildren(oldChartSvg);
+
+  oldDataSrc = document.getElementById('dataSource');
+  removeChildren(oldDataSrc);
 
   var chartSvg = d3.select('#chartDiv')
                 .append('svg')
@@ -84,6 +105,17 @@ function opioidLineChartUS() {
                 .attr('id', 'chartG')
                 .attr('transform', 'translate(0, 0)');
 
+  var linkGroup = chartSvg.append('g')
+    .attr('transform', 'translate(1100, 980)')      
+    .append('a')
+    .attr("href", "data/opiod_data/opiodDataState.csv")    
+    .append('text')
+    .style("fill", "darkblue")
+    .style("font-size", "18px")
+    .attr("text-anchor", "middle")
+    .style("pointer-events", "all")
+    .style('cursor', 'pointer')
+    .text('Data Source');
 
   queue().defer(d3.csv, "data/opiod_data/opiodDataState.csv")
         .defer(d3.csv, "data/opiod_data/opiodData.csv")
@@ -98,6 +130,9 @@ function opioidLineChartOhio() {
   oldChartSvg = document.getElementById('chartDiv');
   removeChildren(oldChartSvg);
 
+  oldDataSrc = document.getElementById('dataSource');
+  removeChildren(oldDataSrc);
+
   var chartSvg = d3.select('#chartDiv')
                 .append('svg')
                 .attr('id', 'svgchart')       // svg ID is '#svgchart'
@@ -111,6 +146,17 @@ function opioidLineChartOhio() {
                 .attr('id', 'chartG')
                 .attr('transform', 'translate(0, 0)');
 
+  var linkGroup = chartSvg.append('g')
+    .attr('transform', 'translate(1100, 980)')      
+    .append('a')
+    .attr("href", "data/opiod_data/opiodData.csv")    
+    .append('text')
+    .style("fill", "darkblue")
+    .style("font-size", "18px")
+    .attr("text-anchor", "middle")
+    .style("pointer-events", "all")
+    .style('cursor', 'pointer')
+    .text('Data Source');
 
   queue().defer(d3.csv, "data/opiod_data/opiodDataState.csv")
         .defer(d3.csv, "data/opiod_data/opiodData.csv")
@@ -125,6 +171,9 @@ function opioidLineChartOhioUS() {
   oldChartSvg = document.getElementById('chartDiv');
   removeChildren(oldChartSvg);
 
+  oldDataSrc = document.getElementById('dataSource');
+  removeChildren(oldDataSrc);
+
   var chartSvg = d3.select('#chartDiv')
                 .append('svg')
                 .attr('id', 'svgchart')       // svg ID is '#svgchart'
@@ -137,6 +186,30 @@ function opioidLineChartOhioUS() {
   var chartGroup = chartSvg.append('g')
                 .attr('id', 'chartG')
                 .attr('transform', 'translate(0, 0)');
+
+  var linkGroup = chartSvg.append('g')
+    .attr('transform', 'translate(1100, 980)')      
+    .append('a')
+    .attr("href", "data/opiod_data/opiodData.csv")    
+    .append('text')
+    .style("fill", "darkblue")
+    .style("font-size", "18px")
+    .attr("text-anchor", "middle")
+    .style("pointer-events", "all")
+    .style('cursor', 'pointer')
+    .text('Data Source 1');
+
+  var linkGroup = chartSvg.append('g')
+    .attr('transform', 'translate(1100, 1000)')      
+    .append('a')
+    .attr("href", "data/opiod_data/opiodDataState.csv")    
+    .append('text')
+    .style("fill", "darkblue")
+    .style("font-size", "18px")
+    .attr("text-anchor", "middle")
+    .style("pointer-events", "all")
+    .style('cursor', 'pointer')
+    .text('Data Source 2');
 
   queue().defer(d3.csv, "data/opiod_data/opiodDataState.csv")
         .defer(d3.csv, "data/opiod_data/opiodData.csv")
