@@ -459,8 +459,6 @@ function drawLineChartUS(error, dataUS, dataOhio) {
               return yScale(d.Rate);
             });
 
-
-
   var lineGroup = chartGroup.append('g');
   //chartGroup.append('g')
   var lines = lineGroup.selectAll('path')
@@ -485,22 +483,27 @@ function drawLineChartUS(error, dataUS, dataOhio) {
             .attr('stroke-linecap', 'round')
             .attr('d', function(d) {return lineGenerator(d.values); })
             .on('mouseover', function(d, i) {
-              console.log(d);
-              //var xCoord = d3.mouse(this)[0];
-              //var xDom = xScale.invert(xCoord);
-              //var pos = bisector(d, xDom);
-
-
-
+              var xCoord = d3.mouse(this)[0];
+              var xDomInv = parseInt(xScale.invert(xCoord));          
+              var ind = 0;
+              for (i = 0; i < d.values.length; i++) {
+                if (d.values[i].Year == xDomInv) {
+                  ind = i;
+                  break;
+                }
+              }
               tooltip.transition()
                     .duration(200)
                     .style('opacity', 1.0);                
-              tooltip.html(d.key)
-                    .style('left', (d3.event.pageX - 70) + 'px')
-                    .style('top', (d3.event.pageY - 35) + 'px')
+              tooltip.html(d.key + ' | ' + xDomInv + ' Rate: ' + d.values[ind].Rate)
+                    .style('left', (d3.event.pageX - 180) + 'px')
+                    .style('top', (d3.event.pageY - 45) + 'px')                 
                     .style('background-color', 'lightgray')
-                    .style('width', '140px')
-              d3.select(this).attr('stroke', '#778899');                 
+                    .style('width', function() {
+                      var str = d.key + ' | 1999 Rate: ' + d.values[0].Rate;
+                      return str.length*8 + 'px';
+                    });
+              d3.select(this).attr('stroke', '#00ff00');                 
             })
             .on('mouseout', function(d, i) {
               tooltip.transition()
@@ -708,15 +711,27 @@ function drawLineChartOhio(error, dataUS, dataOhio) {
             .attr('stroke-linecap', 'round')
             .attr('d', function(d) {return lineGenerator(d.values); })
             .on('mouseover', function(d, i) {
+              var xCoord = d3.mouse(this)[0];
+              var xDomInv = parseInt(xScale.invert(xCoord));          
+              var ind = 0;
+              for (i = 0; i < d.values.length; i++) {
+                if (d.values[i].Year == xDomInv) {
+                  ind = i;
+                  break;
+                }
+              }
               tooltip.transition()
                     .duration(200)
                     .style('opacity', 1.0);                
-              tooltip.html(d.key)
-                    .style('left', (d3.event.pageX - 70) + 'px')
-                    .style('top', (d3.event.pageY - 35) + 'px')
+              tooltip.html(d.key + ' | ' + xDomInv + ' Rate: ' + d.values[ind].Rate)
+                    .style('left', (d3.event.pageX - 180) + 'px')
+                    .style('top', (d3.event.pageY - 45) + 'px')                 
                     .style('background-color', 'lightgray')
-                    .style('width', '140px')
-              d3.select(this).attr('stroke', '#778899');                 
+                    .style('width', function() {
+                      var str = d.key + ' | 1999 Rate: ' + d.values[0].Rate;
+                      return str.length*8 + 'px';
+                    });
+              d3.select(this).attr('stroke', '#00ff00');                 
             })
             .on('mouseout', function(d, i) {
               tooltip.transition()
@@ -921,15 +936,27 @@ function partialDrawLineChartUS(error, dataUS, dataOhio) {
             .attr('stroke-linecap', 'round')
             .attr('d', function(d) {return lineGenerator(d.values); })
             .on('mouseover', function(d, i) {
+              var xCoord = d3.mouse(this)[0];
+              var xDomInv = parseInt(xScale.invert(xCoord));          
+              var ind = 0;
+              for (i = 0; i < d.values.length; i++) {
+                if (d.values[i].Year == xDomInv) {
+                  ind = i;
+                  break;
+                }
+              }
               tooltip.transition()
                     .duration(200)
                     .style('opacity', 1.0);                
-              tooltip.html(d.key)
-                    .style('left', (d3.event.pageX - 70) + 'px')
-                    .style('top', (d3.event.pageY - 35) + 'px')
+              tooltip.html(d.key + ' | ' + xDomInv + ' Rate: ' + d.values[ind].Rate)
+                    .style('left', (d3.event.pageX - 180) + 'px')
+                    .style('top', (d3.event.pageY - 45) + 'px')                 
                     .style('background-color', 'lightgray')
-                    .style('width', '140px')
-              d3.select(this).attr('stroke', '#778899');                 
+                    .style('width', function() {
+                      var str = d.key + ' | 1999 Rate: ' + d.values[0].Rate;
+                      return str.length*8 + 'px';
+                    });
+              d3.select(this).attr('stroke', '#00ff00');                 
             })
             .on('mouseout', function(d, i) {
               tooltip.transition()
@@ -1088,15 +1115,27 @@ function partialDrawLineChartOhio(error, dataUS, dataOhio) {
             .attr('stroke-linecap', 'round')
             .attr('d', function(d) {return lineGenerator(d.values); })
             .on('mouseover', function(d, i) {
+              var xCoord = d3.mouse(this)[0];
+              var xDomInv = parseInt(xScale.invert(xCoord));          
+              var ind = 0;
+              for (i = 0; i < d.values.length; i++) {
+                if (d.values[i].Year == xDomInv) {
+                  ind = i;
+                  break;
+                }
+              }
               tooltip.transition()
                     .duration(200)
                     .style('opacity', 1.0);                
-              tooltip.html(d.key)
-                    .style('left', (d3.event.pageX - 70) + 'px')
-                    .style('top', (d3.event.pageY - 35) + 'px')
+              tooltip.html(d.key + ' | ' + xDomInv + ' Rate: ' + d.values[ind].Rate)
+                    .style('left', (d3.event.pageX - 180) + 'px')
+                    .style('top', (d3.event.pageY - 45) + 'px')                 
                     .style('background-color', 'lightgray')
-                    .style('width', '140px')
-              d3.select(this).attr('stroke', '#778899');                 
+                    .style('width', function() {
+                      var str = d.key + ' | 1999 Rate: ' + d.values[0].Rate;
+                      return str.length*8 + 'px';
+                    });
+              d3.select(this).attr('stroke', '#00ff00');                 
             })
             .on('mouseout', function(d, i) {
               tooltip.transition()

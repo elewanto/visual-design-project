@@ -135,7 +135,7 @@ function drawDonut(error, dType, dAge, dGender, dRace, dMonth, dDay) {
           .attr('dy', '.35em')
           .attr('text-anchor', 'middle')
           .text(function(d, i) { 
-                return d.data.Cause + '\xa0\xa0\xa0' + d.data.Deaths.toLocaleString('en');
+                return d.data.Cause + ': \xa0\xa0\xa0' + d.data.Deaths.toLocaleString('en');
               })
           .style("font-size", function(d) {
             if (d.data.Percent > 20) {
@@ -157,9 +157,9 @@ function drawDonut(error, dType, dAge, dGender, dRace, dMonth, dDay) {
   pieGroup.append('text')
       .text(function (d) {
         if (donutType == 'Race') {
-          return ('Suicide Rate per 100,000');
+          return ('(Suicide Rate per 100,000)');
         } else {
-          return ('Number of Suicides');                
+          return ('(Number of Suicides)');                
         }
       })
       .style('font-size', '24px')
@@ -353,7 +353,7 @@ function drawDonutR(error, dAge, dGender, dRace) {
           .attr('dy', '.35em')
           .attr('text-anchor', 'middle')
           .text(function(d, i) { 
-                return d.data.Cause + '\xa0\xa0\xa0' + d.data.Rate;
+                return d.data.Cause + ' :\xa0\xa0\xa0' + d.data.Rate;
               })
           .style("font-size", function(d) {
             if (d.data.Percent > 20) {
@@ -374,7 +374,7 @@ function drawDonutR(error, dAge, dGender, dRace) {
 
   pieGroup.append('text')
       .text(function (d) {
-        return ('Suicide Rate per 100,000');
+        return ('(Suicide Rate per 100,000)');
       })
       .style('font-size', '24px')
       .attr('transform', 'translate(0,30)');
@@ -580,15 +580,27 @@ function drawLineChartUS(error, dataUS, dataOhio) {
             .attr('stroke-linecap', 'round')
             .attr('d', function(d) {return lineGenerator(d.values); })
             .on('mouseover', function(d, i) {
+              var xCoord = d3.mouse(this)[0];
+              var xDomInv = parseInt(xScale.invert(xCoord));          
+              var ind = 0;
+              for (i = 0; i < d.values.length; i++) {
+                if (d.values[i].Year == xDomInv) {
+                  ind = i;
+                  break;
+                }
+              }
               tooltip.transition()
                     .duration(200)
                     .style('opacity', 1.0);                
-              tooltip.html(d.key)
-                    .style('left', (d3.event.pageX - 70) + 'px')
-                    .style('top', (d3.event.pageY - 35) + 'px')
+              tooltip.html(d.key + ' | ' + xDomInv + ' Rate: ' + d.values[ind].Rate)
+                    .style('left', (d3.event.pageX - 180) + 'px')
+                    .style('top', (d3.event.pageY - 45) + 'px')                 
                     .style('background-color', 'lightgray')
-                    .style('width', '140px')
-              d3.select(this).attr('stroke', '#778899');                 
+                    .style('width', function() {
+                      var str = d.key + ' | 1999 Rate: ' + d.values[0].Rate;
+                      return str.length*8 + 'px';
+                    });
+              d3.select(this).attr('stroke', '#00ff00');                 
             })
             .on('mouseout', function(d, i) {
               tooltip.transition()
@@ -597,7 +609,7 @@ function drawLineChartUS(error, dataUS, dataOhio) {
               d3.select(this).attr('stroke', function(d) {
               if (d.key == 'Ohio') {return colors[1];}
               return colors[0];
-              });                       
+              });                             
             });     
 
   lines.each(function(d) {d.totalLength = this.getTotalLength();})
@@ -799,15 +811,27 @@ function drawLineChartOhio(error, dataUS, dataOhio) {
             .attr('stroke-linecap', 'round')
             .attr('d', function(d) {return lineGenerator(d.values); })
             .on('mouseover', function(d, i) {
+              var xCoord = d3.mouse(this)[0];
+              var xDomInv = parseInt(xScale.invert(xCoord));          
+              var ind = 0;
+              for (i = 0; i < d.values.length; i++) {
+                if (d.values[i].Year == xDomInv) {
+                  ind = i;
+                  break;
+                }
+              }
               tooltip.transition()
                     .duration(200)
                     .style('opacity', 1.0);                
-              tooltip.html(d.key)
-                    .style('left', (d3.event.pageX - 70) + 'px')
-                    .style('top', (d3.event.pageY - 35) + 'px')
+              tooltip.html(d.key + ' | ' + xDomInv + ' Rate: ' + d.values[ind].Rate)
+                    .style('left', (d3.event.pageX - 180) + 'px')
+                    .style('top', (d3.event.pageY - 45) + 'px')                 
                     .style('background-color', 'lightgray')
-                    .style('width', '140px')
-              d3.select(this).attr('stroke', '#778899');                 
+                    .style('width', function() {
+                      var str = d.key + ' | 1999 Rate: ' + d.values[0].Rate;
+                      return str.length*8 + 'px';
+                    });
+              d3.select(this).attr('stroke', '#00ff00');                 
             })
             .on('mouseout', function(d, i) {
               tooltip.transition()
@@ -817,7 +841,7 @@ function drawLineChartOhio(error, dataUS, dataOhio) {
               if (d.key == 'Franklin' || d.key == 'Delaware' || d.key == 'Fairfield' || d.key == 'Pickaway') {return colors[1];}
               return colors[0];
               });                       
-            });        
+            });       
 
   lines.each(function(d) {d.totalLength = this.getTotalLength();})
   .attr("stroke-dasharray", function(d) {return d.totalLength + " " + d.totalLength})
@@ -1017,15 +1041,27 @@ function partialDrawLineChartUS(error, dataUS, dataOhio) {
             .attr('stroke-linecap', 'round')
             .attr('d', function(d) {return lineGenerator(d.values); })
             .on('mouseover', function(d, i) {
+              var xCoord = d3.mouse(this)[0];
+              var xDomInv = parseInt(xScale.invert(xCoord));          
+              var ind = 0;
+              for (i = 0; i < d.values.length; i++) {
+                if (d.values[i].Year == xDomInv) {
+                  ind = i;
+                  break;
+                }
+              }
               tooltip.transition()
                     .duration(200)
                     .style('opacity', 1.0);                
-              tooltip.html(d.key)
-                    .style('left', (d3.event.pageX - 70) + 'px')
-                    .style('top', (d3.event.pageY - 35) + 'px')
+              tooltip.html(d.key + ' | ' + xDomInv + ' Rate: ' + d.values[ind].Rate)
+                    .style('left', (d3.event.pageX - 180) + 'px')
+                    .style('top', (d3.event.pageY - 45) + 'px')                 
                     .style('background-color', 'lightgray')
-                    .style('width', '140px')
-              d3.select(this).attr('stroke', '#778899');                 
+                    .style('width', function() {
+                      var str = d.key + ' | 1999 Rate: ' + d.values[0].Rate;
+                      return str.length*8 + 'px';
+                    });
+              d3.select(this).attr('stroke', '#00ff00');                 
             })
             .on('mouseout', function(d, i) {
               tooltip.transition()
@@ -1034,7 +1070,7 @@ function partialDrawLineChartUS(error, dataUS, dataOhio) {
               d3.select(this).attr('stroke', function(d) {
               if (d.key == 'Ohio') {return colors[1];}
               return colors[0];
-              });                       
+              });                           
             });            
 
   lines.each(function(d) {d.totalLength = this.getTotalLength();})
@@ -1188,15 +1224,27 @@ function partialDrawLineChartOhio(error, dataUS, dataOhio) {
             .attr('stroke-linecap', 'round')
             .attr('d', function(d) {return lineGenerator(d.values); })
             .on('mouseover', function(d, i) {
+              var xCoord = d3.mouse(this)[0];
+              var xDomInv = parseInt(xScale.invert(xCoord));          
+              var ind = 0;
+              for (i = 0; i < d.values.length; i++) {
+                if (d.values[i].Year == xDomInv) {
+                  ind = i;
+                  break;
+                }
+              }
               tooltip.transition()
                     .duration(200)
                     .style('opacity', 1.0);                
-              tooltip.html(d.key)
-                    .style('left', (d3.event.pageX - 70) + 'px')
-                    .style('top', (d3.event.pageY - 35) + 'px')
+              tooltip.html(d.key + ' | ' + xDomInv + ' Rate: ' + d.values[ind].Rate)
+                    .style('left', (d3.event.pageX - 180) + 'px')
+                    .style('top', (d3.event.pageY - 45) + 'px')                 
                     .style('background-color', 'lightgray')
-                    .style('width', '140px')
-              d3.select(this).attr('stroke', '#778899');                 
+                    .style('width', function() {
+                      var str = d.key + ' | 1999 Rate: ' + d.values[0].Rate;
+                      return str.length*8 + 'px';
+                    });
+              d3.select(this).attr('stroke', '#00ff00');                 
             })
             .on('mouseout', function(d, i) {
               tooltip.transition()
@@ -1206,7 +1254,7 @@ function partialDrawLineChartOhio(error, dataUS, dataOhio) {
               if (d.key == 'Franklin' || d.key == 'Delaware' || d.key == 'Fairfield' || d.key == 'Pickaway') {return colors[1];}
               return colors[0];
               });                       
-            });     
+            });   
 
   lines.each(function(d) {d.totalLength = this.getTotalLength();})
   .attr("stroke-dasharray", function(d) {return d.totalLength + " " + d.totalLength})

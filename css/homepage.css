@@ -132,6 +132,9 @@ div.tooltip {
   text-align: center;
   vertical-align: middle;
   z-index: 1;
+  word-wrap: break-word;
+  overflow: visible;
+
 }
 
 .tooltipTree {
