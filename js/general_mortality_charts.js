@@ -211,11 +211,11 @@ function drawAllCauseSunburst() {
   d3.csv("data/general_mortality_data/general_mortality_all_causes_sunburst_1999_2016.csv", function(data){
     var parent = root;
     var current = root;
-    var totalDeaths = 0;    
+    var totalDeaths = 122394;    
     data.forEach(function(d){     // iterate through each row of csv data
 
       value = +d.value;
-      totalDeaths += value;
+      //totalDeaths += value;
       if (d.category == "All Causes") {
         root.children[root.children.length] = {"name":d.name, "children":[]};
         current = root.children[root.children.length-1];
@@ -279,7 +279,7 @@ function drawAllCauseSunburst() {
 
     slice.append("text")
         .attr('transform', function(d) {
-              console.log(d);
+              //console.log(d);
               if (d.depth > 0) {
                 var t = (180 / Math.PI * (arc.startAngle()(d) + arc.endAngle()(d)) / 2 - 90);
                 var rotAng = 0;
@@ -298,7 +298,7 @@ function drawAllCauseSunburst() {
         .style('stroke-width', 5)
         //.attr("x", 0)
         //.attr("y", 0)
-        .text(function(d) { console.log(d.data.name); return d.data.name; });
+        //.text(function(d) { console.log(d.data.name); return d.data.name; });
 
 
 

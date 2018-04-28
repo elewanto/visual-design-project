@@ -308,8 +308,6 @@ function drawTreemap(error, data) {
   }
 
 
-
-
 }
 
 
@@ -317,94 +315,7 @@ function drawTreemap(error, data) {
 
 
 
-
-
-
-
-
-
-
-
-
-
 function drawSunburst(error, data) {
-
-  groups = ['Category'];
-
-  data.forEach(function(d) {
-    d.Deaths = +d.Deaths;
-  });
-
-  // parse csv data to hierarchical json format
-  var genGroups = function(data) {
-    return _.map(data, function(element, index) {
-      return { name : index, children : element };
-    });
-  };
-
-  var nest = function(node, curIndex) {
-    if (curIndex === 0) {
-      node.children = genGroups(_.groupBy(data, groups[0]));
-      _.each(node.children, function (child) {
-        nest(child, curIndex + 1);
-      });
-    }
-    else {
-      if (curIndex < groups.length) {
-        node.children = genGroups(
-          _.groupBy(node.children, groups[curIndex])
-        );
-        _.each(node.children, function (child) {
-          nest(child, curIndex + 1);
-        });
-      }
-    }
-    return node;
-  };
-
-  jsonData = nest({}, 0);
-
-
-  var canvasWidth = 1200;
-  var canvasHeight = 1000;
-
-  var marginLeft = 60;
-  var marginRight = 20;
-  var marginTop = 100;
-  var marginBottom = 20;  
-
-  var chartWidth = canvasWidth - marginLeft - marginRight;
-  var chartHeight = canvasHeight - marginTop - marginBottom;
-
-  var radius = 300;
-
-  var color = d3.scaleOrdinal().range(['#74E600','#26527C','#61D7A4','#6CAC2B','#408AD2','#218359','#36D792','#679ED2','#B0F26D','#4B9500','#98F23D','#04396C','#007241']);
-
-  var chartGroup = d3.select('#chartG');
-
-  chartGroup.append("g")
-    .attr("transform", "translate(" + chartWidth / 2 + "," + chartHeight * .52 + ")");
-
-  var partition = d3.layout.partition()
-    .size([2 * Math.PI, radius * radius])
-    .value(function(d) { return d.Deaths; });
-
-  var arc = d3.arc()
-    .startAngle(function(d) { return d.x; })
-    .endAngle(function(d) { return d.x + d.dx; })
-    .innerRadius(function(d) { return Math.sqrt(d.y); })
-    .outerRadius(function(d) { return Math.sqrt(d.y + d.dy); });  
-
-  var path = chartGroup.datum(jsonData).selectAll("path")
-    .data(partition.nodes)
-    .enter().append("path")
-    .attr("display", function(d) { return d.depth ? null : "none"; }) // hide inner ring
-    .attr("d", arc)
-    .attr("class", function(d) { return (d.children ? d : d.parent).name; })
-    .style("stroke", "#fff")
-    .style("fill", function(d) { return color((d.children ? d : d.parent).name); })
-    .style("fill-rule", "evenodd");    
-
 
 
 }
@@ -651,7 +562,7 @@ function drawLineChartOhio(error, dataUS, dataOhio) {
   var canvasHeight = 1000;
 
   var marginLeft = 60;
-  var marginRight = 15;
+  var marginRight = 20;
   var marginTop = 100;
   var marginBottom = 20;  
 
@@ -864,7 +775,7 @@ function partialDrawLineChartUS(error, dataUS, dataOhio) {
   var canvasHeight = 1000;
 
   var marginLeft = 60;
-  var marginRight = 15;
+  var marginRight = 20;
   var marginTop = 100;
   var marginBottom = 20;  
 

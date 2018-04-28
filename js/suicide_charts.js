@@ -439,17 +439,6 @@ console.log(data);
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 function drawLineChartUS(error, dataUS, dataOhio) {
 
   // convert strings to numbers
@@ -689,7 +678,7 @@ function drawLineChartOhio(error, dataUS, dataOhio) {
   var canvasHeight = 1000;
 
   var marginLeft = 60;
-  var marginRight = 15;
+  var marginRight = 20;
   var marginTop = 100;
   var marginBottom = 20;  
 
@@ -907,7 +896,7 @@ function partialDrawLineChartUS(error, dataUS, dataOhio) {
   var canvasHeight = 1000;
 
   var marginLeft = 60;
-  var marginRight = 15;
+  var marginRight = 20;
   var marginTop = 100;
   var marginBottom = 20;  
 
