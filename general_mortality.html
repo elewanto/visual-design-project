@@ -28,7 +28,8 @@
     <script src="https://d3js.org/queue.v1.min.js"></script> <!-- Mke map library -->
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/0.10.0/lodash.min.js"></script>     
     <!-- project .js files -->
-    <script src="js/general_mortality.js"></script>    
+    <script src="js/general_mortality.js"></script>   
+    <script src="js/general_mortality_charts.js"></script>       
     <script src="js/ohio_map_v1.js"></script>  <!-- Mike's original Ohio map imported to standalone .js file -->
     <script src="js/ohio_map.js"></script>    <!-- Mike's new Ohio heat map tied to data -->
     <script src="js/us_map.js"></script>      <!-- Mike's US heat map tied to data -->
@@ -100,7 +101,14 @@
                   </div>
                   <div class="dropdownd">
                     <button class="dropbtnd" onclick="display_image_mortality(1)">Mortality Risk with Age Group (Columbus 2014)</button>             
-                  </div>             
+                  </div> 
+                  <div class="dropdownd">
+                    <button class="dropbtnd">Columbus Rates</button>
+                    <div class="dropdownd-content">
+                      <a onclick="generalBubbleColumbus()">Bubble Chart</a>
+                      <a onclick="generalSunburstColumbus()">Sunburst</a>                      
+                    </div>              
+                  </div>                              
                 </div>
               </div>
             </div>
