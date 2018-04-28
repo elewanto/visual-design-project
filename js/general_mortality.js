@@ -9,6 +9,7 @@ function drawStart() {
 
   console.log('in landingPageStart()');
   draw_static_word_cloud();
+  display_image_mortality(1);
 }
 
 /************************************************************************************************/
@@ -36,6 +37,9 @@ function display_image_mortality(img_id){
   oldChartSvg = document.getElementById('chartDiv');
   removeChildren(oldChartSvg);
 
+  oldDataSrc = document.getElementById('dataSource');
+  removeChildren(oldDataSrc);
+
   var img = new Image();
   var parentDiv = document.getElementById('chartDiv');
   img.onload = function() {
@@ -48,12 +52,23 @@ function display_image_mortality(img_id){
 
   switch(parseInt(img_id)){
     case 0: img.src = 'images/Deaths_Race_Cbus.png';
+            link = 'data/mortality_data/Black_White_Mortality_OH_County_2000_2015.csv';
             break;
     case 1: img.src = 'images/mortality_risk_age.png';
+            link = 'data/mortality_data/mortality_risk_age_grps.csv';
             break;
     default:
             break; 
   }
+
+  var parentDiv2 = document.getElementById('dataSource');
+  parentDiv2.setAttribute("top", img.height);
+
+  var anchorTag = document.createElement('a');
+  anchorTag.setAttribute("href", link); 
+  anchorTag.setAttribute("style", "float:right");
+  anchorTag.innerHTML = "Data Source";
+  parentDiv2.appendChild(anchorTag);
 }
 
 function deaths_BW_Gap(img_id){
@@ -61,6 +76,9 @@ function deaths_BW_Gap(img_id){
 
   oldChartSvg = document.getElementById('chartDiv');
   removeChildren(oldChartSvg);
+
+  oldDataSrc = document.getElementById('dataSource');
+  removeChildren(oldDataSrc);
 
   var img1 = new Image();
   var img2 = new Image();
@@ -82,10 +100,20 @@ function deaths_BW_Gap(img_id){
   switch(parseInt(img_id)){
     case 0: img1.src = 'images/Diff_Deaths_White_OH.png';
             img2.src = 'images/Diff_Deaths_Black_OH.png';
+            link = "data/mortality_data/Causes_of_death_OH_2011_2015";
             break;
     default:
             break; 
   }
+
+  var parentDiv2 = document.getElementById('dataSource');
+  parentDiv2.setAttribute("top", img1.height + img2.height);
+  
+  var anchorTag = document.createElement('a');
+  anchorTag.setAttribute("href", link); 
+  anchorTag.setAttribute("style", "float:right");
+  anchorTag.innerHTML = "Data Source";
+  parentDiv2.appendChild(anchorTag);
 }
 
 function deaths_rural_urban_OH() {
@@ -93,6 +121,12 @@ function deaths_rural_urban_OH() {
 
   oldChartSvg = document.getElementById('chartDiv');
   removeChildren(oldChartSvg);
+
+  oldDataSrc = document.getElementById('dataSource');
+  removeChildren(oldDataSrc);
+
+  link1 = "data/mortality_data/OH_Rural_Counties_Mortality_rate.csv";
+  link2 = "data/mortality_data/OH_Urban_Counties_Mortality_Rate.csv";
 
   var chartSvg = d3.select('#chartDiv')
                 .append('svg')
@@ -106,8 +140,8 @@ function deaths_rural_urban_OH() {
                           .attr('id', 'chartG')
                           .attr('transform', 'translate(5, 0)');
 
-  drawBubbles("data/mortality_data/OH_Rural_Counties_Mortality_rate.csv");
-  drawBubbles("data/mortality_data/OH_Urban_Counties_Mortality_Rate.csv");
+  drawBubbles(link1, 1);
+  drawBubbles(link2, 2);
 }
 
 function drawWordCloud(){
@@ -157,7 +191,7 @@ function drawWordCloud(){
   });
 }
 
-function drawBubbles(file){
+function drawBubbles(file, link_id){
 
   if(file == "data/mortality_data/OH_Rural_Counties_Mortality_rate.csv"){
     xtransform = 5;
@@ -253,6 +287,24 @@ function drawBubbles(file){
                           return d.data.County;
                         });
   });
+
+  var parentDiv2 = document.getElementById('dataSource');
+  parentDiv2.setAttribute("top", 400);
+  if(link_id == 1){
+    var anchorTag = document.createElement('a');
+    anchorTag.setAttribute("href", file); 
+    anchorTag.setAttribute("style", "float:left");
+    anchorTag.innerHTML = "Data Source";
+    parentDiv2.appendChild(anchorTag);
+  }
+  
+  if(link_id == 2){
+    var anchorTag = document.createElement('a');
+    anchorTag.setAttribute("href", file); 
+    anchorTag.setAttribute("style", "float:right");
+    anchorTag.innerHTML = "Data Source";
+    parentDiv2.appendChild(anchorTag);
+  }
 }
 
 

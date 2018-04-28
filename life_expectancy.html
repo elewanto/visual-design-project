@@ -63,7 +63,7 @@
       </div>
 
       <div id="titleDiv" class="wrapper">
-        <p>Life Expectancy Trends</p>
+        <p>Visualization of Life Expectancy Trends</p>
       </div>
 
       <!-- SVG for map is build as child to mapDiv -->
@@ -88,19 +88,19 @@
               <div  id="analysisDropdown">
                 <div class="drop-btn-group">
                   <div class="dropdownd">
-                    <button class="dropbtnd" onclick="display_image(0)">Life Expectancy Trend over years in Columbus</button>
+                    <button class="dropbtnd" onclick="display_image(0)">Columbus LE trend over years</button>
                   </div>
                   <div class="dropdownd">
-                    <button class="dropbtnd" onclick="display_image(1)">Life Expectancy with Gender/Race in US</button>
+                    <button class="dropbtnd" onclick="display_image(1)">LE and Gender/Race in US</button>
                   </div>
                   <div class="dropdownd">
-                    <button class="dropbtnd" onclick="display_image(2)">Life Expectancy and Physical Activity (Columbus)</button>
+                    <button class="dropbtnd" onclick="display_image(2)">Columbus LE and Physical Activity</button>
                   </div>
                   <div class="dropdownd">
-                    <button class="dropbtnd" onclick="display_image(3)">Life Expectancy and Obesity (Columbus)</button>
+                    <button class="dropbtnd" onclick="display_image(3)">Columbus LE and Obesity</button>
                   </div>
                   <div class="dropdownd">
-                    <button class="dropbtnd">Life Expectancy and Income</button>
+                    <button class="dropbtnd">LE and Income</button>
                     <div class="dropdownd-content">
                       <a onclick="LE_income_OH()">Ohio Male Female LE with Income Quartiles</a>
                       <a onclick="LE_MF_Gap(0)">LE Gap in Male Female Income Quartiles in US</a>
@@ -116,6 +116,8 @@
             <div class="panel-body">
               <div>
                 <div id="chartDiv" class="svg-container">
+                </div>
+                <div id="dataSource">
                 </div>
               </div>
             </div> 

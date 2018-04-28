@@ -90,18 +90,18 @@
               <div  id="analysisDropdown">
                 <div class="drop-btn-group">
                   <div class="dropdownd">
-                    <button class="dropbtnd" onclick="deaths_rural_urban_OH()">Deaths of Rural-Urban Ohio</button>
+                    <button class="dropbtnd" onclick="display_image_mortality(1)">Columbus Mortality Risk with Age Group</button>             
+                  </div> 
+                  <div class="dropdownd">
+                    <button class="dropbtnd" onclick="deaths_rural_urban_OH()">Deaths in Rural-Urban Ohio</button>
                   </div>
                   <div class="dropdownd">
                     <button class="dropbtnd">Mortality and Race</button>
                     <div class="dropdownd-content">
                       <a onclick="display_image_mortality(0)">Mortality rate and Race in Columbus</a>
-                      <a onclick="deaths_BW_Gap(0)">Change in Mortality rate for White and Black in Ohio</a>
+                      <a onclick="deaths_BW_Gap(0)">Change in Mortality rate with Race in Ohio</a>
                     </div>              
                   </div>
-                  <div class="dropdownd">
-                    <button class="dropbtnd" onclick="display_image_mortality(1)">Mortality Risk with Age Group (Columbus 2014)</button>             
-                  </div> 
                   <div class="dropdownd">
                     <button class="dropbtnd">Columbus Rates</button>
                     <div class="dropdownd-content">
@@ -118,6 +118,8 @@
             <div class="panel-body">
               <div>
                 <div id="chartDiv" class="svg-container">
+                </div>
+                <div id="dataSource">
                 </div>
                 <div id="tooltip" opacity="0">
                 </div>

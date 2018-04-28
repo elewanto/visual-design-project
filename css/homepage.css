@@ -225,3 +225,16 @@ text {
   font-size: 18px;
   font-weight: bold;
 }
+
+#chartDiv {
+  position: relative;
+  z-index: 0;
+}
+
+ 
+
+#dataSource {
+  position: absolute;
+  z-index: 1;
+  width: 90%;
+}
