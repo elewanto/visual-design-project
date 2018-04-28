@@ -75,9 +75,6 @@ function display_image(img_id){
   var anchorTag = document.createElement('a');
   anchorTag.setAttribute("href", link1); 
   anchorTag.setAttribute("style", "float:right");
-  anchorTag.setAttribute("font-size", '18px');
-  anchorTag.setAttribute("fill", "darkblue");
-  anchorTag.setAttribute("font-weight", "bold");
   anchorTag.innerHTML = "Data Source";
   parentDiv2.appendChild(anchorTag);
 }
