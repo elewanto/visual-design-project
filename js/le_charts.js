@@ -61,9 +61,8 @@ function drawIncomeCharts(error, data) {
   d3.select('#chart'+str).select('#g5mastertitle')
     .append("text")
     .text(str_txt +" Life Expectancy of Different Income Levels")
-    .attr("font-size", "20px") 
-    .attr("font-weight", 700); 
-
+    .attr("class", "subtopic") 
+    
   // left side chart labels
   var barHeightStep = 25;
   var vertPad = 10;
