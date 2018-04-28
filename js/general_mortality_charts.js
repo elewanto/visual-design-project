@@ -55,6 +55,8 @@ function drawAllCauseBubble() {
               .style('font-size', '32px')
               .attr('class', 'title');
 
+          
+
     var color = d3.scaleOrdinal(d3.schemeCategory20b);     
 
 
@@ -195,12 +197,21 @@ function drawAllCauseSunburst() {
 
   var titleGroup = d3.select('#chartG')
             .append('g')
-            .attr('transform', 'translate(620, 50)')
+            .attr('transform', 'translate(600, 50)')
             .attr('id', '#chartTitle')
             .append('text')
             .text('Columbus All Causes of Death (1999 - 2016)')
             .style('font-size', '32px')
             .attr('class', 'title');
+
+    d3.select('#chartG')
+              .append('g')
+              .attr('transform', 'translate(600, 90)')
+              .attr('id', '#chartTitle2')
+              .append('text')
+              .text('(Click rings to explore)')
+              .style('font-size', '24px')
+              .attr('class', 'title');                
 
 
   var root = {

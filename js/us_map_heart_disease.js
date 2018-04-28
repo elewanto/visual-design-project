@@ -188,7 +188,8 @@ function drawHeartDiseaseUSMap(year) {
           .style('font-size', 8)
           .attr('display', '')
           .text(function(d, i) {
-            if (d.properties.name == 'Puerto Rico') {
+            if (d.properties.name == 'Puerto Rico' || d.properties.name == 'New Hampshire' || d.properties.name == 'Rhode Island' || d.properties.name == 'New Jersey'
+                || d.properties.name == 'District of Columbia' || d.properties.name == 'Delaware') {
               return '';
             }
             return d.properties.name;

@@ -336,8 +336,9 @@ function generalBubbleColumbus() {
 
 function generalSunburstColumbus() {
   // delete old chart elements
-  oldChartSvg = document.getElementById('chartDiv');
-  removeChildren(oldChartSvg);
+  //oldChartSvg = document.getElementById('chartDiv');
+  //removeChildren(oldChartSvg);
+  clearAll();
 
   var chartSvg = d3.select('#chartDiv')
                 .append('svg')
