@@ -39,9 +39,7 @@
 
 
   <body onload="drawStart();">
-
     <div id="container">
-
       <!-- top navigation bar -->
       <div class="navbarm">
         <a href="homepage.html">Home</a>
@@ -88,19 +86,19 @@
               <div  id="analysisDropdown">
                 <div class="drop-btn-group">
                   <div class="dropdownd">
-                    <button class="dropbtnd" onclick="display_image(0)">Columbus LE trend over years</button>
+                    <button class="dropbtnd" onclick="display_image(0)">Columbus Trend over Time</button>
                   </div>
                   <div class="dropdownd">
-                    <button class="dropbtnd" onclick="display_image(1)">LE and Gender/Race in US</button>
+                    <button class="dropbtnd" onclick="display_image(1)">US Trend with Gender/Race</button>
                   </div>
                   <div class="dropdownd">
-                    <button class="dropbtnd" onclick="display_image(2)">Columbus LE and Physical Activity</button>
+                    <button class="dropbtnd" onclick="display_image(2)">Columbus Trend with Physical Activity</button>
                   </div>
                   <div class="dropdownd">
-                    <button class="dropbtnd" onclick="display_image(3)">Columbus LE and Obesity</button>
+                    <button class="dropbtnd" onclick="display_image(3)">Columbus Trend with Obesity</button>
                   </div>
                   <div class="dropdownd">
-                    <button class="dropbtnd">LE and Income</button>
+                    <button class="dropbtnd">Trend with Income</button>
                     <div class="dropdownd-content">
                       <a onclick="LE_income_OH()">Ohio Male Female LE with Income Quartiles</a>
                       <a onclick="LE_MF_Gap(0)">LE Gap in Male Female Income Quartiles in US</a>
@@ -115,17 +113,19 @@
           <div class="panel panel-default col-sm-9" id="chart-panel">
             <div class="panel-body">
               <div>
+                <div id ="chartTitle">
+                </div>
                 <div id="chartDiv" class="svg-container">
                 </div>
                 <div id="dataSource">
+                </div>
+                <div id="analysisText">
                 </div>
               </div>
             </div> 
           </div>
         </div>
       </div> 
-      
-
     </div>
   </body>
 

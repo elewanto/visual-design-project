@@ -57,8 +57,6 @@ function drawBubble() {
 
     var color = d3.scaleOrdinal(d3.schemeCategory20b);     
 
-
-
     var node = chartGroup.append('g')
       .attr('transform', 'translate(0, 50)')
       .selectAll(".node")

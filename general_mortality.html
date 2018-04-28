@@ -8,7 +8,7 @@
     <title>Team 3 Visual Design Project Homepage</title>
 
     <!-- dependent .css files --> 
-  <!--  <link href="css/bootstrap.min.css" rel="stylesheet"> --><!-- bootstrap css file -->      
+    <!--  <link href="css/bootstrap.min.css" rel="stylesheet"> --><!-- bootstrap css file -->      
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
@@ -42,9 +42,7 @@
 
 
   <body onload="drawStart();">
-
     <div id="container">
-
       <!-- top navigation bar -->
       <div class="navbarm">
         <a href="homepage.html">Home</a>
@@ -98,8 +96,8 @@
                   <div class="dropdownd">
                     <button class="dropbtnd">Mortality and Race</button>
                     <div class="dropdownd-content">
-                      <a onclick="display_image_mortality(0)">Mortality rate and Race in Columbus</a>
-                      <a onclick="deaths_BW_Gap(0)">Change in Mortality rate with Race in Ohio</a>
+                      <a onclick="display_image_mortality(0)">Columbus</a>
+                      <a onclick="deaths_BW_Gap(0)">Ohio</a>
                     </div>              
                   </div>
                   <div class="dropdownd">
@@ -117,11 +115,15 @@
           <div class="panel panel-default col-sm-9" id="chart-panel">
             <div class="panel-body">
               <div>
+                <div id ="chartTitle">
+                </div>
                 <div id="chartDiv" class="svg-container">
                 </div>
                 <div id="dataSource">
                 </div>
                 <div id="tooltip" opacity="0">
+                </div>
+                <div id="analysisText">
                 </div>
               </div>
             </div> 

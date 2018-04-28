@@ -14,11 +14,7 @@ function drawStart() {
 function display_image(img_id){
   console.log('display_image()');
 
-  oldChartSvg = document.getElementById('chartDiv');
-  removeChildren(oldChartSvg);
-
-  oldDataSrc = document.getElementById('dataSource');
-  removeChildren(oldDataSrc);
+  clearAll();
 
   var img = new Image();
   var parentDiv = document.getElementById('chartDiv');
@@ -31,19 +27,23 @@ function display_image(img_id){
   };
 
   switch(parseInt(img_id)){
-    case 0: img.src = 'images/LE_temporal_Cbus.png';
+    case 0: displayTitle("LE in Columbus from 1985 to 2014");
+            img.src = 'images/LE_temporal_Cbus.png';
             link1 = "";
             link2 = 'data/le_data/LE_ParallelCord.csv';
             break;
-    case 1: img.src = 'images/LE_US_gender_race.png';
+    case 1: displayTitle("LE for Black and White Male and Female Population in US (1900-2015)");
+            img.src = 'images/LE_US_gender_race.png';
             link1 = "";
             link2 = 'data/le_data/NCHS_-_Death_rates_and_life_expectancy_at_birth.csv';
             break;
-    case 2: img.src = 'images/LE_physical_activity_Cbus.png';
+    case 2: displayTitle("Correlation of LE and Physical Activity Prevalence");
+            img.src = 'images/LE_physical_activity_Cbus.png';
             link1 = 'data/le_data/IHME_county_data_LifeExpectancy_OHIO.csv';
             link2 = 'data/le_data/IHME_county_data_PhysicalActivity_OHIO.csv';
             break;
-    case 3: img.src = 'images/LE_obesity_Cbus.png';
+    case 3: displayTitle("Correlation of LE and Obesity");
+            img.src = 'images/LE_obesity_Cbus.png';
             link1 = 'data/le_data/IHME_county_data_LifeExpectancy_OHIO.csv';
             link2 = 'data/le_data/IHME_county_data_Obesity_OHIO.csv';
             break;
@@ -71,11 +71,7 @@ function display_image(img_id){
 function LE_MF_Gap(img_id){
   console.log('LE_MF_Gap()')
 
-  oldChartSvg = document.getElementById('chartDiv');
-  removeChildren(oldChartSvg);
-
-  oldDataSrc = document.getElementById('dataSource');
-  removeChildren(oldDataSrc);
+  clearAll();
 
   var img1 = new Image();
   var img2 = new Image();
@@ -95,11 +91,13 @@ function LE_MF_Gap(img_id){
                 imgNode.setAttribute('width', img2.width);  
   };
   switch(parseInt(img_id)){
-    case 0: img1.src = 'images/LE_Q1_US.png';
+    case 0: displayTitle("LE of people in US with Income in Quartile 1 and Quartile 4 (2015)");
+            img1.src = 'images/LE_Q1_US.png';
             img2.src = 'images/LE_Q4_US.png';
             link = "data/le_data/LE_M_F_States_Income_2015.csv";
             break;
-    case 1: img1.src = 'images/LE_Q1_Cbus.png';
+    case 1: displayTitle("LE of people in Columbus with Income in Quartile 1 and Quartile 4 (2015)");
+            img1.src = 'images/LE_Q1_Cbus.png';
             img2.src = 'images/LE_Q4_Cbus.png';
             link = "data/le_data/LE_M_F_County_Income_2015.csv";
             break;
@@ -119,11 +117,7 @@ function LE_MF_Gap(img_id){
 function LE_income_OH() {
   console.log('LE_income_OH()')
 
-  oldChartSvg = document.getElementById('chartDiv');
-  removeChildren(oldChartSvg);
-
-  oldDataSrc = document.getElementById('dataSource');
-  removeChildren(oldDataSrc);
+  clearAll();
 
   var chartSvg = d3.select('#chartDiv')
                 .append('svg')
@@ -140,6 +134,7 @@ function LE_income_OH() {
           .attr('id', 'chartM')
           .attr('transform', 'translate(5, 450)');
 
+  displayTitle("Columbus Female Male LE with Income in Quartile 1 and Quartile 4");        
   drawFIncomeChartstart();
   drawMIncomeChartstart();
 
@@ -193,11 +188,33 @@ function drawMaps() {
 
 // remove document html children of node parameter
 function removeChildren(node) {
-  console.log('in removeChildren()');
+  //console.log('in removeChildren()');
 
   while (node.firstChild) {
     node.removeChild(node.firstChild);
   }
 }
 
+function clearAll(){
+  oldChartSvg = document.getElementById('chartDiv');
+  removeChildren(oldChartSvg);
 
+  oldDataSrc = document.getElementById('dataSource');
+  removeChildren(oldDataSrc);
+
+  oldTitle = document.getElementById('chartTitle');
+  removeChildren(oldTitle);
+
+  oldText = document.getElementById('chartTitle');
+  removeChildren(oldText);
+}
+
+function displayTitle(text){
+  var t = document.createTextNode(text);
+  var parentDiv = document.getElementById('chartTitle');
+  parentDiv.style.fontSize = "24px";
+  parentDiv.style.fontWeight = "800";
+  parentDiv.style.fontFamily = "Lato";
+  parentDiv.style.textAlign = "middle";
+  parentDiv.appendChild(t);
+}

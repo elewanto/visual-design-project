@@ -231,10 +231,14 @@ text {
   z-index: 0;
 }
 
- 
-
 #dataSource {
   position: absolute;
   z-index: 1;
   width: 90%;
+}
+
+.subtopic {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: left;
 }
