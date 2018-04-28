@@ -248,7 +248,7 @@ function drawAllCauseCirclePack() {
       .selectAll(".node")
       .data(pack(root).descendants())
       .enter().append("g")
-      .attr("class", function(d) { return d.children ? "node" : "leaf node"; })
+      .attr("class", function(d) { return d.children ? "pack node" : "pack leaf node"; })
       .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
 
     var circles = node.append("circle")
