@@ -2,6 +2,11 @@
 
 function drawDonut(error, dType, dAge, dGender, dRace, dMonth, dDay) {
 
+  document.getElementById('analysisText').innerHTML = 'These pie charts show statistics on suicides in the four Columbus counties from 1999 to 2016.  Click the \"Columbus Number\" dropdown button to choose' +
+            ' between numbers of suicides relative to age, gender, race, method of suicide, month of the year, and day of the week. Click on the \"Columbus Rates\" to see statistics on rates of suicides' +
+            'per 100,000 people population, which normalizes results against differend demographic sizes.  The \"per 100,000 population\" is a standard reporting method used by the CDC, who maintains national' 
+            + 'mortality statistics';   
+
   // convert strings to numbers
   dType.forEach(function(d) {
     d.Deaths = +d.Deaths;
@@ -237,6 +242,11 @@ function drawDonut(error, dType, dAge, dGender, dRace, dMonth, dDay) {
 
 function drawDonutR(error, dAge, dGender, dRace) {
 
+  document.getElementById('analysisText').innerHTML = 'These pie charts show statistics on suicides in the four Columbus counties from 1999 to 2016.  Click the \"Columbus Number\" dropdown button to choose' +
+            ' between numbers of suicides relative to age, gender, race, method of suicide, month of the year, and day of the week. Click on the \"Columbus Rates\" to see statistics on rates of suicides' +
+            'per 100,000 people population, which normalizes results against differend demographic sizes.  The \"per 100,000 population\" is a standard reporting method used by the CDC, who maintains national' 
+            + 'mortality statistics';   
+
   // convert strings to numbers
   dAge.forEach(function(d) {
     d.Rate = +d.Rate;
@@ -442,6 +452,9 @@ console.log(data);
 
 
 function drawLineChartUS(error, dataUS, dataOhio) {
+
+  document.getElementById('analysisText').innerHTML = 'This parllalel coordinates line chart shows the yearly suicide rate of Ohio, in red, versus the other 49 states, in green.' +
+          ' Hover over any line to see the state and suicide rate at any point in time.  This chart can be useful for identifying changes in suicide rates since 1999.';  
 
   // convert strings to numbers
   dataUS.forEach(function(d) {
@@ -669,6 +682,11 @@ function drawLineChartUS(error, dataUS, dataOhio) {
 
 
 function drawLineChartOhio(error, dataUS, dataOhio) {
+
+
+  document.getElementById('analysisText').innerHTML = 'This parllalel coordinates line chart shows the yearly suicide rate of the four Columbus counties, Delaware, Fairfield' +
+          ' Franklin, and Pickaway, in red, versus the other 84 Ohio counties, in green.' +
+          ' Hover over any line to see the state and suicide rate at any point in time.  This chart can be useful for identifying changes in suicide rates since 1999.';  
 
   // convert strings to numbers
   dataUS.forEach(function(d) {
@@ -900,6 +918,11 @@ function drawLineChartOhio(error, dataUS, dataOhio) {
 
 function partialDrawLineChartUS(error, dataUS, dataOhio) {
   console.log('drawLine chart');
+
+  document.getElementById('analysisText').innerHTML = 'This combined parllalel coordinates line chart overlays both state and national suicide charts to compare suicide rates ' +
+          'of Columbus and Ohio counties to other states.  Columbus counties are shown in dark red, Ohio in light red, states in green, and Ohio counties in light blue. '
+          + ' Hover over any line to see the state or county and suicide rate at any point in time.  This chart can be useful for identifying changes in suicide rates since 1999.'; 
+
 
   // convert strings to numbers
   dataUS.forEach(function(d) {

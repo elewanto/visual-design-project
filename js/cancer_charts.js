@@ -567,7 +567,7 @@ function drawLineChartUS(error, dataUS, dataOhio) {
 
 function drawLineChartOhio(error, dataUS, dataOhio) {
 
-  document.getElementById('analysisText').innerHTML = 'This parllalel coordinates line chart shows the yearly cancermortality rate of the four Columbus counties, Delaware, Fairfield' +
+  document.getElementById('analysisText').innerHTML = 'This parllalel coordinates line chart shows the yearly cancer mortality rate of the four Columbus counties, Delaware, Fairfield' +
           ' Franklin, and Pickaway, in red, versus the other 84 Ohio counties, in green.' +
           ' Hover over any line to see the state and mortality rate at any point in time.  This chart can be useful for identifying changes in cancer mortality rates since 1999.';
    
