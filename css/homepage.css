@@ -44,6 +44,10 @@ html, body {
   padding-top: 20px;
 }
 
+#topHalfWindow {
+  max-width: 80%;
+}
+
 #chartImage {
   max-width: 100%;
   
@@ -56,7 +60,7 @@ html, body {
 #sliderDiv {
   padding-top: 10px;
   padding-right: 10px;
-  padding-bottom: 60px;
+  padding-bottom: 0px;
   padding-left: 0px;
   font-size: 18px;
 }
@@ -70,7 +74,8 @@ html, body {
 #titleDiv {
   text-align: left;
   font-family: "Lato", Sans-serif;
-  font-size: 3em;
+  /*font-size: 3em;*/
+  font-size: 28px;
   font-weight: bold;
   padding-left: 20px;
 }
