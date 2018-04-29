@@ -74,14 +74,13 @@
         <a href="homepage.html">Home</a>
         <a href="life_expectancy.html">Life Expectancy</a>
         <div class="dropdownm">
-          <button class="dropbtnm">Mortality
+          <button class="dropbtnm" onclick="location.href = 'general_mortality.html';">Mortality
             <i class="fa fa-caret-down"></i>
           </button>
           <div class="dropdownm-content">
             <a href="heart_disease.html">Heart Disease</a>
             <a href="cancer.html">Cancer</a>
             <a href="suicide.html">Suicide</a>
-            <a href="general_mortality.html">General</a>
           </div>
         </div>
         <a href="opioid.html">Opioid</a>
@@ -96,7 +95,7 @@
                      <div class="col span-1-of-2">
                         <h1>Concept Statement</h1>
                         <p class="long-copy">
-                           Despite high economic status and availability of reliable healthcare services, Columbus residents have lower life expectancy, higher obesity rates, and greater abuse of opioids. We will identify the trends in opioid abuse and obesity and their possible effects on life expectancy in Columbus, Ohio. We will focus on Columbus counties and compare them to the national and state averages to determine the impact of these three epidemics in Ohio. Our goal is to show trends in Columbus residents’ life expectancy, opioid use, and obesity relative to the rest of the country over time, possible correlations between them, and to explore other potential influencing factors.
+                           Despite high economic status and availability of reliable healthcare services, Columbus residents have lower life expectancy, higher obesity rates, and greater abuse of opioids. We will identify the trends in opioid abuse and obesity and their possible effects on life expectancy in Columbus, Ohio. We will focus on Columbus counties and compare them to the national and state averages to determine the impact of these three epidemics in Ohio. Our goal is to show trends in Columbus residents’ life expectancy, causes of mortality, opioid use, and obesity relative to the rest of the country over time, possible correlations between them, and to explore other potential influencing factors.
                         </p>
                         <br><br><h1>Life Expectancy</h1>
                         <p class="long-copy">
@@ -104,11 +103,11 @@
                         </p>
                         <br><br><h1>Mortality</h1>
                         <p class="long-copy">
-                          FILL IN
+                          Columbus counties show lower rates of heart disease and cancer mortalities compared to other Ohio counties, and while rates of heart disease mortality have decreased by 19% in Ohio from 1999 to 2015, Ohio counties are among the top ten states with the highest heart disease mortality rates.  Similarly, while Columbus counties have lower rates of cancer mortality than other Ohio counties, the cancer mortality rates are also among the top ten states. This can be observed in the 'Trends Over Time' line graphs.  The cancer treemap diagram highlights the top causes of Columbus cancer deaths between 1999 and 2015, with lung cancers as the most prevalent, representing 29.8% of the total cancer deaths, and breast cancer as the second highest, with 8.2% of total cancer deaths.  Columbus suicide rates are lower than other parts of the state, but Ohio suicide rates overall have increased 51% from 2000 to 2016.
                         </p>
                         <br><br><h1>Opioid</h1>
                         <p class="long-copy">
-                          Even though opioid prescribing rates in Ohio have decreased by 20.4 percent from 2012 to 2016, Ohio ranks second amount states, behind West Virginia, at 39.1 overdose deaths per 100,000 people. Despite this, of the 35 counties collected in the data, Franklin County ranked 25th in mortality rate caused by opioid overdose, at 23.5 percent. This study shows that Males are twice as likely to die from an overdose than females and Caucasians are one and a half times more likely to die than African Americans. As the opioid epidemic continues, it will be interesting to see where Ohio and Franklin County end up. 
+                          Even though opioid prescribing rates in Ohio have decreased by 20.4 percent from 2012 to 2016, Ohio ranks second among states, behind West Virginia, at 39.1 overdose deaths per 100,000 people. Despite this, of the 35 counties collected in the data, Franklin County ranked 25th in mortality rate caused by opioid overdose, at 23.5 deaths per 100,000. This study shows that males are twice as likely to die from an overdose than females and Caucasians are one and a half times more likely to die than African Americans. As the opioid epidemic continues, it will be interesting to see where Ohio and Franklin County end up. 
                         </p>
                         <br><br><h1>Obesity</h1>
                         <p class="long-copy">
@@ -134,29 +133,30 @@ trends in Obesity.From the trends we observed in this project for the United Sta
         <div class="row">
 
             <!--First column-->
-            <div class="col-md-4">
+            <div class="col-md-2">
                 <h5 class="text-uppercase mb-4 mt-3 font-weight-bold">Acknowledge</h5>
-                <p>CSE 5544 Team </p>
+                <p>CSE 5544</p>
+		<p>Design 5453</p>
             </div>
             <!--/.First column-->
 
             <hr class="clearfix w-100 d-md-none">
 
             <!--Second column-->
-            <div class="col-md-2 mx-auto">
-                <h5 class="text-uppercase mb-4 mt-3 font-weight-bold"></h5>
+            <div class="col-md-4 mx-auto">
+                <h5 class="text-uppercase mb-4 mt-3 font-weight-bold">Reference Links</h5>
                 <ul class="list-unstyled">
                     <li>
-                        <a href="#!"></a>
+                        <a href="https://bl.ocks.org/mbostock/4063582">D3 Treemap Reference</a>
                     </li>
                     <li>
-                        <a href="#!"></a>
+                        <a href="https://bl.ocks.org/mbostock/4348373">D3 Zoomable Sunburst Reference</a>
                     </li>
                     <li>
-                        <a href="#!"></a>
+                        <a href="https://github.com/jasondavies/d3-cloud">Word Cloud Reference</a>
                     </li>
                     <li>
-                        <a href="#!"></a>
+                        <a href="http://bl.ocks.org/michellechandra/0b2ce4923dc9b5809922">US Map D3 Reference</a>
                     </li>
                 </ul>
             </div>
@@ -165,17 +165,20 @@ trends in Obesity.From the trends we observed in this project for the United Sta
             <hr class="clearfix w-100 d-md-none">
 
             <!--Third column-->
-            <div class="col-md-2 mx-auto">
-                <h5 class="text-uppercase mb-4 mt-3 font-weight-bold">Links</h5>
+            <div class="col-md-4 mx-auto">
+                <h5 class="text-uppercase mb-4 mt-3 font-weight-bold">Cont.</h5>
                 <ul class="list-unstyled">
-                    <li>
-                        <a href="http://bl.ocks.org/michellechandra/0b2ce4923dc9b5809922">US Map D3 Reference</a>
-                    </li>
                     <li>
                         <a href="https://github.com/lillianiwaniszyn/Poverty_Obesity_Visual">US Map Integrate with Data Reference </a>
 		    </li>
                     <li>
                         <a href="https://bl.ocks.org/mbostock/3887051">Group Bar Chart Reference</a>
+                    </li>
+		    <li>
+                        <a href="https://vincent.readthedocs.io/en/latest/">Python Vincent API Reference</a>
+                    </li>
+		    <li>
+                        <a href="https://bl.ocks.org/mbostock">D3 Chart Reference</a>
                     </li>
                 </ul>
             </div>

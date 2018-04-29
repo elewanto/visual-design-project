@@ -16,7 +16,8 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> <!-- navbar arrow icon -->
     <link rel="stylesheet" type="text/css" href="css/homepage.css">    <!-- homepage css file --> 
     <link rel="stylesheet" type="text/css" href="css/navbar.css">   <!-- navbar css file -->
-    <link rel="stylesheet" type="text/css" href="css/data_dropdown.css">   <!-- data dropdown css file -->      
+    <link rel="stylesheet" type="text/css" href="css/data_dropdown.css">   <!-- data dropdown css file -->   
+    <link rel="stylesheet" type="text/css" href="css/general_mortality.css">    <!-- homepage css file -->        
     <!-- .js library packages -->
     <script src="https://d3js.org/d3.v4.min.js"></script>  <!-- D3 library -->
     <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>      
@@ -48,14 +49,13 @@
         <a href="homepage.html">Home</a>
         <a href="life_expectancy.html">Life Expectancy</a>
         <div class="dropdownm">
-          <button class="dropbtnm">Mortality
+          <button class="dropbtnm" onclick="location.href = 'general_mortality.html';">Mortality
             <i class="fa fa-caret-down"></i>
           </button>
           <div class="dropdownm-content">
             <a href="heart_disease.html">Heart Disease</a>
             <a href="cancer.html">Cancer</a>
             <a href="suicide.html">Suicide</a>
-            <a href="general_mortality.html">General</a>
           </div>
         </div>
         <a href="opioid.html">Opioid</a>
@@ -103,8 +103,9 @@
                   <div class="dropdownd">
                     <button class="dropbtnd">Columbus Rates</button>
                     <div class="dropdownd-content">
+                      <a onclick="generalSunburstColumbus()">Sunburst</a>                       
                       <a onclick="generalBubbleColumbus()">Bubble Chart</a>
-                      <a onclick="generalSunburstColumbus()">Sunburst</a>                      
+                      <a onclick="generalCirclePackColumbus()">Circle Pack</a>                      
                     </div>              
                   </div>                              
                 </div>

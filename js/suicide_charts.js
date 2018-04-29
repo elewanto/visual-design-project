@@ -2,6 +2,11 @@
 
 function drawDonut(error, dType, dAge, dGender, dRace, dMonth, dDay) {
 
+  document.getElementById('analysisText').innerHTML = 'These pie charts show statistics on suicides in the four Columbus counties from 1999 to 2016.  Click the \"Columbus Number\" dropdown button to choose' +
+            ' between numbers of suicides relative to age, gender, race, method of suicide, month of the year, and day of the week. Click on the \"Columbus Rates\" to see statistics on rates of suicides' +
+            'per 100,000 people population, which normalizes results against differend demographic sizes.  The \"per 100,000 population\" is a standard reporting method used by the CDC, who maintains national' 
+            + 'mortality statistics';   
+
   // convert strings to numbers
   dType.forEach(function(d) {
     d.Deaths = +d.Deaths;
@@ -58,13 +63,14 @@ function drawDonut(error, dType, dAge, dGender, dRace, dMonth, dDay) {
   var chartGroup = d3.select('#chartG');
 
   chartGroup.append('g')
-            .attr('transform', 'translate(650, 50)')
+            .attr('transform', 'translate(0, 50)')
             .attr('id', '#chartTitle')
             .append('text')
             .text(function (d) {
                 return ('Columbus Total Suicides by ' + donutType + ' 1999 - 2016');
             })
-            .attr('class', 'title');
+            .attr('class', 'title')
+            .style('text-anchor', 'start');
 
   var canvasWidth = 1200;
   var canvasHeight = 1000;
@@ -135,7 +141,7 @@ function drawDonut(error, dType, dAge, dGender, dRace, dMonth, dDay) {
           .attr('dy', '.35em')
           .attr('text-anchor', 'middle')
           .text(function(d, i) { 
-                return d.data.Cause + '\xa0\xa0\xa0' + d.data.Deaths.toLocaleString('en');
+                return d.data.Cause + ': \xa0\xa0\xa0' + d.data.Deaths.toLocaleString('en');
               })
           .style("font-size", function(d) {
             if (d.data.Percent > 20) {
@@ -157,9 +163,9 @@ function drawDonut(error, dType, dAge, dGender, dRace, dMonth, dDay) {
   pieGroup.append('text')
       .text(function (d) {
         if (donutType == 'Race') {
-          return ('Suicide Rate per 100,000');
+          return ('(Suicide Rate per 100,000)');
         } else {
-          return ('Number of Suicides');                
+          return ('(Number of Suicides)');                
         }
       })
       .style('font-size', '24px')
@@ -236,6 +242,11 @@ function drawDonut(error, dType, dAge, dGender, dRace, dMonth, dDay) {
 
 function drawDonutR(error, dAge, dGender, dRace) {
 
+  document.getElementById('analysisText').innerHTML = 'These pie charts show statistics on suicides in the four Columbus counties from 1999 to 2016.  Click the \"Columbus Number\" dropdown button to choose' +
+            ' between numbers of suicides relative to age, gender, race, method of suicide, month of the year, and day of the week. Click on the \"Columbus Rates\" to see statistics on rates of suicides' +
+            'per 100,000 people population, which normalizes results against differend demographic sizes.  The \"per 100,000 population\" is a standard reporting method used by the CDC, who maintains national' 
+            + 'mortality statistics';   
+
   // convert strings to numbers
   dAge.forEach(function(d) {
     d.Rate = +d.Rate;
@@ -276,13 +287,14 @@ function drawDonutR(error, dAge, dGender, dRace) {
   var chartGroup = d3.select('#chartG');
 
   chartGroup.append('g')
-            .attr('transform', 'translate(650, 50)')
+            .attr('transform', 'translate(0, 50)')
             .attr('id', '#chartTitle')
             .append('text')
             .text(function (d) {
               return ('Columbus Total Suicide Rates per 100,000 Population by ' + donutType + ' 1999 - 2016');
             })
-            .attr('class', 'title');
+            .attr('class', 'title')
+            .style('text-anchor', 'start');
 
   var canvasWidth = 1200;
   var canvasHeight = 1000;
@@ -353,7 +365,7 @@ function drawDonutR(error, dAge, dGender, dRace) {
           .attr('dy', '.35em')
           .attr('text-anchor', 'middle')
           .text(function(d, i) { 
-                return d.data.Cause + '\xa0\xa0\xa0' + d.data.Rate;
+                return d.data.Cause + ' :\xa0\xa0\xa0' + d.data.Rate;
               })
           .style("font-size", function(d) {
             if (d.data.Percent > 20) {
@@ -374,7 +386,7 @@ function drawDonutR(error, dAge, dGender, dRace) {
 
   pieGroup.append('text')
       .text(function (d) {
-        return ('Suicide Rate per 100,000');
+        return ('(Suicide Rate per 100,000)');
       })
       .style('font-size', '24px')
       .attr('transform', 'translate(0,30)');
@@ -439,18 +451,10 @@ console.log(data);
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 function drawLineChartUS(error, dataUS, dataOhio) {
+
+  document.getElementById('analysisText').innerHTML = 'This parllalel coordinates line chart shows the yearly suicide rate of Ohio, in red, versus the other 49 states, in green.' +
+          ' Hover over any line to see the state and suicide rate at any point in time.  This chart can be useful for identifying changes in suicide rates since 1999.';  
 
   // convert strings to numbers
   dataUS.forEach(function(d) {
@@ -465,11 +469,12 @@ function drawLineChartUS(error, dataUS, dataOhio) {
   var chartGroup = d3.select('#chartG');
 
   chartGroup.append('g')
-            .attr('transform', 'translate(650, 50)')
+            .attr('transform', 'translate(0, 50)')
             .attr('id', '#chartTitle')
             .append('text')
             .text('U.S. Suicide Rates per 100,000 Population (1999 - 2016)')
-            .attr('class', 'title');
+            .attr('class', 'title')
+            .style('text-anchor', 'start');
 
   var canvasWidth = 1200;
   var canvasHeight = 1000;
@@ -591,15 +596,27 @@ function drawLineChartUS(error, dataUS, dataOhio) {
             .attr('stroke-linecap', 'round')
             .attr('d', function(d) {return lineGenerator(d.values); })
             .on('mouseover', function(d, i) {
+              var xCoord = d3.mouse(this)[0];
+              var xDomInv = parseInt(xScale.invert(xCoord));          
+              var ind = 0;
+              for (i = 0; i < d.values.length; i++) {
+                if (d.values[i].Year == xDomInv) {
+                  ind = i;
+                  break;
+                }
+              }
               tooltip.transition()
                     .duration(200)
                     .style('opacity', 1.0);                
-              tooltip.html(d.key)
-                    .style('left', (d3.event.pageX - 70) + 'px')
-                    .style('top', (d3.event.pageY - 35) + 'px')
+              tooltip.html(d.key + ' | ' + xDomInv + ' Rate: ' + d.values[ind].Rate)
+                    .style('left', (d3.event.pageX - 180) + 'px')
+                    .style('top', (d3.event.pageY - 45) + 'px')                 
                     .style('background-color', 'lightgray')
-                    .style('width', '140px')
-              d3.select(this).attr('stroke', '#778899');                 
+                    .style('width', function() {
+                      var str = d.key + ' | 1999 Rate: ' + d.values[0].Rate;
+                      return str.length*8 + 'px';
+                    });
+              d3.select(this).attr('stroke', '#00ff00');                 
             })
             .on('mouseout', function(d, i) {
               tooltip.transition()
@@ -608,7 +625,7 @@ function drawLineChartUS(error, dataUS, dataOhio) {
               d3.select(this).attr('stroke', function(d) {
               if (d.key == 'Ohio') {return colors[1];}
               return colors[0];
-              });                       
+              });                             
             });     
 
   lines.each(function(d) {d.totalLength = this.getTotalLength();})
@@ -666,6 +683,11 @@ function drawLineChartUS(error, dataUS, dataOhio) {
 
 function drawLineChartOhio(error, dataUS, dataOhio) {
 
+
+  document.getElementById('analysisText').innerHTML = 'This parllalel coordinates line chart shows the yearly suicide rate of the four Columbus counties, Delaware, Fairfield' +
+          ' Franklin, and Pickaway, in red, versus the other 84 Ohio counties, in green.' +
+          ' Hover over any line to see the state and suicide rate at any point in time.  This chart can be useful for identifying changes in suicide rates since 1999.';  
+
   // convert strings to numbers
   dataUS.forEach(function(d) {
     d.Rate = +d.Rate;
@@ -679,17 +701,18 @@ function drawLineChartOhio(error, dataUS, dataOhio) {
   var chartGroup = d3.select('#chartG');
 
   chartGroup.append('g')
-            .attr('transform', 'translate(650, 50)')
+            .attr('transform', 'translate(0, 50)')
             .attr('id', '#chartTitle')
             .append('text')
             .text('Ohio Counties Suicide Rates per 100,000 Population (incomplete) (1999 - 2016)')
-            .attr('class', 'title');
+            .attr('class', 'title')
+            .style('text-anchor', 'start');            
 
   var canvasWidth = 1200;
   var canvasHeight = 1000;
 
   var marginLeft = 60;
-  var marginRight = 15;
+  var marginRight = 20;
   var marginTop = 100;
   var marginBottom = 20;  
 
@@ -810,15 +833,27 @@ function drawLineChartOhio(error, dataUS, dataOhio) {
             .attr('stroke-linecap', 'round')
             .attr('d', function(d) {return lineGenerator(d.values); })
             .on('mouseover', function(d, i) {
+              var xCoord = d3.mouse(this)[0];
+              var xDomInv = parseInt(xScale.invert(xCoord));          
+              var ind = 0;
+              for (i = 0; i < d.values.length; i++) {
+                if (d.values[i].Year == xDomInv) {
+                  ind = i;
+                  break;
+                }
+              }
               tooltip.transition()
                     .duration(200)
                     .style('opacity', 1.0);                
-              tooltip.html(d.key)
-                    .style('left', (d3.event.pageX - 70) + 'px')
-                    .style('top', (d3.event.pageY - 35) + 'px')
+              tooltip.html(d.key + ' | ' + xDomInv + ' Rate: ' + d.values[ind].Rate)
+                    .style('left', (d3.event.pageX - 180) + 'px')
+                    .style('top', (d3.event.pageY - 45) + 'px')                 
                     .style('background-color', 'lightgray')
-                    .style('width', '140px')
-              d3.select(this).attr('stroke', '#778899');                 
+                    .style('width', function() {
+                      var str = d.key + ' | 1999 Rate: ' + d.values[0].Rate;
+                      return str.length*8 + 'px';
+                    });
+              d3.select(this).attr('stroke', '#00ff00');                 
             })
             .on('mouseout', function(d, i) {
               tooltip.transition()
@@ -828,7 +863,7 @@ function drawLineChartOhio(error, dataUS, dataOhio) {
               if (d.key == 'Franklin' || d.key == 'Delaware' || d.key == 'Fairfield' || d.key == 'Pickaway') {return colors[1];}
               return colors[0];
               });                       
-            });        
+            });       
 
   lines.each(function(d) {d.totalLength = this.getTotalLength();})
   .attr("stroke-dasharray", function(d) {return d.totalLength + " " + d.totalLength})
@@ -884,6 +919,11 @@ function drawLineChartOhio(error, dataUS, dataOhio) {
 function partialDrawLineChartUS(error, dataUS, dataOhio) {
   console.log('drawLine chart');
 
+  document.getElementById('analysisText').innerHTML = 'This combined parllalel coordinates line chart overlays both state and national suicide charts to compare suicide rates ' +
+          'of Columbus and Ohio counties to other states.  Columbus counties are shown in dark red, Ohio in light red, states in green, and Ohio counties in light blue. '
+          + ' Hover over any line to see the state or county and suicide rate at any point in time.  This chart can be useful for identifying changes in suicide rates since 1999.'; 
+
+
   // convert strings to numbers
   dataUS.forEach(function(d) {
     d.Rate = +d.Rate;
@@ -897,17 +937,18 @@ function partialDrawLineChartUS(error, dataUS, dataOhio) {
   var chartGroup = d3.select('#chartG');
 
   chartGroup.append('g')
-            .attr('transform', 'translate(650, 50)')
+            .attr('transform', 'translate(0, 50)')
             .attr('id', '#chartTitle')
             .append('text')
             .text('U.S. and Ohio Suicide Rates per 100,000 Population (incomplete) (1999 - 2016)')
-            .attr('class', 'title');
+            .attr('class', 'title')
+            .style('text-anchor', 'start');
 
   var canvasWidth = 1200;
   var canvasHeight = 1000;
 
   var marginLeft = 60;
-  var marginRight = 15;
+  var marginRight = 20;
   var marginTop = 100;
   var marginBottom = 20;  
 
@@ -1028,15 +1069,27 @@ function partialDrawLineChartUS(error, dataUS, dataOhio) {
             .attr('stroke-linecap', 'round')
             .attr('d', function(d) {return lineGenerator(d.values); })
             .on('mouseover', function(d, i) {
+              var xCoord = d3.mouse(this)[0];
+              var xDomInv = parseInt(xScale.invert(xCoord));          
+              var ind = 0;
+              for (i = 0; i < d.values.length; i++) {
+                if (d.values[i].Year == xDomInv) {
+                  ind = i;
+                  break;
+                }
+              }
               tooltip.transition()
                     .duration(200)
                     .style('opacity', 1.0);                
-              tooltip.html(d.key)
-                    .style('left', (d3.event.pageX - 70) + 'px')
-                    .style('top', (d3.event.pageY - 35) + 'px')
+              tooltip.html(d.key + ' | ' + xDomInv + ' Rate: ' + d.values[ind].Rate)
+                    .style('left', (d3.event.pageX - 180) + 'px')
+                    .style('top', (d3.event.pageY - 45) + 'px')                 
                     .style('background-color', 'lightgray')
-                    .style('width', '140px')
-              d3.select(this).attr('stroke', '#778899');                 
+                    .style('width', function() {
+                      var str = d.key + ' | 1999 Rate: ' + d.values[0].Rate;
+                      return str.length*8 + 'px';
+                    });
+              d3.select(this).attr('stroke', '#00ff00');                 
             })
             .on('mouseout', function(d, i) {
               tooltip.transition()
@@ -1045,7 +1098,7 @@ function partialDrawLineChartUS(error, dataUS, dataOhio) {
               d3.select(this).attr('stroke', function(d) {
               if (d.key == 'Ohio') {return colors[1];}
               return colors[0];
-              });                       
+              });                           
             });            
 
   lines.each(function(d) {d.totalLength = this.getTotalLength();})
@@ -1199,15 +1252,27 @@ function partialDrawLineChartOhio(error, dataUS, dataOhio) {
             .attr('stroke-linecap', 'round')
             .attr('d', function(d) {return lineGenerator(d.values); })
             .on('mouseover', function(d, i) {
+              var xCoord = d3.mouse(this)[0];
+              var xDomInv = parseInt(xScale.invert(xCoord));          
+              var ind = 0;
+              for (i = 0; i < d.values.length; i++) {
+                if (d.values[i].Year == xDomInv) {
+                  ind = i;
+                  break;
+                }
+              }
               tooltip.transition()
                     .duration(200)
                     .style('opacity', 1.0);                
-              tooltip.html(d.key)
-                    .style('left', (d3.event.pageX - 70) + 'px')
-                    .style('top', (d3.event.pageY - 35) + 'px')
+              tooltip.html(d.key + ' | ' + xDomInv + ' Rate: ' + d.values[ind].Rate)
+                    .style('left', (d3.event.pageX - 180) + 'px')
+                    .style('top', (d3.event.pageY - 45) + 'px')                 
                     .style('background-color', 'lightgray')
-                    .style('width', '140px')
-              d3.select(this).attr('stroke', '#778899');                 
+                    .style('width', function() {
+                      var str = d.key + ' | 1999 Rate: ' + d.values[0].Rate;
+                      return str.length*8 + 'px';
+                    });
+              d3.select(this).attr('stroke', '#00ff00');                 
             })
             .on('mouseout', function(d, i) {
               tooltip.transition()
@@ -1217,7 +1282,7 @@ function partialDrawLineChartOhio(error, dataUS, dataOhio) {
               if (d.key == 'Franklin' || d.key == 'Delaware' || d.key == 'Fairfield' || d.key == 'Pickaway') {return colors[1];}
               return colors[0];
               });                       
-            });     
+            });   
 
   lines.each(function(d) {d.totalLength = this.getTotalLength();})
   .attr("stroke-dasharray", function(d) {return d.totalLength + " " + d.totalLength})

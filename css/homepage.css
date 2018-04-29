@@ -36,6 +36,14 @@ html, body {
     height: 100%;*/
 }
 
+#analysisText, #analysistext {
+  font-weight: bold;
+  font-size: 20px;
+  text-align: justify;
+  text-justify: inner-word;
+  padding-top: 20px;
+}
+
 #chartImage {
   max-width: 100%;
   
@@ -132,6 +140,9 @@ div.tooltip {
   text-align: center;
   vertical-align: middle;
   z-index: 1;
+  word-wrap: break-word;
+  overflow: visible;
+
 }
 
 .tooltipTree {
@@ -214,6 +225,7 @@ text {
   font-weight: bold;
   fill: black;
   text-anchor: middle;
+  cursor: default;
 }
 
 .title {

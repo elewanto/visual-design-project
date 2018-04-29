@@ -27,8 +27,9 @@ async function sliderChange() {
 
 function heartTreemapColumbus() {
   // delete old chart elements
-  oldChartSvg = document.getElementById('chartDiv');
-  removeChildren(oldChartSvg);
+  //oldChartSvg = document.getElementById('chartDiv');
+  //removeChildren(oldChartSvg);
+  clearAll();
 
   var chartSvg = d3.select('#chartDiv')
                 .append('svg')
@@ -62,8 +63,9 @@ function heartTreemapColumbus() {
 
 function heartBubbleColumbus() {
   // delete old chart elements
-  oldChartSvg = document.getElementById('chartDiv');
-  removeChildren(oldChartSvg);
+  //oldChartSvg = document.getElementById('chartDiv');
+  //removeChildren(oldChartSvg);
+  clearAll();
 
   var chartSvg = d3.select('#chartDiv')
                 .append('svg')
@@ -96,8 +98,9 @@ function heartBubbleColumbus() {
 function heartDiseaseLineChartUS() {
 
   // delete old chart elements
-  oldChartSvg = document.getElementById('chartDiv');
-  removeChildren(oldChartSvg);
+  //oldChartSvg = document.getElementById('chartDiv');
+  //removeChildren(oldChartSvg);
+  clearAll();
 
   var chartSvg = d3.select('#chartDiv')
                 .append('svg')
@@ -134,8 +137,9 @@ function heartDiseaseLineChartUS() {
 function heartDiseaseLineChartOhio() {
 
   // delete old chart elements
-  oldChartSvg = document.getElementById('chartDiv');
-  removeChildren(oldChartSvg);
+  //oldChartSvg = document.getElementById('chartDiv');
+  //removeChildren(oldChartSvg);
+  clearAll();
 
   var chartSvg = d3.select('#chartDiv')
                 .append('svg')
@@ -173,8 +177,9 @@ function heartDiseaseLineChartOhio() {
 function heartDiseaseLineChartOhioUS() {
 
   // delete old chart elements
-  oldChartSvg = document.getElementById('chartDiv');
-  removeChildren(oldChartSvg);
+  //oldChartSvg = document.getElementById('chartDiv');
+  //removeChildren(oldChartSvg);
+  clearAll();
 
   var chartSvg = d3.select('#chartDiv')
                 .append('svg')
@@ -299,4 +304,20 @@ function removeChildren(node) {
     node.removeChild(node.firstChild);
   }
 
+}
+
+
+
+function clearAll(){
+  oldChartSvg = document.getElementById('chartDiv');
+  removeChildren(oldChartSvg);
+
+  oldDataSrc = document.getElementById('dataSource');
+  removeChildren(oldDataSrc);
+
+  oldTitle = document.getElementById('chartTitle');
+  removeChildren(oldTitle);
+
+  oldText = document.getElementById('analysisText');
+  removeChildren(oldText);
 }

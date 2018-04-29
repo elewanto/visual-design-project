@@ -22,6 +22,10 @@ function drawBubble() {
 
   var totalDeaths = 0;
 
+  document.getElementById('analysisText').innerHTML = 'Hover over each bubble for more information about the type of disease, the category it belongs to,' +
+          'the number of deaths the disease caused, and the percentage of total heart disease deaths.  The size of the bubble represents'
+          + 'the number of deaths, so a larger bubble means higher number of deaths.';  
+
   var tooltip = d3.select('body').append('div').attr('class', 'tooltipTree'); 
 
   d3.csv("data/heart_disease_data/heart_disease_type_columbus_1999_2016.csv", function(d) {
@@ -44,14 +48,17 @@ function drawBubble() {
           }
         });
 
+        console.log(root);
+
     var chartGroup = d3.select('#chartG');
 
     chartGroup.append('g')
-              .attr('transform', 'translate(650, 50)')
+              .attr('transform', 'translate(0, 50)')
               .attr('id', '#chartTitle')
               .append('text')
               .text('Columbus Heart Disease Deaths by Type (1999 - 2015)')
-              .attr('class', 'title');
+              .attr('class', 'title')
+              .style('text-anchor', 'start');              
 
     var color = d3.scaleOrdinal(d3.schemeCategory20b);     
 
@@ -67,7 +74,7 @@ function drawBubble() {
         .attr("id", function(d) { return d.id; })
         .attr("r", function(d) { return d.r; })
         .style("fill", function(d) { return color(d.package); })
-        .style('cursor', 'pointer')
+        .style('cursor', 'default')
         .on('mousemove', function(d) {
             d3.select(this)   
               .transition()
@@ -142,7 +149,7 @@ function drawBubble() {
           return d.sizeF + 'px';
         })
         .style('font-weight', 'bold')
-        .style('cursor', 'pointer')        
+        .style('cursor', 'default')        
         .attr("x", 0)
         .attr("y", function(d, i, nodes) { return 20 + (i - nodes.length / 2 - 0.5) * (d.sizeF-2); })
         .text(function(d) { return d.wordV; });
@@ -157,6 +164,12 @@ function drawBubble() {
 
 // using Mike Bostick's Treemap example
 function drawTreemap(error, data) {
+
+
+
+  document.getElementById('analysisText').innerHTML = 'Hover over each box for more information about the type of disease, the category it belongs to,' +
+          'the number of deaths the disease caused, and the percentage of total heart disease deaths.  The size of the box represents'
+          + 'the number of deaths, so a larger box means higher number of deaths.';    
 
   groups = ['Category'];
   var totalDeaths = 0;
@@ -213,11 +226,12 @@ function drawTreemap(error, data) {
   var chartGroup = d3.select('#chartG');
 
   chartGroup.append('g')
-            .attr('transform', 'translate(650, 50)')
+            .attr('transform', 'translate(0, 50)')
             .attr('id', '#chartTitle')
             .append('text')
             .text('Columbus Heart Disease Deaths by Type (1999 - 2015)')
-            .attr('class', 'title');
+            .attr('class', 'title')
+            .style('text-anchor', 'start');            
 
 
   var fader = function(color) { return d3.interpolateRgb(color, "#fff")(0.2); },
@@ -338,298 +352,13 @@ function drawTreemap(error, data) {
 
 
 
-
-function drawSunburst() {
-
-
-
-  var canvasWidth = 1200;
-  var canvasHeight = 1000;
-
-  var marginLeft = 20;
-  var marginRight = 20;
-  var marginTop = 100;
-  var marginBottom = 20;
-
-  var chartWidth = canvasWidth - marginLeft - marginRight;
-  var chartHeight = canvasHeight - marginTop - marginBottom;
-
-  var format = d3.format(',d');
-
-  var pack = d3.pack()                // set size of chart
-      //.size([chartWidth, chartHeight])
-      .size([1200,1000])
-      .padding(1);
-
-  var totalDeaths = 0;
-
-  var tooltip = d3.select('body').append('div').attr('class', 'tooltipTree'); 
-
-  d3.csv("data/general_mortality_data/general_mortality_all_causes_bubble_1999_2016.csv", function(d) {
-    d.value = +d.value;
-    if (d.value) {
-      totalDeaths += d.value;
-      return d;
-    }
-  }, function(error, classes) {
-    if (error) throw error;
-
-    var root = d3.hierarchy({children: classes})
-        .sum(function(d) { return d.value; })
-        .each(function(d) {
-          if (id = d.data.id) {
-            var id, i = id.lastIndexOf(".");
-            d.id = id;
-            d.package = id.slice(0, i);
-            d.class = id.slice(i + 1);
-          }
-        });
-
-    var chartGroup = d3.select('#chartG');
-
-    chartGroup.append('g')
-              .attr('transform', 'translate(650, 50)')
-              .attr('id', '#chartTitle')
-              .append('text')
-              .text('Columbus All Causes of Death (1999 - 2015)')
-              .attr('class', 'title');
-
-    var color = d3.scaleOrdinal(d3.schemeCategory20b);     
-
-
-
-    var node = chartGroup.append('g')
-      .attr('transform', 'translate(0, 50)')
-      .selectAll(".node")
-      .data(pack(root).leaves())
-      .enter().append("g")
-        .attr("class", "node")
-        .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
-
-    var circles = node.append("circle")
-        .attr("id", function(d) { return d.id; })
-        .attr("r", function(d) { return d.r; })
-        .style("fill", function(d) { return color(d.package); })
-        .style('cursor', 'pointer')
-        .on('mousemove', function(d) {
-            d3.select(this)   
-              .transition()
-              //.ease(d3.easeBounce)
-              .attr('r', 1.1*d.r)
-              .duration(300);
-            tooltip.style("left", d3.event.pageX + 10 + "px");
-            tooltip.style("top", d3.event.pageY - 20 + "px");
-            tooltip.style("display", "inline-block");        
-            tooltip.html(d.children ? null : 'Category: ' + d.package.slice(11, d.package.length+1) 
-                                            + ' | Type: ' + d.class + ' | ' + d.data.value.toLocaleString('en')
-                                            + ' deaths' + ' | ' + (d.data.value*100/totalDeaths).toLocaleString('en') + '% of ' 
-                                            + totalDeaths.toLocaleString('en') + ' total deaths');
-        }).on('mouseout', function(d) {
-            d3.select(this)
-              .transition()
-              .ease(d3.easeBounce)
-              .attr('r', d.r)
-              .duration(300);          
-          tooltip.style('display', 'none');
-        });
-
-
-
-    node.append("clipPath")
-        .attr("id", function(d) { return "clip-" + d.id; })
-        .append("use")
-        .attr("xlink:href", function(d) { return "#" + d.id; });
-
-    node.append("text")
-        .attr("clip-path", function(d) { return "url(#clip-" + d.id + ")"; })
-        .selectAll("tspan")
-        .data(function(d) { 
-          var fontSize = 14;
-          var maxLenPerWord = parseInt(d.r/6.5);
-          var maxWord = parseInt(d.r/15);
-          //var label = d.class.slice(0, maxLen);
-          var label = d.class
-          if (maxLenPerWord == 0 || maxWord == 0) {
-            return ([{'wordV':"", 'sizeF':fontSize}]);
-          }
-          if (d.r > 100) {
-            fontSize = 24;
-          } else if (d.r > 80) {
-            fontSize = 22;
-          } else if (d.r > 50){
-            fontSize = 20;
-          } else if (d.r > 20) {
-            fontSize = 18;
-          } else {
-            fontSize = 16;
-          }
-          var labelJoin = [];
-          var labelArr = label.split(" ");
-          if (maxWord > 3) {
-            maxWord = 3;
-          }          
-          labelArr.forEach(function(d) {
-            if (maxWord > 0) {
-              if (d.length > maxLenPerWord) { 
-                labelJoin.push({'wordV': d.slice(0, maxLenPerWord+1), 'sizeF': fontSize});
-              } else {
-                labelJoin.push({'wordV': d.slice(0, maxLenPerWord+1), 'sizeF': fontSize});
-              }
-              maxWord--;              
-            }
-          })
-          return labelJoin;
-        })
-        .enter().append("tspan")       
-        .style('font-size', function(d) {
-          return d.sizeF + 'px';
-        })
-        .style('font-weight', 'bold')
-        .style('cursor', 'pointer')        
-        .attr("x", 0)
-        .attr("y", function(d, i, nodes) { return 20 + (i - nodes.length / 2 - 0.5) * (d.sizeF-2); })
-        .text(function(d) { return d.wordV; });
-
-  });
-
-
-
-
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-function drawSunburst1() {
-
-
-var width = 960,
-    height = 700,
-    radius = (Math.min(width, height) / 2) - 10;
-
-var formatNumber = d3.format(",d");
-
-var x = d3.scaleLinear()
-    .range([0, 2 * Math.PI]);
-
-var y = d3.scaleSqrt()
-    .range([0, radius]);
-
-var color = d3.scaleOrdinal(d3.schemeCategory20);
-
-var partition = d3.partition();
-
-var arc = d3.arc()
-    .startAngle(function(d) { return Math.max(0, Math.min(2 * Math.PI, x(d.x0))); })
-    .endAngle(function(d) { return Math.max(0, Math.min(2 * Math.PI, x(d.x1))); })
-    .innerRadius(function(d) { return Math.max(0, y(d.y0)); })
-    .outerRadius(function(d) { return Math.max(0, y(d.y1)); });
-
-
-var svg = d3.select("body").append("svg")
-    .attr("width", width)
-    .attr("height", height)
-  .append("g")
-    .attr("transform", "translate(" + width / 2 + "," + (height / 2) + ")");
-
-d3.json("https://gist.githubusercontent.com/mbostock/4348373/raw/85f18ac90409caa5529b32156aa6e71cf985263f/flare.json", function(error, root) {
-  if (error) throw error;
-  
-  root = d3.hierarchy(root);
-  root.sum(function(d) { return d.size; });
-  svg.selectAll("path")
-      .data(partition(root).descendants())
-    .enter().append("path")
-      .attr("d", arc)
-      .style("fill", function(d) { return color((d.children ? d : d.parent).data.name); })
-      .on("click", click)
-    .append("title")
-      .text(function(d) { return d.data.name + "\n" + formatNumber(d.value); });
-});
-
-function click(d) {
-  svg.transition()
-      .duration(750)
-      .tween("scale", function() {
-        var xd = d3.interpolate(x.domain(), [d.x0, d.x1]),
-            yd = d3.interpolate(y.domain(), [d.y0, 1]),
-            yr = d3.interpolate(y.range(), [d.y0 ? 20 : 0, radius]);
-        return function(t) { x.domain(xd(t)); y.domain(yd(t)).range(yr(t)); };
-      })
-    .selectAll("path")
-      .attrTween("d", function(d) { return function() { return arc(d); }; });
-}
-
-d3.select(self.frameElement).style("height", height + "px");
-
-
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 function drawLineChartUS(error, dataUS, dataOhio) {
+
+
+  document.getElementById('analysisText').innerHTML = 'This parllalel coordinates line chart shows the yearly heart disease mortality rate of Ohio, in red, versus the other 49 states, in green.' +
+          ' Hover over any line to see the state and mortality rate at any point in time.  This chart can be useful for identifying changes in heart disease mortality rates since 1999.';
+
+   
 
   // convert strings to numbers
   dataUS.forEach(function(d) {
@@ -644,11 +373,12 @@ function drawLineChartUS(error, dataUS, dataOhio) {
   var chartGroup = d3.select('#chartG');
 
   chartGroup.append('g')
-            .attr('transform', 'translate(650, 50)')
+            .attr('transform', 'translate(0, 50)')
             .attr('id', '#chartTitle')
             .append('text')
             .text('U.S. Heart Disease Mortality Rates per 100,000 Population (1999 - 2015)')
-            .attr('class', 'title');
+            .attr('class', 'title')
+            .style('text-anchor', 'start');            
 
   var canvasWidth = 1200;
   var canvasHeight = 1000;
@@ -748,8 +478,6 @@ function drawLineChartUS(error, dataUS, dataOhio) {
               return yScale(d.Rate);
             });
 
-
-
   var lineGroup = chartGroup.append('g');
   //chartGroup.append('g')
   var lines = lineGroup.selectAll('path')
@@ -774,15 +502,27 @@ function drawLineChartUS(error, dataUS, dataOhio) {
             .attr('stroke-linecap', 'round')
             .attr('d', function(d) {return lineGenerator(d.values); })
             .on('mouseover', function(d, i) {
+              var xCoord = d3.mouse(this)[0];
+              var xDomInv = parseInt(xScale.invert(xCoord));          
+              var ind = 0;
+              for (i = 0; i < d.values.length; i++) {
+                if (d.values[i].Year == xDomInv) {
+                  ind = i;
+                  break;
+                }
+              }
               tooltip.transition()
                     .duration(200)
                     .style('opacity', 1.0);                
-              tooltip.html(d.key)
-                    .style('left', (d3.event.pageX - 70) + 'px')
-                    .style('top', (d3.event.pageY - 35) + 'px')
+              tooltip.html(d.key + ' | ' + xDomInv + ' Rate: ' + d.values[ind].Rate)
+                    .style('left', (d3.event.pageX - 180) + 'px')
+                    .style('top', (d3.event.pageY - 45) + 'px')                 
                     .style('background-color', 'lightgray')
-                    .style('width', '140px')
-              d3.select(this).attr('stroke', '#778899');                 
+                    .style('width', function() {
+                      var str = d.key + ' | 1999 Rate: ' + d.values[0].Rate;
+                      return str.length*8 + 'px';
+                    });
+              d3.select(this).attr('stroke', '#00ff00');                 
             })
             .on('mouseout', function(d, i) {
               tooltip.transition()
@@ -849,6 +589,11 @@ function drawLineChartUS(error, dataUS, dataOhio) {
 
 function drawLineChartOhio(error, dataUS, dataOhio) {
 
+  document.getElementById('analysisText').innerHTML = 'This parllalel coordinates line chart shows the yearly heart disease mortality rate of the four Columbus counties, Delaware, Fairfield' +
+          ' Franklin, and Pickaway, in red, versus the other 84 Ohio counties, in green.' +
+          ' Hover over any line to see the state and mortality rate at any point in time.  This chart can be useful for identifying changes in heart disease mortality rates since 1999.';
+   
+
   // convert strings to numbers
   dataUS.forEach(function(d) {
     d.Rate = +d.Rate;
@@ -862,11 +607,12 @@ function drawLineChartOhio(error, dataUS, dataOhio) {
   var chartGroup = d3.select('#chartG');
 
   chartGroup.append('g')
-            .attr('transform', 'translate(650, 50)')
+            .attr('transform', 'translate(0, 50)')
             .attr('id', '#chartTitle')
             .append('text')
             .text('Ohio Counties Heart Disease Mortality Rates per 100,000 Population (1999 - 2015)')
-            .attr('class', 'title');
+            .attr('class', 'title')
+            .style('text-anchor', 'start');            
 
   var canvasWidth = 1200;
   var canvasHeight = 1000;
@@ -990,15 +736,27 @@ function drawLineChartOhio(error, dataUS, dataOhio) {
             .attr('stroke-linecap', 'round')
             .attr('d', function(d) {return lineGenerator(d.values); })
             .on('mouseover', function(d, i) {
+              var xCoord = d3.mouse(this)[0];
+              var xDomInv = parseInt(xScale.invert(xCoord));          
+              var ind = 0;
+              for (i = 0; i < d.values.length; i++) {
+                if (d.values[i].Year == xDomInv) {
+                  ind = i;
+                  break;
+                }
+              }
               tooltip.transition()
                     .duration(200)
                     .style('opacity', 1.0);                
-              tooltip.html(d.key)
-                    .style('left', (d3.event.pageX - 70) + 'px')
-                    .style('top', (d3.event.pageY - 35) + 'px')
+              tooltip.html(d.key + ' | ' + xDomInv + ' Rate: ' + d.values[ind].Rate)
+                    .style('left', (d3.event.pageX - 180) + 'px')
+                    .style('top', (d3.event.pageY - 45) + 'px')                 
                     .style('background-color', 'lightgray')
-                    .style('width', '140px')
-              d3.select(this).attr('stroke', '#778899');                 
+                    .style('width', function() {
+                      var str = d.key + ' | 1999 Rate: ' + d.values[0].Rate;
+                      return str.length*8 + 'px';
+                    });
+              d3.select(this).attr('stroke', '#00ff00');                 
             })
             .on('mouseout', function(d, i) {
               tooltip.transition()
@@ -1063,6 +821,12 @@ function drawLineChartOhio(error, dataUS, dataOhio) {
 
 function partialDrawLineChartUS(error, dataUS, dataOhio) {
 
+
+  document.getElementById('analysisText').innerHTML = 'This combined parllalel coordinates line chart overlays both state and national heart disease charts to compare heart disease mortality rates ' +
+          'of Columbus and Ohio counties to other states.  Columbus counties are shown in dark red, Ohio in light red, states in green, and Ohio counties in light blue. '
+          + ' Hover over any line to see the state or county and mortality rate at any point in time.  This chart can be useful for identifying changes in heart disease mortality rates since 1999.';
+    
+
   // convert strings to numbers
   dataUS.forEach(function(d) {
     d.Rate = +d.Rate;
@@ -1076,11 +840,12 @@ function partialDrawLineChartUS(error, dataUS, dataOhio) {
   var chartGroup = d3.select('#chartG');
 
   chartGroup.append('g')
-            .attr('transform', 'translate(650, 50)')
+            .attr('transform', 'translate(0, 50)')
             .attr('id', '#chartTitle')
             .append('text')
             .text('U.S. and Ohio Heart Disease Mortality Rates per 100,000 Population (1999 - 2015)')
-            .attr('class', 'title');
+            .attr('class', 'title')
+            .style('text-anchor', 'start');            
 
   var canvasWidth = 1200;
   var canvasHeight = 1000;
@@ -1203,15 +968,27 @@ function partialDrawLineChartUS(error, dataUS, dataOhio) {
             .attr('stroke-linecap', 'round')
             .attr('d', function(d) {return lineGenerator(d.values); })
             .on('mouseover', function(d, i) {
+              var xCoord = d3.mouse(this)[0];
+              var xDomInv = parseInt(xScale.invert(xCoord));          
+              var ind = 0;
+              for (i = 0; i < d.values.length; i++) {
+                if (d.values[i].Year == xDomInv) {
+                  ind = i;
+                  break;
+                }
+              }
               tooltip.transition()
                     .duration(200)
                     .style('opacity', 1.0);                
-              tooltip.html(d.key)
-                    .style('left', (d3.event.pageX - 70) + 'px')
-                    .style('top', (d3.event.pageY - 35) + 'px')
+              tooltip.html(d.key + ' | ' + xDomInv + ' Rate: ' + d.values[ind].Rate)
+                    .style('left', (d3.event.pageX - 180) + 'px')
+                    .style('top', (d3.event.pageY - 45) + 'px')                 
                     .style('background-color', 'lightgray')
-                    .style('width', '140px')
-              d3.select(this).attr('stroke', '#778899');                 
+                    .style('width', function() {
+                      var str = d.key + ' | 1999 Rate: ' + d.values[0].Rate;
+                      return str.length*8 + 'px';
+                    });
+              d3.select(this).attr('stroke', '#00ff00');                 
             })
             .on('mouseout', function(d, i) {
               tooltip.transition()
@@ -1370,15 +1147,27 @@ function partialDrawLineChartOhio(error, dataUS, dataOhio) {
             .attr('stroke-linecap', 'round')
             .attr('d', function(d) {return lineGenerator(d.values); })
             .on('mouseover', function(d, i) {
+              var xCoord = d3.mouse(this)[0];
+              var xDomInv = parseInt(xScale.invert(xCoord));          
+              var ind = 0;
+              for (i = 0; i < d.values.length; i++) {
+                if (d.values[i].Year == xDomInv) {
+                  ind = i;
+                  break;
+                }
+              }
               tooltip.transition()
                     .duration(200)
                     .style('opacity', 1.0);                
-              tooltip.html(d.key)
-                    .style('left', (d3.event.pageX - 70) + 'px')
-                    .style('top', (d3.event.pageY - 35) + 'px')
+              tooltip.html(d.key + ' | ' + xDomInv + ' Rate: ' + d.values[ind].Rate)
+                    .style('left', (d3.event.pageX - 180) + 'px')
+                    .style('top', (d3.event.pageY - 45) + 'px')                 
                     .style('background-color', 'lightgray')
-                    .style('width', '140px')
-              d3.select(this).attr('stroke', '#778899');                 
+                    .style('width', function() {
+                      var str = d.key + ' | 1999 Rate: ' + d.values[0].Rate;
+                      return str.length*8 + 'px';
+                    });
+              d3.select(this).attr('stroke', '#00ff00');                 
             })
             .on('mouseout', function(d, i) {
               tooltip.transition()

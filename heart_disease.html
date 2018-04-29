@@ -54,14 +54,14 @@
         <a href="homepage.html">Home</a>
         <a href="life_expectancy.html">Life Expectancy</a>
         <div class="dropdownm">
-          <button class="dropbtnm">Mortality
+          <button class="dropbtnm" onclick="location.href = 'general_mortality.html';">Mortality
             <i class="fa fa-caret-down"></i>
+            </script>            
           </button>
           <div class="dropdownm-content">
             <a href="heart_disease.html">Heart Disease</a>
             <a href="cancer.html">Cancer</a>
             <a href="suicide.html">Suicide</a>
-            <a href="general_mortality.html">General</a>
           </div>
         </div>
         <a href="opioid.html">Opioid</a>
@@ -128,7 +128,6 @@
                     <div class="dropdownd-content">
                       <a onclick="heartTreemapColumbus()">Treemap</a>
                       <a onclick="heartBubbleColumbus()">Bubble Chart</a>
-                      <a onclick="heartSunburstColumbus()">Sunburst</a>
                     </div>
                   </div>                                             
                 </div>
@@ -138,8 +137,16 @@
 
           <div class="panel panel-default col-sm-9" id="chart-panel">
             <div class="panel-body">
-              <div id="chartDiv" class="svg-container">
-              </div>
+                <div id ="chartTitle">
+                </div>
+                <div id="chartDiv" class="svg-container">
+                </div>
+                <div id="dataSource">
+                </div>
+                <div id="tooltip" opacity="0">
+                </div>
+                <div id="analysisText">
+                </div>            
             </div> 
           </div>
         </div>
