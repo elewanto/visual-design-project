@@ -47,8 +47,6 @@
     <link rel="stylesheet" type="text/css" href="css/homepageSam.css">    <!-- homepage css file --> 
     <link rel="stylesheet" type="text/css" href="css/navbar.css">   <!-- navbar css file -->  
 
-
-
     <!-- .js library packages -->
     <script src="https://d3js.org/d3.v4.min.js"></script>  <!-- D3 library -->
     <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>      
@@ -61,7 +59,10 @@
 
     <!-- project .js files -->
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>   
 
   </head>
 
@@ -88,42 +89,104 @@
         <a id="aboutus" href="about_us.html">About Us</a>
       </div>
 
-    <!--end wrapper-->
-    <section class="section-steps" id="works">
-         <div class="row">
-                     <!--Concept Statement-->
-                     <div class="col span-1-of-2">
-                        <h1>Concept Statement</h1>
-                        <p class="long-copy">
-                           Despite high economic status and availability of reliable healthcare services, Columbus residents have lower life expectancy, higher obesity rates, and greater abuse of opioids. We will identify the trends in opioid abuse and obesity and their possible effects on life expectancy in Columbus, Ohio. We will focus on Columbus counties and compare them to the national and state averages to determine the impact of these three epidemics in Ohio. Our goal is to show trends in Columbus residents’ life expectancy, causes of mortality, opioid use, and obesity relative to the rest of the country over time, possible correlations between them, and to explore other potential influencing factors.
-                        </p>
-                        <br><br><h1>Life Expectancy</h1>
-                        <p class="long-copy">
-                          While life expectancy, the average time someone is expected to live, in Columbus has risen since 1980, it lags behind the rest of the state. In 2014, Franklin County ranked 55th among Ohio’s counties at 77.6 years when compared to the statewide life expectancy at 77.9 years. Comparing Ohio and its counties with a U.S. average life expectancy of 79.1 years, Ohio is struggling to keep up with the rest of the nation.
-                        </p>
-                        <br><br><h1>Mortality</h1>
-                        <p class="long-copy">
-                          Columbus counties show lower rates of heart disease and cancer mortalities compared to other Ohio counties, and while rates of heart disease mortality have decreased by 19% in Ohio from 1999 to 2015, Ohio counties are among the top ten states with the highest heart disease mortality rates.  Similarly, while Columbus counties have lower rates of cancer mortality than other Ohio counties, the cancer mortality rates are also among the top ten states. This can be observed in the 'Trends Over Time' line graphs.  The cancer treemap diagram highlights the top causes of Columbus cancer deaths between 1999 and 2015, with lung cancers as the most prevalent, representing 29.8% of the total cancer deaths, and breast cancer as the second highest, with 8.2% of total cancer deaths.  Columbus suicide rates are lower than other parts of the state, but Ohio suicide rates overall have increased 51% from 2000 to 2016.
-                        </p>
-                        <br><br><h1>Opioid</h1>
-                        <p class="long-copy">
-                          Even though opioid prescribing rates in Ohio have decreased by 20.4 percent from 2012 to 2016, Ohio ranks second among states, behind West Virginia, at 39.1 overdose deaths per 100,000 people. Despite this, of the 35 counties collected in the data, Franklin County ranked 25th in mortality rate caused by opioid overdose, at 23.5 deaths per 100,000. This study shows that males are twice as likely to die from an overdose than females and Caucasians are one and a half times more likely to die than African Americans. As the opioid epidemic continues, it will be interesting to see where Ohio and Franklin County end up. 
-                        </p>
-                        <br><br><h1>Obesity</h1>
-                        <p class="long-copy">
-			In "Is the U.S. Population Behaving Healthier?" (NBER Working Paper 13013), researchers David Cutler, Edward Glaeser, and Allison Rosen examine trends in health behaviors and estimate their effect on mortality rates. The authors conclude that changes in health behaviors have contributed to a drop in mortality rates over the past thirty years, but caution that future increases in obesity may reverse this trend. So, we are also interested in the temporal 
-trends in Obesity.From the trends we observed in this project for the United State, the obesity rate for each state increases for each year. For Ohio State, the obesity rate increases to more than 29% since 2007.  Even if we narrow down our scale to the Columbus, the trend plot demonstrates the increasing obesity trend for all 10 counties in the columbus, albeit some county such as Madison has a decreasing rate in 2012. The obesity issue gradually becomes a potential factor that has impact for life expectancy.
-                        </p>
-			<br><br>     
+      <div id="myCarousel" class="carousel slide" data-ride="carousel" style="width: 60%; height: 30%; margin: 0 auto">
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+          <li data-target="#myCarousel" data-slide-to="3"></li>
+        </ol>
+
+        <div class="carousel-inner">
+          <div class="item active">
+            <img src="images/le_carousel.png" style="width:100%; height: 500px;">
           </div>
 
-          <div class="row">
-            <!--Concept Statement-->
-            <div class="col span-1-of-2">
-              <a href="index.html"><button class="button button1">SPLASH PAGE</button></a>
+          <div class="item">
+            <img src="images/mortality_home.png" style="width:100%; height: 500px;">
           </div>
+        
+          <div class="item">
+            <img src="images/obesity_home.png" style="width:100%; height: 500px;">
+          </div>
+
+          <div class="item">
+            <img src="images/opioid_home.png" style="width:100%; height: 500px;">
+          </div>
+        </div>
+
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+
+      <div class="container">
+          <div class="panel panel-default">
+           <div class="panel-heading"><h1>Life Expectancy in US and Ohio</h1></div>
+           <div class="panel-body">
+              <div class="row">
+                  <div class="col-md-6">
+                    <img class="rounded-circle" src="images/le_home.png" alt="Chania" width="460" height="345">
+                  </div>
+
+                  <div class="col-md-6">
+                      <h2>How long can you live?</h2>
+                      <p>
+                          While life expectancy, the average time someone is expected to live, in Columbus has risen since 1980, it lags behind the rest of the state. In 2014, Franklin County ranked 55th among Ohio’s counties at 77.6 years when compared to the statewide life expectancy at 77.9 years. Comparing Ohio and its counties with a U.S. average life expectancy of 79.1 years, Ohio is struggling to keep up with the rest of the nation.
+                      </p>
+                  </div>
+              </div> 
+              <div class="row">
+                  <div class="col-md-6 text-center">
+                      <h2>What is killing you?</h2>
+                      <p>
+                          Columbus counties show lower rates of heart disease and cancer mortalities compared to other Ohio counties, and while rates of heart disease mortality have decreased by 19% in Ohio from 1999 to 2015, Ohio counties are among the top ten states with the highest heart disease mortality rates.  Similarly, while Columbus counties have lower rates of cancer mortality than other Ohio counties, the cancer mortality rates are also among the top ten states. This can be observed in the 'Trends Over Time' line graphs.  The cancer treemap diagram highlights the top causes of Columbus cancer deaths between 1999 and 2015, with lung cancers as the most prevalent, representing 29.8% of the total cancer deaths, and breast cancer as the second highest, with 8.2% of total cancer deaths.  Columbus suicide rates are lower than other parts of the state, but Ohio suicide rates overall have increased 51% from 2000 to 2016.
+                      </p>
+                  </div>
+
+                  <div class="col-md-6">
+                    <img src="images/mortality_home.png" class="rounded-circle" alt="Chania" width="460" height="345">
+                  </div>
+              </div> 
+
+              <div class="row">
+                <div class="col-md-6">
+                  <img src="images/obesity_home.png" class="rounded-circle" alt="Chania" width="460" height="345">
+                </div>
+
+                <div class="col-md-6 text-center">
+                  <h2>How can those fat cells kill you early?</h2>
+                  <p>
+                    In "Is the U.S. Population Behaving Healthier?" (NBER Working Paper 13013), researchers David Cutler, Edward Glaeser, and Allison Rosen examine trends in health behaviors and estimate their effect on mortality rates. The authors conclude that changes in health behaviors have contributed to a drop in mortality rates over the past thirty years, but caution that future increases in obesity may reverse this trend. So, we are also interested in the temporal trends in Obesity.From the trends we observed in this project for the United State, the obesity rate for each state increases for each year. For Ohio State, the obesity rate increases to more than 29% since 2007.  Even if we narrow down our scale to the Columbus, the trend plot demonstrates the increasing obesity trend for all 10 counties in the columbus, albeit some county such as Madison has a decreasing rate in 2012.The obesity issue gradually becomes a potential factor that has impact for life expectancy.
+                  </p>
+                </div>
+              </div> 
+
+              <div class="row">
+                <div class="col-md-6 text-center">
+                  <h2>How addicted are you?</h2>
+                    <p>
+                          Even though opioid prescribing rates in Ohio have decreased by 20.4 percent from 2012 to 2016, Ohio ranks second among states, behind West Virginia, at 39.1 overdose deaths per 100,000 people. Despite this, of the 35 counties collected in the data, Franklin County ranked 25th in mortality rate caused by opioid overdose, at 23.5 deaths per 100,000. This study shows that males are twice as likely to die from an overdose than females and Caucasians are one and a half times more likely to die than African Americans. As the opioid epidemic continues, it will be interesting to see where Ohio and Franklin County end up. 
+                    </p>
+                </div>
+                <div class="col-md-6">
+                  <img src="images/opioid_home.png" class="rounded-circle" alt="Chania" width="460" height="345">
+                </div>
+              </div> 
+           </div>
+          </div>
+      </div>
+
+      <div class="row">
+      <div class="col span-1-of-2">
+        <a href="index.html"><button class="button button1">SPLASH PAGE</button></a>
+      </div>
     </section>
-    <!--end data analysis-->
 		 
 <!--Footer: reference https://mdbootstrap.com/components/bootstrap-footer/ -->
 <footer class="page-footer font-small stylish-color-dark pt-4 mt-4">
