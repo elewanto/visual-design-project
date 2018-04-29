@@ -334,6 +334,12 @@ function drawSunburst(error, data) {
 
 function drawLineChartUS(error, dataUS, dataOhio) {
 
+
+  document.getElementById('analysisText').innerHTML = 'This parllalel coordinates line chart shows the yearly cancer mortality rate of Ohio, in red, versus the other 49 states, in green.' +
+          ' Hover over any line to see the state and mortality rate at any point in time.  This chart can be useful for identifying changes in cancer mortality rates since 1999.';
+
+
+
   // convert strings to numbers
   dataUS.forEach(function(d) {
     d.Rate = +d.Rate;
@@ -561,6 +567,12 @@ function drawLineChartUS(error, dataUS, dataOhio) {
 
 function drawLineChartOhio(error, dataUS, dataOhio) {
 
+  document.getElementById('analysisText').innerHTML = 'This parllalel coordinates line chart shows the yearly cancermortality rate of the four Columbus counties, Delaware, Fairfield' +
+          ' Franklin, and Pickaway, in red, versus the other 84 Ohio counties, in green.' +
+          ' Hover over any line to see the state and mortality rate at any point in time.  This chart can be useful for identifying changes in cancer mortality rates since 1999.';
+   
+
+
   // convert strings to numbers
   dataUS.forEach(function(d) {
     d.Rate = +d.Rate;
@@ -786,6 +798,10 @@ function drawLineChartOhio(error, dataUS, dataOhio) {
 
 
 function partialDrawLineChartUS(error, dataUS, dataOhio) {
+
+  document.getElementById('analysisText').innerHTML = 'This combined parllalel coordinates line chart overlays both state and national cancer charts to compare cancer rates ' +
+          'of Columbus and Ohio counties to other states.  Columbus counties are shown in dark red, Ohio in light red, states in green, and Ohio counties in light blue. '
+          + ' Hover over any line to see the state or county and mortality rate at any point in time.  This chart can be useful for identifying changes in cancer mortality rates since 1999.';  
 
   // convert strings to numbers
   dataUS.forEach(function(d) {
