@@ -45,9 +45,6 @@ function display_image(img_id){
   oldDataSrc = document.getElementById('dataSource');
   removeChildren(oldDataSrc);
 
-  oldText = document.getElementById('analysisText');
-  removeChildren(oldText);
-
   var img = new Image();
   var parentDiv = document.getElementById('chartDiv');
   img.onload = function() {
@@ -92,9 +89,6 @@ function opioidLineChartUS() {
   oldDataSrc = document.getElementById('dataSource');
   removeChildren(oldDataSrc);
 
-  oldText = document.getElementById('analysisText');
-  removeChildren(oldText);
-
   var chartSvg = d3.select('#chartDiv')
                 .append('svg')
                 .attr('id', 'svgchart')       // svg ID is '#svgchart'
@@ -136,9 +130,6 @@ function opioidLineChartOhio() {
   oldDataSrc = document.getElementById('dataSource');
   removeChildren(oldDataSrc);
 
-  oldText = document.getElementById('analysisText');
-  removeChildren(oldText);
-
   var chartSvg = d3.select('#chartDiv')
                 .append('svg')
                 .attr('id', 'svgchart')       // svg ID is '#svgchart'
@@ -179,9 +170,6 @@ function opioidLineChartOhioUS() {
 
   oldDataSrc = document.getElementById('dataSource');
   removeChildren(oldDataSrc);
-
-  oldText = document.getElementById('analysisText');
-  removeChildren(oldText);
 
   var chartSvg = d3.select('#chartDiv')
                 .append('svg')
