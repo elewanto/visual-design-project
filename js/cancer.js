@@ -36,8 +36,9 @@ async function sliderChange() {
 
 function cancerTreemapColumbus() {
   // delete old chart elements
-  oldChartSvg = document.getElementById('chartDiv');
-  removeChildren(oldChartSvg);
+  //oldChartSvg = document.getElementById('chartDiv');
+  //removeChildren(oldChartSvg);
+  clearAll();
 
   var chartSvg = d3.select('#chartDiv')
                 .append('svg')
@@ -71,8 +72,9 @@ function cancerTreemapColumbus() {
 
 function cancerBubbleColumbus() {
   // delete old chart elements
-  oldChartSvg = document.getElementById('chartDiv');
-  removeChildren(oldChartSvg);
+  //oldChartSvg = document.getElementById('chartDiv');
+  //removeChildren(oldChartSvg);
+  clearAll();
 
   var chartSvg = d3.select('#chartDiv')
                 .append('svg')
@@ -109,8 +111,9 @@ function cancerBubbleColumbus() {
 
 function cancerSunburstColumbus() {
   // delete old chart elements
-  oldChartSvg = document.getElementById('chartDiv');
-  removeChildren(oldChartSvg);
+  //oldChartSvg = document.getElementById('chartDiv');
+  //removeChildren(oldChartSvg);
+  clearAll();
 
   var chartSvg = d3.select('#chartDiv')
                 .append('svg')
@@ -135,8 +138,9 @@ function cancerSunburstColumbus() {
 function cancerLineChartUS() {
 
   // delete old chart elements
-  oldChartSvg = document.getElementById('chartDiv');
-  removeChildren(oldChartSvg);
+  //oldChartSvg = document.getElementById('chartDiv');
+  //removeChildren(oldChartSvg);
+  clearAll();
 
   var chartSvg = d3.select('#chartDiv')
                 .append('svg')
@@ -173,8 +177,9 @@ function cancerLineChartUS() {
 function cancerLineChartOhio() {
 
   // delete old chart elements
-  oldChartSvg = document.getElementById('chartDiv');
-  removeChildren(oldChartSvg);
+  //oldChartSvg = document.getElementById('chartDiv');
+  //removeChildren(oldChartSvg);
+  clearAll();
 
   var chartSvg = d3.select('#chartDiv')
                 .append('svg')
@@ -212,8 +217,9 @@ function cancerLineChartOhio() {
 function cancerLineChartOhioUS() {
 
   // delete old chart elements
-  oldChartSvg = document.getElementById('chartDiv');
-  removeChildren(oldChartSvg);
+  //oldChartSvg = document.getElementById('chartDiv');
+  //removeChildren(oldChartSvg);
+  clearAll();
 
   var chartSvg = d3.select('#chartDiv')
                 .append('svg')
@@ -341,4 +347,19 @@ function removeChildren(node) {
     node.removeChild(node.firstChild);
   }
 
+}
+
+
+function clearAll(){
+  oldChartSvg = document.getElementById('chartDiv');
+  removeChildren(oldChartSvg);
+
+  oldDataSrc = document.getElementById('dataSource');
+  removeChildren(oldDataSrc);
+
+  oldTitle = document.getElementById('chartTitle');
+  removeChildren(oldTitle);
+
+  oldText = document.getElementById('analysisText');
+  removeChildren(oldText);
 }

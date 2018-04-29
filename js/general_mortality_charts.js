@@ -2,6 +2,9 @@
 
 function drawAllCauseBubble() {
 
+  document.getElementById('analysisText').innerHTML = 'This chart shows all causes of death in Columbus.  Hover over each bubble for more information about the cause of death, the category it belongs to,' +
+          'the number of deaths, and the percentage of total deaths in Columbus.  The size of the bubble represents'
+          + 'the number of deaths, so a larger bubble means a higher number of deaths.';  
 
   var canvasWidth = 1200;
   var canvasHeight = 1000;
@@ -48,13 +51,13 @@ function drawAllCauseBubble() {
     var chartGroup = d3.select('#chartG');
 
     chartGroup.append('g')
-              .attr('transform', 'translate(640, 50)')
+              .attr('transform', 'translate(0, 50)')
               .attr('id', '#chartTitle')
               .append('text')
               .text('Columbus All Causes of Death (1999 - 2016)')
               .style('font-size', '32px')
-              .attr('class', 'title');
-
+              .attr('class', 'title')
+              .style('text-anchor', 'start');
           
 
     var color = d3.scaleOrdinal(d3.schemeCategory20b);     
@@ -73,7 +76,7 @@ function drawAllCauseBubble() {
         .attr("id", function(d) { return d.id; })
         .attr("r", function(d) { return d.r; })
         .style("fill", function(d) { return color(d.package); })
-        .style('cursor', 'pointer')
+        .style('cursor', 'default')
         .on('mousemove', function(d) {
             d3.select(this)   
               .transition()
@@ -148,7 +151,7 @@ function drawAllCauseBubble() {
           return d.sizeF + 'px';
         })
         .style('font-weight', 'bold')
-        .style('cursor', 'pointer')        
+        .style('cursor', 'default')        
         .attr("x", 0)
         .attr("y", function(d, i, nodes) { return 20 + (i - nodes.length / 2 - 0.5) * (d.sizeF-2); })
         .text(function(d) { return d.wordV; });
@@ -162,6 +165,11 @@ function drawAllCauseBubble() {
 
 
 function drawAllCauseCirclePack() {
+
+  document.getElementById('analysisText').innerHTML = 'This chart shows all causes of death in Columbus.  Hover over each bubble for more information about the cause of death, the category it belongs to,' +
+          'the number of deaths, and the percentage of total deaths in Columbus.  The size of the bubble represents'
+          + 'the number of deaths, so a larger bubble means a higher number of deaths.  The large translucent bubbles serve to cluster related causes of death, so each darker colored bubble belongs to a cluster.'
+          +'Hovering over the translucent bubble gives you information about the cluster category, while hovering over each smaller bubble gives information about the specific cause of death.';    
 
   var canvasWidth = 900;
   var canvasHeight = 1000;
@@ -234,12 +242,13 @@ function drawAllCauseCirclePack() {
     var chartGroup = d3.select('#chartG');
 
     chartGroup.append('g')
-              .attr('transform', 'translate(640, 50)')
+              .attr('transform', 'translate(0, 50)')
               .attr('id', '#chartTitle')
               .append('text')
               .text('Columbus All Causes of Death (1999 - 2016)')
               .style('font-size', '32px')
-              .attr('class', 'title');
+              .attr('class', 'title')
+              .style('text-anchor', 'start');              
 
     var color = d3.scaleOrdinal(d3.schemeCategory20b);     
 
@@ -358,6 +367,13 @@ function drawAllCauseCirclePack() {
 // based on Mike Bostick's Sunburst Template
 function drawAllCauseSunburst() {
 
+  document.getElementById('analysisText').innerHTML = 'This sunburst chart shows all causes of death in Columbus.  Each inner wedge represents a group of specific causes of death in the surrounding outer wedges.'
+       + ' You can click on any outer colored wedge to zoom in on a specific category of death to reveal additional details about the specific causes.  Then click on the center of the circle'
+       + ' to zoom back out.<br /><br />Or you can hover over any wedge for more information about the cause of death, the category it belongs to,' +
+          'the number of deaths, and the percentage of total deaths in Columbus.  The size of the wedge represents'
+          + 'the number of deaths, so a larger wedge means a higher number of deaths.  The inner wedges serve to cluster related causes of death, and each outer wedge belongs to the inner wedge category'
+          + 'that it is attached to.';            
+
   var width = 1000,
       height = 850,
       radius = (Math.min(width, height) / 2) - 10;
@@ -389,22 +405,23 @@ function drawAllCauseSunburst() {
 
   var titleGroup = d3.select('#chartG')
             .append('g')
-            .attr('transform', 'translate(600, 50)')
+            .attr('transform', 'translate(0, 50)')
             .attr('id', '#chartTitle')
             .append('text')
             .text('Columbus All Causes of Death (1999 - 2016)')
             .style('font-size', '32px')
-            .attr('class', 'title');
+            .attr('class', 'title')
+            .style('text-anchor', 'start');            
 
     d3.select('#chartG')
               .append('g')
-              .attr('transform', 'translate(600, 90)')
+              .attr('transform', 'translate(0, 90)')
               .attr('id', '#chartTitle2')
               .append('text')
               .text('(Click rings to explore)')
               .style('font-size', '24px')
-              .attr('class', 'title');                
-
+              .attr('class', 'title')                
+              .style('text-anchor', 'start');
 
   var root = {
     "name":"All Causes",
@@ -491,11 +508,14 @@ function drawAllCauseSunburst() {
                 return null;
               }
         })
-        .style('font-weight', 'bold')
+        .style('font-weight', 'normal')
         //.style('cursor', 'pointer')        
         .style('font-size', '14px')
         .style('stroke', 'black')
-        .style('stroke-width', 5)
+        .style('stroke-width', 1)
+        .attr("x", 0)
+        .attr("y", 0)
+        //.text(function(d) { console.log(d.data.name); return d.data.name.slice(0, 10); });        
 
 
   }); // end csv function

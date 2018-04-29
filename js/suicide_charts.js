@@ -58,13 +58,14 @@ function drawDonut(error, dType, dAge, dGender, dRace, dMonth, dDay) {
   var chartGroup = d3.select('#chartG');
 
   chartGroup.append('g')
-            .attr('transform', 'translate(650, 50)')
+            .attr('transform', 'translate(0, 50)')
             .attr('id', '#chartTitle')
             .append('text')
             .text(function (d) {
                 return ('Columbus Total Suicides by ' + donutType + ' 1999 - 2016');
             })
-            .attr('class', 'title');
+            .attr('class', 'title')
+            .style('text-anchor', 'start');
 
   var canvasWidth = 1200;
   var canvasHeight = 1000;
@@ -276,13 +277,14 @@ function drawDonutR(error, dAge, dGender, dRace) {
   var chartGroup = d3.select('#chartG');
 
   chartGroup.append('g')
-            .attr('transform', 'translate(650, 50)')
+            .attr('transform', 'translate(0, 50)')
             .attr('id', '#chartTitle')
             .append('text')
             .text(function (d) {
               return ('Columbus Total Suicide Rates per 100,000 Population by ' + donutType + ' 1999 - 2016');
             })
-            .attr('class', 'title');
+            .attr('class', 'title')
+            .style('text-anchor', 'start');
 
   var canvasWidth = 1200;
   var canvasHeight = 1000;
@@ -454,11 +456,12 @@ function drawLineChartUS(error, dataUS, dataOhio) {
   var chartGroup = d3.select('#chartG');
 
   chartGroup.append('g')
-            .attr('transform', 'translate(650, 50)')
+            .attr('transform', 'translate(0, 50)')
             .attr('id', '#chartTitle')
             .append('text')
             .text('U.S. Suicide Rates per 100,000 Population (1999 - 2016)')
-            .attr('class', 'title');
+            .attr('class', 'title')
+            .style('text-anchor', 'start');
 
   var canvasWidth = 1200;
   var canvasHeight = 1000;
@@ -680,11 +683,12 @@ function drawLineChartOhio(error, dataUS, dataOhio) {
   var chartGroup = d3.select('#chartG');
 
   chartGroup.append('g')
-            .attr('transform', 'translate(650, 50)')
+            .attr('transform', 'translate(0, 50)')
             .attr('id', '#chartTitle')
             .append('text')
             .text('Ohio Counties Suicide Rates per 100,000 Population (incomplete) (1999 - 2016)')
-            .attr('class', 'title');
+            .attr('class', 'title')
+            .style('text-anchor', 'start');            
 
   var canvasWidth = 1200;
   var canvasHeight = 1000;
@@ -910,11 +914,12 @@ function partialDrawLineChartUS(error, dataUS, dataOhio) {
   var chartGroup = d3.select('#chartG');
 
   chartGroup.append('g')
-            .attr('transform', 'translate(650, 50)')
+            .attr('transform', 'translate(0, 50)')
             .attr('id', '#chartTitle')
             .append('text')
             .text('U.S. and Ohio Suicide Rates per 100,000 Population (incomplete) (1999 - 2016)')
-            .attr('class', 'title');
+            .attr('class', 'title')
+            .style('text-anchor', 'start');
 
   var canvasWidth = 1200;
   var canvasHeight = 1000;

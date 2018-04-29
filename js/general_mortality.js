@@ -427,7 +427,7 @@ function clearAll(){
   oldTitle = document.getElementById('chartTitle');
   removeChildren(oldTitle);
 
-  oldText = document.getElementById('chartTitle');
+  oldText = document.getElementById('analysisText');
   removeChildren(oldText);
 }
 

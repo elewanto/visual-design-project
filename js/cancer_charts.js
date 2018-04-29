@@ -2,6 +2,10 @@
 // using Mike Bostick's Treemap example
 function drawBubble() {
 
+  document.getElementById('analysisText').innerHTML = 'Hover over each bubble for more information about the type of cancer, the category it belongs to,' +
+          'the number of deaths the cancer caused, and the percentage of total cancer deaths.  The size of the bubble represents'
+          + 'the number of deaths, so a larger bubble means higher number of deaths.';  
+
   var canvasWidth = 1200;
   var canvasHeight = 1000;
 
@@ -47,11 +51,12 @@ function drawBubble() {
     var chartGroup = d3.select('#chartG');
 
     chartGroup.append('g')
-              .attr('transform', 'translate(650, 50)')
+              .attr('transform', 'translate(0, 50)')
               .attr('id', '#chartTitle')
               .append('text')
               .text('Columbus Cancer Deaths by Type (1999 - 2015)')
-              .attr('class', 'title');
+              .attr('class', 'title')
+              .style('text-anchor', 'start');              
 
     var color = d3.scaleOrdinal(d3.schemeCategory20c);     
 
@@ -143,6 +148,10 @@ function drawBubble() {
 // using Mike Bostick's Treemap example
 function drawTreemap(error, data) {
 
+  document.getElementById('analysisText').innerHTML = 'Hover over each box for more information about the type of cancer, the category it belongs to,' +
+          'the number of deaths the cancer caused, and the percentage of total cancer deaths.  The size of the box represents'
+          + 'the number of deaths, so a larger box means higher number of deaths.';    
+
   groups = ['Category'];
   var totalDeaths = 0;
   // convert string data to numbers
@@ -198,12 +207,12 @@ function drawTreemap(error, data) {
   var chartGroup = d3.select('#chartG');
 
   chartGroup.append('g')
-            .attr('transform', 'translate(650, 50)')
+            .attr('transform', 'translate(0, 50)')
             .attr('id', '#chartTitle')
             .append('text')
             .text('Columbus Cancer Deaths by Type (1999 - 2015)')
-            .attr('class', 'title');
-
+            .attr('class', 'title')
+            .style('text-anchor', 'start');
 
   var fader = function(color) { return d3.interpolateRgb(color, "#fff")(0.2); },
       color = d3.scaleOrdinal(d3.schemeCategory20.map(fader)),
@@ -338,11 +347,12 @@ function drawLineChartUS(error, dataUS, dataOhio) {
   var chartGroup = d3.select('#chartG');
 
   chartGroup.append('g')
-            .attr('transform', 'translate(650, 50)')
+            .attr('transform', 'translate(0, 50)')
             .attr('id', '#chartTitle')
             .append('text')
             .text('U.S. Cancer Mortality Rates per 100,000 Population (1999 - 2016)')
-            .attr('class', 'title');
+            .attr('class', 'title')
+            .style('text-anchor', 'start');            
 
   var canvasWidth = 1200;
   var canvasHeight = 1000;
@@ -564,11 +574,12 @@ function drawLineChartOhio(error, dataUS, dataOhio) {
   var chartGroup = d3.select('#chartG');
 
   chartGroup.append('g')
-            .attr('transform', 'translate(650, 50)')
+            .attr('transform', 'translate(0, 50)')
             .attr('id', '#chartTitle')
             .append('text')
             .text('Ohio Counties Cancer Mortality Rates per 100,000 Population (1999 - 2016)')
-            .attr('class', 'title');
+            .attr('class', 'title')
+            .style('text-anchor', 'start');            
 
   var canvasWidth = 1200;
   var canvasHeight = 1000;
@@ -789,11 +800,12 @@ function partialDrawLineChartUS(error, dataUS, dataOhio) {
   var chartGroup = d3.select('#chartG');
 
   chartGroup.append('g')
-            .attr('transform', 'translate(650, 50)')
+            .attr('transform', 'translate(0, 50)')
             .attr('id', '#chartTitle')
             .append('text')
             .text('U.S. and Ohio Cancer Mortality Rates per 100,000 Population (1999 - 2016)')
-            .attr('class', 'title');
+            .attr('class', 'title')
+            .style('text-anchor', 'start');            
 
   var canvasWidth = 1200;
   var canvasHeight = 1000;

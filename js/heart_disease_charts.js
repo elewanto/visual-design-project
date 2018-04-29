@@ -22,6 +22,10 @@ function drawBubble() {
 
   var totalDeaths = 0;
 
+  document.getElementById('analysisText').innerHTML = 'Hover over each bubble for more information about the type of disease, the category it belongs to,' +
+          'the number of deaths the disease caused, and the percentage of total heart disease deaths.  The size of the bubble represents'
+          + 'the number of deaths, so a larger bubble means higher number of deaths.';  
+
   var tooltip = d3.select('body').append('div').attr('class', 'tooltipTree'); 
 
   d3.csv("data/heart_disease_data/heart_disease_type_columbus_1999_2016.csv", function(d) {
@@ -49,11 +53,12 @@ function drawBubble() {
     var chartGroup = d3.select('#chartG');
 
     chartGroup.append('g')
-              .attr('transform', 'translate(650, 50)')
+              .attr('transform', 'translate(0, 50)')
               .attr('id', '#chartTitle')
               .append('text')
               .text('Columbus Heart Disease Deaths by Type (1999 - 2015)')
-              .attr('class', 'title');
+              .attr('class', 'title')
+              .style('text-anchor', 'start');              
 
     var color = d3.scaleOrdinal(d3.schemeCategory20b);     
 
@@ -69,7 +74,7 @@ function drawBubble() {
         .attr("id", function(d) { return d.id; })
         .attr("r", function(d) { return d.r; })
         .style("fill", function(d) { return color(d.package); })
-        .style('cursor', 'pointer')
+        .style('cursor', 'default')
         .on('mousemove', function(d) {
             d3.select(this)   
               .transition()
@@ -144,7 +149,7 @@ function drawBubble() {
           return d.sizeF + 'px';
         })
         .style('font-weight', 'bold')
-        .style('cursor', 'pointer')        
+        .style('cursor', 'default')        
         .attr("x", 0)
         .attr("y", function(d, i, nodes) { return 20 + (i - nodes.length / 2 - 0.5) * (d.sizeF-2); })
         .text(function(d) { return d.wordV; });
@@ -159,6 +164,12 @@ function drawBubble() {
 
 // using Mike Bostick's Treemap example
 function drawTreemap(error, data) {
+
+
+
+  document.getElementById('analysisText').innerHTML = 'Hover over each box for more information about the type of disease, the category it belongs to,' +
+          'the number of deaths the disease caused, and the percentage of total heart disease deaths.  The size of the box represents'
+          + 'the number of deaths, so a larger box means higher number of deaths.';    
 
   groups = ['Category'];
   var totalDeaths = 0;
@@ -215,11 +226,12 @@ function drawTreemap(error, data) {
   var chartGroup = d3.select('#chartG');
 
   chartGroup.append('g')
-            .attr('transform', 'translate(650, 50)')
+            .attr('transform', 'translate(0, 50)')
             .attr('id', '#chartTitle')
             .append('text')
             .text('Columbus Heart Disease Deaths by Type (1999 - 2015)')
-            .attr('class', 'title');
+            .attr('class', 'title')
+            .style('text-anchor', 'start');            
 
 
   var fader = function(color) { return d3.interpolateRgb(color, "#fff")(0.2); },
@@ -355,11 +367,12 @@ function drawLineChartUS(error, dataUS, dataOhio) {
   var chartGroup = d3.select('#chartG');
 
   chartGroup.append('g')
-            .attr('transform', 'translate(650, 50)')
+            .attr('transform', 'translate(0, 50)')
             .attr('id', '#chartTitle')
             .append('text')
             .text('U.S. Heart Disease Mortality Rates per 100,000 Population (1999 - 2015)')
-            .attr('class', 'title');
+            .attr('class', 'title')
+            .style('text-anchor', 'start');            
 
   var canvasWidth = 1200;
   var canvasHeight = 1000;
@@ -583,11 +596,12 @@ function drawLineChartOhio(error, dataUS, dataOhio) {
   var chartGroup = d3.select('#chartG');
 
   chartGroup.append('g')
-            .attr('transform', 'translate(650, 50)')
+            .attr('transform', 'translate(0, 50)')
             .attr('id', '#chartTitle')
             .append('text')
             .text('Ohio Counties Heart Disease Mortality Rates per 100,000 Population (1999 - 2015)')
-            .attr('class', 'title');
+            .attr('class', 'title')
+            .style('text-anchor', 'start');            
 
   var canvasWidth = 1200;
   var canvasHeight = 1000;
@@ -809,11 +823,12 @@ function partialDrawLineChartUS(error, dataUS, dataOhio) {
   var chartGroup = d3.select('#chartG');
 
   chartGroup.append('g')
-            .attr('transform', 'translate(650, 50)')
+            .attr('transform', 'translate(0, 50)')
             .attr('id', '#chartTitle')
             .append('text')
             .text('U.S. and Ohio Heart Disease Mortality Rates per 100,000 Population (1999 - 2015)')
-            .attr('class', 'title');
+            .attr('class', 'title')
+            .style('text-anchor', 'start');            
 
   var canvasWidth = 1200;
   var canvasHeight = 1000;
