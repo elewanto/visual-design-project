@@ -27,22 +27,22 @@ function display_image(img_id){
   };
 
   switch(parseInt(img_id)){
-    case 0: displayTitle("LE in Columbus from 1985 to 2014");
+    case 0: displayTitle("Life Expectancy in Columbus from 1985 to 2014");
             img.src = 'images/LE_temporal_Cbus.png';
             link1 = "";
             link2 = 'data/le_data/LE_ParallelCord.csv';
             break;
-    case 1: displayTitle("LE for Black and White Male and Female Population in US (1900-2015)");
+    case 1: displayTitle("How does Race and Gender affect Life Expectancy in US?");
             img.src = 'images/LE_US_gender_race.png';
             link1 = "";
             link2 = 'data/le_data/NCHS_-_Death_rates_and_life_expectancy_at_birth.csv';
             break;
-    case 2: displayTitle("Correlation of LE and Physical Activity Prevalence");
+    case 2: displayTitle("Correlation of Life Expectancy and Physical Activity Prevalence");
             img.src = 'images/LE_physical_activity_Cbus.png';
             link1 = 'data/le_data/IHME_county_data_LifeExpectancy_OHIO.csv';
             link2 = 'data/le_data/IHME_county_data_PhysicalActivity_OHIO.csv';
             break;
-    case 3: displayTitle("Correlation of LE and Obesity");
+    case 3: displayTitle("Correlation of Life Expectancy and Obesity");
             img.src = 'images/LE_obesity_Cbus.png';
             link1 = 'data/le_data/IHME_county_data_LifeExpectancy_OHIO.csv';
             link2 = 'data/le_data/IHME_county_data_Obesity_OHIO.csv';
@@ -147,6 +147,27 @@ function LE_income_OH() {
   anchorTag.setAttribute("font-size", "18px");
   anchorTag.innerHTML = "Data Source";
   parentDiv2.appendChild(anchorTag); 
+
+  var legend = chartSvg.selectAll(".legend")
+      .data(["goldenrod", "lightcoral", "yellowgreen"])
+      .enter().append("g")
+      .attr("class", "legend")
+      .attr("transform", function(d, i) { return "translate(10," + i * 20 + ")"; });
+
+    legend.append("rect")
+          .attr("x", 870)
+          .attr("y", 400)
+          .attr("width", 18)
+          .attr("height", 18)
+          .style("fill", function(d) { return d;});
+
+    legend.append("text")
+          .data(["Average Life Expectancy in the income group", "Less than Average Life Expectancy in the group", "More than Average Life Expectancy in the group"])
+          .attr("x", 1200 - 24)
+          .attr("y", 410)
+          .attr("dy", ".35em")
+          .style("text-anchor", "end")
+          .text(function(d) { return d; });
 }
 
 // create SVG and groups needed to draw two maps side-by-side
