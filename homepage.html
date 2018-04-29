@@ -8,31 +8,31 @@
    <meta charset="UTF-8">     
 	  <style>
   /* ----- Buttons ----- */
-.button {
-	outline: none;
-	background-color:transparent;
-	border: none;
-	padding: 13px 60px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 21px;
-	-webkit-transition-duration: 0.4s; /* Safari */
-	transition-duration: 0.4s;
-	cursor: pointer;
-	border-radius: 48px; 
-  margin-top:70px;
-  }
-  .button1 {
-	color: rgb(0, 0, 0); 
-	border: 1px solid rgb(0, 0, 0);
-	outline: none;
-  }
-  .button1:hover {
-	background-color: #923025;
-	color: white;
-	border: none;
-	outline: none;
+    .button {
+    	outline: none;
+    	background-color:transparent;
+    	border: none;
+    	padding: 13px 60px;
+    	text-align: center;
+    	text-decoration: none;
+    	display: inline-block;
+    	font-size: 21px;
+    	-webkit-transition-duration: 0.4s; /* Safari */
+    	transition-duration: 0.4s;
+    	cursor: pointer;
+    	border-radius: 48px; 
+      margin-top:70px;
+      }
+      .button1 {
+    	color: rgb(0, 0, 0); 
+    	border: 1px solid rgb(0, 0, 0);
+    	outline: none;
+      }
+      .button1:hover {
+    	background-color: #923025;
+    	color: white;
+    	border: none;
+    	outline: none;
   }
   </style>
     <title>Team 3 Visual Design Project Homepage</title>
@@ -88,7 +88,8 @@
         <a href="obesity.html">Obesity</a>
         <a id="aboutus" href="about_us.html">About Us</a>
       </div>
-
+      
+      <h1 class="text-center" >Life Expectancy in US and Ohio</h1>
       <div id="myCarousel" class="carousel slide" data-ride="carousel" style="width: 60%; height: 30%; margin: 0 auto">
         <ol class="carousel-indicators">
           <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -127,9 +128,14 @@
 
       <div class="container">
           <div class="panel panel-default">
-           <div class="panel-heading"><h1>Life Expectancy in US and Ohio</h1></div>
+           <div class="panel-heading"></div>
            <div class="panel-body">
               <div class="row">
+                  <blockquote class="blockquote text-right">
+                    <p class="mb-0" style="font-size:30px; font-family: lato; color: #923025">"Ohio ranked as one of the worst states to live in"</p>
+                    <footer class="blockquote-footer"><cite title="Source Title" style="font-size:15px">Cleveland 19 News</cite>
+                    </footer>
+                  </blockquote>
                   <div class="col-md-6">
                     <img class="rounded-circle" src="images/le_home.png" alt="Chania" width="460" height="345">
                   </div>
@@ -142,7 +148,12 @@
                       <a class="btn" href="life_expectancy.html">View details »</a>
                   </div>
               </div> 
+
               <div class="row">
+                  <blockquote class="blockquote text-left">
+                      <p class="mb-0" style="font-size:30px; font-family: lato; color: #923025">Ohio suicide rates have increased 51% from 2000 to 2016</p>
+                      </footer>
+                  </blockquote>
                   <div class="col-md-6">
                       <h2>What is killing you?</h2>
                       <p>
@@ -157,6 +168,10 @@
               </div> 
 
               <div class="row">
+                <blockquote class="blockquote text-right">
+                    <p class="mb-0 text-right" style="font-size:30px; font-family: lato; color: #923025">Obesity rate has increased to more than 29% in Ohio since 2007</p>
+                    </footer>
+                </blockquote>
                 <div class="col-md-6">
                   <img src="images/obesity_home.png" class="rounded-circle" alt="Chania" width="460" height="345">
                 </div>
@@ -171,6 +186,10 @@
               </div> 
 
               <div class="row">
+                <blockquote class="blockquote text-left">
+                    <p class="mb-0" style="font-size:30px; font-family: lato; color: #923025">Franklin County ranked 25th in mortality rate caused by opioid overdose, at 23.5 deaths per 100,000</p>
+                    </footer>
+                </blockquote>
                 <div class="col-md-6">
                   <h2>How addicted are you?</h2>
                     <p>
@@ -192,9 +211,10 @@
       </div>
     </section>
 		 
+
+
 <!--Footer: reference https://mdbootstrap.com/components/bootstrap-footer/ -->
 <footer class="page-footer font-small stylish-color-dark pt-4 mt-4">
-
     <!--Footer Links-->
     <div class="container text-center text-md-left">
         <div class="row">
@@ -203,7 +223,7 @@
             <div class="col-md-2">
                 <h5 class="text-uppercase mb-4 mt-3 font-weight-bold">Acknowledge</h5>
                 <p>CSE 5544</p>
-		<p>Design 5453</p>
+		            <p>Design 5453</p>
             </div>
             <!--/.First column-->
 
@@ -233,35 +253,30 @@
 
             <!--Third column-->
             <div class="col-md-4 mx-auto">
-                <h5 class="text-uppercase mb-4 mt-3 font-weight-bold">Cont.</h5>
+                <h5 class="text-uppercase mb-4 mt-3 font-weight-bold">More Reference Links</h5>
                 <ul class="list-unstyled">
                     <li>
-                        <a href="https://github.com/lillianiwaniszyn/Poverty_Obesity_Visual">US Map Integrate with Data Reference </a>
-		    </li>
+                      <a href="https://github.com/lillianiwaniszyn/Poverty_Obesity_Visual">US Map Integrate with Data Reference </a>
+		                </li>
                     <li>
                         <a href="https://bl.ocks.org/mbostock/3887051">Group Bar Chart Reference</a>
                     </li>
-		    <li>
+		                <li>
                         <a href="https://vincent.readthedocs.io/en/latest/">Python Vincent API Reference</a>
                     </li>
-		    <li>
+		                <li>
                         <a href="https://bl.ocks.org/mbostock">D3 Chart Reference</a>
                     </li>
                 </ul>
             </div>
             <!--/.Third column-->
 
-            <hr class="clearfix w-100 d-md-none">
-           
+            <hr class="clearfix w-100 d-md-none">           
         </div>
     </div>
-
     <br>
     <!--/.Footer Links-->
-
-
-</footer>
-<!--/.Footer-->
-  </body>
-
+  </footer>
+  <!--/.Footer-->
+</body>
 </html>
