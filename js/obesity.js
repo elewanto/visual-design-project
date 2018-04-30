@@ -145,8 +145,8 @@ function columbus_trend(img_id){
                 imgNode = parentDiv.childNodes[0];
                 imgNode.setAttribute('id', 'chartImage');
                 imgNode.setAttribute('class', 'center-block');
-                imgNode.setAttribute('width', '150%');  
-                imgNode.setAttribute('height', '150%');  
+                imgNode.setAttribute('width', '100%');  
+                imgNode.setAttribute('height', '100%');  
 
   };
 
