@@ -20,10 +20,10 @@ function draw_static_word_cloud(){
   var parentDiv = document.getElementById('cloud');
 
   img.onload = function() {
-                parentDiv.appendChild(img);
+               imgNode = parentDiv.appendChild(img);
                 //console.log(parentDiv.childNodes);
                 //imgNode = parentDiv.childNodes[0];
-                imgNode = parentDiv.getElementsByTagName("img")[0]
+                //imgNode = parentDiv.getElementsByTagName("img")[0]
                 //console.log(imgNode);
                 imgNode.setAttribute('id', 'cloudImage');
                 imgNode.setAttribute('class', 'center-block');

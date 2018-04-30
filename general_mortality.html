@@ -64,26 +64,26 @@
       </div>
 
       <div id="titleDiv" class="wrapper">
-        <p>Visualization of Columbus Mortality Trends</p>
+        <p>Columbus Mortality Trends</p>
       </div>
 
       <!-- SVG for map is build as child to mapDiv -->
       <!-- TODO: wrap SVGs in bootstrap panel or well? -->
-      <div class="container-fluid">
+      <div id="topHalfWindowGenMort" class="container-fluid">
         <div class="panel panel-default">
           <div class="panel-body">
             <div id="cloud" class="svg-container">
-             <!--   <img src="images/wordcloud.png" class="center-block"></img> -->
+
             </div>
           </div>
         </div>
       </div>
-
+             <!--   <img src="images/wordcloud.png" class="center-block"></img> -->
       <!-- SVG for charts is build as child to chartDiv -->
       <div class="container-fluid" id="chart-container">
 
         <div class="row" id="dataDiv">
-          <div class="panel panel-default col-sm-3" id="chart-panel">
+          <div class="panel panel-default col-sm-3" id="chart-panel1">
             <div class="panel-body">
               <div  id="analysisDropdown">
                 <div class="drop-btn-group">
@@ -113,9 +113,8 @@
             </div>
           </div>
 
-          <div class="panel panel-default col-sm-9" id="chart-panel">
+          <div class="panel panel-default col-sm-9" id="chart-panel2">
             <div class="panel-body">
-              <div>
                 <div id ="chartTitle">
                 </div>
                 <div id="chartDiv" class="svg-container">
@@ -126,7 +125,6 @@
                 </div>
                 <div id="analysisText">
                 </div>
-              </div>
             </div> 
           </div>
         </div>

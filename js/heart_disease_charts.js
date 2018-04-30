@@ -3,7 +3,8 @@
 function drawBubble() {
 
   var canvasWidth = 1200;
-  var canvasHeight = 1000;
+  //var canvasHeight = 1000;
+var canvasHeight = 1000;  
 
   var marginLeft = 20;
   var marginRight = 20;
@@ -382,6 +383,7 @@ function drawLineChartUS(error, dataUS, dataOhio) {
 
   var canvasWidth = 1200;
   var canvasHeight = 1000;
+  var canvasHeight = 1000;  
 
   var marginLeft = 60;
   var marginRight = 15;

@@ -17,19 +17,22 @@ html, body {
 
 
 .svg-container {
-    display: inline-block;
+    display: block;
     /*display: block;*/
     position: relative;
     width: 100%;
+    height: 100%;
     /*padding-bottom: 100%;*/
     vertical-align: top;
-    overflow: hidden;  
+    /*overflow: hidden;  */ 
 }
 
 .svg-content {
   /*  display: inline-block;*/
     display: block;
     position: relative;
+    width: 100%;
+    max-height: 100%;    
     top: 0;
     left: 0;
     /*width: 100%;
@@ -44,19 +47,25 @@ html, body {
   padding-top: 20px;
 }
 
-#chartImage {
+#topHalfWindow {
+  max-width: 85%;
+  height: 100vh;
+}
+
+#topHalfWindowLE {
   max-width: 100%;
-  
-  object-fit: fill;
-  background-position: center;
-  background-repeat: no-repeat;  
+  padding-bottom: 0px;
+}
+
+#topHalfWindowGenMort {
+  max-width: 80%;
 }
 
 
 #sliderDiv {
   padding-top: 10px;
   padding-right: 10px;
-  padding-bottom: 60px;
+  padding-bottom: 0px;
   padding-left: 0px;
   font-size: 18px;
 }
@@ -70,17 +79,50 @@ html, body {
 #titleDiv {
   text-align: left;
   font-family: "Lato", Sans-serif;
-  font-size: 3em;
+  /*font-size: 3em;*/
+  font-size: 28px;
   font-weight: bold;
   padding-left: 20px;
 }
 
 #chart-container {
- margin: 5px;
+  margin: 5px;
+
 }
 
-#chart-panel {
+#chart-panel1 {
   min-height: 800px; 
+}
+
+#chart-panel2 {
+  max-width: 80%;
+  height: 95vh;  
+}
+
+.panel-body {
+  width: 100%;
+  height: 100%;
+}
+
+#chartDiv {
+  position: relative;
+  z-index: 0;
+}
+
+#chartImage {
+  max-width: 100%;
+
+  object-fit: fill;
+  background-position: center;
+  background-repeat: no-repeat;  
+}
+
+#cloudImage {
+  /*max-width: 100%;*/
+  max-height: 76vh;  
+  object-fit: fill;
+  background-position: center;
+  background-repeat: no-repeat;   
 }
 
 .grid line {
@@ -238,10 +280,7 @@ text {
   font-weight: bold;
 }
 
-#chartDiv {
-  position: relative;
-  z-index: 0;
-}
+
 
 #dataSource {
   position: absolute;

@@ -210,27 +210,32 @@ function drawOpioidUSMap(year) {
           });
         var legend = d3.select('#usmap')                // add legend for the svg
               .append("g")
+              .attr('id', 'mapLegend')
               .attr("class", "legend")
-              .attr("transform","translate(800,500)")                // position for the legend position
+              .attr("transform","translate(800,500)")                // position for the legend
               .selectAll("g")
-              .data([0.1, 0.4, 0.7, 1.0])
+              .data([0.1, 0.4, 0.7, 1.0, -1])
               .enter()
               .append("g")
-              .attr("transform", function(d, i) { return "translate(10," + i * 28 + ")"; });
-            legend.append("rect")               // append the rectangle box for legend
-                .attr("width", 24)
-                .attr("height", 24)
-                .style("fill", function(d, i) {
-                  return(d3.interpolateYlOrBr(d)) });
-            legend.append("text")                 // append the legend text
-                  .data([Math.round(0.1*(maxRate-minRate)+minRate) + ' Deaths per 100,000', Math.round(0.4*(maxRate-minRate)+minRate) + ' Deaths per 100,000',
-                         Math.round(0.7*(maxRate-minRate)+minRate) + ' Deaths per 100,000', Math.round(1.0*(maxRate-minRate)+minRate) + ' Deaths per 100,000',
-                          'Data Unavailable\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0']) // lazy justify with whitespace unicode
-                  .attr("x", 120)
-                  .attr("y", 7)
-                  .attr("dy", ".7em")
-                  .style('font-size', 16)
-                  .text(function(d) { return d; });
+              .attr("transform", function(d, i) { 
+                return "translate(10," + i * 28 + ")"; });
+        legend.append("rect")               // append the rectangle box for legend
+            .attr("width", 24)
+            .attr("height", 24)
+            .style("fill", function(d, i) {
+              if (d == -1) {
+                return '#e8e8e8';
+              }              
+              return(d3.interpolateYlOrBr(d)) });
+        legend.append("text")                 // append the legend text
+              .data([Math.round(0.1*(maxRate-minRate)+minRate) + ' Deaths per 100,000', Math.round(0.4*(maxRate-minRate)+minRate) + ' Deaths per 100,000',
+                     Math.round(0.7*(maxRate-minRate)+minRate) + ' Deaths per 100,000', Math.round(1.0*(maxRate-minRate)+minRate) + ' Deaths per 100,000',
+                      'Data Unavailable\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0']) // lazy justify with whitespace unicode
+              .attr("x", 120)
+              .attr("y", 7)
+              .attr("dy", ".7em")
+              .style('font-size', 16)
+              .text(function(d) { return d; });
     }); // end d3.json data function
 
 

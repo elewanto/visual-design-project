@@ -188,7 +188,7 @@ function drawMaps() {
                 .append('svg')
                 .attr('id', 'svgmap')       // svg ID is '#svgmap'
                 .attr('preserveAspectRatio', 'xMinYMin meet')
-                .attr('viewBox', '0 0 1500 700')
+                .attr('viewBox', '0 0 1500 615')
                 .classed('svg-content', true);
                 //.attr('width', width)
                 //.attr('height', height);
