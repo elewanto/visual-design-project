@@ -23,9 +23,9 @@ var canvasHeight = 1000;
 
   var totalDeaths = 0;
 
-  document.getElementById('analysisText').innerHTML = 'Hover over each bubble for more information about the type of disease, the category it belongs to,' +
-          'the number of deaths the disease caused, and the percentage of total heart disease deaths.  The size of the bubble represents'
-          + 'the number of deaths, so a larger bubble means higher number of deaths.';  
+  document.getElementById('analysisText').innerHTML = 'Hover over each bubble for more information about the type of disease, the larger category it belongs to,' +
+          ' the number of deaths the disease caused, and the percentage of total heart disease deaths.  The size of the bubble represents'
+          + ' the number of deaths, so a larger bubble represents a higher number of deaths.';  
 
   var tooltip = d3.select('body').append('div').attr('class', 'tooltipTree'); 
 
@@ -168,9 +168,9 @@ function drawTreemap(error, data) {
 
 
 
-  document.getElementById('analysisText').innerHTML = 'Hover over each box for more information about the type of disease, the category it belongs to,' +
-          'the number of deaths the disease caused, and the percentage of total heart disease deaths.  The size of the box represents'
-          + 'the number of deaths, so a larger box means higher number of deaths.';    
+  document.getElementById('analysisText').innerHTML = 'Hover over each box for more information about the type of disease, the larger category it belongs to,' +
+          ' the number of deaths the disease caused, and the percentage of total heart disease deaths.  The size of the box represents'
+          + ' the number of deaths, so a larger box represents a higher number of deaths.';    
 
   groups = ['Category'];
   var totalDeaths = 0;
@@ -356,7 +356,7 @@ function drawTreemap(error, data) {
 function drawLineChartUS(error, dataUS, dataOhio) {
 
 
-  document.getElementById('analysisText').innerHTML = 'This parllalel coordinates line chart shows the yearly heart disease mortality rate of Ohio, in red, versus the other 49 states, in green.' +
+  document.getElementById('analysisText').innerHTML = 'This parallel coordinates line chart shows the yearly heart disease mortality rate of Ohio, in red, versus the other 49 states, in green.' +
           ' Hover over any line to see the state and mortality rate at any point in time.  This chart can be useful for identifying changes in heart disease mortality rates since 1999.';
 
    
@@ -591,7 +591,7 @@ function drawLineChartUS(error, dataUS, dataOhio) {
 
 function drawLineChartOhio(error, dataUS, dataOhio) {
 
-  document.getElementById('analysisText').innerHTML = 'This parllalel coordinates line chart shows the yearly heart disease mortality rate of the four Columbus counties, Delaware, Fairfield' +
+  document.getElementById('analysisText').innerHTML = 'This parallel coordinates line chart shows the yearly heart disease mortality rate of the four Columbus counties, Delaware, Fairfield' +
           ' Franklin, and Pickaway, in red, versus the other 84 Ohio counties, in green.' +
           ' Hover over any line to see the state and mortality rate at any point in time.  This chart can be useful for identifying changes in heart disease mortality rates since 1999.';
    
@@ -824,8 +824,8 @@ function drawLineChartOhio(error, dataUS, dataOhio) {
 function partialDrawLineChartUS(error, dataUS, dataOhio) {
 
 
-  document.getElementById('analysisText').innerHTML = 'This combined parllalel coordinates line chart overlays both state and national heart disease charts to compare heart disease mortality rates ' +
-          'of Columbus and Ohio counties to other states.  Columbus counties are shown in dark red, Ohio in light red, states in green, and Ohio counties in light blue. '
+  document.getElementById('analysisText').innerHTML = 'This combined parallel coordinates line chart overlays both state and national heart disease charts to compare heart disease mortality rates ' +
+          ' of Columbus and Ohio counties to other states.  Columbus counties are shown in dark red, Ohio in light red, states in green, and Ohio counties in light blue. '
           + ' Hover over any line to see the state or county and mortality rate at any point in time.  This chart can be useful for identifying changes in heart disease mortality rates since 1999.';
     
 

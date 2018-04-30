@@ -2,9 +2,9 @@
 
 function drawAllCauseBubble() {
 
-  document.getElementById('analysisText').innerHTML = 'This chart shows all causes of death in Columbus.  Hover over each bubble for more information about the cause of death, the category it belongs to,' +
-          'the number of deaths, and the percentage of total deaths in Columbus.  The size of the bubble represents'
-          + 'the number of deaths, so a larger bubble means a higher number of deaths.';  
+  document.getElementById('analysisText').innerHTML = 'This chart shows all causes of death in Columbus.  Hover over each bubble for more information about the cause of death, the larger category it belongs to,' +
+          ' the number of deaths, and the percentage of total deaths in Columbus.  The size of the bubble represents'
+          + ' the number of deaths, so a larger bubble represents a higher number of deaths.';  
 
   var canvasWidth = 1200;
   var canvasHeight = 1000;
@@ -166,10 +166,10 @@ function drawAllCauseBubble() {
 
 function drawAllCauseCirclePack() {
 
-  document.getElementById('analysisText').innerHTML = 'This chart shows all causes of death in Columbus.  Hover over each bubble for more information about the cause of death, the category it belongs to,' +
-          'the number of deaths, and the percentage of total deaths in Columbus.  The size of the bubble represents'
-          + 'the number of deaths, so a larger bubble means a higher number of deaths.  The large translucent bubbles serve to cluster related causes of death, so each darker colored bubble belongs to a cluster.'
-          +'Hovering over the translucent bubble gives you information about the cluster category, while hovering over each smaller bubble gives information about the specific cause of death.';    
+  document.getElementById('analysisText').innerHTML = 'This chart shows all causes of death in Columbus.  Hover over each bubble for more information about the cause of death, the larger category it belongs to,' +
+          ' the number of deaths, and the percentage of total deaths in Columbus.  The size of the bubble represents'
+          + ' the number of deaths, so a larger bubble represents a higher number of deaths.  The large translucent bubbles serve to cluster related causes of death, so each darker colored bubble belongs to a cluster.'
+          +' Hovering over the translucent bubble gives you information about the cluster category, while hovering over each smaller bubble gives information about the specific cause of death.';    
 
   var canvasWidth = 900;
   var canvasHeight = 1000;
@@ -370,9 +370,9 @@ function drawAllCauseSunburst() {
   document.getElementById('analysisText').innerHTML = 'This sunburst chart shows all causes of death in Columbus.  Each inner wedge represents a group of specific causes of death in the surrounding outer wedges.'
        + ' You can click on any outer colored wedge to zoom in on a specific category of death to reveal additional details about the specific causes.  Then click on the center of the circle'
        + ' to zoom back out.<br /><br />Or you can hover over any wedge for more information about the cause of death, the category it belongs to,' +
-          'the number of deaths, and the percentage of total deaths in Columbus.  The size of the wedge represents'
-          + 'the number of deaths, so a larger wedge means a higher number of deaths.  The inner wedges serve to cluster related causes of death, and each outer wedge belongs to the inner wedge category'
-          + 'that it is attached to.';            
+          ' the number of deaths, and the percentage of total deaths in Columbus.  The size of the wedge represents'
+          + ' the number of deaths, so a larger wedge means a higher number of deaths.  The inner wedges serve to cluster related causes of death, and each outer wedge belongs to the inner wedge category'
+          + ' that it is attached to.';            
 
   var width = 1000,
       height = 850,
