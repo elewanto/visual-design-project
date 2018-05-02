@@ -369,10 +369,7 @@ function drawAllCauseSunburst() {
 
   document.getElementById('analysisText').innerHTML = 'This sunburst chart shows all causes of death in Columbus.  Each inner wedge represents a group of specific causes of death in the surrounding outer wedges.'
        + ' You can click on any outer colored wedge to zoom in on a specific category of death to reveal additional details about the specific causes.  Then click on the center of the circle'
-       + ' to zoom back out.<br /><br />Or you can hover over any wedge for more information about the cause of death, the category it belongs to,' +
-          ' the number of deaths, and the percentage of total deaths in Columbus.  The size of the wedge represents'
-          + ' the number of deaths, so a larger wedge means a higher number of deaths.  The inner wedges serve to cluster related causes of death, and each outer wedge belongs to the inner wedge category'
-          + ' that it is attached to.';            
+       + ' to zoom back out.';            
 
   var width = 1000,
       height = 850,
