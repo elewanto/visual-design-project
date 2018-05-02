@@ -17,13 +17,13 @@ function drawSuicideUSMap(year) {
 
   // create single title for both maps
   var mapsvg = d3.select("#svgmap")
-    .attr("class", "maptitle")
+    .append('g')
+    .attr("id", "maptitle")
     .append("text")               //apend the graph title                     
-            .attr("x", 800)
-            .attr("y", 40)
-            .attr('id', 'mastertitle')
-            .text(year +"  Suicide Rates per 100,000 Population (incomplete)")
-            .style('font-size', 22);    
+    .attr("x", 800)
+    .attr("y", 40)
+    .text(year +"  Suicide Rates per 100,000 Population (incomplete)")
+    .style('font-size', 22);    
 
   // select US map group within svg
   d3.select('#svgmap').append('g')               //apend the graph title                     
@@ -258,18 +258,18 @@ function redrawSuicideUSMap(year, delay) {
       .projection(projection);
 
   parent = document.getElementById('svgmap');     // clear old title and rewrite new year
-  child = document.getElementById('mastertitle');
+  child = document.getElementById('maptitle');
   parent.removeChild(child);
 
   // create single title for both maps
   var mapsvg = d3.select("#svgmap")
-    .attr("class", "maptitle")
+    .append('g')
+    .attr("id", "maptitle")
     .append("text")               //apend the graph title                     
-            .attr("x", 800)
-            .attr("y", 40)
-            .attr('id', 'mastertitle')            
-            .text(year +"  Suicide Rates per 100,000 Population ")  
-            .style('font-size', 22);    
+    .attr("x", 800)
+    .attr("y", 40)         
+    .text(year +"  Suicide Rates per 100,000 Population ")  
+    .style('font-size', 22);    
 
 
   // get data from US and Ohio to find global min max rates for color scaling

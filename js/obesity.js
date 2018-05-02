@@ -50,10 +50,8 @@ function obesity1_chart1() {
                 .attr('id', 'svgchart')       // svg ID is '#svgchart'
                 .attr('preserveAspectRatio', 'xMidYMid meet')
                 .attr('viewBox', '0 0 1200 800')
-                .classed('svg-content', true)
+                .classed('svg-content-bot', true)
                 .attr('overflow', 'visible');
-                //.attr('width', width)
-                //.attr('height', height);
 
   // create US map group <g>  ID #usmap
   var chartGroup = chartSvg.append('g')
@@ -82,10 +80,8 @@ function columbus_bar_chart() {
                 .attr('id', 'svgchart')       // svg ID is '#svgchart'
                 .attr('preserveAspectRatio', 'xMidYMid meet')
                 .attr('viewBox', '0 0 2000 1200')
-                .classed('svg-content', true)
-                .attr('overflow', 'visible');
-                //.attr('width', width)
-                //.attr('height', height);
+                .classed('svg-content-bot', true)
+                .attr('overflow', 'visible');      
 
   // create US map group <g>  ID #usmap
   var chartGroup = chartSvg.append('g')
@@ -114,10 +110,8 @@ function columbus_bubble() {
                 .attr('id', 'svgchart')       // svg ID is '#svgchart'
                 .attr('preserveAspectRatio', 'xMidYMid meet')
                 .attr('viewBox', '0 0 1200 800')
-                .classed('svg-content', true)
-                .attr('overflow', 'visible');
-                //.attr('width', width)
-                //.attr('height', height);
+                .classed('svg-content-bot', true)
+                .attr('overflow', 'visible');      
 
   // create US map group <g>  ID #usmap
   var chartGroup = chartSvg.append('g')
@@ -144,10 +138,7 @@ function columbus_trend(img_id){
                 parentDiv.appendChild(img);
                 imgNode = parentDiv.childNodes[0];
                 imgNode.setAttribute('id', 'chartImage');
-                imgNode.setAttribute('class', 'center-block');
-                imgNode.setAttribute('width', '100%');  
-                imgNode.setAttribute('height', '100%');  
-
+                imgNode.setAttribute('class', 'center-block');  
   };
 
   switch(parseInt(img_id)){
@@ -182,11 +173,9 @@ function drawMaps(year) {
   var mapSvg = d3.select('#mapDiv')
                 .append('svg')
                 .attr('id', 'svgmap')       // svg ID is '#svgmap'
-                .attr('preserveAspectRatio', 'xMinYMin meet')
+                .attr('preserveAspectRatio', 'xMidYMid meet')
                 .attr('viewBox', '0 0 1500 700')
-                .classed('svg-content', true);
-                //.attr('width', width)
-                //.attr('height', height);
+                .classed('svg-content-top', true);
 
   // create US map group <g>  ID #usmap
   var usmapg = mapSvg.append('g')

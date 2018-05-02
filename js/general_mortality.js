@@ -126,7 +126,7 @@ function deaths_rural_urban_OH() {
                 .attr('id', 'svgchart')       // svg ID is '#svgchart'
                 .attr('preserveAspectRatio', 'xMidYMid meet')
                 .attr('viewBox', '0 0 1200 400')
-                .classed('svg-content', true)
+                .classed('svg-content-bot', true)
                 .attr('overflow', 'visible');
 
   var chartGroup = chartSvg.append('g')
@@ -201,6 +201,7 @@ function drawBubbles(file, link_id){
   var bubbles_svg = d3.select('#chartG')
             .append('svg')
             .attr('class', 'bubbles')
+            .attr('class', 'svg-content-bot')
             .attr('id', 'bubble-chart')
             .attr('width', 1000)
             .attr('height', 500)
@@ -310,8 +311,8 @@ function generalBubbleColumbus() {
                 .attr('id', 'svgchart')       // svg ID is '#svgchart'
                 .attr('preserveAspectRatio', 'xMidYMid meet')
                 .attr('viewBox', '0 0 1200 1000')
-                .classed('svg-content', true)
-                .attr('overflow', 'visible');
+                .classed('svg-content-bot', true)
+                .attr('overflow', 'visible');                
 
   // create chart group as child of svg
   var chartGroup = chartSvg.append('g')
@@ -345,8 +346,8 @@ function generalSunburstColumbus() {
                 .attr('id', 'svgchart')       // svg ID is '#svgchart'
                 .attr('preserveAspectRatio', 'xMidYMid meet')
                 .attr('viewBox', '0 0 1200 1000')
-                .classed('svg-content', true)
-                .attr('overflow', 'visible');
+                .classed('svg-content-bot', true)
+                .attr('overflow', 'visible');                
 
 
 
@@ -382,9 +383,8 @@ function generalCirclePackColumbus() {
                 .attr('id', 'svgchart')       // svg ID is '#svgchart'
                 .attr('preserveAspectRatio', 'xMidYMid meet')
                 .attr('viewBox', '0 0 1200 1000')
-                .classed('svg-content', true)
+                .classed('svg-content-bot', true)
                 .attr('overflow', 'visible');
-
 
 
   // create chart group as child of svg

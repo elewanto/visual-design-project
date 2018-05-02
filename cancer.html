@@ -73,11 +73,9 @@
       <!-- SVG for map is build as child to mapDiv -->
       <div id="topHalfWindow" class="container-fluid">
         <div class="panel panel-default">
-          <div class="panel-body">
-
-            <div id="mapDiv" class="svg-container">
+          <div id="mapSliderContainer" class="panel-body">
+            <div id="mapDiv" class="svg-container-top">
             </div>
-
             <div id="sliderDiv" class="wrapper">
               <b>1999 &nbsp;&nbsp;</b>
               <input id="mapSlider" data-slider-id='mSlider' type="text"
@@ -90,7 +88,6 @@
               />
               <b>&nbsp;&nbsp; 2016</b>
             </div>
-
           </div>
         </div>
       </div>
@@ -100,8 +97,7 @@
       <div class="container-fluid" id="chart-container">
 
         <div class="row" id="dataDiv">
-          <div class="panel panel-default col-sm-3" id="chart-panel1">
-            <div class="panel-body">
+          <div class="col-sm-3" id="chart-panel1">
               <div  id="analysisDropdown">
                 <div class="drop-btn-group">
                   <div class="dropdownd">
@@ -129,14 +125,13 @@
                   </div>                    
                 </div>
               </div>
-            </div>
           </div>
 
           <div class="panel panel-default col-sm-9" id="chart-panel2">
             <div class="panel-body">
                 <div id ="chartTitle">
                 </div>
-                <div id="chartDiv" class="svg-container">
+                <div id="chartDiv" class="svg-container-bot">
                 </div>
                 <div id="dataSource">
                 </div>

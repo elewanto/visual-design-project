@@ -48,7 +48,7 @@ function suicideDonuts(selection) {
                 .attr('id', 'svgchart')       // svg ID is '#svgchart'
                 .attr('preserveAspectRatio', 'xMidYMid meet')
                 .attr('viewBox', '0 0 1200 1000')
-                .classed('svg-content', true)
+                .classed('svg-content-bot', true)
                 .attr('overflow', 'visible');
 
   // create chart group as child of svg
@@ -92,8 +92,8 @@ function suicideDonutsR(selection) {
                 .attr('id', 'svgchart')       // svg ID is '#svgchart'
                 .attr('preserveAspectRatio', 'xMidYMid meet')
                 .attr('viewBox', '0 0 1200 1000')
-                .classed('svg-content', true)
-                .attr('overflow', 'visible');
+                .classed('svg-content-bot', true)
+                .attr('overflow', 'visible');                      
 
   // create chart group as child of svg
   var chartGroup = chartSvg.append('g')
@@ -134,8 +134,8 @@ function suicideLineChartUS() {
                 .attr('id', 'svgchart')       // svg ID is '#svgchart'
                 .attr('preserveAspectRatio', 'xMidYMid meet')
                 .attr('viewBox', '0 0 1200 1000')
-                .classed('svg-content', true)
-                .attr('overflow', 'visible');
+                .classed('svg-content-bot', true)
+                .attr('overflow', 'visible');                      
 
   // create chart group as child of svg
   var chartGroup = chartSvg.append('g')
@@ -175,8 +175,8 @@ function suicideLineChartOhio() {
                 .attr('id', 'svgchart')       // svg ID is '#svgchart'
                 .attr('preserveAspectRatio', 'xMidYMid meet')
                 .attr('viewBox', '0 0 1200 1000')
-                .classed('svg-content', true)
-                .attr('overflow', 'visible');
+                .classed('svg-content-bot', true)
+                .attr('overflow', 'visible');                      
 
   // create chart group as child of svg
   var chartGroup = chartSvg.append('g')
@@ -215,8 +215,8 @@ function suicideLineChartOhioUS() {
                 .attr('id', 'svgchart')       // svg ID is '#svgchart'
                 .attr('preserveAspectRatio', 'xMidYMid meet')
                 .attr('viewBox', '0 0 1200 1000')
-                .classed('svg-content', true)
-                .attr('overflow', 'visible');
+                .classed('svg-content-bot', true)
+                .attr('overflow', 'visible');                      
 
   // create chart group as child of svg
   var chartGroup = chartSvg.append('g')
@@ -309,11 +309,9 @@ function drawMaps(year) {
   var mapSvg = d3.select('#mapDiv')
                 .append('svg')
                 .attr('id', 'svgmap')       // svg ID is '#svgmap'
-                .attr('preserveAspectRatio', 'xMinYMin meet')
+                .attr('preserveAspectRatio', 'xMidYMid meet')
                 .attr('viewBox', '0 0 1500 700')
-                .classed('svg-content', true);
-                //.attr('width', width)
-                //.attr('height', height);
+                .classed('svg-content-top', true);
 
   // create US map group <g>  ID #usmap
   var usmapg = mapSvg.append('g')

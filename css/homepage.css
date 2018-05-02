@@ -1,103 +1,128 @@
 @charset "utf-8";
 
-
 html, body {
-  /*background-color: #d1d3d4;  */
   background-color: #fff;
   font-size: 100%;
   width: 100%;
   height: 100%;
-  /*margin: 0;
-  padding: 0;  */
 
-  font-family: "Leto", sans-serif; /* Mike map */
+  font-family: "Leto", sans-serif;
   font-size: 14px;
   color: #333;
 }
 
-
-.svg-container {
-    display: block;
-    /*display: block;*/
-    position: relative;
-    width: 100%;
-    height: 100%;
-    /*padding-bottom: 100%;*/
-    vertical-align: top;
-    /*overflow: hidden;  */ 
+#mapSliderContainer {
+  max-height: 100%;
 }
 
-.svg-content {
-  /*  display: inline-block;*/
+.svg-container-top {
+    display: block;
+    position: relative;
+    max-height: 80%;
+    vertical-align: top;
+}
+
+.svg-content-top {
+    display: block;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+#sliderDiv {
+  max-height: 10%;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 0px;
+  font-size: 18px;
+}
+
+#mapDiv {
+  max-height: 80%;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+#svgmap {
+  max-height: 60vh;
+}
+
+#chart-container {
+  margin: 5px;
+  min-height: 800px;  
+  max-height: 95vh;
+}
+
+#dataDiv {
+  height: 100%;
+}
+
+#chart-panel1 {
+  height: 100%;
+  padding-top: 150px;
+}
+
+#chart-panel2 {
+  max-height: 95vh;
+}
+
+.svg-container-bot {
     display: block;
     position: relative;
     width: 100%;
-    max-height: 100%;    
+    max-width: 100%;
+    max-height: 65vh;
+    vertical-align: top;
+}
+
+.svg-content-bot {
+    display: block;
+    position: relative;
+    max-height: 65vh;
     top: 0;
     left: 0;
-    /*width: 100%;
-    height: 100%;*/
+}
+
+#chartDiv {
+  max-height: 80%;
+  width: 100%;
+  max-width: 100%;
+  position: relative;
+  z-index: 0;
 }
 
 #analysisText, #analysistext {
+  display: block;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 2vmin;
   text-align: justify;
   text-justify: inner-word;
   padding-top: 20px;
+  max-height: 30vh;
 }
 
 #topHalfWindow {
-  max-width: 85%;
-  height: 100vh;
+  max-height: 80vh;
 }
 
+
 #topHalfWindowLE {
-  max-width: 100%;
-  padding-bottom: 40px;
+  max-height: 80vh;
+
+  margin-bottom: 10px;
 }
 
 #topHalfWindowGenMort {
   max-width: 80%;
 }
 
-
-#sliderDiv {
-  padding-top: 10px;
-  padding-right: 10px;
-  padding-bottom: 0px;
-  padding-left: 0px;
-  font-size: 18px;
-}
-
-#mapDiv {
-  padding-right: 10px;
-  padding-left: 10px;
-}
-
-
 #titleDiv {
   text-align: left;
   font-family: "Lato", Sans-serif;
-  /*font-size: 3em;*/
   font-size: 28px;
   font-weight: bold;
   padding-left: 20px;
-}
-
-#chart-container {
-  margin: 5px;
-
-}
-
-#chart-panel1 {
-  min-height: 800px;
-  padding-top: 150px;
-}
-
-#chart-panel2 {
-  max-width: 80%;
-  /*height: 95vh; */
 }
 
 .panel-body {
@@ -105,18 +130,36 @@ html, body {
   height: 100%;
 }
 
-#chartDiv {
-  height: 80vh;
-  position: relative;
-  z-index: 0;
-}
-
 #chartImage {
+  object-fit: contain;
+  width: auto;
+  max-height: 80vh;
   max-width: 100%;
-
-  object-fit: fill;
   background-position: center;
   background-repeat: no-repeat;  
+}
+
+#chartImage2 {
+  object-fit: contain;
+  width: auto;
+  max-height: 40vh;
+  max-width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;  
+}
+
+#chartImage3 {
+  object-fit: contain;
+  width: auto;
+  max-height: 40vh;
+  max-width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;  
+}
+
+#svgchart {
+  width: 100%;
+  height: 80%;
 }
 
 #cloudImage {
@@ -137,10 +180,6 @@ html, body {
   stroke-width: 0;
 }
 
-.maptitle {
-  font-size: 3em;
-  font-weight: bold;
-}
 
 .wrapper {
   text-align: center;

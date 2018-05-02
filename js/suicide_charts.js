@@ -5,7 +5,7 @@ function drawDonut(error, dType, dAge, dGender, dRace, dMonth, dDay) {
   document.getElementById('analysisText').innerHTML = 'These pie charts show statistics on suicides in the four Columbus counties from 1999 to 2016.  Click the \"Columbus Number\" dropdown button to choose' +
             ' between numbers of suicides relative to age, gender, race, method of suicide, month of the year, and day of the week. Click on the \"Columbus Rates\" to see statistics on rates of suicides' +
             ' per 100,000 people population, which normalizes results against differend demographic sizes.  The \"per 100,000 population\" is a standard reporting method used by the CDC, who maintains national' 
-            + ' mortality statistics';   
+            + ' mortality statistics.';   
 
   // convert strings to numbers
   dType.forEach(function(d) {
@@ -245,7 +245,7 @@ function drawDonutR(error, dAge, dGender, dRace) {
   document.getElementById('analysisText').innerHTML = 'These pie charts show statistics on suicides in the four Columbus counties from 1999 to 2016.  Click the \"Columbus Number\" dropdown button to choose' +
             ' between numbers of suicides relative to age, gender, race, method of suicide, month of the year, and day of the week. Click on the \"Columbus Rates\" to see statistics on rates of suicides' +
             ' per 100,000 people population, which normalizes results against differend demographic sizes.  The \"per 100,000 population\" is a standard reporting method used by the CDC, who maintains national' 
-            + ' mortality statistics';   
+            + ' mortality statistics.';   
 
   // convert strings to numbers
   dAge.forEach(function(d) {

@@ -17,13 +17,13 @@ function drawCancerUSMap(year) {
 
   // create single title for both maps
   var mapsvg = d3.select("#svgmap")
-    .attr("class", "maptitle")
+    .append('g')
+    .attr("id", "maptitle")
     .append("text")               //apend the graph title                     
-            .attr("x", 800)
-            .attr("y", 40)
-            .attr('id', 'mastertitle')
-            .text(year +"  Cancer Mortality Rates per 100,000 Population ")
-            .style('font-size', 22);    
+    .attr("x", 800)
+    .attr("y", 40)
+    .text(year +"  Cancer Mortality Rates per 100,000 Population ")
+    .style('font-size', 22);    
 
   d3.select('#svgmap').append('g')               //apend the graph title                     
     .attr("transform","translate(400,70)")
@@ -248,18 +248,18 @@ function redrawCancerUSMap(year, delay) {
       .projection(projection);
 
   parent = document.getElementById('svgmap');     // clear old title and rewrite new year
-  child = document.getElementById('mastertitle');
+  child = document.getElementById('maptitle');
   parent.removeChild(child);
 
   // create single title for both maps
   var mapsvg = d3.select("#svgmap")
-    .attr("class", "maptitle")
+    .append('g')
+    .attr("id", "maptitle")
     .append("text")               //apend the graph title                     
-            .attr("x", 800)
-            .attr("y", 40)
-            .attr('id', 'mastertitle')            
-            .text(year +"  Cancer Mortality Rates per 100,000 Population ")  
-            .style('font-size', 22);    
+    .attr("x", 800)
+    .attr("y", 40)       
+    .text(year +"  Cancer Mortality Rates per 100,000 Population ")  
+    .style('font-size', 22);    
 
 
   // get data from US and Ohio to find global min max rates for color scaling

@@ -68,6 +68,7 @@ function display_image(img_id){
   parentDiv2.appendChild(anchorTag);
 }
 
+
 function LE_MF_Gap(img_id){
   console.log('LE_MF_Gap()')
 
@@ -79,14 +80,14 @@ function LE_MF_Gap(img_id){
   img1.onload = function() {
                 parentDiv.appendChild(img1);
                 imgNode = parentDiv.childNodes[0];
-                imgNode.setAttribute('id', 'chartImage');
+                imgNode.setAttribute('id', 'chartImage2');
                 imgNode.setAttribute('class', 'center-block');
                 imgNode.setAttribute('width', img1.width);  
   };
   img2.onload = function() {
                 parentDiv.appendChild(img2);
                 imgNode = parentDiv.childNodes[1];
-                imgNode.setAttribute('id', 'chartImage');
+                imgNode.setAttribute('id', 'chartImage3');
                 imgNode.setAttribute('class', 'center-block');
                 imgNode.setAttribute('width', img2.width);  
   };
@@ -124,7 +125,7 @@ function LE_income_OH() {
                 .attr('id', 'svgchart')       // svg ID is '#svgchart'
                 .attr('preserveAspectRatio', 'xMidYMid meet')
                 .attr('viewBox', '0 0 1200 800')
-                .classed('svg-content', true)
+                .classed('svg-content-bot', true)
                 .attr('overflow', 'visible');
 
   var chartGroup = chartSvg.append('g')
@@ -187,11 +188,9 @@ function drawMaps() {
   var mapSvg = d3.select('#mapDiv')
                 .append('svg')
                 .attr('id', 'svgmap')       // svg ID is '#svgmap'
-                .attr('preserveAspectRatio', 'xMinYMin meet')
+                .attr('preserveAspectRatio', 'xMidYMid meet')
                 .attr('viewBox', '0 0 1500 615')
-                .classed('svg-content', true);
-                //.attr('width', width)
-                //.attr('height', height);
+                .classed('svg-content-top', true);
 
   // create US map group <g>  ID #usmap
   var usmapg = mapSvg.append('g')

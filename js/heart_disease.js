@@ -36,8 +36,7 @@ function heartTreemapColumbus() {
                 .attr('id', 'svgchart')       // svg ID is '#svgchart'
                 .attr('preserveAspectRatio', 'xMidYMid meet')
                 .attr('viewBox', '0 0 1200 1000')
-                .classed('svg-content', true)
-                .attr('overflow', 'visible');
+                .classed('svg-content-bot', true);                
 
   // create chart group as child of svg
   var chartGroup = chartSvg.append('g')
@@ -72,8 +71,8 @@ function heartBubbleColumbus() {
                 .attr('id', 'svgchart')       // svg ID is '#svgchart'
                 .attr('preserveAspectRatio', 'xMidYMid meet')
                 .attr('viewBox', '0 0 1200 1000')
-                .classed('svg-content', true)
-                .attr('overflow', 'visible');
+                .classed('svg-content-bot', true)
+                .attr('overflow', 'visible');                
 
   // create chart group as child of svg
   var chartGroup = chartSvg.append('g')
@@ -107,8 +106,8 @@ function heartDiseaseLineChartUS() {
                 .attr('id', 'svgchart')       // svg ID is '#svgchart'
                 .attr('preserveAspectRatio', 'xMidYMid meet')
                 .attr('viewBox', '0 0 1200 1000')
-                .classed('svg-content', true)
-                .attr('overflow', 'visible');
+                .classed('svg-content-bot', true)
+                .attr('overflow', 'visible');                
 
   // create chart group as child of svg
   var chartGroup = chartSvg.append('g')
@@ -146,8 +145,8 @@ function heartDiseaseLineChartOhio() {
                 .attr('id', 'svgchart')       // svg ID is '#svgchart'
                 .attr('preserveAspectRatio', 'xMidYMid meet')
                 .attr('viewBox', '0 0 1200 1000')
-                .classed('svg-content', true)
-                .attr('overflow', 'visible');
+                .classed('svg-content-bot', true)
+                .attr('overflow', 'visible');                
 
   // create chart group as child of svg
   var chartGroup = chartSvg.append('g')
@@ -186,8 +185,8 @@ function heartDiseaseLineChartOhioUS() {
                 .attr('id', 'svgchart')       // svg ID is '#svgchart'
                 .attr('preserveAspectRatio', 'xMidYMid meet')
                 .attr('viewBox', '0 0 1200 1000')
-                .classed('svg-content', true)
-                .attr('overflow', 'visible');
+                .classed('svg-content-bot', true)
+                .attr('overflow', 'visible');                
 
   // create chart group as child of svg
   var chartGroup = chartSvg.append('g')
@@ -276,11 +275,8 @@ function drawMaps(year) {
                 .append('svg')
                 .attr('id', 'svgmap')       // svg ID is '#svgmap'
                 .attr('preserveAspectRatio', 'xMidYMid meet')
-                .attr('viewBox', '0 0 1500 700')
-                .classed('svg-content', true)
-                .attr('overflow', 'visible');                
-                //.attr('width', width)
-                //.attr('height', height);
+                .attr('viewBox', '18 0 1500 700')
+                .classed('svg-content-top', true);
 
   // create US map group <g>  ID #usmap
   var usmapg = mapSvg.append('g')
